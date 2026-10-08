@@ -48,6 +48,76 @@
       "seed": true
     },
     {
+      "id": "province-nord:ea80d7239f03f70a",
+      "sourceId": "province-nord",
+      "kind": "consultation",
+      "title": "MAITRISE D’ŒUVRE « ETUDE » POUR LE RENOUVELLEMENT DE LA CANALISATION D’EAU USEE ET LA POSE D’UNE CANALISATION D’EAU PLUVIALE DERRIERE LA RUE DES FLAMBOYANTS A POUEMBOUT",
+      "reference": "08-2026",
+      "buyer": "SIVM VKP",
+      "nature": "Service",
+      "status": "Ouvert",
+      "url": "https://marchespublics.province-nord.nc/sallemarche.aspx",
+      "publishedAt": "2026-10-09T09:30:00+11:00",
+      "deadline": "2026-11-12T12:00:00+11:00",
+      "firstSeen": "2026-10-08T23:48:02.895Z",
+      "lastSeen": "2026-10-08T23:48:02.895Z"
+    },
+    {
+      "id": "lnc-legales:e5894d7f2808c12f",
+      "sourceId": "lnc-legales",
+      "kind": "consultation",
+      "title": "AVIS D’APPEL D’OFFRES AOO 73 TRAVAUX DE SIGNALISATION HORIZONTALE ET VERTICALE DES VOIES COMMUNALES DE DUMB�...",
+      "summary": "AVIS D’APPEL D’OFFRES AOO_73 TRAVAUX DE SIGNALISATION HORIZONTALE ET VERTICALE DES VOIES COMMUNALES DE DUMB�...",
+      "buyer": "VILLE DE DUMBEA DIRECTION DU DEVELOPPEMENT DURABLE ET DE LA PROXIMITE",
+      "url": "https://legales.lnc.nc/annonce/ville-de-dumbea-direction-du-developpement-durable-et-de-la-proximite-09-10-2026-30524",
+      "publishedAt": "2026-10-09T00:00:00+11:00",
+      "firstSeen": "2026-10-08T23:47:17.509Z",
+      "lastSeen": "2026-10-08T23:47:17.509Z"
+    },
+    {
+      "id": "lnc-legales:838d0fe83babf0f1",
+      "sourceId": "lnc-legales",
+      "kind": "consultation",
+      "title": "AVIS D’APPEL D’OFFRES TRAVAUX D’ENTRETIEN DES FOSSES ET DES OUVRAGES D’EAUX PLUVIALES DE LA COMMUNE DE D...",
+      "summary": "VILLE DE DUMBEA DIRECTION DU DEVELOPPEMENT DURABLE ET DE LA PROXIMITE",
+      "buyer": "VILLE DE DUMBEA DIRECTION DU DEVELOPPEMENT DURABLE ET DE LA PROXIMITE",
+      "url": "https://legales.lnc.nc/annonce/ville-de-dumbea-direction-du-developpement-durable-et-de-la-proximite-09-10-2026-30521",
+      "publishedAt": "2026-10-09T00:00:00+11:00",
+      "firstSeen": "2026-10-08T23:47:17.509Z",
+      "lastSeen": "2026-10-08T23:47:17.509Z"
+    },
+    {
+      "id": "lnc-legales:f131fae6d5d94e65",
+      "sourceId": "lnc-legales",
+      "kind": "consultation",
+      "title": "AVIS D’APPEL D’OFFRES TRAVAUX DE SIGNALISATION HORIZONTALE ET VERTICALE DES VOIES COMMUNALES DE DUMBÉA - 20...",
+      "summary": "VILLE DE DUMBEA DIRECTION DU DEVELOPPEMENT DURABLE ET DE LA PROXIMITE",
+      "buyer": "VILLE DE DUMBEA DIRECTION DU DEVELOPPEMENT DURABLE ET DE LA PROXIMITE",
+      "url": "https://legales.lnc.nc/annonce/ville-de-dumbea-direction-du-developpement-durable-et-de-la-proximite-09-10-2026-30520",
+      "publishedAt": "2026-10-09T00:00:00+11:00",
+      "firstSeen": "2026-10-08T23:47:17.509Z",
+      "lastSeen": "2026-10-08T23:47:17.509Z"
+    },
+    {
+      "id": "marchespublics-nc:r8t-3459",
+      "sourceId": "marchespublics-nc",
+      "kind": "consultation",
+      "title": "Installation de panneaux solaires photovoltaïques pour l’alimentation électrique des conteneurs froids (REEFERS).",
+      "summary": "l’Installation de panneaux solaires photovoltaïques pour l’alimentation électrique des conteneurs froids (REEFERS).",
+      "reference": "3530-306P",
+      "buyer": "Port Autonome de la Nouvelle-Calédonie",
+      "buyerLocation": "Nouméa",
+      "location": "NOUVELLE-CALÉDONIE",
+      "nature": "Travaux",
+      "procedure": "Appel d'offres ouvert",
+      "procedureCode": "AOO",
+      "url": "https://portail.marchespublics.nc/entreprise/consultation/3459?orgAcronyme=r8t",
+      "publishedAt": "2026-10-09T00:00:00+11:00",
+      "deadline": "2026-11-16T15:00:00+11:00",
+      "firstSeen": "2026-10-08T23:46:53.271Z",
+      "lastSeen": "2026-10-08T23:46:53.271Z"
+    },
+    {
       "id": "marchespublics-nc:g3h-3454",
       "sourceId": "marchespublics-nc",
       "kind": "consultation",
@@ -181,35 +251,62 @@
     {
       "id": "ville-kone:b5acddba10afb591",
       "sourceId": "ville-kone",
-      "kind": "annonce",
-      "title": "BTA WARU Pierre Doui à NETCHAOT et BTA GOROMOEDO et MAHOSSEM à TIAKANA La mairie de Koné informe les entrepreneurs du lancement de deux appels d’offres pour la réalisation des travaux d’électrification filaire : Électrif",
+      "kind": "consultation",
+      "title": "BTA WARU Pierre Doui à NETCHAOT et BTA GOROMOEDO et MAHOSSEM à TIAKANA",
       "summary": "BTA WARU Pierre Doui à NETCHAOT et BTA GOROMOEDO et MAHOSSEM à TIAKANA La mairie de Koné informe les entrepreneurs du lancement de deux appels d’offres pour la réalisation des travaux d’électrification filaire : Électrification BTA WARU Pierre Doui à NETCHAOT (FER- 2023) sur la commune de Koné Électrification BTA GOROMOEDO et MAHOSSEM à TIAKANA (FER – 2023)... 03/05/2025",
       "url": "https://www.koohne.nc/bta-waru-pierre-doui-a-netchaot-et-bta-goromoedo-et-mahossem-a-tiakana/",
       "firstSeen": "2026-10-08T09:13:00.240Z",
       "lastSeen": "2026-10-08T09:13:00.240Z",
-      "seed": true
+      "seed": true,
+      "updatedAt": "2026-10-08T23:48:14.104Z",
+      "history": [
+        {
+          "at": "2026-10-08T23:48:14.104Z",
+          "field": "title",
+          "from": "BTA WARU Pierre Doui à NETCHAOT et BTA GOROMOEDO et MAHOSSEM à TIAKANA La mairie de Koné informe les entrepreneurs du lancement de deux appels d’offres pour la réalisation des travaux d’électrification filaire : Électrif",
+          "to": "BTA WARU Pierre Doui à NETCHAOT et BTA GOROMOEDO et MAHOSSEM à TIAKANA"
+        }
+      ]
     },
     {
       "id": "ville-kone:6606fe6f47d0eb87",
       "sourceId": "ville-kone",
       "kind": "consultation",
-      "title": "Réalisation des repas dans les écoles maternelles et primaires publiques Le Maire de la Commune de KONE informe les entreprises qu’il lance un appel d’offres ouvert concernant : Le transport des repas dans les écoles mat",
+      "title": "Réalisation des repas dans les écoles maternelles et primaires publiques",
       "summary": "Réalisation des repas dans les écoles maternelles et primaires publiques Le Maire de la Commune de KONE informe les entreprises qu’il lance un appel d’offres ouvert concernant : Le transport des repas dans les écoles maternelles et primaires publiques de Koné pour les années 2024, 2025 et 2026. 06/10/2023",
       "url": "https://www.koohne.nc/realisation-des-repas-dans-les-ecoles-maternelles-et-primaires-publiques/",
       "firstSeen": "2026-10-08T09:13:00.240Z",
       "lastSeen": "2026-10-08T09:13:00.240Z",
-      "seed": true
+      "seed": true,
+      "updatedAt": "2026-10-08T23:48:14.104Z",
+      "history": [
+        {
+          "at": "2026-10-08T23:48:14.104Z",
+          "field": "title",
+          "from": "Réalisation des repas dans les écoles maternelles et primaires publiques Le Maire de la Commune de KONE informe les entreprises qu’il lance un appel d’offres ouvert concernant : Le transport des repas dans les écoles mat",
+          "to": "Réalisation des repas dans les écoles maternelles et primaires publiques"
+        }
+      ]
     },
     {
       "id": "ville-kone:fa358e8334cc304a",
       "sourceId": "ville-kone",
       "kind": "consultation",
-      "title": "Le transport des repas dans les écoles maternelles et primaires publiques Le Maire de la Commune de KONE informe les entreprises qu’il lance un appel d’offres ouvert concernant : le transport des repas dans les écoles ma",
+      "title": "Le transport des repas dans les écoles maternelles et primaires publiques",
       "summary": "Le transport des repas dans les écoles maternelles et primaires publiques Le Maire de la Commune de KONE informe les entreprises qu’il lance un appel d’offres ouvert concernant : le transport des repas dans les écoles maternelles et primaires publiques de Koné pour les années 2024, 2025 et 2026. L’appel d’offres est constitué de six (6) lots : ... 06/10/2023",
       "url": "https://www.koohne.nc/le-transport-des-repas-dans-les-ecoles-maternelles-et-primaires-publiques/",
       "firstSeen": "2026-10-08T09:13:00.240Z",
       "lastSeen": "2026-10-08T09:13:00.240Z",
-      "seed": true
+      "seed": true,
+      "updatedAt": "2026-10-08T23:48:14.104Z",
+      "history": [
+        {
+          "at": "2026-10-08T23:48:14.104Z",
+          "field": "title",
+          "from": "Le transport des repas dans les écoles maternelles et primaires publiques Le Maire de la Commune de KONE informe les entreprises qu’il lance un appel d’offres ouvert concernant : le transport des repas dans les écoles ma",
+          "to": "Le transport des repas dans les écoles maternelles et primaires publiques"
+        }
+      ]
     },
     {
       "id": "ville-dumbea:dab4cb4e31393288",
@@ -381,6 +478,132 @@
       "lastSeen": "2026-10-08T07:01:12.138Z",
       "seed": true,
       "status": "Advertised"
+    },
+    {
+      "id": "lnc-legales:651e50b721569e51",
+      "sourceId": "lnc-legales",
+      "kind": "consultation",
+      "title": "Direction de l'Enseignement, de la Formation, de l'Insertion et de la Jeunesse",
+      "summary": "PROVINCE NORD DEFIJ - Direction de l'Enseignement, de la Formation, de l'Insertion et de la Jeunesse",
+      "buyer": "PROVINCE NORD DEFIJ",
+      "url": "https://legales.lnc.nc/annonce/province-nord-defij-direction-de-lenseignement-de-la-formation-de-linsertion-et-de-la-jeunesse-08-10-2026-30513",
+      "publishedAt": "2026-10-08T00:00:00+11:00",
+      "firstSeen": "2026-10-08T23:47:17.509Z",
+      "lastSeen": "2026-10-08T23:47:17.509Z"
+    },
+    {
+      "id": "lnc-legales:ef81285f655ab0f9",
+      "sourceId": "lnc-legales",
+      "kind": "consultation",
+      "title": "Demande de toiles ombrières extérieures au nive...",
+      "summary": "N° de Consultation : 2026/S3005 Demande de toiles ombrières extérieures au nive...",
+      "reference": "2026/S3005",
+      "buyer": "PROVINCE NORD DASSPS",
+      "url": "https://legales.lnc.nc/annonce/province-nord-dassps-direction-des-affaires-sanitaires-et-sociales-et-des-problemes-de-societe-08-10-2026-30514",
+      "publishedAt": "2026-10-08T00:00:00+11:00",
+      "firstSeen": "2026-10-08T23:47:17.509Z",
+      "lastSeen": "2026-10-08T23:47:17.509Z"
+    },
+    {
+      "id": "lnc-legales:87d30e5ec4d3811e",
+      "sourceId": "lnc-legales",
+      "kind": "consultation",
+      "title": "Révision remorque SPHYRAENA BGN Sud SBGN 2026",
+      "summary": "N° de Consultation : 2026/S3008 Révision remorque SPHYRAENA BGN Sud SBGN 2026 Révision remorque...",
+      "reference": "2026/S3008",
+      "buyer": "PROVINCE NORD DDEE",
+      "url": "https://legales.lnc.nc/annonce/province-nord-ddee-direction-du-developpement-economique-et-de-lenvironnement-08-10-2026-30515",
+      "publishedAt": "2026-10-08T00:00:00+11:00",
+      "firstSeen": "2026-10-08T23:47:17.509Z",
+      "lastSeen": "2026-10-08T23:47:17.509Z"
+    },
+    {
+      "id": "lnc-legales:d8ade754eb87fb54",
+      "sourceId": "lnc-legales",
+      "kind": "consultation",
+      "title": "Révision des deux remorques ; ALBULA et CORYPHAENA BGN Centre SBGN...",
+      "summary": "N° de Consultation : 2026/S3007 Révision des deux remorques ; ALBULA et CORYPHAENA BGN Centre SBGN...",
+      "reference": "2026/S3007",
+      "buyer": "PROVINCE NORD DDEE",
+      "url": "https://legales.lnc.nc/annonce/province-nord-ddee-direction-du-developpement-economique-et-de-lenvironnement-08-10-2026-30517",
+      "publishedAt": "2026-10-08T00:00:00+11:00",
+      "firstSeen": "2026-10-08T23:47:17.509Z",
+      "lastSeen": "2026-10-08T23:47:17.509Z"
+    },
+    {
+      "id": "lnc-legales:c4e87bce642eea7c",
+      "sourceId": "lnc-legales",
+      "kind": "consultation",
+      "title": "AVIS D’APPEL D’OFFRES CONFORT-THERMIQUE-BRL-2026 AMELIORATION DU CONFORT THERMIQUE DES ECOLES LOUISE MICHEL & LYS D'EAU LOTS 01 ET 13",
+      "summary": "AVIS D’APPEL D’OFFRES CONFORT-THERMIQUE-BRL-2026 AMELIORATION DU CONFORT THERMIQUE DES ECOLES LOUISE MICHEL & LYS D'EAU LOTS 01 ET 13 Objet : La consultation ...",
+      "buyer": "MAIRIE DE BOURAIL",
+      "url": "https://legales.lnc.nc/annonce/mairie-de-bourail-08-10-2026-30526",
+      "publishedAt": "2026-10-08T00:00:00+11:00",
+      "firstSeen": "2026-10-08T23:47:17.509Z",
+      "lastSeen": "2026-10-08T23:47:17.509Z"
+    },
+    {
+      "id": "lnc-legales:97b79693003f3246",
+      "sourceId": "lnc-legales",
+      "kind": "consultation",
+      "title": "Annonce de consultation SERVEURSDMZSIA Fourniture et maintenance de Serveurs DMZ et SIA Date et heure limite de remi...",
+      "summary": "CCI - Chambre de commerce et d'industrie de Nouvelle-Calédonie",
+      "buyer": "CCI - Chambre de commerce et d'industrie de Nouvelle-Calédonie",
+      "url": "https://legales.lnc.nc/annonce/cci-chambre-de-commerce-et-dindustrie-de-nouvelle-caledonie-08-10-2026-30525",
+      "publishedAt": "2026-10-08T00:00:00+11:00",
+      "firstSeen": "2026-10-08T23:47:17.509Z",
+      "lastSeen": "2026-10-08T23:47:17.509Z"
+    },
+    {
+      "id": "lnc-legales:bd8fe95fe1170579",
+      "sourceId": "lnc-legales",
+      "kind": "consultation",
+      "title": "AVIS D'APPEL D'OFFRES DE PRESTATIONS DE SERVICES 2026-03 HGN",
+      "summary": "AVIS D'APPEL D'OFFRES DE PRESTATIONS DE SERVICES 2026-03 HGN Collecte des ordures ménagères et déchets issus du tri sélectif de la commune pour la période...",
+      "buyer": "COMMUNE DE HIENGHENE",
+      "url": "https://legales.lnc.nc/annonce/commune-de-hienghene-08-10-2026-30522",
+      "publishedAt": "2026-10-08T00:00:00+11:00",
+      "firstSeen": "2026-10-08T23:47:17.509Z",
+      "lastSeen": "2026-10-08T23:47:17.509Z"
+    },
+    {
+      "id": "lnc-legales:105d3728ef76e282",
+      "sourceId": "lnc-legales",
+      "kind": "consultation",
+      "title": "Formation PSC1 par prestataire agréé dans le c...",
+      "summary": "N° de Consultation : 2026/S3010 Formation PSC1 par prestataire agréé dans le c...",
+      "reference": "2026/S3010",
+      "buyer": "PROVINCE NORD DEFIJ",
+      "url": "https://legales.lnc.nc/annonce/province-nord-defij-direction-de-lenseignement-de-la-formation-de-linsertion-et-de-la-jeunesse-08-10-2026-30519",
+      "publishedAt": "2026-10-08T00:00:00+11:00",
+      "firstSeen": "2026-10-08T23:47:17.509Z",
+      "lastSeen": "2026-10-08T23:47:17.509Z"
+    },
+    {
+      "id": "lnc-legales:7bf2b7394ee1f866",
+      "sourceId": "lnc-legales",
+      "kind": "consultation",
+      "title": "Fourniture de matériel d'armement pour une bateau en 3L2",
+      "summary": "N° de Consultation : 2026/S3009 Fourniture de matériel d'armement pour une bateau en 3L2 Objet...",
+      "reference": "2026/S3009",
+      "buyer": "PROVINCE NORD DDEE",
+      "url": "https://legales.lnc.nc/annonce/province-nord-ddee-direction-du-developpement-economique-et-de-lenvironnement-08-10-2026-30516",
+      "publishedAt": "2026-10-08T00:00:00+11:00",
+      "firstSeen": "2026-10-08T23:47:17.509Z",
+      "lastSeen": "2026-10-08T23:47:17.509Z"
+    },
+    {
+      "id": "lnc-legales:bef4eec37280132e",
+      "sourceId": "lnc-legales",
+      "kind": "consultation",
+      "title": "ANNONCE LEGALE N° 2026/73 TÉLÉSURVEILLANCE, SURVEILLANCE ET GARDIENNAGE DES ÉDIFICES ET ESPACES COMMUNAUX",
+      "summary": "ANNONCE LEGALE N° 2026/73 TÉLÉSURVEILLANCE, SURVEILLANCE ET GARDIENNAGE DES ÉDIFICES ET ESPACES COMMUNAUX Le maire de la ville de Nouméa informe les personnes i...",
+      "reference": "2026/73",
+      "buyer": "VILLE DE NOUMEA",
+      "url": "https://legales.lnc.nc/annonce/ville-de-noumea-08-10-2026-30518",
+      "publishedAt": "2026-10-08T00:00:00+11:00",
+      "firstSeen": "2026-10-08T23:47:17.509Z",
+      "lastSeen": "2026-10-08T23:47:17.509Z"
     },
     {
       "id": "marches-publics-etat:g6l-3080344",
@@ -1012,6 +1235,34 @@
       "firstSeen": "2026-10-08T07:01:04.349Z",
       "lastSeen": "2026-10-08T07:01:04.349Z",
       "seed": true
+    },
+    {
+      "id": "pwd-vanuatu:438d3790a0245175",
+      "sourceId": "pwd-vanuatu",
+      "kind": "consultation",
+      "title": "ID714: Invitation to RFQ 06/26/WK/RFQ/EF/SH/BU/ERP/FE25/DoPH - Construction of Security Guard House at South Paray domestic Wharf. (Re-advertise)",
+      "summary": "Dear Potential Bidders,\n\nThe Public Works Department would like to invite you to submit your quotation in response to the re-advertisement of RFQ 06/26/WK/RFQ/EF/SH/BU/ERP/FE25/DoPH - Construction of Security Guard House at South Paray domestic Wharf (Re-advertise)\n\nFind attached the RFQ package on this link:\n\nhttps://drive.google.com/file/d/1_qs_PGL4vSp7AUOqe7Oc4W-zonJvF2hU/view?usp=sharing\n\nNB. Potential Bidders must verify that they are complying with Vanuatu Tax Laws by providing:\n\na) A copy of business registration certificate (VFS) for 2026\n\nb) Copy of Business license by Customs or Province for 2026\n\nc) VAT clearance letter from Customs for 2025\n\nQuotations must be received no later than the Submission Date and Time being: 10.00 am on Monday 12th October 2026 by mail or hand-delivered to the address specified below:\n\nRFQ 06/26/WK/RFQ/SN/SN/PT/DoPH/NPP/MIPU\n\nPublic Works Department Head Office\n\nNasituan Building, Rue Sautot, Port Vila\n\nThank you,\n\n\n\nRalston Charlie\n\nSenior Procurement Officer North\n\nEmail: cralston@vanuatu.gov.vu\nPublic Works Department,\n\nPort Vila, Vanuatu\nPhone: (678) 33460 or (678) 22888\npwd.gov.vu/",
+      "url": "https://pwd.gov.vu/procurements/procurements-page/714-id714-invitation-to-rfq-06-26-wk-rfq-ef-sh-bu-erp-fe25-doph-construction-of-security-guard-house-at-south-paray-domestic-wharf-re-advertise",
+      "publishedAt": "2026-10-06T10:05:30.000Z",
+      "tags": [
+        "Procurements"
+      ],
+      "firstSeen": "2026-10-08T23:50:01.488Z",
+      "lastSeen": "2026-10-08T23:50:01.488Z"
+    },
+    {
+      "id": "pwd-vanuatu:3a0025ca518e41fc",
+      "sourceId": "pwd-vanuatu",
+      "kind": "consultation",
+      "title": "ID713: Invitation to RFQ: 19/26/WK/RFQ/EF/SH/BU/ERP/FE25/DoPH - Supply of Fenders for International Main wharf, Port Vila, Shefa Provinces",
+      "summary": "Dear Potential Bidders,\n\nThe Public Works Department would like to invite you to submit your quotation in response to the\n\nRFQ: 19/26/WK/RFQ/EF/SH/BU/ERP/FE25/DoPH - Supply of Fenders for International Main wharf, Port Vila, Shefa Provinces.\n\nFind attached the RFQ package on this link:\n\nhttps://drive.google.com/drive/folders/1uhue5u1oX4__6n3GmI9MBvLwctbsVdhu?usp=sharing\n\nNB. Potential Bidders must verify that they are complying with Vanuatu Tax Laws by providing:\n\na) A copy of business registration certificate (VFS) for 2026\n\nb) Copy of Business license by Customs or Province for 2026\n\nc) VAT clearance letter from Customs for 2025\n\nQuotations must be received no later than the Submission Date and Time being: 3.00pm on 9th October 2026 by mail or hand-delivered to the address specified below:\n\nRFQ 19/26/WK/RFQ/SN/SN/PT/DoPH/NPP/MIPU\n\nPublic Works Department Head Office\n\nNasituan Building, Rue Sautot, Port Vila\n\nThank you,\n\n\n\nRalston Charlie\n\nSenior Procurement Officer North\n\nEmail: cralston@vanuatu.gov.vu\nPublic Works Department,\n\nPort Vila, Vanuatu\nPhone: (678) 33460 or (678) 22888\npwd.gov.vu/",
+      "url": "https://pwd.gov.vu/procurements/procurements-page/713-id713-invitation-to-rfq-19-26-wk-rfq-ef-sh-bu-erp-fe25-doph-supply-of-fenders-for-international-main-wharf-port-vila-shefa-provinces",
+      "publishedAt": "2026-10-06T09:47:37.000Z",
+      "tags": [
+        "Procurements"
+      ],
+      "firstSeen": "2026-10-08T23:50:01.488Z",
+      "lastSeen": "2026-10-08T23:50:01.488Z"
     },
     {
       "id": "cps-appels-offres:17fa5ca942a51fd9",
@@ -1921,10 +2172,19 @@
       "procedureCode": "AOO",
       "url": "https://portail.marchespublics.nc/entreprise/consultation/3438?orgAcronyme=f4g",
       "publishedAt": "2026-09-29T00:00:00+11:00",
-      "deadline": "2026-10-20T15:30:00+11:00",
+      "deadline": "2026-11-03T15:30:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
       "lastSeen": "2026-10-08T07:01:04.349Z",
-      "seed": true
+      "seed": true,
+      "updatedAt": "2026-10-08T23:46:53.271Z",
+      "history": [
+        {
+          "at": "2026-10-08T23:46:53.271Z",
+          "field": "deadline",
+          "from": "2026-10-20T15:30:00+11:00",
+          "to": "2026-11-03T15:30:00+11:00"
+        }
+      ]
     },
     {
       "id": "marchespublics-nc:q1s-3437",
@@ -4115,14 +4375,23 @@
       "id": "port-papeete:7b935ec8a6e4cf06",
       "sourceId": "port-papeete",
       "kind": "attribution",
-      "title": "AVIS D’APPEL PUBLIC A CANDIDATURES N°2026/27POUR L’ATTRIBUTION D’AUTORISATIONS D’OUTILLAGE PRIVE AVEC OBLIGATION DE SERVICE PUBLIC SUR LE TERMINAL DE COMMERCE INTERNATIONAL DU PORT DE PAPEETE 1. Informations sur l’autori",
+      "title": "AVIS D’APPEL PUBLIC A CANDIDATURES N°2026/27POUR L’ATTRIBUTION D’AUTORISATIONS D’OUTILLAGE PRIVE AVEC OBLIGATION DE SERVICE PUBLIC SUR LE TERMINAL DE COMMERCE INTERNATIONAL DU PORT DE PAPEETE",
       "summary": "AVIS D’APPEL PUBLIC A CANDIDATURES N°2026/27POUR L’ATTRIBUTION D’AUTORISATIONS D’OUTILLAGE PRIVE AVEC OBLIGATION DE SERVICE PUBLIC SUR LE TERMINAL DE COMMERCE INTERNATIONAL DU PORT DE PAPEETE 1. Informations sur l’autorité compétente pour attribuer les autorisations d’outillage privé avec obligation de service public. L’autorité compétente pour attribuer... Lire la suite août 26, 2026 A la une , Actualités , Marchés publics",
       "reference": "2026/27POUR",
       "url": "https://www.portdepapeete.pf/2026/08/26/avis-dappel-public-a-candidatures-n2026-27pour-lattribution-dautorisations-doutillage-prive-avec-obligation-de-service-public-sur-le-terminal-de-commerce-inte/",
       "publishedAt": "2026-08-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:09.865Z",
       "lastSeen": "2026-10-08T09:13:09.865Z",
-      "seed": true
+      "seed": true,
+      "updatedAt": "2026-10-08T23:49:40.798Z",
+      "history": [
+        {
+          "at": "2026-10-08T23:49:40.798Z",
+          "field": "title",
+          "from": "AVIS D’APPEL PUBLIC A CANDIDATURES N°2026/27POUR L’ATTRIBUTION D’AUTORISATIONS D’OUTILLAGE PRIVE AVEC OBLIGATION DE SERVICE PUBLIC SUR LE TERMINAL DE COMMERCE INTERNATIONAL DU PORT DE PAPEETE 1. Informations sur l’autori",
+          "to": "AVIS D’APPEL PUBLIC A CANDIDATURES N°2026/27POUR L’ATTRIBUTION D’AUTORISATIONS D’OUTILLAGE PRIVE AVEC OBLIGATION DE SERVICE PUBLIC SUR LE TERMINAL DE COMMERCE INTERNATIONAL DU PORT DE PAPEETE"
+        }
+      ]
     },
     {
       "id": "mont-dore:6df7697b0e7a4da9",
@@ -7678,13 +7947,22 @@
       "id": "ville-kone:3981c9e17682ead5",
       "sourceId": "ville-kone",
       "kind": "attribution",
-      "title": "Nouveaux marchés FER 2022 et 2023 Avis d’attribution marchés NEAMI NETCHAOT et TIAKANA La mairie continue son programme d’électrification en attribuant 3 nouveaux marchés. Ceci se fait dans la cadre du programme FER (Fon",
+      "title": "Nouveaux marchés FER 2022 et 2023",
       "summary": "Nouveaux marchés FER 2022 et 2023 Avis d’attribution marchés NEAMI NETCHAOT et TIAKANA La mairie continue son programme d’électrification en attribuant 3 nouveaux marchés. Ceci se fait dans la cadre du programme FER (Fonds Electrification Rurale). AVIS ATTRIBUTION ELECTRIFICATION GOROMOEDO et MAHOSSEM TIAKANA AVIS ATTRIBUTION ELECTRIFICATION WARU Pierre NETCHAOT AVIS... 25/11/2025",
       "url": "https://www.koohne.nc/nouveaux-marches-fer-2022-et-2023/",
       "publishedAt": "2023-01-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:00.240Z",
       "lastSeen": "2026-10-08T09:13:00.240Z",
-      "seed": true
+      "seed": true,
+      "updatedAt": "2026-10-08T23:48:14.104Z",
+      "history": [
+        {
+          "at": "2026-10-08T23:48:14.104Z",
+          "field": "title",
+          "from": "Nouveaux marchés FER 2022 et 2023 Avis d’attribution marchés NEAMI NETCHAOT et TIAKANA La mairie continue son programme d’électrification en attribuant 3 nouveaux marchés. Ceci se fait dans la cadre du programme FER (Fon",
+          "to": "Nouveaux marchés FER 2022 et 2023"
+        }
+      ]
     },
     {
       "id": "secal:a0a4bd69187945ec",
@@ -8542,13 +8820,22 @@
       "id": "ville-kone:166c1506a3ad37c6",
       "sourceId": "ville-kone",
       "kind": "consultation",
-      "title": "HTA/BTA habitations à la tribu de NEAMI La mairie de Koné informe les entrepreneurs du lancement d’un appel d’offres pour la réalisation des travaux d’électrification filaire HTA/BTA habitations à la tribu de NEAMI (FER",
+      "title": "HTA/BTA habitations à la tribu de NEAMI",
       "summary": "HTA/BTA habitations à la tribu de NEAMI La mairie de Koné informe les entrepreneurs du lancement d’un appel d’offres pour la réalisation des travaux d’électrification filaire HTA/BTA habitations à la tribu de NEAMI (FER 2022) sur la commune de Koné. Vous pouvez trouver cette consultation sur le site : https://marchespublics.province-nord.nc/accueil.aspx AVIS AOO... 03/05/2025",
       "url": "https://www.koohne.nc/hta-bta-habitations-a-la-tribu-de-neami-fer-2022/",
       "publishedAt": "2022-01-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:00.240Z",
       "lastSeen": "2026-10-08T09:13:00.240Z",
-      "seed": true
+      "seed": true,
+      "updatedAt": "2026-10-08T23:48:14.104Z",
+      "history": [
+        {
+          "at": "2026-10-08T23:48:14.104Z",
+          "field": "title",
+          "from": "HTA/BTA habitations à la tribu de NEAMI La mairie de Koné informe les entrepreneurs du lancement d’un appel d’offres pour la réalisation des travaux d’électrification filaire HTA/BTA habitations à la tribu de NEAMI (FER",
+          "to": "HTA/BTA habitations à la tribu de NEAMI"
+        }
+      ]
     },
     {
       "id": "secal:c3ebe38823f9f260",
