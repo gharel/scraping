@@ -155,6 +155,12 @@
   color: var(--warning-text);
 }
 
+.badge--info {
+  background: var(--info-soft);
+  border-color: transparent;
+  color: var(--info-text);
+}
+
 .badge--new {
   background: var(--accent);
   border-color: var(--accent);

@@ -4,6 +4,7 @@
  */
 import { getAdapter } from './adapters/index.js';
 import { createHttpClient } from './lib/http.js';
+import { RELAY_VERSION, relayItems, relayProblem } from './lib/relais.js';
 import { loadStore } from './lib/store.js';
 import { cleanText, oneLine } from './lib/text.js';
 
@@ -110,9 +111,47 @@ export function pruneItems(items, { now, retentionDays, sourceIds }) {
   });
 }
 
-export async function runVeille({ config, dataDir, only = null, log = () => {}, now = () => new Date() }) {
+/**
+ * Relevé d'une source à publier pour la veille en ligne : ses annonces actuelles (non retirées),
+ * avec la même clé que lors d'une lecture directe, et la date de la dernière lecture réussie.
+ */
+export function buildRelay({ source, items, status }) {
+  const prefix = `${source.id}:`;
+  const list = items
+    .filter((item) => item.sourceId === source.id && !item.gone && String(item.id).startsWith(prefix))
+    .map((item) => ({ key: item.id.slice(prefix.length), ...sanitizeItem(item) }))
+    .sort((a, b) => (a.key < b.key ? -1 : a.key > b.key ? 1 : 0));
+  return {
+    version: RELAY_VERSION,
+    sourceId: source.id,
+    url: source.url,
+    at: status.lastSuccess,
+    listing: Boolean(status.listing),
+    total: status.total ?? list.length,
+    items: list,
+  };
+}
+
+/** Relais publié par le PC pour cette source, s'il est récent et correspond à la même adresse. */
+async function freshRelay(store, source, now, log) {
+  let relay;
+  try {
+    relay = await store.readRelay(source.id);
+  } catch (error) {
+    log(`  relais illisible : ${error.message}`);
+    return null;
+  }
+  if (!relay) return null;
+  const problem = relayProblem(relay, source, now);
+  if (problem) {
+    log(`  relais ignoré : ${problem}`);
+    return null;
+  }
+  return { ...relay, items: relayItems(relay) };
+}
+
+export async function runVeille({ config, dataDir, only = null, log = () => {}, now = () => new Date(), runner = RUNNER, http = createHttpClient() }) {
   const store = await loadStore(dataDir);
-  const http = createHttpClient();
   const startedAt = now();
   const status = store.status;
   const seeded = { ...store.seeded };
@@ -120,6 +159,21 @@ export async function runVeille({ config, dataDir, only = null, log = () => {}, 
   const added = [];
   const updated = [];
   const report = [];
+
+  // Fusionne les annonces lues (ou relayées) d'une source et renvoie ses vraies nouveautés.
+  const integrate = (source, rawItems, { runAt, listing }) => {
+    // Premier passage (ou adresse modifiée) : les annonces déjà en ligne ne sont pas des nouveautés.
+    const firstRun = seeded[source.id] !== source.url;
+    // Adresse modifiée : les annonces de l'ancienne adresse sont remplacées, pas marquées « retirées ».
+    if (seeded[source.id] && firstRun) items = items.filter((item) => item.sourceId !== source.id);
+    const merged = mergeSourceItems(items, source, rawItems, { now: runAt, firstRun, listing });
+    seeded[source.id] = source.url;
+    items = merged.items;
+    const fresh = merged.added.filter((item) => !item.seed);
+    added.push(...fresh);
+    updated.push(...merged.updated);
+    return { fresh, firstRun };
+  };
 
   for (const source of config.sources.filter((entry) => entry.invalid)) {
     status.sources[source.id] = {
@@ -139,19 +193,10 @@ export async function runVeille({ config, dataDir, only = null, log = () => {}, 
       const adapter = getAdapter(source.type);
       const snapshot = adapter.listing ? null : await store.readSnapshot(source.id);
       const result = await adapter.fetch(source, { http, log, now: runAt, snapshot });
-      // Premier passage (ou adresse modifiée) : les annonces déjà en ligne ne sont pas des nouveautés.
-      const firstRun = seeded[source.id] !== source.url;
-      // Adresse modifiée : les annonces de l'ancienne adresse sont remplacées, pas marquées « retirées ».
-      if (seeded[source.id] && firstRun) items = items.filter((item) => item.sourceId !== source.id);
       // Une page en mode « liens » se comporte comme une liste : un lien disparu = annonce retirée.
-      const listing = result.listing ?? adapter.listing;
-      const merged = mergeSourceItems(items, source, result.items, { now: runAt, firstRun, listing });
-      seeded[source.id] = source.url;
-      items = merged.items;
+      const listing = Boolean(result.listing ?? adapter.listing);
+      const { fresh, firstRun } = integrate(source, result.items, { runAt, listing });
       if (result.snapshot) await store.writeSnapshot(source.id, result.snapshot);
-      const fresh = merged.added.filter((item) => !item.seed);
-      added.push(...fresh);
-      updated.push(...merged.updated);
       status.sources[source.id] = {
         url: source.url,
         type: source.type,
@@ -165,14 +210,44 @@ export async function runVeille({ config, dataDir, only = null, log = () => {}, 
         firstCheck: Boolean(firstRun || result.meta?.firstCheck),
         durationMs: Date.now() - began,
         failures: 0,
-        where: RUNNER,
+        listing,
+        where: runner,
       };
       report.push({ source, ok: true, found: result.items.length, added: fresh.length });
       log(`✓ ${source.name} : ${result.items.length} élément(s) lu(s), ${fresh.length} nouveauté(s)${firstRun ? ' (premier passage)' : ''}`);
     } catch (error) {
       const message = oneLine(error?.message || String(error)).slice(0, 300);
+      // Site que GitHub n'atteint pas : on reprend le relevé récent publié par Vigie sur le PC.
+      const relay = error?.network && runner === 'github' ? await freshRelay(store, source, runAt, log) : null;
+      if (relay) {
+        const { fresh, firstRun } = integrate(source, relay.items, { runAt, listing: Boolean(relay.listing) });
+        status.sources[source.id] = {
+          url: source.url,
+          type: source.type,
+          ok: true,
+          error: null,
+          lastRun: runAt.toISOString(),
+          lastSuccess: relay.at,
+          found: relay.items.length,
+          total: relay.total ?? relay.items.length,
+          added: fresh.length,
+          firstCheck: firstRun,
+          durationMs: Date.now() - began,
+          failures: 0,
+          listing: Boolean(relay.listing),
+          network: true,
+          where: runner,
+          via: 'relais',
+          relayAt: relay.at,
+          directError: message,
+        };
+        report.push({ source, ok: true, found: relay.items.length, added: fresh.length, relayed: true });
+        log(`↪ ${source.name} : injoignable depuis GitHub, ${relay.items.length} élément(s) relayé(s) par le PC (relevé du ${relay.at}), ${fresh.length} nouveauté(s)`);
+        continue;
+      }
+      const { via, directError, ...rest } = previous;
       status.sources[source.id] = {
-        ...previous,
+        ...rest,
         url: source.url,
         type: source.type,
         ok: false,
@@ -182,7 +257,7 @@ export async function runVeille({ config, dataDir, only = null, log = () => {}, 
         lastRun: runAt.toISOString(),
         durationMs: Date.now() - began,
         failures: (previous.failures || 0) + 1,
-        where: RUNNER,
+        where: runner,
       };
       report.push({ source, ok: false, error: message });
       log(`✗ ${source.name} : ${message}`);

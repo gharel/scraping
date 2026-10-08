@@ -388,6 +388,28 @@ const ctx = {
     render();
     toast('Déconnecté de GitHub. Le jeton a été retiré de cet appareil.', 'success');
   },
+  /** Relais vers la version en ligne (mode local) : connect, publish ou disconnect. */
+  async relay(action, payload, buttonElement) {
+    if (!state.backend.relay) return false;
+    setBusy(buttonElement, true, { connect: 'Vérification…', publish: 'Publication…', disconnect: 'Désactivation…' }[action]);
+    try {
+      const result = await state.backend.relay(action, payload);
+      if (state.local) state.local = { ...state.local, relay: result.relay };
+      render();
+      const { outcome } = result;
+      const count = outcome?.published?.length || 0;
+      if (action === 'disconnect') toast('Relais désactivé : le jeton a été retiré de ce PC.', 'success');
+      else if (outcome && !outcome.ok) toast(action === 'connect' ? `Relais activé, mais la publication a échoué : ${outcome.error}` : outcome.error, 'error');
+      else if (count) toast(`${plural(count, 'source publiée', 'sources publiées')} pour la version en ligne : elle les reprendra à son prochain passage.`, 'success', { timeout: 8000 });
+      else toast(action === 'connect' ? 'Relais activé. Rien à publier pour l’instant : il partira après la prochaine vérification.' : 'Rien de nouveau à publier : les relevés en ligne sont à jour.', 'success', { timeout: 8000 });
+      return true;
+    } catch (error) {
+      toast(error.message || 'Relais indisponible.', 'error');
+      return false;
+    } finally {
+      setBusy(buttonElement, false);
+    }
+  },
   setTheme(value) {
     prefs.write('theme', value);
     applyTheme(value);

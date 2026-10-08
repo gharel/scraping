@@ -4,7 +4,7 @@
 import { clear, h, nextId } from '../dom.js';
 import { icon } from '../icons.js';
 import { formatDate, plural, prettyTitle, relativeTime } from '../format.js';
-import { outOfReach } from '../model.js';
+import { outOfReach, relayed } from '../model.js';
 import { guessSourceType, KIND_LABELS, normalizeSource, REGIONS, SOURCE_TYPES, sourceProblems, uniqueId } from '../shared/config.js';
 import { badge, button, callout, categoryBadge, closeDialog, emptyState, field, input, openDialog, pageHead, segmented, select, selectControl, setBusy, toggle, toast } from '../ui.js';
 
@@ -13,12 +13,27 @@ const TYPE_ICONS = { atexo: 'landmark', rss: 'rss', page: 'globe', liste: 'list'
 function statusPill(source, status) {
   if (!source.enabled) return badge('En pause', 'neutral', { iconName: 'pause' });
   if (!status?.lastRun) return badge('Pas encore vérifiée', 'neutral');
+  if (relayed(status)) return badge(`Relayée depuis votre PC · ${relativeTime(status.relayAt)}`, 'info', { iconName: 'laptop', title: `Relevé du ${formatDate(status.relayAt, { time: true })}` });
   if (outOfReach(status)) return badge('Hors de portée en ligne', 'warning', { iconName: 'globe' });
   if (status.ok === false) return badge('Erreur', 'danger', { iconName: 'alert' });
   return badge('À jour', 'success', { iconName: 'check' });
 }
 
 function statusMessage(status) {
+  if (relayed(status)) {
+    return h(
+      'p',
+      { class: 'source-error source-error--relay' },
+      icon('laptop', { size: 16 }),
+      h(
+        'span',
+        null,
+        // Date insécable : « 8 h 03 » ne se coupe pas en fin de ligne.
+        `Les serveurs de GitHub ne peuvent pas lire ce site : ses annonces ont été lues par Vigie sur votre PC (relevé du ${formatDate(status.relayAt, { time: true }).replace(/ /g, ' ')}) puis publiées ici.`,
+        status.directError ? h('small', null, status.directError) : null,
+      ),
+    );
+  }
   if (status?.ok !== false || !status.error) return null;
   if (outOfReach(status)) {
     return h(
@@ -28,7 +43,8 @@ function statusMessage(status) {
       h(
         'span',
         null,
-        'Ce site ne répond pas aux serveurs de GitHub qui assurent la veille en ligne : il filtre sans doute les connexions venant de l’étranger. Il reste lisible depuis votre PC, avec Vigie en local.',
+        'Ce site ne répond pas aux serveurs de GitHub qui assurent la veille en ligne : il filtre sans doute les connexions venant de l’étranger. Il reste lisible depuis votre PC : avec le relais activé dans les réglages de Vigie en local, ses annonces sont publiées ici.',
+        status.relayAt ? ` Dernier relevé relayé ${relativeTime(status.relayAt)}, trop ancien pour être repris.` : null,
         h('small', null, status.error),
       ),
     );
@@ -113,9 +129,11 @@ export function renderSources(ctx) {
   const categoriesById = new Map(state.config.categories.map((category) => [category.id, category]));
   const canEdit = state.backend.canEdit;
   const sources = state.config.sources;
-  const okCount = sources.filter((source) => source.enabled && state.status?.sources?.[source.id]?.ok).length;
-  const reachCount = sources.filter((source) => source.enabled && outOfReach(state.status?.sources?.[source.id])).length;
-  const activeCount = sources.filter((source) => source.enabled).length;
+  const enabledStatus = sources.filter((source) => source.enabled).map((source) => state.status?.sources?.[source.id]);
+  const relayCount = enabledStatus.filter(relayed).length;
+  const okCount = enabledStatus.filter((status) => status?.ok).length - relayCount;
+  const reachCount = enabledStatus.filter(outOfReach).length;
+  const activeCount = enabledStatus.length;
 
   return h(
     'div',
@@ -123,7 +141,7 @@ export function renderSources(ctx) {
     pageHead(
       'Sources',
       sources.length
-        ? `${plural(activeCount, 'source active', 'sources actives')} · ${okCount} à jour${reachCount ? ` · ${reachCount} hors de portée en ligne` : ''}`
+        ? `${plural(activeCount, 'source active', 'sources actives')} · ${okCount} à jour${relayCount ? ` · ${relayCount} relayée${relayCount > 1 ? 's' : ''} depuis votre PC` : ''}${reachCount ? ` · ${reachCount} hors de portée en ligne` : ''}`
         : 'Les sites et flux que Vigie surveille pour vous',
       canEdit ? button('Ajouter une source', { iconName: 'plus', onClick: () => openSourceForm(ctx) }) : null,
       canEdit ? button('Vérifier maintenant', { variant: 'secondary', iconName: 'refresh', onClick: (event) => ctx.runNow(event.currentTarget) }) : null,

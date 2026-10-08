@@ -3,9 +3,11 @@
  *   items.json      toutes les annonces connues
  *   status.json     état de chaque source et historique des passages
  *   snapshots/      dernier état des pages surveillées
+ *   relais/         annonces relayées par Vigie sur le PC (sites que GitHub n'atteint pas)
  */
 import { mkdir, readFile, readdir, rename, rm, writeFile } from 'node:fs/promises';
 import path from 'node:path';
+import { RELAY_DIR, relayFileName } from './relais.js';
 
 async function readJson(file, fallback) {
   try {
@@ -44,6 +46,9 @@ export async function loadStore(dataDir) {
     },
     async writeSnapshot(sourceId, snapshot) {
       await writeJson(path.join(snapshotsDir, `${safeName(sourceId)}.json`), snapshot);
+    },
+    async readRelay(sourceId) {
+      return readJson(path.join(dataDir, RELAY_DIR, relayFileName(sourceId)), null);
     },
     async cleanSnapshots(keepIds) {
       const keep = new Set([...keepIds].map((id) => `${safeName(id)}.json`));

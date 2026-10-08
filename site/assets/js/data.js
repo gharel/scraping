@@ -87,6 +87,15 @@ function localBackend() {
       if (!response.ok) throw new Error(body.error || 'Test impossible');
       return body;
     },
+    /** Relais : le jeton part vers le serveur local, qui le garde sur ce PC et ne le renvoie jamais. */
+    async relay(action, payload) {
+      const route = action === 'publish' ? 'api/relay/publish' : 'api/relay';
+      const method = { connect: 'PUT', disconnect: 'DELETE', publish: 'POST' }[action];
+      const response = await fetch(route, { method, headers, body: payload ? JSON.stringify(payload) : undefined });
+      const body = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(body.error || 'Relais indisponible');
+      return body;
+    },
   };
 }
 

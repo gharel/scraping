@@ -3,7 +3,7 @@
  */
 import { h } from '../dom.js';
 import { icon } from '../icons.js';
-import { plural } from '../format.js';
+import { plural, relativeTime } from '../format.js';
 import * as prefs from '../prefs.js';
 import { button, callout, field, input, pageHead, segmented, setBusy, toast, toggle } from '../ui.js';
 
@@ -29,17 +29,98 @@ function codeLine(text) {
   return h('div', { class: 'code-line' }, h('code', null, text), copy);
 }
 
-function tokenUrl(repository) {
+function tokenUrl(repository, { relay = false } = {}) {
   const [owner, repo] = String(repository || '').split('/');
   const params = new URLSearchParams({
-    name: `Vigie (${repo || 'veille'})`,
-    description: 'Modifier la veille Vigie depuis la version en ligne',
+    name: relay ? `Vigie relais (${repo || 'veille'})` : `Vigie (${repo || 'veille'})`,
+    description: relay ? 'Publier depuis le PC les annonces des sites que GitHub ne peut pas lire' : 'Modifier la veille Vigie depuis la version en ligne',
     target_name: owner || '',
     expires_in: '366',
     contents: 'write',
-    actions: 'write',
+    ...(relay ? {} : { actions: 'write' }),
   });
   return `https://github.com/settings/personal-access-tokens/new?${params}`;
+}
+
+const RELAY_INTRO = 'Quelques sites refusent les serveurs de GitHub qui assurent la veille en ligne. Avec le relais, Vigie publie leurs annonces sur la version en ligne après chaque vérification faite sur ce PC.';
+
+/** Mode local : relais des sites que la veille en ligne n'atteint pas. */
+function relaySection(ctx) {
+  const relay = ctx.state.local?.relay;
+  if (!relay) return null;
+  const repository = relay.repository || 'gharel/scraping';
+  if (!relay.configured) {
+    const token = input({ type: 'password', placeholder: 'github_pat_…', autocomplete: 'off' });
+    const repoInput = relay.repository ? null : input({ placeholder: 'propriétaire/dépôt' });
+    const submit = async (event) => {
+      event.preventDefault();
+      const value = token.value.trim();
+      if (!value) {
+        toast('Collez d’abord le jeton GitHub.', 'error');
+        return;
+      }
+      await ctx.relay('connect', { token: value, repository: repoInput ? repoInput.value.trim() : relay.repository }, event.currentTarget.querySelector('button[type="submit"]'));
+    };
+    return section(
+      'Relais vers la version en ligne',
+      RELAY_INTRO,
+      h(
+        'ol',
+        { class: 'steps' },
+        h(
+          'li',
+          null,
+          h('p', null, h('strong', null, 'Créez un jeton d’accès'), ` limité au dépôt ${repository}, avec l’autorisation « Contents » en lecture et écriture. Le jeton créé pour la version en ligne convient aussi.`),
+          button('Créer le jeton sur GitHub', { variant: 'secondary', size: 'sm', href: tokenUrl(repository, { relay: true }), external: true, iconAfter: 'external' }),
+        ),
+        h(
+          'li',
+          null,
+          h('p', null, h('strong', null, 'Collez le jeton ici.'), ' Il reste sur ce PC, dans local-data/relais.json, et n’est jamais publié.'),
+          h(
+            'form',
+            { class: 'inline-form', onSubmit: submit },
+            repoInput ? field({ label: 'Dépôt GitHub', control: repoInput }) : null,
+            field({ label: 'Jeton GitHub', control: token }),
+            button('Activer le relais', { type: 'submit', iconName: 'cloud' }),
+          ),
+        ),
+      ),
+    );
+  }
+  const { last } = relay;
+  return section(
+    'Relais vers la version en ligne',
+    RELAY_INTRO,
+    callout('success', 'cloud', `Relais actif vers ${relay.repository}`, h('p', null, 'La veille en ligne reprend ces annonces à son passage suivant (toutes les 2 heures), tant que le relevé a moins de 6 heures.')),
+    last && !last.ok ? callout('warning', 'warning', 'La dernière publication a échoué', h('p', null, last.error)) : null,
+    h(
+      'ul',
+      { class: 'facts' },
+      h('li', null, icon('clock', { size: 18 }), h('span', null, h('strong', null, 'Dernière publication : '), relay.running ? 'en cours…' : relay.publishedAt ? relativeTime(relay.publishedAt) : 'aucune pour l’instant, elle partira après la prochaine vérification.')),
+      last?.ok && last.online === false ? h('li', null, icon('info', { size: 18 }), h('span', null, 'Version en ligne injoignable au dernier essai : seules les sources déjà relayées ont été publiées.')) : null,
+    ),
+    relay.sources.length
+      ? h(
+          'div',
+          { class: 'relay-sources' },
+          h('p', { class: 'relay-sources-title' }, plural(relay.sources.length, 'source relayée', 'sources relayées')),
+          h(
+            'ul',
+            null,
+            relay.sources.map((entry) =>
+              h('li', null, h('span', { class: 'relay-source-name' }, entry.name), h('span', { class: 'relay-source-meta' }, [entry.at ? `relevé ${relativeTime(entry.at)}` : null, entry.found != null ? plural(entry.found, 'annonce') : null].filter(Boolean).join(' · '))),
+            ),
+          ),
+        )
+      : null,
+    h(
+      'div',
+      { class: 'settings-actions' },
+      button('Publier maintenant', { variant: 'secondary', iconName: 'refresh', onClick: (event) => ctx.relay('publish', null, event.currentTarget) }),
+      button('Désactiver le relais', { variant: 'ghost', iconName: 'logout', onClick: (event) => ctx.relay('disconnect', null, event.currentTarget) }),
+    ),
+  );
 }
 
 function githubSection(ctx) {
@@ -218,6 +299,7 @@ function installSection(ctx) {
       h('li', null, h('p', null, 'Lancez Vigie : l’interface s’ouvre sur http://localhost:4700'), codeLine('npm start')),
     ),
     h('p', { class: 'field-hint' }, 'Sous Windows, le script scripts\\windows\\installer-demarrage.ps1 lance Vigie automatiquement à l’ouverture de session.'),
+    h('p', { class: 'field-hint' }, 'Activez ensuite le relais dans les réglages de Vigie sur votre PC : les sites que GitHub ne peut pas lire apparaîtront aussi sur cette version en ligne.'),
   );
 }
 
@@ -247,6 +329,7 @@ export function renderReglages(ctx) {
         }),
       ),
       githubSection(ctx),
+      state.backend.kind === 'local' ? relaySection(ctx) : null,
       alertsSection(ctx),
       scheduleSection(ctx),
       deviceSection(ctx),

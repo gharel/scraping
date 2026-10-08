@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "sourceId": "mont-dore",
+  "url": "https://www.mont-dore.nc/marches-publics",
+  "at": "2026-10-08T21:10:49.651Z",
+  "listing": true,
+  "total": 12,
+  "items": [
+    {
+      "key": "236ed841906b6c83",
+      "kind": "attribution",
+      "title": "Avis d'attribution de marché - 25-15-MD - Entretien des espaces verts de la ville du Mont-Dore Lot...",
+      "summary": "Marchés attribués Avis d'attribution de marché - 25-15-MD - Entretien des espaces verts de la ville du Mont-Dore Lot...",
+      "url": "https://www.mont-dore.nc/sites/default/files/st-marches-publics/st-2026/st-2026-03/Avis%20d%27attribution%20march%C3%A9%2025-15MD.pdf",
+      "publishedAt": "2026-03-01T00:00:00+11:00"
+    },
+    {
+      "key": "3a09c6fbf7e8ee3b",
+      "kind": "attribution",
+      "title": "Avis d'attribution de marché - 26-01- MD à 26 - 14 - MD - Construction du nouveau centre de secour...",
+      "summary": "Marchés attribués Avis d'attribution de marché - 26-01- MD à 26 - 14 - MD - Construction du nouveau centre de secour...",
+      "url": "https://www.mont-dore.nc/sites/default/files/st-marches-publics/st-2026/st-2026-04/Avis%20d%27attribution%20march%C3%A9s%2026-01MD%20%C3%A0%2026-14MD.pdf",
+      "publishedAt": "2026-04-01T00:00:00+11:00"
+    },
+    {
+      "key": "407e3149070d1f31",
+      "kind": "attribution",
+      "title": "Avis d'attribution de marché - 25-12-MD - Collecte et traitement des déchets municipaux Lot 1",
+      "summary": "Marchés attribués Avis d'attribution de marché - 25-12-MD - Collecte et traitement des déchets municipaux Lot 1",
+      "url": "https://www.mont-dore.nc/sites/default/files/st-marches-publics/st-2026/st-2026-03/Avis%20d%27attribution%20march%C3%A9%2025-12MD.pdf",
+      "publishedAt": "2026-03-01T00:00:00+11:00"
+    },
+    {
+      "key": "40cd6918cd72c655",
+      "kind": "consultation",
+      "title": "AVIS D'APPEL D'OFFRES L'entretien des espaces verts de la Ville du Mont-Dore Lot 8 (La Conception)...",
+      "summary": "Appels d’offres AVIS D'APPEL D'OFFRES L'entretien des espaces verts de la Ville du Mont-Dore Lot 8 (La Conception)...",
+      "url": "https://www.mont-dore.nc/sites/default/files/st-marches-publics/st-2026/st-2026-10/00.%20AAO_EV_MtDore.pdf",
+      "publishedAt": "2026-10-01T00:00:00+11:00"
+    },
+    {
+      "key": "54b299576e00c31e",
+      "kind": "consultation",
+      "title": "AVIS D’APPEL D’OFFRES - La collecte des ordures ménagères résiduelles et déchets ménagers recyclab...",
+      "summary": "Appels d’offres AVIS D’APPEL D’OFFRES - La collecte des ordures ménagères résiduelles et déchets ménagers recyclab...",
+      "url": "https://www.mont-dore.nc/sites/default/files/st-marches-publics/st-2026/st-2026-08/00.%20AAO_March%C3%A92_collecte%20OM_MtDore.pdf",
+      "publishedAt": "2026-08-01T00:00:00+11:00"
+    },
+    {
+      "key": "6df7697b0e7a4da9",
+      "kind": "attribution",
+      "title": "L'avis d’attribution du marché n°26-16/MD",
+      "summary": "Marchés attribués L'avis d’attribution du marché n°26-16/MD",
+      "reference": "26-16/MD",
+      "url": "https://www.mont-dore.nc/sites/default/files/st-marches-publics/st-2026/st-2026-08/Avis%20d%27attribution%20march%C3%A9%2026-16MD.pdf",
+      "publishedAt": "2026-08-01T00:00:00+11:00"
+    },
+    {
+      "key": "711cc922ee40309f",
+      "kind": "attribution",
+      "title": "Avis d'attribution de marché - 25-14-MD - Entretien des espaces verts de la Ville du Mont-Dore Lot...",
+      "summary": "Marchés attribués Avis d'attribution de marché - 25-14-MD - Entretien des espaces verts de la Ville du Mont-Dore Lot...",
+      "url": "https://www.mont-dore.nc/sites/default/files/st-marches-publics/st-2026/st-2026-03/Avis%20d%27attribution%20march%C3%A9%2025-14MD.pdf",
+      "publishedAt": "2026-03-01T00:00:00+11:00"
+    },
+    {
+      "key": "7f05383af819abeb",
+      "kind": "attribution",
+      "title": "Avis d'attribution marché 25-13MD - Collecte et traitement des déchets municipaux Lots 2 et 3",
+      "summary": "Marchés attribués Avis d'attribution marché 25-13MD - Collecte et traitement des déchets municipaux Lots 2 et 3",
+      "url": "https://www.mont-dore.nc/sites/default/files/st-marches-publics/st-2026/st-2026-01/Avis%20d%27attribution%20march%C3%A9%2025-13MD.pdf",
+      "publishedAt": "2026-01-01T00:00:00+11:00"
+    },
+    {
+      "key": "8b662a9c95ac36cc",
+      "kind": "consultation",
+      "title": "AVIS D’APPEL D’OFFRES - La gestion du service de pré-collecte des déchets ménagers de la Ville du ...",
+      "summary": "Appels d’offres AVIS D’APPEL D’OFFRES - La gestion du service de pré-collecte des déchets ménagers de la Ville du ...",
+      "url": "https://www.mont-dore.nc/sites/default/files/st-marches-publics/st-2026/st-2026-08/00.%20AAO_March%C3%A91_bacs_MtDore.pdf",
+      "publishedAt": "2026-08-01T00:00:00+11:00"
+    },
+    {
+      "key": "9b3f95d2107a2171",
+      "kind": "consultation",
+      "title": "AVIS D’APPEL D’OFFRES - La gestion de la relation avec les usagers dans le cadre des marchés de co...",
+      "summary": "Appels d’offres AVIS D’APPEL D’OFFRES - La gestion de la relation avec les usagers dans le cadre des marchés de co...",
+      "url": "https://www.mont-dore.nc/sites/default/files/st-marches-publics/st-2026/st-2026-08/00.%20AAO_March%C3%A93_Relation%20usagers_MtDore.pdf",
+      "publishedAt": "2026-08-01T00:00:00+11:00"
+    },
+    {
+      "key": "cc5573c1923ffcfc",
+      "kind": "consultation",
+      "title": "AVIS D’APPEL D’OFFRES - L’exploitation du réseau et de la station d’épuration du centre-ville à Bo...",
+      "summary": "Appels d’offres AVIS D’APPEL D’OFFRES - L’exploitation du réseau et de la station d’épuration du centre-ville à Bo...",
+      "url": "https://www.mont-dore.nc/sites/default/files/st-marches-publics/st-2026/st-2026-08/0.2-AAO%20STEP%20BOULARI%20MD%202026%20%281%29.pdf",
+      "publishedAt": "2026-08-01T00:00:00+11:00"
+    },
+    {
+      "key": "e5cf57438f9d246d",
+      "kind": "consultation",
+      "title": "AVIS D’APPEL D’OFFRES - L’exploitation du réseau et de la station d’épuration du centre-ville à Bo...",
+      "summary": "Appels d’offres AVIS D’APPEL D’OFFRES - L’exploitation du réseau et de la station d’épuration du centre-ville à Bo...",
+      "url": "https://www.mont-dore.nc/sites/default/files/st-marches-publics/st-2026/st-2026-08/0.2-AAO%20STEP%20BOULARI%20MD%202026.pdf",
+      "publishedAt": "2026-08-01T00:00:00+11:00"
+    }
+  ]
+}

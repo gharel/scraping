@@ -55,14 +55,14 @@ Interface conçue avec le design system **Skazy Formation** (Claude Design) : lo
 
 Les pages de la Ville de Nouméa, d’Enercal et de l’OPT n’ayant pas de liste exploitable, Vigie y signale toute modification.
 
-**Sites hors de portée en ligne.** Quelques sites refusent les connexions venant des serveurs de GitHub, qui assurent la veille en ligne (filtrage des connexions étrangères) : Haut-commissariats de Nouvelle-Calédonie et de Polynésie, Wallis-et-Futuna, Lexpol, Mont-Dore et Province des Îles. Ils apparaissent « Hors de portée en ligne » dans l’onglet Sources et restent suivis normalement par Vigie sur votre PC. Les avis de l’État (Haut-commissariats, Wallis-et-Futuna) sont de toute façon publiés sur PLACE, suivi en ligne. Le Gouvernement de la Nouvelle-Calédonie et la plupart des communes publient sur marchespublics.nc, déjà couvert.
+**Sites hors de portée en ligne.** Quelques sites refusent les connexions venant des serveurs de GitHub, qui assurent la veille en ligne (filtrage des connexions étrangères) : Haut-commissariats de Nouvelle-Calédonie et de Polynésie, Wallis-et-Futuna, Lexpol, Mont-Dore et Province des Îles. Vigie lancé sur votre PC les lit normalement et, avec le [relais](#relayer-les-sites-hors-de-portée-vers-la-version-en-ligne), publie leurs annonces sur la version en ligne : elles y apparaissent « Relayée depuis votre PC · il y a 1 h ». Sans relevé récent (PC éteint depuis plus de 6 heures, relais désactivé), ils apparaissent « Hors de portée en ligne » dans l’onglet Sources. Les avis de l’État (Haut-commissariats, Wallis-et-Futuna) sont de toute façon publiés sur PLACE, suivi en ligne. Le Gouvernement de la Nouvelle-Calédonie et la plupart des communes publient sur marchespublics.nc, déjà couvert.
 
 ## Utiliser Vigie
 
 - **Annonces** : les tuiles du haut filtrent en un clic (en cours, nouvelles, clôture proche, suivies). Toutes les options de filtre sont des puces avec leur nombre d’annonces : catégories (« Mes catégories » par défaut, « Toutes » pour tout voir), statut, territoire, source, type ; le tri se fait par date de publication ou par date limite. L’étoile « suit » une annonce sur l’appareil.
-- **Sources** : rangées par territoire, avec l’état de chaque vérification (à jour, erreur, en pause), ajout et modification.
+- **Sources** : rangées par territoire, avec l’état de chaque vérification (à jour, relayée depuis votre PC, hors de portée en ligne, erreur, en pause), ajout et modification.
 - **Catégories** : mots-clés de classement, avec aperçu en direct des annonces trouvées.
-- **Réglages** : thème, connexion GitHub, alertes, fréquence, export.
+- **Réglages** : thème, connexion GitHub, relais (sur le PC), alertes, fréquence, export.
 
 ### Modifier la veille depuis la version en ligne
 
@@ -98,6 +98,24 @@ Sous Windows :
 - `scripts\windows\demarrer-vigie.cmd` lance Vigie d’un double-clic ;
 - `scripts\windows\installer-demarrage.ps1` le lance automatiquement à chaque ouverture de session (tâche planifiée « Vigie ») ;
 - `scripts\windows\desinstaller-demarrage.ps1` retire ce démarrage automatique.
+
+### Relayer les sites hors de portée vers la version en ligne
+
+Les sites qui filtrent les serveurs de GitHub restent lisibles depuis votre PC. Le relais publie leurs annonces sur la version en ligne :
+
+1. Lancez Vigie sur votre PC (`npm start`), onglet **Réglages**, carte « Relais vers la version en ligne ».
+2. Cliquez sur « Créer le jeton sur GitHub » : dépôt `gharel/scraping` uniquement, autorisation **Contents** en lecture et écriture. Le jeton créé pour la version en ligne convient aussi.
+3. Collez le jeton et cliquez sur « Activer le relais ». Vigie vérifie le jeton (sans rien modifier dans le dépôt) puis publie aussitôt.
+
+Ensuite, après chaque vérification faite sur le PC :
+
+- Vigie lit l’état de la version en ligne (`data/status.json` publié avec le site) pour savoir quels sites GitHub n’atteint pas ;
+- il publie leurs annonces dans `data/relais/<source>.json` (annonces actuelles, date du relevé), **en un seul commit** « Relais : annonces lues depuis le PC (…) » ;
+- un relevé inchangé n’est republié qu’au bout de 3 heures, pour rester récent sans créer un commit à chaque passage. « Publier maintenant » force la publication.
+
+À son passage suivant (toutes les 2 heures), la veille en ligne essaie toujours de lire le site directement. Si GitHub reste bloqué et que le relevé du PC a moins de 6 heures, elle fusionne ses annonces comme si elle les avait lues : mêmes clés, donc pas de doublon ni de fausse nouveauté, et les vraies nouveautés déclenchent l’alerte par e-mail. Un relevé plus ancien, ou fait sur une autre adresse que celle de la source, est ignoré.
+
+Le jeton est enregistré sur le PC dans `local-data/relais.json` (dossier ignoré par git). Il n’est jamais affiché, ni écrit dans le journal, ni servi par l’interface locale. « Désactiver le relais » le supprime.
 
 ## Ajouter une source
 
@@ -168,8 +186,12 @@ Règles :
 ## Fonctionnement
 
 ```
+Vigie sur votre PC (toutes les heures, relais activé)
+  └─ commit             data/relais/<source>.json pour les sites que GitHub n'atteint pas
+
 GitHub Actions (toutes les 2 h)
   └─ npm run scrape     lit les sources, met à jour data/items.json et data/status.json
+                        (site injoignable : relevé du PC repris s'il a moins de 6 h)
   └─ commit             seulement si les annonces ont changé
   └─ alerte             ticket GitHub si nouveautés dans vos catégories
   └─ npm run build      assemble _site/ (interface + données + configuration)
@@ -179,9 +201,9 @@ GitHub Actions (toutes les 2 h)
 | Dossier | Contenu |
 | --- | --- |
 | `config/veille.json` | Sources, catégories et réglages |
-| `data/` | Annonces connues, état des sources, état des pages surveillées |
+| `data/` | Annonces connues, état des sources, état des pages surveillées, relevés relayés par le PC (`data/relais/`) |
 | `scraper/` | Moteur de veille (Node.js) : lecteurs Atexo, RSS, liste CSS, page web |
-| `server/` | Serveur local (`npm start`) : interface, API et vérifications planifiées |
+| `server/` | Serveur local (`npm start`) : interface, API, vérifications planifiées et relais |
 | `site/` | Interface web (HTML, CSS, JavaScript sans compilation) |
 | `scripts/` | Publication du site, icônes, démarrage automatique sous Windows |
 | `test/` | Tests automatisés (`npm test`) |

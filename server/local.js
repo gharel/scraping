@@ -5,6 +5,9 @@
  *   npm start -- --port 5000       autre port
  *   npm start -- --no-open         sans ouvrir le navigateur
  *   npm start -- --data dossier    autre dossier de données (par défaut : local-data/)
+ *
+ * Relais (facultatif, jeton GitHub collé dans Réglages) : après chaque vérification, les annonces
+ * des sites que la veille en ligne n'atteint pas sont publiées dans data/relais/ (voir relais.js).
  */
 import { spawn } from 'node:child_process';
 import { cp, readFile, stat } from 'node:fs/promises';
@@ -13,6 +16,7 @@ import path from 'node:path';
 import { previewSource, runVeille } from '../scraper/core.js';
 import { DEFAULT_CONFIG_FILE, ROOT_DIR, readConfig, writeConfig } from '../scraper/lib/config-file.js';
 import { normalizeSource, sourceProblems } from '../site/assets/js/shared/config.js';
+import * as relais from './relais.js';
 
 const args = process.argv.slice(2);
 const option = (name, fallback) => {
@@ -24,6 +28,7 @@ const SITE_DIR = path.join(ROOT_DIR, 'site');
 const DATA_DIR = path.resolve(option('data', path.join(ROOT_DIR, 'local-data')));
 const START_PORT = Number(option('port', process.env.PORT || 4700));
 const OPEN_BROWSER = !args.includes('--no-open');
+const PUBLIC_DATA = new Set(['items.json', 'status.json']);
 
 const TYPES = {
   '.html': 'text/html; charset=utf-8',
@@ -45,9 +50,35 @@ const state = {
   lastRunFinishedAt: null,
   lastResult: null,
   intervalMinutes: 60,
+  // Publication en cours des annonces relayées vers la version en ligne.
+  relay: null,
 };
 
 const log = (message) => console.log(`[${new Date().toLocaleTimeString('fr-FR')}] ${message}`);
+
+/** Publie les relevés des sites que GitHub n'atteint pas (une publication à la fois). */
+async function publishRelays({ force = false } = {}) {
+  if (state.relay) return state.relay;
+  state.relay = (async () => {
+    try {
+      const { config } = await readConfig();
+      return await relais.publishRelays({ config, dataDir: DATA_DIR, force, log });
+    } finally {
+      state.relay = null;
+    }
+  })();
+  return state.relay;
+}
+
+async function relayState() {
+  let config = null;
+  try {
+    ({ config } = await readConfig());
+  } catch {
+    /* configuration illisible : noms des sources indisponibles */
+  }
+  return relais.publicState(await relais.readSettings(), { running: Boolean(state.relay), config });
+}
 
 async function exists(file) {
   try {
@@ -94,6 +125,8 @@ async function runOnce(only = null) {
     state.running = false;
     state.lastRunFinishedAt = new Date().toISOString();
   }
+  // Sans attendre : la vérification est terminée pour l'interface pendant la publication du relais.
+  publishRelays().catch((error) => log(`Relais : ${error.message}`));
   return true;
 }
 
@@ -168,7 +201,30 @@ async function handleApi(request, response, pathname, port) {
       lastResult: state.lastResult,
       dataDir: path.relative(ROOT_DIR, DATA_DIR) || DATA_DIR,
       port,
+      relay: await relayState(),
     });
+  }
+  // Relais vers la version en ligne : le jeton est reçu ici, enregistré dans local-data/, jamais renvoyé.
+  if (pathname === '/api/relay' && request.method === 'PUT') {
+    const body = await readBody(request, 16 * 1024);
+    try {
+      const settings = await relais.connect({ token: body.token, repository: body.repository });
+      log(`Relais activé vers ${settings.repository}`);
+    } catch (error) {
+      return send(response, error.status === 400 ? 400 : 422, { error: error.message });
+    }
+    const outcome = await publishRelays({ force: true });
+    return send(response, 200, { relay: await relayState(), outcome });
+  }
+  if (pathname === '/api/relay' && request.method === 'DELETE') {
+    await relais.disconnect();
+    log('Relais désactivé : jeton retiré de ce PC');
+    return send(response, 200, { relay: await relayState() });
+  }
+  if (pathname === '/api/relay/publish' && request.method === 'POST') {
+    const outcome = await publishRelays({ force: true });
+    if (!outcome) return send(response, 409, { error: 'Activez d’abord le relais avec un jeton GitHub.' });
+    return send(response, 200, { relay: await relayState(), outcome });
   }
   if (pathname === '/api/run' && request.method === 'POST') {
     const body = await readBody(request);
@@ -218,7 +274,11 @@ function createApp(port) {
       const decoded = decodeURIComponent(pathname);
       if (decoded.startsWith('/api/')) return await handleApi(request, response, decoded, port);
       if (request.method !== 'GET' && request.method !== 'HEAD') return send(response, 405, 'Méthode non autorisée');
-      if (decoded.startsWith('/data/')) return await serveFile(response, DATA_DIR, decoded.slice('/data/'.length));
+      // Seules les données lues par l'interface sont servies (local-data/ contient aussi le jeton du relais).
+      if (decoded.startsWith('/data/')) {
+        const file = decoded.slice('/data/'.length);
+        return PUBLIC_DATA.has(file) ? await serveFile(response, DATA_DIR, file) : send(response, 404, 'Introuvable');
+      }
       if (decoded === '/config/veille.json') return await serveFile(response, path.dirname(DEFAULT_CONFIG_FILE), 'veille.json');
       return await serveFile(response, SITE_DIR, decoded === '/' ? 'index.html' : decoded.slice(1));
     } catch (error) {
@@ -270,6 +330,7 @@ async function main() {
     await runOnce();
   } else {
     state.lastRunFinishedAt = new Date(lastUpdate).toISOString();
+    publishRelays().catch((error) => log(`Relais : ${error.message}`));
   }
   schedule();
 }

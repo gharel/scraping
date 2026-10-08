@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "sourceId": "haut-commissariat-pf",
+  "url": "https://www.polynesie-francaise.gouv.fr/Publications/Publications-legales-et-avis/Marches-publics",
+  "at": "2026-10-08T21:10:51.781Z",
+  "listing": true,
+  "total": 2,
+  "items": [
+    {
+      "key": "a205d4770a030d58",
+      "kind": "consultation",
+      "title": "Avis de publicité 2026 SOLIMPRESS",
+      "summary": "Télécharger Avis de publicité_2026_SOLIMPRESS PDF - 0,12 Mb - 03/08/2026",
+      "url": "https://www.polynesie-francaise.gouv.fr/contenu/telechargement/54781/350422/file/Avis%20de%20publicit%C3%A9_2026_SOLIMPRESS.pdf",
+      "publishedAt": "2026-08-03T00:00:00+11:00"
+    },
+    {
+      "key": "b51936fe7c049407",
+      "kind": "consultation",
+      "title": "Avis de publicité 2026 Securisation hall accueil HCRPF",
+      "summary": "Télécharger Avis de publicité_2026_Securisation_hall_accueil_HCRPF PDF - 0,32 Mb - 07/07/2026",
+      "url": "https://www.polynesie-francaise.gouv.fr/contenu/telechargement/54738/350109/file/Avis%20de%20publicit%C3%A9_2026_Securisation_hall_accueil_HCRPF.pdf",
+      "publishedAt": "2026-07-07T00:00:00+11:00"
+    }
+  ]
+}

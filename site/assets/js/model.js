@@ -20,6 +20,11 @@ export function outOfReach(status) {
   return Boolean(status && status.ok === false && status.network && status.where === 'github');
 }
 
+/** Source que la veille en ligne n'atteint pas, mise à jour grâce au relevé publié par Vigie sur le PC. */
+export function relayed(status) {
+  return Boolean(status && status.ok === true && status.via === 'relais' && status.relayAt);
+}
+
 export function enrichItems({ items, config, since, starred, now = new Date() }) {
   const compiled = compileCategories(config.categories, config.settings.excludeKeywords);
   const sources = new Map(config.sources.map((source) => [source.id, source]));

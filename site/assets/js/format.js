@@ -75,9 +75,10 @@ export function relativeTime(value, now = new Date()) {
   if (seconds < 0) return formatDate(date, { short: true });
   if (seconds < 60) return 'à l’instant';
   const minutes = Math.round(seconds / 60);
-  if (minutes < 60) return `il y a ${minutes} min`;
+  // Espace insécable : « 8 h » ne se coupe pas en fin de ligne.
+  if (minutes < 60) return `il y a ${minutes} min`;
   const hours = Math.round(minutes / 60);
-  if (hours < 24) return `il y a ${hours} h`;
+  if (hours < 24) return `il y a ${hours} h`;
   const days = -daysUntil(date, now);
   if (days <= 1) return 'hier';
   if (days < 7) return `il y a ${days} jours`;
@@ -90,9 +91,9 @@ export function untilTime(value, now = new Date()) {
   if (!date) return '';
   const minutes = Math.round((date - now) / 60000);
   if (minutes <= 0) return 'imminente';
-  if (minutes < 60) return `dans ${minutes} min`;
+  if (minutes < 60) return `dans ${minutes} min`;
   const hours = Math.round(minutes / 60);
-  if (hours < 24) return `dans ${hours} h`;
+  if (hours < 24) return `dans ${hours} h`;
   return `le ${formatDate(date, { short: true })}`;
 }
 
