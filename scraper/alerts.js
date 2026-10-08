@@ -20,7 +20,7 @@ function hasTime(iso) {
 
 export function buildAlert({ added, config, appUrl = '' }) {
   if (!added?.length || !config.settings.githubAlerts) return null;
-  const compiled = compileCategories(config.categories);
+  const compiled = compileCategories(config.categories, config.settings.excludeKeywords);
   const sources = new Map(config.sources.map((source) => [source.id, source]));
   const categoryNames = new Map(config.categories.map((category) => [category.id, category.name]));
   const timezone = config.settings.timezone;

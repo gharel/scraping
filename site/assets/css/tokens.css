@@ -102,6 +102,7 @@
   --header-bg: rgba(255, 255, 255, 0.92);
   --overlay: rgba(26, 26, 26, 0.45);
   --skeleton: var(--color-gray-200);
+  --logo-skazy: var(--color-dark);
 
   /* Sémantiques : fond doux + texte lisible (AA) */
   --success: #3a9e68;
@@ -150,6 +151,7 @@
     --header-bg: rgba(26, 26, 26, 0.9);
     --overlay: rgba(0, 0, 0, 0.6);
     --skeleton: #303030;
+    --logo-skazy: #ffffff;
     --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5);
     --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.45), 0 2px 4px rgba(0, 0, 0, 0.3);
     --shadow-lg: 0 10px 28px rgba(0, 0, 0, 0.55), 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -190,6 +192,7 @@
   --header-bg: rgba(26, 26, 26, 0.9);
   --overlay: rgba(0, 0, 0, 0.6);
   --skeleton: #303030;
+  --logo-skazy: #ffffff;
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5);
   --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.45), 0 2px 4px rgba(0, 0, 0, 0.3);
   --shadow-lg: 0 10px 28px rgba(0, 0, 0, 0.55), 0 4px 8px rgba(0, 0, 0, 0.3);

@@ -168,30 +168,27 @@ ol {
   text-decoration: none;
 }
 
-.wordmark {
-  font-weight: var(--weight-extrabold);
-  font-size: 1.15rem;
-  letter-spacing: var(--tracking-tight);
-  white-space: nowrap;
-  line-height: 1;
+/* Logo officiel Skazy Formation (SVG) : « skazy » suit le thème, « formation » reste vert. */
+.logo {
+  display: block;
+  height: 30px;
+  width: auto;
+  aspect-ratio: 218 / 72;
+  flex-shrink: 0;
 }
 
-.wordmark-skazy {
-  color: var(--color-dark);
-}
-
-.wordmark-formation {
-  color: var(--color-primary);
-}
-
-:root[data-theme='dark'] .wordmark-skazy {
-  color: #ffffff;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']) .wordmark-skazy {
-    color: #ffffff;
+@media (min-width: 768px) {
+  .logo {
+    height: 34px;
   }
+}
+
+.logo-skazy {
+  fill: var(--logo-skazy);
+}
+
+.logo-formation {
+  fill: var(--color-primary);
 }
 
 .brand-divider {

@@ -47,6 +47,7 @@ export const DEFAULT_SETTINGS = {
   githubAlerts: true,
   alertOnlyMatching: true,
   appUrl: '',
+  excludeKeywords: [],
 };
 
 const SLUG_RE = /^[a-z0-9][a-z0-9-]{0,47}$/;
@@ -157,6 +158,7 @@ export function normalizeConfig(raw) {
   settings.localIntervalMinutes = clampNumber(settings.localIntervalMinutes, 5, 1440, DEFAULT_SETTINGS.localIntervalMinutes);
   settings.githubAlerts = settings.githubAlerts !== false;
   settings.alertOnlyMatching = settings.alertOnlyMatching !== false;
+  settings.excludeKeywords = parseKeywords(settings.excludeKeywords || []);
   return {
     settings,
     categories: (Array.isArray(input.categories) ? input.categories : []).map(normalizeCategory),
@@ -176,6 +178,9 @@ function isHttpUrl(value) {
 /** Renvoie la liste des problèmes de la configuration (vide si tout va bien). */
 export function validateConfig(config) {
   const errors = [];
+  const excluded = config.settings?.excludeKeywords || [];
+  if (excluded.length > 300) errors.push('Mots-clés exclus : 300 au maximum');
+  if (excluded.some((keyword) => keyword.length > 80)) errors.push('Mots-clés exclus : un mot-clé dépasse 80 caractères');
   const categoryIds = new Set();
   config.categories.forEach((category, index) => {
     const label = `Catégorie « ${category.name || index + 1} »`;

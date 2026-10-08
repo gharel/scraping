@@ -3,7 +3,8 @@
  */
 import { clear, h, nextId } from '../dom.js';
 import { plural, prettyTitle } from '../format.js';
-import { categorize, compileCategories } from '../shared/categorize.js';
+import { categorize, compileCategories, exclusionMatches } from '../shared/categorize.js';
+import { icon } from '../icons.js';
 import { normalizeCategory, parseKeywords, uniqueId } from '../shared/config.js';
 import { button, callout, closeDialog, emptyState, field, input, openDialog, pageHead, setBusy, textarea, toast } from '../ui.js';
 import { modeNotice } from './sources.js';
@@ -33,6 +34,67 @@ function renderCategoryCard(category, ctx, counts) {
   );
 }
 
+function excludedCount(ctx, keywords) {
+  const compiled = compileCategories([], keywords);
+  return ctx.state.enriched.filter((item) => item.open && exclusionMatches(item, compiled).length).length;
+}
+
+function exclusionsCard(ctx) {
+  const keywords = ctx.state.config.settings.excludeKeywords;
+  const count = excludedCount(ctx, keywords);
+  return h(
+    'section',
+    { class: 'exclusions-card', 'aria-labelledby': 'exclusions-title' },
+    h(
+      'div',
+      { class: 'exclusions-head' },
+      h('span', { class: 'exclusions-icon', 'aria-hidden': 'true' }, icon('filter', { size: 20 })),
+      h(
+        'div',
+        { class: 'exclusions-text' },
+        h('h2', { id: 'exclusions-title' }, 'Mots-clés exclus'),
+        h('p', null, 'Une annonce qui contient l’un de ces mots-clés n’entre dans aucune catégorie : elle n’apparaît pas dans « Mes catégories » et ne déclenche pas d’alerte.'),
+      ),
+    ),
+    keywords.length
+      ? h('ul', { class: 'keyword-list', 'aria-label': 'Mots-clés exclus' }, keywords.map((keyword) => h('li', { class: 'keyword keyword--excluded' }, keyword)))
+      : h('p', { class: 'cat-empty' }, 'Aucun mot-clé exclu.'),
+    h(
+      'div',
+      { class: 'cat-actions' },
+      h('p', { class: 'exclusions-count' }, plural(count, 'annonce en cours écartée', 'annonces en cours écartées')),
+      ctx.state.backend.canEdit ? button('Modifier', { variant: 'secondary', size: 'sm', iconName: 'pencil', onClick: () => openExclusionsForm(ctx) }) : null,
+    ),
+  );
+}
+
+function openExclusionsForm(ctx) {
+  const keywords = textarea({ value: ctx.state.config.settings.excludeKeywords.join('\n'), rows: 10, spellcheck: 'false', placeholder: 'travaux\nBTP\ngénie civil' });
+  const preview = h('p', { class: 'field-hint', 'aria-live': 'polite' });
+  const update = () => {
+    preview.textContent = `${plural(excludedCount(ctx, parseKeywords(keywords.value)), 'annonce en cours serait écartée', 'annonces en cours seraient écartées')}.`;
+  };
+  keywords.addEventListener('input', update);
+  update();
+  const save = async (event) => {
+    event?.preventDefault();
+    const saveButton = document.querySelector('#dialog .js-save');
+    setBusy(saveButton, true, 'Enregistrement…');
+    const ok = await ctx.updateConfig((next) => {
+      next.settings.excludeKeywords = parseKeywords(keywords.value);
+      return next;
+    }, 'Vigie : mots-clés exclus');
+    setBusy(saveButton, false);
+    if (ok) closeDialog();
+  };
+  openDialog({
+    title: 'Mots-clés exclus',
+    description: 'Un mot-clé ou une expression par ligne, avec les mêmes règles que les catégories (étoile finale pour les variantes).',
+    body: h('form', { class: 'form', novalidate: true, onSubmit: save }, field({ label: 'Annonces à écarter', control: keywords }), preview),
+    actions: [button('Annuler', { variant: 'ghost', onClick: () => closeDialog() }), button('Enregistrer', { iconName: 'check', className: 'js-save', onClick: save })],
+  });
+}
+
 export function renderCategories(ctx) {
   const { state } = ctx;
   const open = state.enriched.filter((item) => item.open);
@@ -58,6 +120,8 @@ export function renderCategories(ctx) {
           h('li', null, 'Les accents et les majuscules sont ignorés.'),
           h('li', null, 'Un mot-clé trouve le mot entier : « audit » ne trouve pas « auditorium ».'),
           h('li', null, 'Une étoile finale inclut les variantes : « format* » trouve formation, formateur, formations…'),
+          h('li', null, 'Un sigle écrit en majuscules (« IA », « ERP ») ne trouve que ce sigle en majuscules.'),
+          h('li', null, 'Seul l’objet de l’annonce compte (titre, résumé, nature), pas le nom de l’acheteur.'),
           h('li', null, `Une annonce peut appartenir à plusieurs catégories. ${unclassified ? `${plural(unclassified, 'annonce en cours n’est', 'annonces en cours ne sont')} dans aucune catégorie.` : ''}`),
         ),
       ),
@@ -66,6 +130,7 @@ export function renderCategories(ctx) {
     state.config.categories.length
       ? h('ul', { class: 'cat-list' }, state.config.categories.map((category) => renderCategoryCard(category, ctx, counts)))
       : emptyState('tags', 'Aucune catégorie', 'Créez des catégories pour repérer en un coup d’œil les annonces qui vous concernent.', canEdit ? button('Ajouter une catégorie', { iconName: 'plus', onClick: () => openCategoryForm(ctx) }) : null),
+    exclusionsCard(ctx),
   );
 }
 
@@ -105,7 +170,7 @@ export function openCategoryForm(ctx, existing = null) {
         preview.append(h('p', { class: 'field-hint' }, 'Ajoutez des mots-clés pour voir les annonces correspondantes.'));
         return;
       }
-      const compiled = compileCategories([category]);
+      const compiled = compileCategories([category], ctx.state.config.settings.excludeKeywords);
       const matches = ctx.state.enriched.filter((item) => item.open && categorize(item, compiled).length);
       preview.append(
         h(

@@ -8,13 +8,13 @@ Vigie surveille automatiquement les appels d’offres publiés en Nouvelle-Calé
 | --- | --- |
 | ![Vigie sur ordinateur](docs/apercu-bureau.png) | ![Vigie sur mobile](docs/apercu-mobile.png) |
 
-Interface conçue avec le design system **Skazy Formation** (Claude Design) : police Georama, vert `#50967c`, boutons pill, cartes à barre de couleur. Responsive, thème clair et sombre.
+Interface conçue avec le design system **Skazy Formation** (Claude Design) : logo officiel en SVG, police Georama, vert `#50967c`, couleurs de catégories du design system, boutons pill, cartes à barre de couleur. Responsive, thème clair et sombre.
 
 ## Ce que fait Vigie
 
 - **Surveille** marchespublics.nc et d’autres sources toutes les 2 heures (en ligne) ou toutes les heures (sur votre PC).
 - **Lit les consultations en détail** : acheteur, référence, procédure, nature, nombre de lots, date limite.
-- **Classe** chaque annonce dans vos catégories grâce à des mots-clés (Formation, Numérique & IA…), avec filtres.
+- **Classe** chaque annonce dans vos domaines (formation, IA, communication, développement, web, bureautique, audiovisuel, data, gestion de projet) et **écarte** le BTP grâce à des mots-clés exclus. Par défaut, seules les annonces de vos catégories sont affichées.
 - **Signale** les nouveautés depuis votre dernière visite, les clôtures proches (compte à rebours J-n) et les reports de date limite.
 - **Alerte par e-mail** via un ticket GitHub quand une nouvelle annonce entre dans vos catégories.
 - **Exporte** les annonces affichées en CSV (Excel).
@@ -34,7 +34,7 @@ La plateforme de la Province Nord renvoie vers marchespublics.nc : ses consultat
 
 ## Utiliser Vigie
 
-- **Annonces** : les tuiles du haut filtrent en un clic (en cours, nouvelles, clôture proche, suivies). Les puces de catégories, la recherche, le statut, la source et le type affinent la liste. L’étoile « suit » une annonce sur l’appareil.
+- **Annonces** : les tuiles du haut filtrent en un clic (en cours, nouvelles, clôture proche, suivies). Toutes les options de filtre sont des puces avec leur nombre d’annonces : catégories (« Mes catégories » par défaut, « Toutes » pour tout voir), statut, source, type ; le tri se fait par date de publication ou par date limite. L’étoile « suit » une annonce sur l’appareil.
 - **Sources** : état de chaque vérification (à jour, erreur, en pause), ajout et modification.
 - **Catégories** : mots-clés de classement, avec aperçu en direct des annonces trouvées.
 - **Réglages** : thème, connexion GitHub, alertes, fréquence, export.
@@ -101,10 +101,30 @@ Les pages construites entièrement en JavaScript ne sont pas lisibles : préfér
 
 ## Catégories et mots-clés
 
+Catégories livrées, avec les couleurs de catégories du design system Skazy Formation :
+
+| Catégorie | Couleur | Exemples de mots-clés |
+| --- | --- | --- |
+| Formation | vert | formation\*, pédagogi\*, e-learning, LMS, training\* |
+| Intelligence artificielle | orange | intelligence artificielle, IA, chatbot\*, automatisation\*, no-code |
+| Communication & webmarketing | orange | communication, réseaux sociaux, campagne\*, événementiel\* |
+| Développement & logiciels | bleu | développement web, logiciel\*, application mobile, ERP, API |
+| Web & numérique | bleu | site internet, numérique\*, informatique\*, cybersécurité, CMS |
+| Bureautique | violet | bureautique, Microsoft 365, Google Workspace, Excel |
+| Audiovisuel & graphisme | turquoise | audiovisuel\*, vidéo, motion design, graphis\*, UX |
+| Data | jaune | data, tableau de bord, Power BI, statistique\* |
+| Gestion de projet | rose | gestion de projet, conduite du changement, agile, Opquast |
+
+Règles :
+
 - Les accents et les majuscules sont ignorés.
 - Un mot-clé trouve le mot entier : « audit » ne trouve pas « auditorium ».
 - Une étoile finale inclut les variantes : `format*` trouve formation, formateur, formations…
+- Un sigle écrit en majuscules (`IA`, `ERP`) ne trouve que ce sigle en majuscules.
+- Seul l’objet de l’annonce compte (titre, résumé, nature), pas le nom de l’acheteur.
 - Une source peut imposer des catégories à toutes ses annonces.
+
+**Mots-clés exclus** (`settings.excludeKeywords`) : une annonce qui contient « travaux », « BTP », « génie civil », « voirie »… n’entre dans aucune catégorie, n’apparaît pas dans « Mes catégories » et ne déclenche pas d’alerte. La liste se modifie en bas de l’onglet Catégories.
 
 ## Fonctionnement
 

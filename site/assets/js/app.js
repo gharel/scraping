@@ -22,6 +22,8 @@ const ROUTES = {
   reglages: { title: 'Réglages', render: renderReglages },
 };
 const PERSISTED_FILTERS = ['category', 'status', 'source', 'kind', 'sort'];
+// Clé versionnée : les filtres enregistrés avant le filtre « Mes catégories » sont ignorés.
+const FILTERS_KEY = 'filters.v2';
 const PAGE_SIZE = 40;
 
 const state = {
@@ -34,7 +36,7 @@ const state = {
   local: null,
   backend: createBackend({ local: null, deploy: null }),
   since: prefs.noveltyReference(),
-  filters: { ...DEFAULT_FILTERS, ...pick(prefs.read('filters', {}), PERSISTED_FILTERS) },
+  filters: { ...DEFAULT_FILTERS, ...pick(prefs.read(FILTERS_KEY, {}), PERSISTED_FILTERS) },
   filtersOpen: false,
   visibleCount: PAGE_SIZE,
   openDetails: new Set(),
@@ -267,14 +269,14 @@ const ctx = {
   setFilters(partial, { debounce = false, keepPage = false } = {}) {
     state.filters = { ...state.filters, ...partial };
     if (!keepPage) state.visibleCount = PAGE_SIZE;
-    prefs.write('filters', pick(state.filters, PERSISTED_FILTERS));
+    prefs.write(FILTERS_KEY, pick(state.filters, PERSISTED_FILTERS));
     if (debounce) scheduleRender();
     else render();
   },
   resetFilters() {
     state.filters = { ...DEFAULT_FILTERS };
     state.visibleCount = PAGE_SIZE;
-    prefs.write('filters', null);
+    prefs.write(FILTERS_KEY, null);
     render();
   },
   toggleFilters() {
@@ -298,7 +300,7 @@ const ctx = {
   },
   showCategory(id) {
     state.filters = { ...state.filters, category: id, quick: null, status: 'open' };
-    prefs.write('filters', pick(state.filters, PERSISTED_FILTERS));
+    prefs.write(FILTERS_KEY, pick(state.filters, PERSISTED_FILTERS));
     navigate('annonces');
   },
   exportCsv(items) {

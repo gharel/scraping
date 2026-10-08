@@ -6,7 +6,7 @@ import { icon } from '../icons.js';
 import { formatDate, plural, prettyTitle, relativeTime, untilTime } from '../format.js';
 import { applyFilters, countBy, DEFAULT_FILTERS, sortItems } from '../model.js';
 import { KIND_LABELS } from '../shared/config.js';
-import { badge, button, callout, categoryBadge, emptyState, iconButton, pageHead, segmented, select, selectControl } from '../ui.js';
+import { badge, button, callout, categoryBadge, emptyState, iconButton, pageHead, segmented } from '../ui.js';
 
 const PAGE_SIZE = 40;
 
@@ -138,13 +138,16 @@ export function renderAnnonces(ctx) {
   const forKinds = applyFilters(all, filters, { ignore: ['kind'] });
   const kindCounts = countBy(forKinds, 'kind');
 
-  const openItems = all.filter((item) => item.open);
+  // Les tuiles comptent dans le périmètre choisi (catégories, source, type, recherche).
+  const scoped = applyFilters(all, { ...filters, quick: null }, { ignore: ['status', 'quick'] });
+  const openItems = scoped.filter((item) => item.open);
   const stats = {
     open: openItems.length,
-    fresh: all.filter((item) => item.isNew).length,
+    fresh: scoped.filter((item) => item.isNew && item.open).length,
     soon: openItems.filter((item) => item.days != null && item.days <= 7).length,
     starred: all.filter((item) => item.starred).length,
   };
+  const scopeHint = filters.category === 'mine' ? 'dans vos catégories' : 'annonces ouvertes';
 
   const errors = state.config.sources.filter((source) => source.enabled && state.status?.sources?.[source.id]?.ok === false);
   const updatedAt = Date.parse(state.status?.updatedAt || '') || 0;
@@ -157,12 +160,12 @@ export function renderAnnonces(ctx) {
     stale ? callout('info', 'info', 'La veille automatique semble à l’arrêt', h('p', null, `Aucune vérification depuis ${relativeTime(state.status.updatedAt).replace('il y a ', '')}. Vérifiez l’onglet Actions du dépôt GitHub.`)) : null,
   ].filter(Boolean);
 
-  const setQuick = (value) => ctx.setFilters({ quick: filters.quick === value ? null : value, status: value === 'starred' ? 'all' : filters.status === 'all' && filters.quick === 'starred' ? 'open' : filters.status });
+  const setQuick = (value) => ctx.setFilters({ quick: filters.quick === value ? null : value });
 
   const tiles = h(
     'div',
     { class: 'stats', role: 'group', 'aria-label': 'Raccourcis' },
-    statTile('En cours', stats.open, 'annonces ouvertes', !filters.quick && filters.status === 'open', () => ctx.setFilters({ quick: null, status: 'open' })),
+    statTile('En cours', stats.open, scopeHint, !filters.quick && filters.status === 'open', () => ctx.setFilters({ quick: null, status: 'open' })),
     statTile('Nouvelles', stats.fresh, 'depuis votre dernière visite', filters.quick === 'new', () => setQuick('new'), 'new'),
     statTile('Clôture proche', stats.soon, 'dans les 7 jours', filters.quick === 'soon', () => setQuick('soon'), 'soon'),
     statTile('Suivies', stats.starred, 'sur cet appareil', filters.quick === 'starred', () => setQuick('starred')),
@@ -180,31 +183,46 @@ export function renderAnnonces(ctx) {
     onInput: (event) => ctx.setFilters({ query: event.target.value }, { debounce: true }),
   });
 
-  const chip = (id, label, count, color) =>
-    h(
+  /** Puce de filtre : un clic sélectionne, un second clic revient à la valeur par défaut. */
+  const chip = (key, value, label, count, { color, fallback } = {}) => {
+    const active = filters[key] === value;
+    return h(
       'button',
-      { class: `chip${filters.category === id ? ' is-active' : ''}`, type: 'button', 'aria-pressed': String(filters.category === id), onClick: () => ctx.setFilters({ category: filters.category === id && id !== 'all' ? 'all' : id }), style: color ? { '--cat': `var(--cat-${color})` } : null },
+      {
+        class: `chip${active ? ' is-active' : ''}${count === 0 && !active ? ' is-empty' : ''}`,
+        type: 'button',
+        'aria-pressed': String(active),
+        onClick: () => ctx.setFilters({ [key]: active && fallback ? fallback : value }),
+        style: color ? { '--cat': `var(--cat-${color})` } : null,
+      },
       color ? h('span', { class: 'chip-dot', 'aria-hidden': 'true' }) : null,
       h('span', { class: 'chip-label' }, label),
       h('span', { class: 'chip-count' }, count.toLocaleString('fr-FR')),
     );
+  };
 
+  const mine = forCategories.length - uncategorized;
   const chips = h(
     'div',
     { class: 'chips', role: 'group', 'aria-label': 'Catégories' },
-    chip('all', 'Toutes', forCategories.length),
-    state.config.categories.map((category) => chip(category.id, category.name, categoryCounts.get(category.id) || 0, category.color)),
-    state.config.categories.length ? chip('none', 'Non classées', uncategorized) : null,
+    state.config.categories.length ? chip('category', 'mine', 'Mes catégories', mine, { fallback: 'all' }) : null,
+    state.config.categories.map((category) => chip('category', category.id, category.name, categoryCounts.get(category.id) || 0, { color: category.color, fallback: 'mine' })),
+    state.config.categories.length ? chip('category', 'none', 'Non classées', uncategorized, { fallback: 'mine' }) : null,
+    chip('category', 'all', 'Toutes', forCategories.length, { fallback: state.config.categories.length ? 'mine' : null }),
   );
 
-  const sourceSelect = select(
-    [{ value: 'all', label: 'Toutes les sources' }, ...state.config.sources.map((source) => ({ value: source.id, label: `${source.name} (${sourceCounts.get(source.id) || 0})` }))],
-    { value: filters.source, id: 'filter-source', onChange: (event) => ctx.setFilters({ source: event.target.value }) },
+  const sourceChips = h(
+    'div',
+    { class: 'chips chips--compact', role: 'group', 'aria-label': 'Sources' },
+    chip('source', 'all', 'Toutes', forSources.length),
+    state.config.sources.map((source) => chip('source', source.id, source.name, sourceCounts.get(source.id) || 0, { fallback: 'all' })),
   );
   const kinds = Object.keys(KIND_LABELS).filter((kind) => kindCounts.has(kind) || filters.kind === kind);
-  const kindSelect = select(
-    [{ value: 'all', label: 'Tous les types' }, ...kinds.map((kind) => ({ value: kind, label: `${KIND_LABELS[kind]} (${kindCounts.get(kind) || 0})` }))],
-    { value: filters.kind, id: 'filter-kind', onChange: (event) => ctx.setFilters({ kind: event.target.value }) },
+  const kindChips = h(
+    'div',
+    { class: 'chips chips--compact', role: 'group', 'aria-label': 'Types d’annonce' },
+    chip('kind', 'all', 'Tous', forKinds.length),
+    kinds.map((kind) => chip('kind', kind, KIND_LABELS[kind], kindCounts.get(kind) || 0, { fallback: 'all' })),
   );
 
   const activeExtra = ['status', 'source', 'kind'].filter((key) => filters[key] !== DEFAULT_FILTERS[key]).length;
@@ -241,22 +259,24 @@ export function renderAnnonces(ctx) {
           onChange: (value) => ctx.setFilters({ status: value }),
         }),
       ),
-      h('div', { class: 'filter-group' }, h('label', { class: 'filter-title', for: 'filter-source' }, 'Source'), sourceSelect),
-      h('div', { class: 'filter-group' }, h('label', { class: 'filter-title', for: 'filter-kind' }, 'Type d’annonce'), kindSelect),
+      h('div', { class: 'filter-group' }, h('p', { class: 'filter-title' }, 'Source'), sourceChips),
+      h('div', { class: 'filter-group' }, h('p', { class: 'filter-title' }, 'Type d’annonce'), kindChips),
     ),
     anyActive ? button('Réinitialiser les filtres', { variant: 'ghost', size: 'sm', iconName: 'x', className: 'filters-reset', onClick: () => ctx.resetFilters() }) : null,
   );
 
   /* ── Résultats ── */
   const visible = filtered.slice(0, state.visibleCount || PAGE_SIZE);
-  const sortSelect = select(
-    [
-      { value: 'recent', label: 'Plus récentes' },
-      { value: 'deadline', label: 'Date limite la plus proche' },
+  const sortControl = segmented({
+    name: 'tri',
+    label: 'Trier les annonces',
+    value: filters.sort,
+    options: [
+      { value: 'recent', label: 'Plus récentes', iconName: 'calendar' },
+      { value: 'deadline', label: 'Date limite', iconName: 'clock' },
     ],
-    { value: filters.sort, id: 'sort', 'aria-label': 'Trier les annonces', onChange: (event) => ctx.setFilters({ sort: event.target.value }, { keepPage: true }) },
-  );
-  selectControl(sortSelect).setAttribute('aria-label', 'Trier les annonces');
+    onChange: (value) => ctx.setFilters({ sort: value }, { keepPage: true }),
+  });
 
   let list;
   if (!all.length) {
@@ -265,6 +285,13 @@ export function renderAnnonces(ctx) {
       state.loading ? 'Chargement des annonces…' : 'Aucune annonce pour le moment',
       state.loading ? null : 'La première vérification des sources n’a pas encore eu lieu.',
       state.loading ? null : runAction(ctx),
+    );
+  } else if (!filtered.length && filters.category === 'mine' && !filters.query && !filters.quick && filters.source === 'all' && filters.kind === 'all') {
+    list = emptyState(
+      'tags',
+      'Aucune annonce en cours dans vos catégories',
+      'Vigie vous signalera les prochaines. Les autres annonces restent consultables.',
+      button('Voir toutes les annonces', { variant: 'secondary', onClick: () => ctx.setFilters({ category: 'all' }) }),
     );
   } else if (!filtered.length) {
     list = emptyState('search', 'Aucune annonce ne correspond', 'Élargissez la recherche ou réinitialisez les filtres.', button('Réinitialiser les filtres', { variant: 'secondary', onClick: () => ctx.resetFilters() }));
@@ -282,7 +309,7 @@ export function renderAnnonces(ctx) {
   const results = h(
     'section',
     { class: 'results', 'aria-label': 'Résultats' },
-    h('div', { class: 'results-bar' }, h('p', { class: 'results-count', 'aria-live': 'polite' }, plural(filtered.length, 'annonce')), h('div', { class: 'results-sort' }, sortSelect)),
+    h('div', { class: 'results-bar' }, h('p', { class: 'results-count', 'aria-live': 'polite' }, plural(filtered.length, 'annonce')), h('div', { class: 'results-sort' }, h('span', { class: 'results-sort-label' }, 'Trier par'), sortControl)),
     list,
   );
 

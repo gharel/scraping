@@ -5,13 +5,14 @@ import { categorize, compileCategories, normalizeText } from './shared/categoriz
 import { KIND_LABELS } from './shared/config.js';
 import { daysUntil, formatDate } from './format.js';
 
-export const DEFAULT_FILTERS = { category: 'all', status: 'open', source: 'all', kind: 'all', sort: 'recent', query: '', quick: null };
+/** Par défaut : uniquement les annonces classées dans au moins une de vos catégories. */
+export const DEFAULT_FILTERS = { category: 'mine', status: 'open', source: 'all', kind: 'all', sort: 'recent', query: '', quick: null };
 
 /** Une annonce sans date limite est considérée comme en cours pendant 45 jours. */
 const ARCHIVE_AFTER_MS = 45 * 86400000;
 
 export function enrichItems({ items, config, since, starred, now = new Date() }) {
-  const compiled = compileCategories(config.categories);
+  const compiled = compileCategories(config.categories, config.settings.excludeKeywords);
   const sources = new Map(config.sources.map((source) => [source.id, source]));
   const sinceMs = Date.parse(since) || 0;
   return items.map((item) => {
@@ -41,13 +42,17 @@ export function enrichItems({ items, config, since, starred, now = new Date() })
 
 export function applyFilters(items, filters, { ignore = [] } = {}) {
   const terms = ignore.includes('query') ? [] : normalizeText(filters.query).split(' ').filter(Boolean);
+  // Les annonces suivies restent visibles quels que soient la catégorie et le statut.
+  const starredView = filters.quick === 'starred' && !ignore.includes('quick');
   return items.filter((item) => {
-    if (!ignore.includes('status')) {
+    if (!ignore.includes('status') && !starredView) {
       if (filters.status === 'open' && !item.open) return false;
       if (filters.status === 'closed' && item.open) return false;
     }
-    if (!ignore.includes('category') && filters.category !== 'all') {
-      if (filters.category === 'none' ? item.categories.length > 0 : !item.categories.includes(filters.category)) return false;
+    if (!ignore.includes('category') && !starredView && filters.category !== 'all') {
+      if (filters.category === 'mine') {
+        if (item.categories.length === 0) return false;
+      } else if (filters.category === 'none' ? item.categories.length > 0 : !item.categories.includes(filters.category)) return false;
     }
     if (!ignore.includes('source') && filters.source !== 'all' && item.sourceId !== filters.source) return false;
     if (!ignore.includes('kind') && filters.kind !== 'all' && item.kind !== filters.kind) return false;

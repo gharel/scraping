@@ -1,12 +1,17 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { test } from 'node:test';
-import { categorize, compileCategories, keywordPattern, normalizeText } from '../site/assets/js/shared/categorize.js';
+import { categorize, compileCategories, foldText, keywordPattern, normalizeText } from '../site/assets/js/shared/categorize.js';
 import { guessSourceType, normalizeConfig, parseKeywords, uniqueId, validateConfig } from '../site/assets/js/shared/config.js';
 import { prettyTitle } from '../site/assets/js/format.js';
 
 test('mots-clés : accents, mots entiers, variantes et apostrophes', () => {
-  const match = (keyword, text) => keywordPattern(keyword).test(normalizeText(text));
+  const match = (keyword, text) => {
+    const re = keywordPattern(keyword);
+    return re.test(re.caseSensitive ? foldText(text) : normalizeText(text));
+  };
+  assert.ok(!match('IA', 'aides individuelles à l’habitat de Ia province Sud'), 'un sigle ne trouve que les majuscules');
+  assert.ok(match('LMS', 'évolution du LMS de l’IFAP'));
   assert.ok(match('formation*', 'Plan de FORMATIONS 2026'));
   assert.ok(!match('formation*', 'Système d’information'));
   assert.ok(match('audit', 'Audit de sécurité'));
@@ -26,6 +31,26 @@ test('catégories : classement d’une annonce', () => {
   const item = { title: 'Assistance à maîtrise d’ouvrage pour l’évolution du LMS', buyer: 'IFAP' };
   assert.deepEqual(categorize(item, compiled), ['formation']);
   assert.deepEqual(categorize(item, compiled, ['btp']), ['btp', 'formation']);
+});
+
+test('exclusions : une annonce de travaux n’entre dans aucune catégorie', () => {
+  const compiled = compileCategories([{ id: 'numerique', keywords: ['numérique*'] }], ['travaux', 'BTP']);
+  assert.deepEqual(categorize({ title: 'Travaux d’aménagement numérique du quartier' }, compiled), []);
+  assert.deepEqual(categorize({ title: 'Transformation numérique des services' }, compiled), ['numerique']);
+  assert.deepEqual(categorize({ title: 'Travaux', nature: 'Travaux' }, compiled, ['numerique']), ['numerique'], 'une catégorie imposée par la source reste appliquée');
+});
+
+test('filtres : « Mes catégories » ne garde que les annonces classées', async () => {
+  const { applyFilters, DEFAULT_FILTERS } = await import('../site/assets/js/model.js');
+  const items = [
+    { id: 'a', open: true, categories: ['formation'], searchText: 'a' },
+    { id: 'b', open: true, categories: [], searchText: 'b' },
+    { id: 'c', open: true, categories: [], starred: true, searchText: 'c' },
+  ];
+  assert.equal(DEFAULT_FILTERS.category, 'mine');
+  assert.deepEqual(applyFilters(items, DEFAULT_FILTERS).map((item) => item.id), ['a']);
+  assert.deepEqual(applyFilters(items, { ...DEFAULT_FILTERS, category: 'all' }).map((item) => item.id), ['a', 'b', 'c']);
+  assert.deepEqual(applyFilters(items, { ...DEFAULT_FILTERS, quick: 'starred' }).map((item) => item.id), ['c'], 'les annonces suivies restent visibles');
 });
 
 test('configuration : la configuration livrée est valide', () => {
