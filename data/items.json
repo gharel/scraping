@@ -212,17 +212,6 @@
       "seed": true
     },
     {
-      "id": "ville-kone:5494131ca3289f0e",
-      "sourceId": "ville-kone",
-      "kind": "annonce",
-      "title": "site internet de la province Nord de Nouvelle-Calédonie.",
-      "summary": "Remarque : ce texte est adapté de celui présentant les conditions d’attribution des marchés publics sur le site internet de la province Nord de Nouvelle-Calédonie.",
-      "url": "https://www.province-nord.nc/affaires-administratives-finances-budget/marches-publics",
-      "firstSeen": "2026-10-08T09:13:00.240Z",
-      "lastSeen": "2026-10-08T09:13:00.240Z",
-      "seed": true
-    },
-    {
       "id": "ville-dumbea:dab4cb4e31393288",
       "sourceId": "ville-dumbea",
       "kind": "consultation",

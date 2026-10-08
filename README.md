@@ -156,7 +156,7 @@ Exemple dans `config/veille.json` :
 }
 ```
 
-En mode `liens`, Vigie choisit le titre le plus parlant : le texte du lien, son contexte (ligne de tableau, paragraphe) ou l’intertitre de l’avis (« Avis de marché : … ») quand le lien ne dit que « Télécharger ». Les pages construites entièrement en JavaScript ne sont pas lisibles : préférez alors leur flux RSS s’il existe.
+En mode `liens`, Vigie choisit le titre le plus parlant : le texte du lien, son contexte (ligne de tableau, paragraphe) ou l’intertitre de l’avis (« Avis de marché : … ») quand le lien ne dit que « Télécharger ». Un avis lié deux fois (vignette, puis titre) prend le titre du lien et le résumé de la vignette. Certains liens ne sont jamais des annonces, même s’ils passent le filtre `match` : ceux qui mènent à une page d’accueil ou de rubrique (« …/marches-publics », « /appels-d-offres?page=2 ») et les renvois vers un autre site glissés dans une phrase (« … sur le site internet de la province Nord »). Les pages construites entièrement en JavaScript ne sont pas lisibles : préférez alors leur flux RSS s’il existe.
 
 ## Catégories et mots-clés
 

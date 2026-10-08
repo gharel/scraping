@@ -31,6 +31,7 @@ test('texte : référence et nature devinées depuis un titre', () => {
   assert.equal(guessKind('Avis d’attribution de marché public DAEM'), 'attribution');
   assert.equal(guessKind('Appel public a concurrence n° APCDERES-2809'), 'consultation');
   assert.equal(guessKind('Appel à projet – Précarité menstruelle'), 'appel-a-projets');
+  assert.equal(guessKind('La mairie lance deux appels d’offres'), 'consultation');
 });
 
 test('atexo : lecture des consultations de marchespublics.nc', () => {
@@ -141,6 +142,30 @@ test('page en mode liens : avis rédigé sous un intertitre, une annonce par avi
   assert.equal(goodies.deadline, '2026-10-19T17:00:00+11:00');
   assert.equal(goodies.publishedAt, '2026-10-01T00:00:00+11:00');
   assert.equal(moe.title, 'MOE - CET Vailepo');
+});
+
+test('page en mode liens : renvois vers d’autres sites et pages de rubrique écartés', async () => {
+  const { default: page } = await import('../scraper/adapters/page.js');
+  const html = `<html><body><div class="contenu">
+    <div class="article"><div class="vignette"><a href="https://www.ville.nc/realisation-des-repas/"><img src="/repas.jpg" alt=""></a></div>
+      <div class="texte"><h4><a href="https://www.ville.nc/realisation-des-repas/">Réalisation des repas dans les écoles</a></h4>
+      <p>Le Maire informe les entreprises qu’il lance deux appels d’offres ouverts pour les repas scolaires.</p></div></div>
+    <ul><li><a href="https://portail.marchespublics.nc/?page=Entreprise.EntrepriseDetailsConsultation&refConsultation=123">Fourniture de matériel informatique</a></li></ul>
+    <p>Remarque : ce texte est adapté de celui présentant les conditions d’attribution des marchés publics sur le <a href="https://www.province-nord.nc/affaires-administratives-finances-budget/marches-publics">site internet de la province Nord de Nouvelle-Calédonie.</a></p>
+    <p>Les règles sont détaillées dans le <a href="https://www.province-nord.nc/guide-des-marches-publics">guide de la province</a>.</p>
+    <p>Toutes les consultations sur <a href="https://www.marchespublics.nc/">marchespublics.nc</a> et les <a href="https://www.ville.nc/les-marches-publics/?page=2">avis précédents</a>.</p>
+  </div></body></html>`;
+  const http = { get: async () => ({ url: 'https://www.ville.nc/marches', text: html }) };
+  const source = { name: 'Ville', url: 'https://www.ville.nc/marches', options: { detect: 'liens', match: 'march|appel|avis|consultation' } };
+  const { items } = await page.fetch(source, { http, now: new Date('2026-10-08T00:00:00Z') });
+  assert.deepEqual(
+    items.map((item) => item.title),
+    ['Réalisation des repas dans les écoles', 'Fourniture de matériel informatique'],
+    'ni la page « marchés publics » d’un autre site, ni un renvoi glissé dans une phrase, ni une page d’accueil ou paginée',
+  );
+  const [repas] = items;
+  assert.equal(repas.kind, 'consultation', 'nature lue dans le texte de l’article');
+  assert.match(repas.summary, /lance deux appels d’offres/, 'résumé tiré de la vignette, titre tiré du lien de l’intertitre');
 });
 
 test('page en mode liens : objet lu sur la fiche de détail, une seule fois', async () => {

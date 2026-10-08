@@ -22,6 +22,19 @@ const DOCUMENT_ONLY = /^(l['’]\s*|le |la |les )?(avis|r[èe]glement|cahier|dos
 const HEADINGS = 'h1, h2, h3, h4, h5, h6';
 // Intertitre d'un avis : « Avis de marché : Entretien des espaces verts… » (le type, puis l'objet).
 const NOTICE_HEADING = /^(avis|appels?|consultation|march[ée]s?|aapc|aao|mapa|rfq|rfp|rft|eoi|request|tender|invitation)\b[^:–—]{0,80}?\s*[:–—]\s*(\S.{9,})$/iu;
+// Dernier segment d'une page d'accueil ou de rubrique (« …/marches-publics », « /nos-appels-doffres/ ») : une liste d'avis, pas un avis.
+const LISTING_SLUG =
+  /^(?:(?:les|nos|tous|toutes)-)?(?:accueil|index|home|actualites?|news|annonces?(?:-legales)?|avis|march[ée]s?-?(?:publics?)?|appels?-(?:d-?)?offres?|consultations?|commande-publique|achats?(?:-publics?)?|tenders?|procurements?)(?:-en-cours)?$/i;
+// Paramètres d'adresse qui ne font que paginer une liste (« ?page=2 »).
+const PAGING_PARAM = /^(?:page|p|paged|pg|start|offset)$/i;
+const DOCUMENT_URL = /\.(?:pdf|docx?|xlsx?|odt|ods|rtf|zip)$/i;
+// Mots d'un titre qui ne donne que le type d'avis (« APPEL À PROJETS », « Avis d'appel d'offres 2026 »).
+const TYPE_WORD = /^(?:avis|appels?|offres?|projets?|candidatures?|concurrence|consultations?|march[ée]s?|publi(?:c|que)s?|attributions?|aapc|aao|mapa|rfq|rfp|rft|eoi|tenders?|[àa]|au|aux|de|des|du|d|l|la|le|les|en|cours|\d{4})$/iu;
+
+function typeOnly(text) {
+  const words = text.split(/[^\p{L}\p{N}]+/u).filter(Boolean);
+  return words.length > 0 && words.every((word) => TYPE_WORD.test(word));
+}
 
 function toList(value) {
   if (!value) return [];
@@ -53,6 +66,39 @@ function fileLabel(url) {
   } catch {
     return '';
   }
+}
+
+/** Lien vers une page d'accueil ou de rubrique (éventuellement paginée) plutôt que vers un avis. */
+function listingPage(url) {
+  try {
+    const { pathname, searchParams } = new URL(url);
+    if ([...searchParams].some(([key, value]) => !PAGING_PARAM.test(key) || !/^\d*$/.test(value))) return false;
+    const last = decodeURIComponent(pathname).split('/').filter(Boolean).pop() || '';
+    return !last || LISTING_SLUG.test(last.replace(/\.(?:php|aspx?|html?)$/i, ''));
+  } catch {
+    return false;
+  }
+}
+
+function host(url) {
+  try {
+    return new URL(url).hostname.replace(/^www\./, '');
+  } catch {
+    return '';
+  }
+}
+
+/**
+ * Lien glissé dans une phrase vers un autre site (« … présentant les conditions d'attribution des marchés
+ * publics sur le site internet de la province Nord ») : une référence citée par la page, pas un avis.
+ */
+function inlineReference($, link, url, pageUrl, own) {
+  if (host(url) === host(pageUrl) || DOCUMENT_URL.test(url.split(/[?#]/)[0])) return false;
+  const block = $(link).closest('p, li, td, dd, blockquote');
+  if (!block.length || !own) return false;
+  const text = oneLine(spacedText(block[0]));
+  const before = text.slice(0, Math.max(0, text.indexOf(own))).trim();
+  return before.split(/\s+/).length >= 3 && /[\p{L},’']$/u.test(before);
 }
 
 /** Texte d'un nœud avec une espace entre éléments (évite « 16/11/202607/10/2026 »). */
@@ -176,7 +222,7 @@ export function extractPage(html, pageUrl, options = {}) {
   const sections = new Set();
   zone.find('a[href]').each((_, a) => {
     const url = absoluteUrl($(a).attr('href'), pageUrl);
-    if (!url || url.split('#')[0] === page) return;
+    if (!url || url.split('#')[0] === page || listingPage(url)) return;
     const own = oneLine($(a).text() || $(a).attr('title') || $(a).attr('aria-label') || '').replace(/\s*[>›»→]+$/, '');
     let context = contextOf($, a);
     // Nom de fichier technique (« 07532d ca9aaa50de… ») : inutilisable comme titre.
@@ -184,6 +230,7 @@ export function extractPage(html, pageUrl, options = {}) {
     const label = hashLike(fileLabel(url)) ? '' : fileLabel(url);
     const generic = own.length < 6 || GENERIC_LINK.test(own) || own.toLowerCase() === label.toLowerCase() || hashLike(own);
     const documentOnly = own.length < 40 && DOCUMENT_ONLY.test(own) && label.length >= 12;
+    if (!generic && !documentOnly && inlineReference($, a, url, pageUrl, own)) return;
     // Lien seul dans son bloc (« Télécharger Avis de marché PDF - 0,24 Mb ») : l'avis est rédigé au-dessus.
     const alone = cleanTitle(context).length <= cleanTitle(own).length + 5;
     const section = (generic || documentOnly) && alone ? sectionOf($, a, zone) : null;
@@ -191,14 +238,27 @@ export function extractPage(html, pageUrl, options = {}) {
     const object = section ? cleanTitle(section.object) : '';
     const title = (object && object[0].toUpperCase() + object.slice(1)) || cleanTitle(documentOnly ? label : generic ? context.slice(0, 220) || label || own : own) || url;
     const haystack = `${title} ${own} ${url}`;
-    if (match && !match.test(haystack)) return;
-    if (exclude && exclude.test(haystack)) return;
+    const matched = !match || match.test(haystack);
+    const excluded = Boolean(exclude && exclude.test(haystack));
     // Un avis par intertitre : ses autres pièces (cahier des charges, note…) ne sont pas des annonces de plus.
-    if (section && sections.has(section.heading)) return;
+    if (section && (!matched || excluded || sections.has(section.heading))) return;
     if (section) sections.add(section.heading);
-    const entry = { url, text: own, title, context, kind: section ? guessKind(section.heading) : '' };
+    // Lien qui nomme l'avis : ni « Télécharger », ni seulement « APPEL À PROJETS ».
+    const named = !generic && !typeOnly(title);
+    const entry = { url, text: own, title, context, kind: section ? guessKind(section.heading) : '', named, bare: context === own, matched, excluded };
     const previous = byUrl.get(url);
-    if (!previous || (previous.title.length < title.length && !GENERIC_LINK.test(title))) byUrl.set(url, entry);
+    if (!previous) {
+      byUrl.set(url, entry);
+      return;
+    }
+    // Même avis lié deux fois (vignette, puis titre) : les filtres valent pour l'avis, son titre vient du lien
+    // qui le nomme et, si ce lien est seul dans son bloc (intertitre), celui de la vignette sert de résumé.
+    const better = previous.named === named ? previous.title.length < title.length && !GENERIC_LINK.test(title) : named;
+    const [kept, other] = better ? [entry, previous] : [previous, entry];
+    if (kept.named && kept.bare && !other.named && other.context.length > kept.context.length) kept.context = other.context;
+    kept.matched = previous.matched || matched;
+    kept.excluded = previous.excluded || excluded;
+    byUrl.set(url, kept);
   });
 
   zone.find('br').replaceWith('\n');
@@ -210,7 +270,8 @@ export function extractPage(html, pageUrl, options = {}) {
     const line = oneLine(raw);
     if (line && line !== lines[lines.length - 1]) lines.push(line);
   }
-  return { lines: lines.slice(0, 3000), links: [...byUrl.values()].slice(0, 400) };
+  const links = [...byUrl.values()].filter((link) => link.matched && !link.excluded);
+  return { lines: lines.slice(0, 3000), links: links.slice(0, 400) };
 }
 
 /**
@@ -293,9 +354,11 @@ export default {
         const detailText = oneLine(detail);
         const summary = detailText && detailText !== title ? detailText : link.context && link.context !== title ? truncate(link.context, 600) : '';
         const text = `${title}\n${link.context}\n${detail}`;
+        // Nature lue dans le titre, sinon dans le texte qui l'accompagne (« … lance un appel d'offres … »).
+        const guessed = guessKind(`${title} ${link.url}`);
         return {
           key: hash(link.url),
-          kind: options.kind || (link.kind !== 'annonce' && link.kind) || guessKind(`${title} ${link.url}`),
+          kind: options.kind || (link.kind !== 'annonce' && link.kind) || (guessed === 'annonce' ? guessKind(link.context) : guessed),
           title,
           buyer,
           url: link.url,

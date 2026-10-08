@@ -65,7 +65,7 @@ export function guessReference(text) {
 export function guessKind(text) {
   const normalized = oneLine(text).toLowerCase();
   if (/\battribution|\battribu[ée]s?\b|\bawarded\b/.test(normalized)) return 'attribution';
-  if (/appel (public )?(a|à) concurrence|appel d.offres?|avis d.appel|avis de march[ée]|consultation|\brfp\b|\brfq\b|\beoi\b|request for (proposal|quotation|tender)|tender/.test(normalized)) return 'consultation';
+  if (/appel (public )?(a|à) concurrence|appels? d.offres?|avis d.appel|avis de march[ée]|consultation|\brfp\b|\brfq\b|\beoi\b|request for (proposal|quotation|tender)|tender/.test(normalized)) return 'consultation';
   if (/appel (a|à) projets?|appel (a|à) candidatures?/.test(normalized)) return 'appel-a-projets';
   return 'annonce';
 }
