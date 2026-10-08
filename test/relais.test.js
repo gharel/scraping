@@ -6,7 +6,7 @@ import { test } from 'node:test';
 import { buildRelay, runVeille } from '../scraper/core.js';
 import { HttpError } from '../scraper/lib/http.js';
 import { needsRelay, relayProblem } from '../scraper/lib/relais.js';
-import { commitFiles, connect, planRelays, publicState, readSettings } from '../server/relais.js';
+import { commitFiles, connect, disconnect, planRelays, publicState, publishRelays, readSettings } from '../server/relais.js';
 import { outOfReach, relayed } from '../site/assets/js/model.js';
 
 const SOURCE = { id: 'wallis-futuna', name: 'Wallis-et-Futuna', url: 'https://www.wallis-et-futuna.gouv.fr/avis', type: 'page', region: 'wf', enabled: true, categories: [], options: { detect: 'liens' } };
@@ -191,6 +191,62 @@ test('relais : tous les relevés partent en un seul commit, même si la veille e
   assert.equal(sha, 'commit-on-c2', 'reparti de la nouvelle tête de branche');
   assert.equal(calls.filter((entry) => entry === 'PATCH /git/refs/heads/main').length, 2);
   assert.equal(calls.filter((entry) => entry === 'POST /git/trees').length, 2);
+});
+
+test('relais : publication depuis le PC, puis désactivation pendant une publication', async (t) => {
+  const lastSuccess = new Date(Date.now() - 10 * 60000).toISOString();
+  const dir = await dataDir({ items: [known('a'), known('b')], status: { sources: { [SOURCE.id]: { ok: true, url: SOURCE.url, lastSuccess, listing: true, total: 2 } }, runs: [] } });
+  t.after(() => rm(dir, { recursive: true, force: true }));
+  const file = path.join(dir, 'relais.json');
+  const token = `github_pat_${'Z9'.repeat(40)}`;
+  await writeFile(file, JSON.stringify({ token, repository: 'gharel/scraping', branch: 'main', published: {} }));
+
+  const commits = [];
+  let onPatch = async () => {};
+  const fetchImpl = async (url, options = {}) => {
+    const json = (body, status = 200) => new Response(JSON.stringify(body), { status });
+    if (url.startsWith('https://gharel.github.io/scraping/data/status.json')) return json({ sources: { [SOURCE.id]: { ok: false, network: true, where: 'github' } } });
+    const route = url.replace('https://api.github.com/repos/gharel/scraping', '');
+    const body = options.body ? JSON.parse(options.body) : null;
+    if (route === '/git/refs/heads/main' && options.method === 'GET') return json({ object: { sha: 'head' } });
+    if (route === '/git/commits/head') return json({ tree: { sha: 'base-tree' } });
+    if (route === '/git/trees') {
+      commits.push(body.tree);
+      return json({ sha: 'new-tree' }, 201);
+    }
+    if (route === '/git/commits') return json({ sha: 'new-commit' }, 201);
+    if (route === '/git/refs/heads/main' && options.method === 'PATCH') {
+      await onPatch();
+      return json({ object: { sha: body.sha } });
+    }
+    return json({ message: 'Not Found' }, 404);
+  };
+
+  const outcome = await publishRelays({ config: CONFIG, dataDir: dir, fetchImpl, file });
+  assert.equal(outcome.ok, true);
+  assert.deepEqual(outcome.published, [SOURCE.id]);
+  assert.equal(commits.length, 1);
+  assert.equal(commits[0][0].path, `data/relais/${SOURCE.id}.json`);
+  const relay = JSON.parse(commits[0][0].content);
+  assert.equal(relay.at, lastSuccess);
+  assert.deepEqual(relay.items.map((item) => item.key), ['a', 'b']);
+  const saved = await readSettings(file);
+  assert.equal(saved.token, token);
+  assert.equal(saved.published[SOURCE.id].at, lastSuccess);
+
+  assert.equal((await publishRelays({ config: CONFIG, dataDir: dir, fetchImpl, file })).published.length, 0, 'relevé inchangé : pas de nouveau commit');
+  assert.equal(commits.length, 1);
+
+  // « Désactiver le relais » pendant une publication (nouvelle lecture sur le PC, « Publier maintenant ») :
+  // le jeton retiré ne revient pas.
+  const newer = new Date(Date.now() - 60000).toISOString();
+  await writeFile(path.join(dir, 'status.json'), JSON.stringify({ sources: { [SOURCE.id]: { ok: true, url: SOURCE.url, lastSuccess: newer, listing: true, total: 2 } }, runs: [] }));
+  onPatch = () => disconnect(file);
+  const raced = await publishRelays({ config: CONFIG, dataDir: dir, fetchImpl, file, force: true });
+  assert.deepEqual(raced.published, [SOURCE.id]);
+  assert.equal(commits.length, 2);
+  assert.equal((await readSettings(file)).token, undefined);
+  assert.equal(await publishRelays({ config: CONFIG, dataDir: dir, fetchImpl, file, force: true }), null, 'relais désactivé : plus rien n’est publié');
 });
 
 test('relais : le jeton est vérifié, gardé sur le PC et jamais renvoyé à l’interface', async (t) => {

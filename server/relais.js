@@ -29,15 +29,19 @@ export class RelayError extends Error {
   }
 }
 
+let detected = null;
+
 /** Dépôt GitHub d'origine de ce dossier (« propriétaire/dépôt »), d'après la configuration git. */
 export function detectRepository() {
+  if (detected !== null) return detected;
   try {
     const remote = execFileSync('git', ['config', '--get', 'remote.origin.url'], { cwd: ROOT_DIR, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim();
     const match = remote.match(/github\.com[:/]([^/]+\/[^/]+?)(?:\.git)?\/?$/);
-    return match ? match[1] : '';
+    detected = match ? match[1] : '';
   } catch {
-    return '';
+    detected = '';
   }
+  return detected;
 }
 
 /* ── Réglages enregistrés sur le PC ───────────────────────────────── */
@@ -260,7 +264,9 @@ export async function publishRelays({ config, dataDir, force = false, log = () =
     outcome.error = error instanceof RelayError ? error.message : `Publication impossible : ${error.message}`;
     log(`Relais : ${outcome.error}`);
   }
-  settings.last = outcome;
-  await writeSettings(settings, file);
+  // Relais désactivé ou jeton changé pendant la publication : ce compte rendu ne le concerne plus.
+  const current = await readSettings(file);
+  if (current.token !== settings.token) return outcome;
+  await writeSettings({ ...current, published: settings.published || {}, publishedAt: settings.publishedAt || null, last: outcome }, file);
   return outcome;
 }
