@@ -96,7 +96,9 @@ function updateChrome() {
     if (link.dataset.nav === state.route) link.setAttribute('aria-current', 'page');
     else link.removeAttribute('aria-current');
   }
-  document.title = `${ROUTES[state.route]?.title || 'Annonces'} · Vigie`;
+  // Accueil (Annonces) : « Vigie · Skazy Formation » ; autre vue : « Sources · Vigie · Skazy Formation ».
+  const prefix = ROUTES[state.route] && state.route !== 'annonces' ? `${ROUTES[state.route].title} · ` : '';
+  document.title = `${prefix}Vigie · Skazy Formation`;
 
   const sync = document.getElementById('sync-status');
   if (sync) {

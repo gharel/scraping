@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 /**
  * Génère les icônes PNG de l'application à partir de site/assets/img/favicon.svg :
- * jumelles blanches (Font Awesome Free, CC BY 4.0) sur un dégradé vert-lime,
- * dans le style des autres outils Skazy Formation.
+ * jumelles blanches (Font Awesome Free, CC BY 4.0) sur un dégradé jaune,
+ * la couleur de Vigie dans l'arc-en-ciel des outils Skazy Formation.
  *   node scripts/generate-icons.js
  */
 import { readFileSync, writeFileSync } from 'node:fs';
