@@ -1,6 +1,6 @@
 # Vigie — veille des appels d’offres
 
-Vigie surveille automatiquement les appels d’offres publiés en Nouvelle-Calédonie et toutes les pages web que vous lui confiez. Les nouveautés sont classées par catégories, signalées dans l’interface et, si vous le souhaitez, envoyées par e-mail.
+Vigie surveille automatiquement les appels d’offres publiés en Nouvelle-Calédonie, à Wallis-et-Futuna, en Polynésie française et au Vanuatu, ainsi que toutes les pages web que vous lui confiez. Les nouveautés sont classées par catégories, signalées dans l’interface et, si vous le souhaitez, envoyées par e-mail.
 
 **Version en ligne : <https://gharel.github.io/scraping/>**
 
@@ -12,8 +12,9 @@ Interface conçue avec le design system **Skazy Formation** (Claude Design) : lo
 
 ## Ce que fait Vigie
 
-- **Surveille** marchespublics.nc et d’autres sources toutes les 2 heures (en ligne) ou toutes les heures (sur votre PC).
-- **Lit les consultations en détail** : acheteur, référence, procédure, nature, nombre de lots, date limite.
+- **Surveille** 32 sources (portails de marchés publics, provinces, communes, établissements publics, journaux d’annonces légales) toutes les 2 heures (en ligne) ou toutes les heures (sur votre PC).
+- **Lit les consultations en détail** : acheteur, référence, procédure, nature, nombre de lots, date de publication, date limite. Quand la liste ne donne que l’acheteur, Vigie lit la fiche de l’annonce pour en connaître l’objet.
+- **Range** chaque annonce par territoire (Nouvelle-Calédonie, Polynésie française, Wallis-et-Futuna, Vanuatu, Pacifique), avec un filtre dédié.
 - **Classe** chaque annonce dans vos domaines (formation, IA, communication, développement, web, bureautique, audiovisuel, data, gestion de projet) et **écarte** le BTP grâce à des mots-clés exclus. Par défaut, seules les annonces de vos catégories sont affichées.
 - **Signale** les nouveautés depuis votre dernière visite, les clôtures proches (compte à rebours J-n) et les reports de date limite.
 - **Alerte par e-mail** via un ticket GitHub quand une nouvelle annonce entre dans vos catégories.
@@ -21,21 +22,43 @@ Interface conçue avec le design system **Skazy Formation** (Claude Design) : lo
 
 ## Sources surveillées par défaut
 
+**Nouvelle-Calédonie**
+
 | Source | Type | Contenu |
 | --- | --- | --- |
 | [Marchés publics NC](https://portail.marchespublics.nc/?page=Entreprise.EntrepriseAdvancedSearch&AllCons) | Portail Atexo | Toutes les consultations en cours (Gouvernement, provinces, communes, établissements publics) |
-| [Province Sud · commande publique](https://www.province-sud.nc/aops/) | Flux RSS | Avis d’appel d’offres et d’attribution |
-| [Province Sud · appels à projets](https://www.province-sud.nc/aaps/) | Flux RSS | Appels à projets |
-| [CAFAT · marchés](https://www.cafat.nc/nos-marches/) | Flux RSS | Marchés de la CAFAT |
-| [Communauté du Pacifique (CPS)](https://www.spc.int/procurement) | Liste CSS | Appels d’offres ouverts de la CPS (siège à Nouméa) |
-| [Marchés publics NC · informations](https://marchespublics.nc/accueil) | Page web | Changements des informations de la plateforme |
+| [Province Nord](https://marchespublics.province-nord.nc/sallemarche.aspx) | Liste CSS | Salle des marchés : objet, direction, référence, nature, date limite |
+| [Province Sud · commande publique](https://www.province-sud.nc/recherche?classNaturalName=Appel%20d%27offres) | Liste CSS | Avis d’appel d’offres et d’attribution |
+| [Province Sud · appels à projets](https://www.province-sud.nc/aaps/feed/) | Flux RSS | Appels à projets |
+| [Province des Îles](https://www.province-iles.nc/appel-offres) | Page web (liens) | Avis publiés en PDF |
+| [Haut-commissariat](https://www.nouvelle-caledonie.gouv.fr/Publications/Marches-publics) | Page web (liens) | Avis de l’État, fiche lue pour la date de publication |
+| [Les Nouvelles Calédoniennes](https://legales.lnc.nc/categorie/appels-doffres-950) | Page web (liens) | Annonces légales d’appels d’offres, objet lu sur la fiche |
+| [IFAP](https://www.ifap.nc/consultations) | Liste CSS | Consultations de formateurs (catégorie Formation imposée) |
+| [FIAF](https://www.fiaf.nc/prestataires-de-formation/acces-a-l-espace-consultations) | Flux RSS | Consultations de prestataires de formation (catégorie Formation imposée) |
+| [CAFAT](https://www.cafat.nc/nos-marches/), [FSH](https://www.fsh.nc/appels-offres/) | Flux RSS | Marchés de ces organismes |
+| [SECAL](https://secal.nc/nos-appels-doffres/) | Liste CSS | Avis de la SECAL (référence, maître d’ouvrage, dates) |
+| [CCI](https://www.cci.nc/la-cci-nc/appels-d-offres-et-consultations), [CHT](https://www.cht.nc/les-appels-d-offres/appels-d-offres-en-cours/), [SIC](https://www.sic.nc/nos-appels-doffre/), [UNC](https://unc.nc/utile/appel-doffres/) | Page web (liens) | Nouveaux avis et dossiers publiés |
+| Villes de [Dumbéa](https://www.ville-dumbea.nc/dumbea-pratique/marches-publics/), [Koné](https://www.koohne.nc/les-marches-publics/), [Koumac](https://www.mairie-koumac.nc/marches-publics), [Mont-Dore](https://www.mont-dore.nc/marches-publics) | Page web (liens) | Nouveaux avis et dossiers publiés |
+| [Nouméa](https://www.noumea.nc/noumea-pratique/appel-offres), [Enercal](https://www.enercal.nc/espace-sous-traitants/), [OPT-NC](https://office.opt.nc/fr/marches-publics/appels-offre), [informations marchespublics.nc](https://marchespublics.nc/accueil) | Page web (texte) | Toute modification de la page |
 
-La plateforme de la Province Nord renvoie vers marchespublics.nc : ses consultations y sont déjà couvertes.
+**Wallis-et-Futuna, Polynésie française, Vanuatu et Pacifique**
+
+| Source | Type | Contenu |
+| --- | --- | --- |
+| [Wallis-et-Futuna](https://www.wallis-et-futuna.gouv.fr/Publications/Appels-d-offres-Avis-d-attribution-des-marches) | Page web (liens) | Avis de l’Administration supérieure : objet, référence, date limite |
+| [Lexpol](https://lexpol.cloud.pf/LexpolMarchesPublics.php?3) | Page web (liens) | Avis de marchés publiés en Polynésie française |
+| [Haut-commissariat de Polynésie](https://www.polynesie-francaise.gouv.fr/Publications/Publications-legales-et-avis/Marches-publics) | Page web (liens) | Avis de l’État en Polynésie |
+| [Port autonome de Papeete](https://www.portdepapeete.pf/marches-publics/) | Page web (liens) | Marchés et appels à projets du port |
+| [Central Tender Board](https://ctb.gov.vu/en/tenders/actual-tenders), [Public Works Department](https://pwd.gov.vu/procurements/procurements-page) | Flux RSS | Appels d’offres du Vanuatu |
+| [Marchés publics de l’État (PLACE)](https://www.marches-publics.gouv.fr/) | Portail Atexo | Consultations de l’État exécutées en Nouvelle-Calédonie, Polynésie, Wallis-et-Futuna ou au Vanuatu |
+| [Communauté du Pacifique (CPS)](https://www.spc.int/procurement) | Liste CSS | Appels d’offres ouverts de la CPS (siège à Nouméa) |
+
+Les pages de la Ville de Nouméa, d’Enercal et de l’OPT n’ayant pas de liste exploitable, Vigie y signale toute modification. Le Gouvernement de la Nouvelle-Calédonie et la plupart des communes publient sur marchespublics.nc, déjà couvert.
 
 ## Utiliser Vigie
 
-- **Annonces** : les tuiles du haut filtrent en un clic (en cours, nouvelles, clôture proche, suivies). Toutes les options de filtre sont des puces avec leur nombre d’annonces : catégories (« Mes catégories » par défaut, « Toutes » pour tout voir), statut, source, type ; le tri se fait par date de publication ou par date limite. L’étoile « suit » une annonce sur l’appareil.
-- **Sources** : état de chaque vérification (à jour, erreur, en pause), ajout et modification.
+- **Annonces** : les tuiles du haut filtrent en un clic (en cours, nouvelles, clôture proche, suivies). Toutes les options de filtre sont des puces avec leur nombre d’annonces : catégories (« Mes catégories » par défaut, « Toutes » pour tout voir), statut, territoire, source, type ; le tri se fait par date de publication ou par date limite. L’étoile « suit » une annonce sur l’appareil.
+- **Sources** : rangées par territoire, avec l’état de chaque vérification (à jour, erreur, en pause), ajout et modification.
 - **Catégories** : mots-clés de classement, avec aperçu en direct des annonces trouvées.
 - **Réglages** : thème, connexion GitHub, alertes, fréquence, export.
 
@@ -79,9 +102,22 @@ Sous Windows :
 | Type | Pour quoi | Ce qu’il faut fournir |
 | --- | --- | --- |
 | `atexo` | marchespublics.nc et les plateformes Atexo | L’adresse de la liste des consultations (recherche avancée) |
-| `rss` | Flux RSS ou Atom | L’adresse du flux (souvent `/feed/`) |
-| `page` | N’importe quelle page web | Mode `texte` (modifications) ou `liens` (nouveaux liens, PDF) ; zone CSS facultative |
+| `rss` | Flux RSS ou Atom | L’adresse du flux (souvent `/feed/`, ou `?format=feed&type=rss` sur Joomla) |
+| `page` | N’importe quelle page web | Mode `texte` (modifications) ou `liens` (chaque lien est une annonce) ; zone CSS facultative |
 | `liste` | Liste d’annonces sans flux | Sélecteurs CSS de l’annonce et de ses champs (`selecteur@attribut` pour lire un attribut) |
+
+Chaque source porte un **territoire** (`region` : `nc`, `pf`, `wf`, `vu` ou `pacifique`). Pour une source régionale (`pacifique`), chaque annonce est rattachée au territoire cité dans son lieu d’exécution ou son titre.
+
+Options utiles (`options`) :
+
+| Type | Option | Effet |
+| --- | --- | --- |
+| `atexo` | `lieux`, `motsCles` | Recherche avancée limitée à des lieux d’exécution (codes Atexo) ou à des mots-clés |
+| `atexo` | `lieuxMax` | Écarte les marchés nationaux qui citent plus de N lieux |
+| `page` | `match`, `exclude` | Expressions régulières : liens à garder, liens à écarter |
+| `page`, `liste` | `keep` | La page ne montre que les derniers avis : une annonce qui en sort n’est pas retirée |
+| `page` | `details`, `detailsTitle` | Lit sur la fiche de chaque annonce le texte de ce sélecteur (une seule fois par annonce) ; avec `detailsTitle`, il devient le titre |
+| `liste` | `fields.status` | Un statut « Expirée », « Clôturée » ou « Closed » ferme l’annonce |
 
 Exemple dans `config/veille.json` :
 
@@ -91,13 +127,14 @@ Exemple dans `config/veille.json` :
   "name": "Mon acheteur",
   "url": "https://exemple.nc/appels-d-offres/",
   "type": "page",
+  "region": "nc",
   "enabled": true,
   "categories": [],
-  "options": { "detect": "liens", "selector": "main" }
+  "options": { "detect": "liens", "selector": "main", "match": "\\.pdf$" }
 }
 ```
 
-Les pages construites entièrement en JavaScript ne sont pas lisibles : préférez alors leur flux RSS s’il existe.
+En mode `liens`, Vigie choisit le titre le plus parlant : le texte du lien, son contexte (ligne de tableau, paragraphe) ou l’intertitre de l’avis (« Avis de marché : … ») quand le lien ne dit que « Télécharger ». Les pages construites entièrement en JavaScript ne sont pas lisibles : préférez alors leur flux RSS s’il existe.
 
 ## Catégories et mots-clés
 
@@ -107,11 +144,11 @@ Catégories livrées, avec les couleurs de catégories du design system Skazy Fo
 | --- | --- | --- |
 | Formation | vert | formation\*, pédagogi\*, e-learning, LMS, training\* |
 | Intelligence artificielle | orange | intelligence artificielle, IA, chatbot\*, automatisation\*, no-code |
-| Communication & webmarketing | orange | communication, réseaux sociaux, campagne\*, événementiel\* |
+| Communication & webmarketing | orange | plan de communication, réseaux sociaux, événementiel\*, magazine\*, goodies |
 | Développement & logiciels | bleu | développement web, logiciel\*, application mobile, ERP, API |
-| Web & numérique | bleu | site internet, numérique\*, informatique\*, cybersécurité, CMS |
+| Web & numérique | bleu | site internet, informatique\*, transformation numérique, cybersécurité, serveur\* |
 | Bureautique | violet | bureautique, Microsoft 365, Google Workspace, Excel |
-| Audiovisuel & graphisme | turquoise | audiovisuel\*, vidéo, motion design, graphis\*, UX |
+| Audiovisuel & graphisme | turquoise | audiovisuel\*, vidéo, court métrage, motion design, graphis\*, UX |
 | Data | jaune | data, tableau de bord, Power BI, statistique\* |
 | Gestion de projet | rose | gestion de projet, conduite du changement, agile, Opquast |
 

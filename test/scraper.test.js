@@ -95,6 +95,95 @@ test('page : extraction du texte et des liens de la zone surveillée', () => {
   assert.deepEqual(page.links.map((link) => link.url), ['https://exemple.nc/doc/1.pdf']);
 });
 
+test('page en mode liens : chaque avis listé devient une annonce lisible', async () => {
+  const { default: page } = await import('../scraper/adapters/page.js');
+  const html = `<html><body><main><ul>
+    <li><span>PORT AUTONOME DE PAPEETE - AAPC2026/25 Retrait d'épaves à Motu Uta - Date de remise de l'offre</span><span>16/11/2026</span><span>07/10/2026</span><a href="LexpolAfficheAnnonceMP.php?t=1">Voir l'annonce ></a></li>
+    <li><span>AVIS D'APPEL D'OFFRES - Entretien des espaces verts</span> <a href="/files/2026-10/aao.pdf">Télécharger</a></li>
+    <li><a href="/contenu/telechargement/1/2/file/Avis_de_publicite_2026_SOLIMPRESS.pdf"></a><span>Avis de publicité_2026_SOLIMPRESS PDF - 0,12 Mb - 03/08/2026</span></li>
+    <li><a href="/menu">Accueil</a></li>
+  </ul></main></body></html>`;
+  const http = { get: async () => ({ url: 'https://exemple.pf/avis', text: html }) };
+  const result = await page.fetch({ name: 'Test', url: 'https://exemple.pf/avis', options: { detect: 'liens', match: 'Lexpol|files|telechargement', keep: true } }, { http, now: new Date('2026-10-08T00:00:00Z') });
+  assert.equal(result.listing, false, 'liste des derniers avis : pas de retrait');
+  assert.equal(result.items.length, 3);
+  const [lexpol, montDore, hc] = result.items;
+  assert.equal(lexpol.buyer, 'PORT AUTONOME DE PAPEETE');
+  assert.equal(lexpol.title, "AAPC2026/25 Retrait d'épaves à Motu Uta");
+  assert.equal(lexpol.deadline, '2026-11-16T00:00:00+11:00');
+  assert.equal(montDore.buyer, '', 'le type d’avis n’est pas un acheteur');
+  assert.equal(montDore.publishedAt, '2026-10-01T00:00:00+11:00', 'date tirée de l’adresse du fichier');
+  assert.equal(hc.title, 'Avis de publicité 2026 SOLIMPRESS');
+  assert.equal(hc.publishedAt, '2026-08-03T00:00:00+11:00');
+});
+
+test('page en mode liens : avis rédigé sous un intertitre, une annonce par avis', async () => {
+  const { default: page } = await import('../scraper/adapters/page.js');
+  const html = `<html><body><div id="main"><div class="lead">
+    <h2>AVIS D'APPEL PUBLIC A LA CONCURRENCE</h2>
+    <h5>Avis de marché : renouvellement des goodies - Wallis et Futuna Tourisme</h5>
+    <p>L'administration supérieure lance le marché public suivant :</p>
+    <p>Référence : 2026-E-PA-57-SBL</p>
+    <p>Date limite de réception des offres : lundi 19 octobre 2026 à 17h00 (heure de Wallis).</p>
+    <div><a href="/contenu/telechargement/1/2/file/Avis%20de%20march%C3%A9.pdf"><span>Télécharger</span> <span>Avis de marché</span> <span>PDF - 0,24 Mb - 01/10/2026</span></a></div>
+    <div><a href="/contenu/telechargement/1/3/file/CDC.pdf"><span>Télécharger</span> <span>CDC goodies</span> <span>PDF - 0,91 Mb - 30/09/2026</span></a></div>
+    <h5>Avis de marché : MOE - CET Vailepo</h5>
+    <p>Mission de maîtrise d'œuvre.</p>
+    <div><a href="/contenu/telechargement/4/5/file/1138-00-Avis-dappel-doffres.pdf"><span>Télécharger</span> <span>Avis</span> <span>PDF - 0,18 Mb - 10/09/2026</span></a></div>
+  </div></div></body></html>`;
+  const http = { get: async () => ({ url: 'https://exemple.wf/avis', text: html }) };
+  const result = await page.fetch({ name: 'WF', url: 'https://exemple.wf/avis', options: { detect: 'liens', selector: '#main', match: 'telechargement' } }, { http, now: new Date('2026-10-08T00:00:00Z') });
+  assert.equal(result.items.length, 2, 'le cahier des charges du même avis n’est pas une annonce de plus');
+  const [goodies, moe] = result.items;
+  assert.equal(goodies.title, 'Renouvellement des goodies - Wallis et Futuna Tourisme');
+  assert.equal(goodies.kind, 'consultation');
+  assert.equal(goodies.reference, '2026-E-PA-57-SBL');
+  assert.equal(goodies.deadline, '2026-10-19T17:00:00+11:00');
+  assert.equal(goodies.publishedAt, '2026-10-01T00:00:00+11:00');
+  assert.equal(moe.title, 'MOE - CET Vailepo');
+});
+
+test('page en mode liens : objet lu sur la fiche de détail, une seule fois', async () => {
+  const { default: page } = await import('../scraper/adapters/page.js');
+  const list = `<html><body><main><div class="annonces">
+    <article><a href="/annonce/1">PROVINCE NORD DEFIJ - Direction de l'Enseignement, de la Formation</a><p>Publié le 07/10/2026</p></article>
+    <article><a href="/annonce/2">Ville du Mont-Dore</a><p>Publié le 07/10/2026</p></article>
+    <article><a href="/annonce/3">VILLE DE NOUMEA - Service des marchés</a><p>Publié le 08/10/2026</p></article>
+  </div></main></body></html>`;
+  const fiches = {
+    'https://legales.exemple.nc/annonce/1': '<h3 class="objet">N° de Consultation : 2026/S2986</h3><p class="texte">Révision 200h du navire Sphyraena</p>',
+    'https://legales.exemple.nc/annonce/2': '<h3 class="avis">AVIS</h3><p class="texte">Fourniture de matériel informatique</p>',
+    'https://legales.exemple.nc/annonce/3': '<h3 class="objet">TÉLÉSURVEILLANCE DES ÉDIFICES COMMUNAUX</h3>',
+  };
+  const asked = [];
+  const http = {
+    get: async (url) => {
+      asked.push(url);
+      return { url, text: fiches[url] || list };
+    },
+  };
+  const source = { name: 'LNC', url: 'https://legales.exemple.nc/appels', options: { detect: 'liens', match: '/annonce/', keep: true, details: 'h3.objet, p.texte', detailsTitle: true } };
+  const now = new Date('2026-10-08T00:00:00Z');
+  const first = await page.fetch(source, { http, now });
+  const [defij, montDore, noumea] = first.items;
+  assert.equal(defij.buyer, 'PROVINCE NORD DEFIJ');
+  assert.equal(defij.title, 'Révision 200h du navire Sphyraena', 'le bloc qui ne porte que le numéro est sauté');
+  assert.equal(defij.reference, '2026/S2986');
+  assert.equal(montDore.buyer, 'Ville du Mont-Dore', 'le lien ne nommait que l’acheteur');
+  assert.equal(montDore.title, 'Fourniture de matériel informatique');
+  assert.equal(noumea.title, 'TÉLÉSURVEILLANCE DES ÉDIFICES COMMUNAUX');
+  assert.equal(noumea.reference, '', '« NOUMEA » n’est pas une référence');
+  assert.equal(asked.length, 4);
+
+  asked.length = 0;
+  const second = await page.fetch(source, { http, now, snapshot: first.snapshot });
+  assert.deepEqual(asked, ['https://legales.exemple.nc/appels'], 'fiches déjà lues : pas de nouvelle requête');
+  assert.equal(second.items[1].title, 'Fourniture de matériel informatique');
+  asked.length = 0;
+  await page.fetch({ ...source, options: { ...source.options, details: 'p.texte' } }, { http, now, snapshot: first.snapshot });
+  assert.equal(asked.length, 4, 'un autre sélecteur relit les fiches');
+});
+
 test('fusion : premier passage, nouveautés, changements de date limite, disparitions', () => {
   const source = { id: 'mp' };
   const t1 = new Date('2026-10-01T00:00:00Z');

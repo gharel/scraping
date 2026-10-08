@@ -119,9 +119,8 @@ export function parseDate(input, { offset = DEFAULT_OFFSET } = {}) {
 /**
  * Cherche une date limite dans un texte libre (« date limite de remise des offres : 30/10/2026 à 16h00 »).
  */
-export function findDeadline(text, options) {
+function findAfter(text, pattern, options) {
   const normalized = String(text || '').replace(/\s+/g, ' ');
-  const pattern = /(date limite|limite de (?:remise|d[ée]p[ôo]t|r[ée]ception)|remise des (?:offres|plis|candidatures)|cl[ôo]ture|closing date|deadline|au plus tard (?:le)?)[^0-9]{0,60}/gi;
   let match;
   while ((match = pattern.exec(normalized))) {
     const after = normalized.slice(match.index + match[0].length, match.index + match[0].length + 60);
@@ -129,4 +128,22 @@ export function findDeadline(text, options) {
     if (date) return date;
   }
   return null;
+}
+
+/** Date limite annoncée dans un texte libre. */
+export function findDeadline(text, options) {
+  return findAfter(
+    text,
+    /(date limite|limite de (?:remise|d[ée]p[ôo]t|r[ée]ception)|remise des (?:offres|plis|candidatures)|remise de l['’]offre|date de (?:cl[ôo]ture|remise)|cl[ôo]ture|jusqu['’]au|avant le|au plus tard(?: le)?|closing date|closes? on|deadline|due date)[^0-9]{0,40}/gi,
+    options,
+  );
+}
+
+/** Date de publication annoncée dans un texte libre (« publié le », « mis en ligne le »…). */
+export function findPublished(text, options) {
+  return (
+    findAfter(text, /(publi[ée]e? le|mis[e]? en ligne le|date de publication|parution(?: du| le)?|posted on|posting date|published)[^0-9]{0,30}/gi, options) ||
+    // À défaut, la date de mise à jour de la page de l'avis.
+    findAfter(text, /(mis[e]? à jour le|updated on)[^0-9]{0,10}/gi, options)
+  );
 }

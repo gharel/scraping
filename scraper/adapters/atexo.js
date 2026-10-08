@@ -10,6 +10,19 @@ import { fromParts } from '../lib/dates.js';
 const RESULT = 'ctl0$CONTENU_PAGE$resultSearch';
 const NEXT_PAGE_TARGET = `${RESULT}$PagerTop$ctl2`;
 const PAGE_SIZE_FIELD = `${RESULT}$listePageSizeTop`;
+const SEARCH = 'ctl0$CONTENU_PAGE$AdvancedSearch';
+// Territoires du Pacifique placés en tête de la liste des lieux d'exécution.
+const PACIFIC = /\(98[678]\)|cal[ée]donie|polyn[ée]sie|wallis|futuna|vanuatu/i;
+
+/** Lieux d'exécution : liste complète et version courte pour l'affichage. */
+function summarizePlaces(text) {
+  const places = oneLine(text)
+    .split(/\s*,\s*/)
+    .filter(Boolean);
+  const ordered = [...places.filter((place) => PACIFIC.test(place)), ...places.filter((place) => !PACIFIC.test(place))];
+  const unique = [...new Set(ordered)];
+  return { count: unique.length, label: unique.length > 3 ? `${unique.slice(0, 3).join(', ')} +${unique.length - 3}` : unique.join(', ') };
+}
 
 function kindFromUrl(url) {
   if (/AvisAttribution/i.test(url)) return 'attribution';
@@ -93,7 +106,7 @@ export function parseResults(html, pageUrl) {
 
     const lots = Number(oneLine(row.find('.lots').first().text()).match(/(\d+)\s*lot/i)?.[1]) || 0;
     const lieux = row.find('.lieux-exe').first();
-    const location = oneLine(lieux.find('[data-content]').first().attr('data-content') || lieux.find('span > span').first().text());
+    const places = summarizePlaces(lieux.find('[data-content]').first().attr('data-content') || lieux.find('span > span').first().text());
 
     const published = dateBlock(row.find('.cons_ref .date').first());
     const closing = row.find('.cloture-line').first();
@@ -122,7 +135,8 @@ export function parseResults(html, pageUrl) {
       procedure: oneLine(procedureNode.attr('title') || ''),
       procedureCode: oneLine(procedureNode.text()),
       nature: oneLine(row.find('.cons_categorie').first().text()),
-      location,
+      location: places.label,
+      placesCount: places.count,
       lots,
       publishedAt: fromParts(published.day, published.month, published.year),
       deadline: fromParts(closingDate.day, closingDate.month, closingDate.year, closingTime),
@@ -143,6 +157,25 @@ export default {
     let page = parseResults(response.text, response.url);
     if (!page.form && page.items.length === 0) {
       throw new Error("La page ne ressemble pas à une liste de consultations Atexo (aucun résultat ni formulaire trouvé)");
+    }
+
+    // Recherche avancée : lieux d'exécution (codes Atexo) et mots-clés, envoyés par le formulaire.
+    const lieux = String(source.options?.lieux || '')
+      .split(/[\s,;]+/)
+      .filter(Boolean);
+    if (lieux.length || source.options?.motsCles) {
+      if (!page.form?.fields.has(`${SEARCH}$keywordSearch`)) {
+        throw new Error('Formulaire de recherche avancée introuvable : utilisez l’adresse « …EntrepriseAdvancedSearch&searchAnnCons »');
+      }
+      const { action, fields } = page.form;
+      if (lieux.length) fields.set(`${SEARCH}$idsSelectedGeoN2`, `,${lieux.join(',')},`);
+      if (source.options?.motsCles) fields.set(`${SEARCH}$keywordSearch`, source.options.motsCles);
+      fields.set(`${SEARCH}$lancerRecherche`, 'Lancer la recherche');
+      fields.set('PRADO_POSTBACK_TARGET', `${SEARCH}$lancerRecherche`);
+      fields.set('PRADO_POSTBACK_PARAMETER', '');
+      const postUrl = absoluteUrl(action.replace(/&amp;/g, '&'), response.url) || response.url;
+      response = await http.post(postUrl, fields.toString(), { headers: { Referer: response.url } });
+      page = parseResults(response.text, source.url);
     }
     page.items.forEach((item) => collected.set(item.key, item));
 
@@ -173,6 +206,9 @@ export default {
 
     const total = page.total || collected.size;
     if (total && collected.size < total) log?.(`  ${source.name} : ${collected.size}/${total} consultations lues`);
-    return { items: [...collected.values()], meta: { total } };
+    // Écarte les marchés de portée nationale (trop de lieux d'exécution).
+    const maxPlaces = Number(source.options?.lieuxMax) || 0;
+    const items = [...collected.values()].filter((item) => !maxPlaces || !item.placesCount || item.placesCount <= maxPlaces);
+    return { items, meta: { total } };
   },
 };

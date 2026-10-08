@@ -139,7 +139,11 @@ export async function runVeille({ config, dataDir, only = null, log = () => {}, 
       const result = await adapter.fetch(source, { http, log, now: runAt, snapshot });
       // Premier passage (ou adresse modifiée) : les annonces déjà en ligne ne sont pas des nouveautés.
       const firstRun = seeded[source.id] !== source.url;
-      const merged = mergeSourceItems(items, source, result.items, { now: runAt, firstRun, listing: adapter.listing });
+      // Adresse modifiée : les annonces de l'ancienne adresse sont remplacées, pas marquées « retirées ».
+      if (seeded[source.id] && firstRun) items = items.filter((item) => item.sourceId !== source.id);
+      // Une page en mode « liens » se comporte comme une liste : un lien disparu = annonce retirée.
+      const listing = result.listing ?? adapter.listing;
+      const merged = mergeSourceItems(items, source, result.items, { now: runAt, firstRun, listing });
       seeded[source.id] = source.url;
       items = merged.items;
       if (result.snapshot) await store.writeSnapshot(source.id, result.snapshot);
@@ -212,15 +216,11 @@ export async function previewSource(source, { log = () => {} } = {}) {
   const snapshot = result.snapshot;
   return {
     type: source.type,
+    listing: Boolean(result.listing ?? adapter.listing),
     found: result.items.length,
     total: result.meta?.total ?? result.items.length,
     items: result.items.slice(0, 6).map(sanitizeItem),
-    sample: snapshot
-      ? source.options?.detect === 'liens'
-        ? snapshot.links.slice(0, 8).map((link) => link.text || link.url)
-        : snapshot.lines.slice(0, 8)
-      : [],
+    sample: snapshot ? snapshot.lines.slice(0, 8) : [],
     lines: snapshot?.lines.length ?? null,
-    links: snapshot?.links.length ?? null,
   };
 }

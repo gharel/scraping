@@ -5,7 +5,7 @@ import { h } from '../dom.js';
 import { icon } from '../icons.js';
 import { formatDate, plural, prettyTitle, relativeTime, untilTime } from '../format.js';
 import { applyFilters, countBy, DEFAULT_FILTERS, sortItems } from '../model.js';
-import { KIND_LABELS } from '../shared/config.js';
+import { KIND_LABELS, REGIONS } from '../shared/config.js';
 import { badge, button, callout, categoryBadge, emptyState, iconButton, pageHead, segmented } from '../ui.js';
 
 const PAGE_SIZE = 40;
@@ -32,9 +32,14 @@ function renderCard(item, ctx, categoriesById) {
   const main = categories[0];
   const deadline = deadlineInfo(item);
   const title = prettyTitle(item.title);
+  const buyer = item.buyer ? prettyTitle(item.buyer) : '';
+
+  // Territoire affiché pour tout ce qui n'est pas en Nouvelle-Calédonie.
+  const regionBadges = (item.regions || []).filter((id) => id !== 'nc').map((id) => badge(REGIONS[id]?.label || id, 'region', { iconName: 'pin' }));
 
   const badges = [
     ...categories.map((category) => categoryBadge(category)),
+    ...regionBadges,
     item.kind && item.kind !== 'consultation' ? badge(KIND_LABELS[item.kind] || item.kind, 'neutral') : null,
     item.isNew ? badge('Nouveau', 'new', { solid: true }) : null,
     item.gone && !item.closed ? badge('Retirée du site', 'danger') : null,
@@ -54,8 +59,8 @@ function renderCard(item, ctx, categoriesById) {
     onClick: () => ctx.toggleStar(item.id),
   });
 
-  const buyerLine = item.buyer
-    ? h('p', { class: 'ao-buyer' }, icon('building', { size: 16 }), h('span', null, item.buyer, item.buyerLocation ? h('span', { class: 'ao-buyer-place' }, ` · ${item.buyerLocation}`) : null))
+  const buyerLine = buyer
+    ? h('p', { class: 'ao-buyer' }, icon('building', { size: 16 }), h('span', null, buyer, item.buyerLocation ? h('span', { class: 'ao-buyer-place' }, ` · ${item.buyerLocation}`) : null))
     : null;
 
   const footLeft = deadline
@@ -211,11 +216,39 @@ export function renderAnnonces(ctx) {
     chip('category', 'all', 'Toutes', forCategories.length, { fallback: state.config.categories.length ? 'mine' : null }),
   );
 
+  // Territoires : seuls ceux qui ont des annonces (ou le territoire choisi) sont proposés.
+  const forRegions = applyFilters(all, filters, { ignore: ['region', 'source'] });
+  const regionCounts = countBy(forRegions, 'regions');
+  const regionChips = h(
+    'div',
+    { class: 'chips chips--compact', role: 'group', 'aria-label': 'Territoires' },
+    h(
+      'button',
+      { class: `chip${filters.region === 'all' ? ' is-active' : ''}`, type: 'button', 'aria-pressed': String(filters.region === 'all'), onClick: () => ctx.setFilters({ region: 'all', source: 'all' }) },
+      h('span', { class: 'chip-label' }, 'Tous'),
+      h('span', { class: 'chip-count' }, forRegions.length.toLocaleString('fr-FR')),
+    ),
+    Object.entries(REGIONS)
+      .filter(([id]) => regionCounts.get(id) || filters.region === id)
+      .map(([id, info]) =>
+        h(
+          'button',
+          { class: `chip${filters.region === id ? ' is-active' : ''}`, type: 'button', 'aria-pressed': String(filters.region === id), onClick: () => ctx.setFilters({ region: filters.region === id ? 'all' : id, source: 'all' }) },
+          h('span', { class: 'chip-label' }, info.label),
+          h('span', { class: 'chip-count' }, (regionCounts.get(id) || 0).toLocaleString('fr-FR')),
+        ),
+      ),
+  );
+
+  // Sources : celles du territoire choisi qui ont des annonces dans la sélection.
+  const visibleSources = state.config.sources.filter(
+    (source) => (filters.region === 'all' || source.region === filters.region || source.region === 'pacifique') && ((sourceCounts.get(source.id) || 0) > 0 || filters.source === source.id),
+  );
   const sourceChips = h(
     'div',
     { class: 'chips chips--compact', role: 'group', 'aria-label': 'Sources' },
     chip('source', 'all', 'Toutes', forSources.length),
-    state.config.sources.map((source) => chip('source', source.id, source.name, sourceCounts.get(source.id) || 0, { fallback: 'all' })),
+    visibleSources.map((source) => chip('source', source.id, source.name, sourceCounts.get(source.id) || 0, { fallback: 'all' })),
   );
   const kinds = Object.keys(KIND_LABELS).filter((kind) => kindCounts.has(kind) || filters.kind === kind);
   const kindChips = h(
@@ -225,7 +258,7 @@ export function renderAnnonces(ctx) {
     kinds.map((kind) => chip('kind', kind, KIND_LABELS[kind], kindCounts.get(kind) || 0, { fallback: 'all' })),
   );
 
-  const activeExtra = ['status', 'source', 'kind'].filter((key) => filters[key] !== DEFAULT_FILTERS[key]).length;
+  const activeExtra = ['status', 'region', 'source', 'kind'].filter((key) => filters[key] !== DEFAULT_FILTERS[key]).length;
   const anyActive = Object.keys(DEFAULT_FILTERS).some((key) => key !== 'sort' && filters[key] !== DEFAULT_FILTERS[key]);
 
   const aside = h(
@@ -259,6 +292,7 @@ export function renderAnnonces(ctx) {
           onChange: (value) => ctx.setFilters({ status: value }),
         }),
       ),
+      h('div', { class: 'filter-group' }, h('p', { class: 'filter-title' }, 'Territoire'), regionChips),
       h('div', { class: 'filter-group' }, h('p', { class: 'filter-title' }, 'Source'), sourceChips),
       h('div', { class: 'filter-group' }, h('p', { class: 'filter-title' }, 'Type d’annonce'), kindChips),
     ),

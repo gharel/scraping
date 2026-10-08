@@ -2,14 +2,15 @@
  * Données dérivées : catégories, statut, nouveautés, filtres, tri et export.
  */
 import { categorize, compileCategories, normalizeText } from './shared/categorize.js';
-import { KIND_LABELS } from './shared/config.js';
+import { itemRegions, KIND_LABELS, REGIONS } from './shared/config.js';
 import { daysUntil, formatDate } from './format.js';
 
 /** Par défaut : uniquement les annonces classées dans au moins une de vos catégories. */
-export const DEFAULT_FILTERS = { category: 'mine', status: 'open', source: 'all', kind: 'all', sort: 'recent', query: '', quick: null };
+export const DEFAULT_FILTERS = { category: 'mine', status: 'open', region: 'all', source: 'all', kind: 'all', sort: 'recent', query: '', quick: null };
 
 /** Une annonce sans date limite est considérée comme en cours pendant 45 jours. */
 const ARCHIVE_AFTER_MS = 45 * 86400000;
+const STATUS_CLOSED = /expir|cl[ôo]tur|termin[ée]|ferm[ée]|closed|annul|infructu|sans suite/i;
 
 export function enrichItems({ items, config, since, starred, now = new Date() }) {
   const compiled = compileCategories(config.categories, config.settings.excludeKeywords);
@@ -17,8 +18,11 @@ export function enrichItems({ items, config, since, starred, now = new Date() })
   const sinceMs = Date.parse(since) || 0;
   return items.map((item) => {
     const source = sources.get(item.sourceId);
-    const deadlineMs = item.deadline ? Date.parse(item.deadline) : Number.NaN;
-    const closed = Number.isFinite(deadlineMs) && deadlineMs < now.getTime();
+    // Date limite sans heure (« 06/11/2026 ») : l'annonce reste ouverte jusqu'au soir.
+    const dateOnly = /T00:00:00(\.000)?(Z|[+-]\d{2}:\d{2})$/.test(item.deadline || '');
+    const deadlineMs = item.deadline ? Date.parse(item.deadline) + (dateOnly ? 86399999 : 0) : Number.NaN;
+    // Date limite passée, ou statut de la source qui l'indique (« Expirée », « Clôturée », « Closed »).
+    const closed = (Number.isFinite(deadlineMs) && deadlineMs < now.getTime()) || STATUS_CLOSED.test(item.status || '');
     const sortDate = Date.parse(item.publishedAt || item.firstSeen) || 0;
     const archived = !Number.isFinite(deadlineMs) && now.getTime() - sortDate > ARCHIVE_AFTER_MS;
     const deadlineChange = (item.history || []).filter((entry) => entry.field === 'deadline').pop() || null;
@@ -26,6 +30,7 @@ export function enrichItems({ items, config, since, starred, now = new Date() })
       ...item,
       source,
       categories: categorize(item, compiled, source?.categories || []),
+      regions: itemRegions(item, source),
       closed,
       archived,
       open: !closed && !archived && !item.gone,
@@ -54,6 +59,7 @@ export function applyFilters(items, filters, { ignore = [] } = {}) {
         if (item.categories.length === 0) return false;
       } else if (filters.category === 'none' ? item.categories.length > 0 : !item.categories.includes(filters.category)) return false;
     }
+    if (!ignore.includes('region') && filters.region && filters.region !== 'all' && !item.regions.includes(filters.region)) return false;
     if (!ignore.includes('source') && filters.source !== 'all' && item.sourceId !== filters.source) return false;
     if (!ignore.includes('kind') && filters.kind !== 'all' && item.kind !== filters.kind) return false;
     if (!ignore.includes('quick') && filters.quick) {
@@ -95,7 +101,7 @@ export function statusLabel(item) {
 
 export function toCsv(items, config) {
   const categoryNames = new Map(config.categories.map((category) => [category.id, category.name]));
-  const header = ['Titre', 'Acheteur', 'Référence', 'Catégories', 'Source', 'Type', 'Nature', 'Procédure', 'Lieu', 'Publiée le', 'Date limite', 'Statut', 'Lien'];
+  const header = ['Titre', 'Acheteur', 'Référence', 'Catégories', 'Territoire', 'Source', 'Type', 'Nature', 'Procédure', 'Lieu', 'Publiée le', 'Date limite', 'Statut', 'Lien'];
   const escape = (value) => {
     const text = String(value ?? '').replace(/\r?\n/g, ' ');
     return /[;"\n]/.test(text) ? `"${text.replace(/"/g, '""')}"` : text;
@@ -105,6 +111,7 @@ export function toCsv(items, config) {
     item.buyer,
     item.reference,
     item.categories.map((id) => categoryNames.get(id)).filter(Boolean).join(', '),
+    (item.regions || []).map((id) => REGIONS[id]?.label).filter(Boolean).join(', '),
     item.source?.name,
     KIND_LABELS[item.kind] || '',
     item.nature,

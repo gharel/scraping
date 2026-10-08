@@ -21,7 +21,7 @@ const ROUTES = {
   categories: { title: 'Catégories', render: renderCategories },
   reglages: { title: 'Réglages', render: renderReglages },
 };
-const PERSISTED_FILTERS = ['category', 'status', 'source', 'kind', 'sort'];
+const PERSISTED_FILTERS = ['category', 'status', 'region', 'source', 'kind', 'sort'];
 // Clé versionnée : les filtres enregistrés avant le filtre « Mes catégories » sont ignorés.
 const FILTERS_KEY = 'filters.v2';
 const PAGE_SIZE = 40;

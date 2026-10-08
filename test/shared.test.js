@@ -53,6 +53,33 @@ test('filtres : « Mes catégories » ne garde que les annonces classées', asyn
   assert.deepEqual(applyFilters(items, { ...DEFAULT_FILTERS, quick: 'starred' }).map((item) => item.id), ['c'], 'les annonces suivies restent visibles');
 });
 
+test('statut : une annonce « Expirée » n’est plus en cours', async () => {
+  const { enrichItems } = await import('../site/assets/js/model.js');
+  const config = normalizeConfig({ categories: [], sources: [{ id: 's', name: 'S', url: 'https://exemple.nc' }] });
+  const now = new Date('2026-10-08T00:00:00Z');
+  const base = { sourceId: 's', title: 'Consultation', publishedAt: '2026-10-01T00:00:00+11:00', firstSeen: now.toISOString() };
+  const [expired, open] = enrichItems({ items: [{ ...base, id: 's:a', status: 'Expirée' }, { ...base, id: 's:b', status: 'Ouvert' }], config, since: null, starred: new Set(), now });
+  assert.equal(expired.open, false);
+  assert.equal(open.open, true);
+  const lastDay = new Date('2026-11-06T05:00:00+11:00');
+  const [dayOnly, withTime] = enrichItems({
+    items: [{ ...base, id: 's:c', deadline: '2026-11-06T00:00:00+11:00' }, { ...base, id: 's:d', deadline: '2026-11-06T04:00:00+11:00' }],
+    config, since: null, starred: new Set(), now: lastDay,
+  });
+  assert.equal(dayOnly.open, true, 'date sans heure : ouverte toute la journée');
+  assert.equal(dayOnly.days, 0);
+  assert.equal(withTime.open, false);
+});
+
+test('territoires : source locale ou source régionale reconnue par le lieu', async () => {
+  const { itemRegions } = await import('../site/assets/js/shared/config.js');
+  assert.deepEqual(itemRegions({ title: 'Marché' }, { region: 'pf' }), ['pf']);
+  assert.deepEqual(itemRegions({ title: 'Marché' }, {}), ['nc'], 'Nouvelle-Calédonie par défaut');
+  assert.deepEqual(itemRegions({ location: '(988) Nouvelle-Calédonie, (987) Polynésie Française' }, { region: 'pacifique' }), ['nc', 'pf']);
+  assert.deepEqual(itemRegions({ location: 'Fiji and New Caledonia' }, { region: 'pacifique' }), ['nc']);
+  assert.deepEqual(itemRegions({ location: 'Tuvalu' }, { region: 'pacifique' }), ['pacifique']);
+});
+
 test('configuration : la configuration livrée est valide', () => {
   const raw = JSON.parse(readFileSync(new URL('../config/veille.json', import.meta.url), 'utf8'));
   const config = normalizeConfig(raw);

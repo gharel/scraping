@@ -161,6 +161,12 @@
   color: var(--on-accent);
 }
 
+.badge--region {
+  background: var(--info-soft);
+  border-color: transparent;
+  color: var(--info-text);
+}
+
 .badge--cat {
   background: var(--cat-soft);
   border-color: var(--cat);

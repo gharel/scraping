@@ -100,8 +100,6 @@
       "name": "Communication & webmarketing",
       "color": 4,
       "keywords": [
-        "communication",
-        "communications",
         "plan de communication",
         "stratégie de communication",
         "webmarketing",
@@ -109,8 +107,6 @@
         "réseaux sociaux",
         "community manag*",
         "social media",
-        "campagne*",
-        "publicité*",
         "relations presse",
         "relations publiques",
         "événementiel*",
@@ -126,7 +122,36 @@
         "supports de communication",
         "imprimerie",
         "signalétique",
-        "outreach"
+        "outreach",
+        "communication institutionnelle",
+        "communication digitale",
+        "communication numérique",
+        "agence de communication",
+        "outils de communication",
+        "chargé de communication",
+        "actions de communication",
+        "campagne de communication",
+        "campagne de sensibilisation",
+        "campagne publicitaire",
+        "espaces publicitaires",
+        "régie publicitaire",
+        "insertion publicitaire",
+        "communication and engagement",
+        "communication materials",
+        "communications strategy",
+        "communication strategy",
+        "communication campaign",
+        "awareness campaign",
+        "magazine*",
+        "goodies",
+        "objets publicitaires",
+        "objets promotionnels",
+        "brochure*",
+        "dépliant*",
+        "kakémono*",
+        "bulletin municipal",
+        "journal municipal",
+        "journal interne"
       ]
     },
     {
@@ -165,7 +190,11 @@
         "programmation",
         "application development",
         "systems developer",
-        "information system*"
+        "information system*",
+        "sécurité applicative",
+        "security by design",
+        "DevOps",
+        "DevSecOps"
       ]
     },
     {
@@ -189,7 +218,6 @@
         "e-commerce",
         "commerce en ligne",
         "boutique en ligne",
-        "numérique*",
         "digital*",
         "dématérialisation",
         "transformation numérique",
@@ -211,7 +239,28 @@
         "matériel informatique",
         "ICT",
         "website*",
-        "digital workspace"
+        "digital workspace",
+        "services numériques",
+        "outils numériques",
+        "solution numérique",
+        "solutions numériques",
+        "stratégie numérique",
+        "inclusion numérique",
+        "médiation numérique",
+        "accompagnement numérique",
+        "écosystème numérique",
+        "numérisation",
+        "parcours numérique",
+        "espace numérique",
+        "serveur*",
+        "fibre optique",
+        "réseaux informatiques",
+        "borne interactive",
+        "bornes interactives",
+        "borne digitale",
+        "bornes digitales",
+        "affichage dynamique",
+        "visioconférence"
       ]
     },
     {
@@ -286,7 +335,20 @@
         "videos",
         "filming",
         "photography",
-        "graphic design"
+        "graphic design",
+        "court métrage",
+        "courts métrages",
+        "long métrage",
+        "cinéma",
+        "cinématographi*",
+        "vidéaste*",
+        "réalisation audiovisuelle",
+        "spot publicitaire",
+        "spots publicitaires",
+        "spot radio",
+        "spots radio",
+        "conception graphique",
+        "création graphique"
       ]
     },
     {
@@ -364,16 +426,223 @@
       "type": "atexo",
       "enabled": true,
       "categories": [],
-      "options": {}
+      "options": {},
+      "region": "nc"
     },
     {
-      "id": "province-sud-avis",
-      "name": "Province Sud · commande publique",
-      "url": "https://www.province-sud.nc/aops/feed/",
+      "id": "cafat-marches",
+      "name": "CAFAT · marchés",
+      "url": "https://www.cafat.nc/category/marches/feed/",
       "type": "rss",
       "enabled": true,
       "categories": [],
-      "options": {}
+      "options": {},
+      "region": "nc"
+    },
+    {
+      "id": "cci-nc",
+      "name": "CCI · appels d'offres et consultations",
+      "url": "https://www.cci.nc/la-cci-nc/appels-d-offres-et-consultations",
+      "type": "page",
+      "region": "nc",
+      "enabled": true,
+      "categories": [],
+      "options": {
+        "detect": "liens",
+        "selector": "#main-container",
+        "match": "media-files",
+        "kind": "consultation"
+      }
+    },
+    {
+      "id": "cht",
+      "name": "CHT Gaston-Bourret · appels d'offres",
+      "url": "https://www.cht.nc/les-appels-d-offres/appels-d-offres-en-cours/",
+      "type": "page",
+      "region": "nc",
+      "enabled": true,
+      "categories": [],
+      "options": {
+        "detect": "liens",
+        "match": "wp-content/uploads",
+        "exclude": "lorem|ipsum|plan"
+      }
+    },
+    {
+      "id": "enercal",
+      "name": "Enercal · espace sous-traitants",
+      "url": "https://www.enercal.nc/espace-sous-traitants/",
+      "type": "page",
+      "region": "nc",
+      "enabled": true,
+      "categories": [],
+      "options": {
+        "detect": "texte",
+        "selector": "main"
+      }
+    },
+    {
+      "id": "fiaf",
+      "name": "FIAF · consultations formation",
+      "url": "https://www.fiaf.nc/prestataires-de-formation/acces-a-l-espace-consultations?format=feed&type=rss",
+      "type": "rss",
+      "region": "nc",
+      "enabled": true,
+      "categories": [
+        "formation"
+      ],
+      "options": {
+        "kind": "consultation"
+      }
+    },
+    {
+      "id": "fsh",
+      "name": "FSH · appels d'offres",
+      "url": "https://www.fsh.nc/category/appels-offres/feed/",
+      "type": "rss",
+      "region": "nc",
+      "enabled": true,
+      "categories": [],
+      "options": {
+        "kind": "consultation"
+      }
+    },
+    {
+      "id": "haut-commissariat-nc",
+      "name": "Haut-commissariat NC · marchés publics",
+      "url": "https://www.nouvelle-caledonie.gouv.fr/Publications/Marches-publics",
+      "type": "page",
+      "region": "nc",
+      "enabled": true,
+      "categories": [],
+      "options": {
+        "detect": "liens",
+        "selector": "#main",
+        "match": "Publications/Marches-publics/.+",
+        "kind": "consultation",
+        "exclude": "\\(offset\\)",
+        "details": "div.fr-col-md-8",
+        "detailsMax": 12
+      }
+    },
+    {
+      "id": "ifap",
+      "name": "IFAP · consultations",
+      "url": "https://www.ifap.nc/consultations",
+      "type": "liste",
+      "region": "nc",
+      "enabled": true,
+      "categories": [
+        "formation"
+      ],
+      "options": {
+        "item": "#ifap-content table tbody tr",
+        "fields": {
+          "title": "td.views-field-title",
+          "url": "td.views-field-field-consultations-media a@href",
+          "publishedAt": "td.views-field-field-date-publication",
+          "deadline": "td.views-field-field-date-cloture",
+          "status": "td.views-field-field-date-cloture"
+        },
+        "kind": "consultation"
+      }
+    },
+    {
+      "id": "lnc-legales",
+      "name": "Les Nouvelles Calédoniennes · appels d'offres",
+      "url": "https://legales.lnc.nc/categorie/appels-doffres-950",
+      "type": "page",
+      "region": "nc",
+      "enabled": true,
+      "categories": [],
+      "options": {
+        "detect": "liens",
+        "selector": "div.space-y-5",
+        "match": "/annonce/",
+        "kind": "consultation",
+        "keep": true,
+        "details": "h3.objet, p.texte",
+        "detailsTitle": true,
+        "detailsMax": 25
+      }
+    },
+    {
+      "id": "mairie-koumac",
+      "name": "Mairie de Koumac · marchés publics",
+      "url": "https://www.mairie-koumac.nc/marches-publics",
+      "type": "page",
+      "region": "nc",
+      "enabled": true,
+      "categories": [],
+      "options": {
+        "detect": "liens",
+        "match": "_files/ugd/.+\\.pdf",
+        "exclude": "livret|guide|flore"
+      }
+    },
+    {
+      "id": "marchespublics-nc-accueil",
+      "name": "Marchés publics NC · informations",
+      "url": "https://marchespublics.nc/accueil",
+      "type": "page",
+      "enabled": true,
+      "categories": [],
+      "options": {
+        "selector": "#content article",
+        "detect": "texte"
+      },
+      "region": "nc"
+    },
+    {
+      "id": "opt-nc",
+      "name": "OPT-NC · appels d'offres",
+      "url": "https://office.opt.nc/fr/marches-publics/appels-offre",
+      "type": "page",
+      "region": "nc",
+      "enabled": true,
+      "categories": [],
+      "options": {
+        "detect": "texte",
+        "selector": "main"
+      }
+    },
+    {
+      "id": "province-iles",
+      "name": "Province des Îles · appels d'offres",
+      "url": "https://www.province-iles.nc/appel-offres",
+      "type": "page",
+      "region": "nc",
+      "enabled": true,
+      "categories": [],
+      "options": {
+        "detect": "liens",
+        "selector": "main",
+        "match": "\\.pdf|appel|avis|consultation",
+        "exclude": "reglement-particulier"
+      }
+    },
+    {
+      "id": "province-nord",
+      "name": "Province Nord · consultations",
+      "url": "https://marchespublics.province-nord.nc/sallemarche.aspx",
+      "type": "liste",
+      "region": "nc",
+      "enabled": true,
+      "categories": [],
+      "options": {
+        "item": "tr.rgRow, tr.rgAltRow",
+        "fields": {
+          "title": "td:nth-child(5)",
+          "buyer": "td:nth-child(2)",
+          "reference": "td:nth-child(4)",
+          "nature": "td:nth-child(6)",
+          "status": "td:nth-child(7)",
+          "publishedAt": "td:nth-child(8)",
+          "deadline": "td:nth-child(9)"
+        },
+        "kind": "consultation",
+        "keep": true
+      }
     },
     {
       "id": "province-sud-appels-a-projets",
@@ -384,16 +653,231 @@
       "categories": [],
       "options": {
         "kind": "appel-a-projets"
+      },
+      "region": "nc"
+    },
+    {
+      "id": "province-sud-avis",
+      "name": "Province Sud · commande publique",
+      "url": "https://www.province-sud.nc/recherche?classNaturalName=Appel%20d%27offres",
+      "type": "liste",
+      "enabled": true,
+      "categories": [],
+      "options": {
+        "item": "article.categorie-actualite",
+        "fields": {
+          "title": "h2",
+          "url": "a@href",
+          "deadline": "h4",
+          "publishedAt": "time"
+        },
+        "keep": true
+      },
+      "region": "nc"
+    },
+    {
+      "id": "secal",
+      "name": "SECAL · appels d'offres",
+      "url": "https://secal.nc/nos-appels-doffres/",
+      "type": "liste",
+      "region": "nc",
+      "enabled": true,
+      "categories": [],
+      "options": {
+        "item": "section#avisdepublications div:has(> a.btn-offres)",
+        "fields": {
+          "title": "span.extrabold",
+          "url": "a.btn-offres@href",
+          "reference": "div.uk-margin-remove-top:has(> div > b:contains(\"Référence\")) > div.uk-taille",
+          "buyer": "div.uk-margin-remove-top:has(> div > b:contains(\"Ouvrage\")):not(:has(b:contains(\"Mandataire\"))) > div.uk-taille",
+          "nature": "div.uk-margin-remove-top:has(> div > b:contains(\"Type de marché\")) > div.uk-taille",
+          "summary": "div.uk-margin-remove-top:has(> div > b:contains(\"Objet du marché\")) > div.uk-taille",
+          "location": "div.uk-margin-remove-top:has(> div > b:contains(\"Lieu\")) > div.uk-taille",
+          "publishedAt": "div.uk-margin-remove-top:has(> div > b:contains(\"Date de publication\")) > div.uk-taille",
+          "deadline": "div.uk-margin-remove-top:has(> div > b:contains(\"Date limite\")) > div.uk-taille"
+        }
       }
     },
     {
-      "id": "cafat-marches",
-      "name": "CAFAT · marchés",
-      "url": "https://www.cafat.nc/category/marches/feed/",
-      "type": "rss",
+      "id": "sic",
+      "name": "SIC · appels d'offres",
+      "url": "https://www.sic.nc/nos-appels-doffre/",
+      "type": "page",
+      "region": "nc",
       "enabled": true,
       "categories": [],
-      "options": {}
+      "options": {
+        "detect": "liens",
+        "match": "\\.pdf|appel|avis|consultation",
+        "exclude": "nos-appels-doffre/?$|/category/|/tag/"
+      }
+    },
+    {
+      "id": "unc",
+      "name": "Université de la Nouvelle-Calédonie · appels d'offres",
+      "url": "https://www.unc.nc/utile/appel-doffres/",
+      "type": "page",
+      "region": "nc",
+      "enabled": true,
+      "categories": [],
+      "options": {
+        "detect": "liens",
+        "selector": "#main",
+        "match": "avis",
+        "kind": "consultation"
+      }
+    },
+    {
+      "id": "ville-dumbea",
+      "name": "Ville de Dumbéa · marchés publics",
+      "url": "https://www.ville-dumbea.nc/dumbea-pratique/marches-publics",
+      "type": "page",
+      "region": "nc",
+      "enabled": true,
+      "categories": [],
+      "options": {
+        "detect": "liens",
+        "selector": "#block-dumbea-content",
+        "match": "/files/",
+        "kind": "consultation"
+      }
+    },
+    {
+      "id": "ville-kone",
+      "name": "Ville de Koné · marchés publics",
+      "url": "https://www.koohne.nc/les-marches-publics/",
+      "type": "page",
+      "region": "nc",
+      "enabled": true,
+      "categories": [],
+      "options": {
+        "detect": "liens",
+        "match": "march|appel|avis|consultation|\\.pdf",
+        "exclude": "marchespublics\\.(province-nord\\.)?nc|/les-marches-publics/?$|/category/|/tag/"
+      }
+    },
+    {
+      "id": "ville-noumea",
+      "name": "Ville de Nouméa · marchés publics",
+      "url": "https://www.noumea.nc/noumea-pratique/appel-offres",
+      "type": "page",
+      "region": "nc",
+      "enabled": true,
+      "categories": [],
+      "options": {
+        "detect": "texte",
+        "selector": "main"
+      }
+    },
+    {
+      "id": "mont-dore",
+      "name": "Ville du Mont-Dore · appels d'offres",
+      "url": "https://www.mont-dore.nc/marches-publics",
+      "type": "page",
+      "region": "nc",
+      "enabled": true,
+      "categories": [],
+      "options": {
+        "detect": "liens",
+        "match": "st-marches-publics"
+      }
+    },
+    {
+      "id": "wallis-futuna",
+      "name": "Wallis-et-Futuna · appels d'offres",
+      "url": "https://www.wallis-et-futuna.gouv.fr/layout/set/print/Publications/Appels-d-offres-Avis-d-attribution-des-marches",
+      "type": "page",
+      "region": "wf",
+      "enabled": true,
+      "categories": [],
+      "options": {
+        "detect": "liens",
+        "selector": "#main",
+        "match": "contenu/telechargement"
+      }
+    },
+    {
+      "id": "haut-commissariat-pf",
+      "name": "Haut-commissariat de Polynésie · marchés publics",
+      "url": "https://www.polynesie-francaise.gouv.fr/Publications/Publications-legales-et-avis/Marches-publics",
+      "type": "page",
+      "region": "pf",
+      "enabled": true,
+      "categories": [],
+      "options": {
+        "detect": "liens",
+        "selector": "#main",
+        "match": "contenu/telechargement",
+        "kind": "consultation"
+      }
+    },
+    {
+      "id": "lexpol-marches",
+      "name": "Lexpol · avis de marchés (Polynésie)",
+      "url": "https://lexpol.cloud.pf/LexpolMarchesPublics.php?3",
+      "type": "page",
+      "region": "pf",
+      "enabled": true,
+      "categories": [],
+      "options": {
+        "detect": "liens",
+        "selector": "#main",
+        "match": "LexpolAfficheAnnonceMP",
+        "kind": "consultation",
+        "keep": true
+      }
+    },
+    {
+      "id": "port-papeete",
+      "name": "Port autonome de Papeete · marchés publics",
+      "url": "https://www.portdepapeete.pf/marches-publics/",
+      "type": "page",
+      "region": "pf",
+      "enabled": true,
+      "categories": [],
+      "options": {
+        "detect": "liens",
+        "selector": "main, #main, article",
+        "match": "\\.pdf|appel|avis|consultation|aapc",
+        "exclude": "marches-publics/?$"
+      }
+    },
+    {
+      "id": "ctb-vanuatu",
+      "name": "Central Tender Board · Vanuatu",
+      "url": "https://ctb.gov.vu/en/tenders/actual-tenders?format=feed&type=rss",
+      "type": "rss",
+      "region": "vu",
+      "enabled": true,
+      "categories": [],
+      "options": {
+        "kind": "consultation"
+      }
+    },
+    {
+      "id": "pwd-vanuatu",
+      "name": "Public Works Department · Vanuatu",
+      "url": "https://pwd.gov.vu/procurements/procurements-page?format=feed&type=rss",
+      "type": "rss",
+      "region": "vu",
+      "enabled": true,
+      "categories": [],
+      "options": {
+        "kind": "consultation"
+      }
+    },
+    {
+      "id": "marches-publics-etat",
+      "name": "Marchés publics de l'État · Pacifique",
+      "url": "https://www.marches-publics.gouv.fr/?page=Entreprise.EntrepriseAdvancedSearch&searchAnnCons",
+      "type": "atexo",
+      "region": "pacifique",
+      "enabled": true,
+      "categories": [],
+      "options": {
+        "lieux": "6489,6472,6494,6463",
+        "lieuxMax": 20
+      }
     },
     {
       "id": "cps-appels-offres",
@@ -415,19 +899,8 @@
           "status": "td.views-field-field-tender-grant-status"
         },
         "kind": "consultation"
-      }
-    },
-    {
-      "id": "marchespublics-nc-accueil",
-      "name": "Marchés publics NC · informations",
-      "url": "https://marchespublics.nc/accueil",
-      "type": "page",
-      "enabled": true,
-      "categories": [],
-      "options": {
-        "selector": "#content article",
-        "detect": "texte"
-      }
+      },
+      "region": "pacifique"
     }
   ]
 }

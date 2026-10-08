@@ -4,7 +4,7 @@
 import { clear, h, nextId } from '../dom.js';
 import { icon } from '../icons.js';
 import { formatDate, plural, prettyTitle, relativeTime } from '../format.js';
-import { guessSourceType, KIND_LABELS, normalizeSource, SOURCE_TYPES, sourceProblems, uniqueId } from '../shared/config.js';
+import { guessSourceType, KIND_LABELS, normalizeSource, REGIONS, SOURCE_TYPES, sourceProblems, uniqueId } from '../shared/config.js';
 import { badge, button, callout, categoryBadge, closeDialog, emptyState, field, input, openDialog, pageHead, segmented, select, selectControl, setBusy, toggle, toast } from '../ui.js';
 
 const TYPE_ICONS = { atexo: 'landmark', rss: 'rss', page: 'globe', liste: 'list' };
@@ -109,7 +109,21 @@ export function renderSources(ctx) {
     ),
     h('div', { class: 'notices' }, modeNotice(ctx)),
     sources.length
-      ? h('ul', { class: 'source-list' }, sources.map((source) => renderSourceCard(source, ctx, counts, categoriesById)))
+      ? h(
+          'div',
+          { class: 'source-groups' },
+          Object.entries(REGIONS)
+            .map(([region, info]) => [region, info, sources.filter((source) => (source.region || 'nc') === region)])
+            .filter(([, , list]) => list.length)
+            .map(([region, info, list]) =>
+              h(
+                'section',
+                { class: 'source-group', 'aria-labelledby': `region-${region}` },
+                h('h2', { class: 'source-group-title', id: `region-${region}` }, info.label, h('span', { class: 'source-group-count' }, plural(list.length, 'source'))),
+                h('ul', { class: 'source-list' }, list.map((source) => renderSourceCard(source, ctx, counts, categoriesById))),
+              ),
+            ),
+        )
       : emptyState('globe', 'Aucune source surveillée', 'Ajoutez l’adresse d’un portail de marchés publics, d’un flux RSS ou de n’importe quelle page web.', canEdit ? button('Ajouter une source', { iconName: 'plus', onClick: () => openSourceForm(ctx) }) : null),
   );
 }
@@ -124,11 +138,28 @@ const LISTE_FIELDS = [
   ['reference', 'Référence', '.ref'],
   ['buyer', 'Acheteur', '.acheteur'],
   ['summary', 'Résumé', '.resume'],
+  ['location', 'Lieu', '.lieu'],
+  ['nature', 'Nature', '.nature'],
+  ['status', 'Statut', '.statut'],
 ];
 
 function typeOptions(type, options, refs) {
   if (type === 'atexo') {
-    return h('p', { class: 'form-note' }, icon('info', { size: 16 }), 'Collez l’adresse de la liste des consultations (recherche avancée). Vigie parcourt toutes les pages de résultats et récupère acheteur, référence, procédure, lots et date limite.');
+    refs.lieux = input({ value: options.lieux || '', placeholder: '6489, 6472', inputmode: 'numeric' });
+    refs.motsCles = input({ value: options.motsCles || '', placeholder: 'formation' });
+    refs.lieuxMax = input({ type: 'number', min: '1', max: '500', value: options.lieuxMax ? String(options.lieuxMax) : '', placeholder: '20', inputmode: 'numeric' });
+    return h(
+      'div',
+      { class: 'form-stack' },
+      h('p', { class: 'form-note' }, icon('info', { size: 16 }), 'Collez l’adresse de la liste des consultations. Vigie parcourt toutes les pages de résultats et récupère acheteur, référence, procédure, lots et date limite.'),
+      h(
+        'div',
+        { class: 'form-grid' },
+        field({ label: 'Lieux d’exécution', optional: true, control: refs.lieux, hint: 'Codes Atexo, avec l’adresse de recherche avancée. État : 6489 Nouvelle-Calédonie, 6472 Polynésie, 6494 Wallis-et-Futuna, 6463 Vanuatu.' }),
+        field({ label: 'Mots-clés de recherche', optional: true, control: refs.motsCles }),
+        field({ label: 'Limite de lieux', optional: true, control: refs.lieuxMax, hint: 'Écarte les marchés nationaux qui citent de très nombreux lieux.' }),
+      ),
+    );
   }
   if (type === 'rss') {
     const kind = select(
@@ -142,6 +173,9 @@ function typeOptions(type, options, refs) {
     refs.detect = options.detect === 'liens' ? 'liens' : 'texte';
     refs.selector = input({ value: options.selector || '', placeholder: 'main, #contenu, .liste-avis…' });
     refs.ignore = input({ value: (options.ignore || []).join(', '), placeholder: '.date-du-jour, #bandeau-cookies' });
+    refs.match = input({ value: options.match || '', placeholder: '\\.pdf|avis|consultation' });
+    refs.exclude = input({ value: options.exclude || '', placeholder: 'reglement|plan-acces' });
+    refs.keep = { value: Boolean(options.keep) };
     return h(
       'div',
       { class: 'form-stack' },
@@ -154,21 +188,29 @@ function typeOptions(type, options, refs) {
           label: 'Ce que Vigie doit signaler',
           value: refs.detect,
           options: [
+            { value: 'liens', label: 'Chaque avis listé (liens)' },
             { value: 'texte', label: 'Les modifications du texte' },
-            { value: 'liens', label: 'Les nouveaux liens' },
           ],
           onChange: (value) => {
             refs.detect = value;
           },
         }),
-        h('p', { class: 'field-hint' }, 'Choisissez « nouveaux liens » pour une page qui liste des avis ou des documents PDF.'),
+        h('p', { class: 'field-hint' }, 'Choisissez « chaque avis listé » pour une page qui liste des avis ou des documents PDF : chaque lien devient une annonce.'),
       ),
       field({ label: 'Zone à surveiller', optional: true, control: refs.selector, hint: 'Sélecteur CSS de la partie utile de la page. Par défaut : le contenu principal.' }),
+      h(
+        'div',
+        { class: 'form-grid' },
+        field({ label: 'Liens à garder', optional: true, control: refs.match, hint: 'Expression régulière testée sur le texte et l’adresse du lien.' }),
+        field({ label: 'Liens à écarter', optional: true, control: refs.exclude, hint: 'Menus, règlements permanents, plans d’accès…' }),
+      ),
       field({ label: 'Éléments à ignorer', optional: true, control: refs.ignore, hint: 'Sélecteurs CSS séparés par des virgules (dates, compteurs, bandeaux) pour éviter les fausses alertes.' }),
+      toggle({ label: 'Liste des derniers avis', description: 'Les annonces qui sortent de la page restent dans Vigie au lieu d’être marquées « retirées ».', checked: refs.keep.value, onChange: (value) => (refs.keep.value = value) }),
     );
   }
   refs.item = input({ value: options.item || '', placeholder: 'table tbody tr' });
   refs.fields = {};
+  refs.keep = { value: Boolean(options.keep) };
   const rows = LISTE_FIELDS.map(([key, label, placeholder, required]) => {
     refs.fields[key] = input({ value: options.fields?.[key] || '', placeholder });
     return field({ label, required, optional: !required, control: refs.fields[key] });
@@ -179,16 +221,29 @@ function typeOptions(type, options, refs) {
     h('p', { class: 'form-note' }, icon('info', { size: 16 }), 'Chaque champ est un sélecteur CSS relatif à une annonce. Ajoutez @attribut pour lire un attribut, par exemple a@href ou time@datetime.'),
     field({ label: 'Sélecteur des annonces', required: true, control: refs.item, hint: 'Un élément par annonce.' }),
     h('div', { class: 'form-grid' }, rows),
+    toggle({ label: 'Liste des derniers avis', description: 'Les annonces qui sortent de la page restent dans Vigie au lieu d’être marquées « retirées ».', checked: refs.keep.value, onChange: (value) => (refs.keep.value = value) }),
   );
 }
 
 function readOptions(type, refs) {
+  if (type === 'atexo') {
+    return { lieux: refs.lieux.value.trim(), motsCles: refs.motsCles.value.trim(), lieuxMax: refs.lieuxMax.value ? Number(refs.lieuxMax.value) : undefined };
+  }
   if (type === 'rss') return refs.kind?.value ? { kind: refs.kind.value } : {};
-  if (type === 'page') return { detect: refs.detect, selector: refs.selector.value.trim(), ignore: refs.ignore.value.split(',').map((s) => s.trim()).filter(Boolean) };
+  if (type === 'page') {
+    return {
+      detect: refs.detect,
+      selector: refs.selector.value.trim(),
+      ignore: refs.ignore.value.split(',').map((s) => s.trim()).filter(Boolean),
+      match: refs.match.value.trim(),
+      exclude: refs.exclude.value.trim(),
+      keep: refs.keep.value,
+    };
+  }
   if (type === 'liste') {
     const fields = {};
     for (const [key, control] of Object.entries(refs.fields || {})) if (control.value.trim()) fields[key] = control.value.trim();
-    return { item: refs.item.value.trim(), fields };
+    return { item: refs.item.value.trim(), fields, keep: refs.keep.value };
   }
   return {};
 }
@@ -205,8 +260,8 @@ function renderPreview(container, result) {
       ? h('ul', { class: 'preview-list' }, result.sample.map((line) => h('li', null, line)))
       : null;
   const summary =
-    result.type === 'page'
-      ? `Page lue : ${plural(result.lines || 0, 'ligne')} de texte et ${plural(result.links || 0, 'lien')}. La surveillance commencera à partir de cet état.`
+    result.type === 'page' && !result.listing
+      ? `Page lue : ${plural(result.lines || 0, 'ligne')} de texte. Vigie signalera chaque modification à partir de cet état.`
       : `${plural(result.found, 'annonce trouvée', 'annonces trouvées')}${result.total && result.total !== result.found ? ` sur ${result.total}` : ''}.`;
   container.append(callout('success', 'checkCircle', 'La source fonctionne', h('p', null, summary), lines));
 }
@@ -218,6 +273,10 @@ export function openSourceForm(ctx, existing = null) {
   const refs = {};
   const name = input({ value: existing?.name || '', placeholder: 'Marchés publics NC', maxlength: 80 });
   const url = input({ value: existing?.url || '', type: 'url', placeholder: 'https://…', inputmode: 'url' });
+  const regionSelect = select(
+    Object.entries(REGIONS).map(([value, info]) => ({ value, label: info.label })),
+    { value: existing?.region || 'nc' },
+  );
   const optionsBox = h('div', { class: 'type-options' });
   const preview = h('div', { class: 'preview', 'aria-live': 'polite' });
   const enabled = { value: existing ? existing.enabled : true };
@@ -290,9 +349,11 @@ export function openSourceForm(ctx, existing = null) {
       name: name.value.trim(),
       url: url.value.trim(),
       type,
+      region: selectControl(regionSelect).value,
       enabled: enabled.value,
       categories: [...selected],
-      options: readOptions(type, refs),
+      // Les réglages avancés absents du formulaire (lecture des fiches, nature imposée…) sont conservés.
+      options: { ...(existing?.type === type ? existing.options : {}), ...readOptions(type, refs) },
     });
 
   const error = h('div', { class: 'form-error', 'aria-live': 'assertive' });
@@ -381,6 +442,7 @@ export function openSourceForm(ctx, existing = null) {
     { class: 'form', novalidate: true, onSubmit: save },
     field({ label: 'Nom', required: true, control: name }),
     field({ label: 'Adresse', required: true, control: url, hint: 'Page, flux RSS ou liste de consultations à surveiller.' }),
+    field({ label: 'Territoire', control: regionSelect, hint: '« Pacifique (régional) » : chaque annonce est rattachée au territoire cité dans son lieu ou son titre.' }),
     h('div', { class: 'field' }, h('p', { class: 'field-label' }, 'Type de source'), typeCards),
     optionsBox,
     h('div', { class: 'field' }, h('p', { class: 'field-label' }, 'Catégories imposées', h('span', { class: 'field-optional' }, ' (facultatif)')), categoryChecks, h('p', { class: 'field-hint' }, 'Toutes les annonces de cette source iront dans ces catégories, en plus du classement par mots-clés.')),

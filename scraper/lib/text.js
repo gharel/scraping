@@ -54,7 +54,10 @@ export function truncate(value, max) {
 
 /** Extrait une référence du type « n° DAEM-AO-12-26 » d'un titre d'avis. */
 export function guessReference(text) {
-  const match = oneLine(text).match(/\bn\s*[°ºo]\s*([A-Z0-9][A-Z0-9_./-]{2,})/i);
+  // « No » seulement suivi d'un point ou d'un chiffre : « NOUMEA » n'est pas une référence.
+  const match = oneLine(text).match(
+    /(?:\b(?:n\s*[°º]|no\.|no(?=\s*\d))|\br[ée]f(?:[ée]rence)?\.?\s*:)\s*(?:de\s+(?:consultation|march[ée]|dossier)\s*:?\s*)?([A-Z0-9][A-Z0-9_./-]{2,})/i,
+  );
   return match ? match[1].replace(/[.-]+$/, '') : '';
 }
 
@@ -62,7 +65,7 @@ export function guessReference(text) {
 export function guessKind(text) {
   const normalized = oneLine(text).toLowerCase();
   if (/\battribution|\battribu[ée]s?\b|\bawarded\b/.test(normalized)) return 'attribution';
-  if (/appel (public )?(a|à) concurrence|appel d.offres?|avis d.appel|consultation|\brfp\b|\brfq\b|\beoi\b|request for (proposal|quotation|tender)|tender/.test(normalized)) return 'consultation';
+  if (/appel (public )?(a|à) concurrence|appel d.offres?|avis d.appel|avis de march[ée]|consultation|\brfp\b|\brfq\b|\beoi\b|request for (proposal|quotation|tender)|tender/.test(normalized)) return 'consultation';
   if (/appel (a|à) projets?|appel (a|à) candidatures?/.test(normalized)) return 'appel-a-projets';
   return 'annonce';
 }

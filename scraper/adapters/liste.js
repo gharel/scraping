@@ -80,6 +80,7 @@ export default {
     if (!items.length) {
       throw new Error('Aucune annonce trouvée avec ces sélecteurs : la page a peut-être changé de structure');
     }
-    return { items, meta: { total: items.length } };
+    // « Garder » : la page ne montre que les dernières annonces ; celles qui en sortent ne sont pas retirées.
+    return { items, listing: !source.options?.keep, meta: { total: items.length } };
   },
 };

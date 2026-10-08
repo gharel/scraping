@@ -28,6 +28,30 @@ export const SOURCE_TYPES = {
 
 export const CATEGORY_COLOR_COUNT = 8;
 
+/**
+ * Territoires couverts. Une source « Pacifique » (portail de l'État, CPS…) voit chaque annonce
+ * rattachée au territoire reconnu dans son lieu d'exécution ou son titre.
+ */
+export const REGIONS = {
+  nc: { label: 'Nouvelle-Calédonie', pattern: /nouvelle[- ]cal[ée]donie|new caledonia|\(988\)|noum[ée]a/i },
+  pf: { label: 'Polynésie française', pattern: /polyn[ée]sie|french polynesia|\(987\)|tahiti|papeete/i },
+  wf: { label: 'Wallis-et-Futuna', pattern: /wallis|futuna|\(986\)/i },
+  vu: { label: 'Vanuatu', pattern: /vanuatu|port[- ]vila|luganville/i },
+  pacifique: { label: 'Pacifique (régional)', pattern: null },
+};
+export const DEFAULT_REGION = 'nc';
+
+/** Territoires d'une annonce : ceux de sa source, ou ceux reconnus pour une source régionale. */
+export function itemRegions(item, source) {
+  const region = REGIONS[source?.region] ? source.region : DEFAULT_REGION;
+  if (region !== 'pacifique') return [region];
+  const text = [item.location, item.buyerLocation, item.title].filter(Boolean).join(' ');
+  const found = Object.entries(REGIONS)
+    .filter(([, info]) => info.pattern && info.pattern.test(text))
+    .map(([id]) => id);
+  return found.length ? found : ['pacifique'];
+}
+
 /** Natures d'annonces reconnues. */
 export const ITEM_KINDS = ['consultation', 'attribution', 'information', 'appel-a-projets', 'annonce', 'modification'];
 
@@ -110,6 +134,10 @@ function cleanOptions(type, options) {
   const out = {};
   if (type === 'atexo') {
     if (source.maxPages) out.maxPages = clampNumber(source.maxPages, 1, 50, 25);
+    // Recherche avancée : codes de lieux d'exécution Atexo (ex. 6489 = Nouvelle-Calédonie) et mots-clés.
+    if (source.lieux) out.lieux = String(source.lieux).replace(/[^\d,]/g, '').replace(/^,+|,+$/g, '');
+    if (source.motsCles) out.motsCles = String(source.motsCles).trim();
+    if (source.lieuxMax) out.lieuxMax = clampNumber(source.lieuxMax, 1, 500, 20);
   } else if (type === 'rss') {
     if (ITEM_KINDS.includes(source.kind)) out.kind = source.kind;
   } else if (type === 'page') {
@@ -118,6 +146,15 @@ function cleanOptions(type, options) {
     const cleanedIgnore = ignore.map((s) => String(s).trim()).filter(Boolean);
     if (cleanedIgnore.length) out.ignore = cleanedIgnore;
     out.detect = source.detect === 'liens' ? 'liens' : 'texte';
+    // Mode « liens » : expressions régulières pour garder ou écarter des liens (texte ou adresse).
+    if (source.match) out.match = String(source.match).trim();
+    if (source.exclude) out.exclude = String(source.exclude).trim();
+    // Pages de détail : sélecteur du texte à lire (ex. l'objet du marché) et nombre de pages par passage.
+    if (source.details) out.details = String(source.details).trim();
+    if (source.detailsMax) out.detailsMax = clampNumber(source.detailsMax, 1, 30, 8);
+    if (source.detailsTitle === true) out.detailsTitle = true;
+    if (source.keep === true) out.keep = true;
+    if (ITEM_KINDS.includes(source.kind)) out.kind = source.kind;
   } else if (type === 'liste') {
     out.item = String(source.item || '').trim();
     out.fields = {};
@@ -125,6 +162,7 @@ function cleanOptions(type, options) {
       if (value && String(value).trim()) out.fields[key] = String(value).trim();
     }
     if (ITEM_KINDS.includes(source.kind)) out.kind = source.kind;
+    if (source.keep === true) out.keep = true;
   }
   return out;
 }
@@ -136,6 +174,7 @@ export function normalizeSource(raw, index = 0) {
     name: String(raw?.name || '').trim() || `Source ${index + 1}`,
     url: String(raw?.url || '').trim(),
     type,
+    region: REGIONS[raw?.region] ? raw.region : DEFAULT_REGION,
     enabled: raw?.enabled !== false,
     categories: Array.isArray(raw?.categories) ? raw.categories.map(String) : [],
     options: cleanOptions(type, raw?.options),
@@ -215,6 +254,14 @@ export function sourceProblems(source, categoryIds = new Set()) {
   if (source.type === 'liste') {
     if (!source.options.item) problems.push('le sélecteur des annonces est obligatoire');
     if (!source.options.fields?.title) problems.push('le sélecteur du titre est obligatoire');
+  }
+  for (const key of ['match', 'exclude']) {
+    if (!source.options?.[key]) continue;
+    try {
+      new RegExp(source.options[key], 'i');
+    } catch {
+      problems.push(`filtre de liens invalide (${source.options[key]})`);
+    }
   }
   return problems;
 }
