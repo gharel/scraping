@@ -1,5 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#50967c"/>
-  <path d="M10 32c5.5-9.5 13-14.5 22-14.5S48.5 22.5 54 32c-5.5 9.5-13 14.5-22 14.5S15.5 41.5 10 32Z" fill="none" stroke="#fff" stroke-width="4.5" stroke-linejoin="round"/>
-  <circle cx="32" cy="32" r="7" fill="#fff"/>
+  <!-- Icône « binoculars » de Font Awesome Free 7.3.1, licence CC BY 4.0 : https://fontawesome.com/license/free -->
+  <defs>
+    <linearGradient id="fond" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c6f432"/>
+      <stop offset="1" stop-color="#2e8b57"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#fond)"/>
+  <path fill="#ffffff" transform="translate(13 13) scale(0.07421875)" d="M128 32l32 0c17.7 0 32 14.3 32 32l0 32-96 0 0-32c0-17.7 14.3-32 32-32zm64 96l0 320c0 17.7-14.3 32-32 32L32 480c-17.7 0-32-14.3-32-32l0-59.1c0-34.6 9.4-68.6 27.2-98.3 13.7-22.8 22.5-48.2 25.8-74.6L60.5 156c2-16 15.6-28 31.8-28l99.8 0zm227.8 0c16.1 0 29.8 12 31.8 28L459 216c3.3 26.4 12.1 51.8 25.8 74.6 17.8 29.7 27.2 63.7 27.2 98.3l0 59.1c0 17.7-14.3 32-32 32l-128 0c-17.7 0-32-14.3-32-32l0-320 99.8 0zM320 64c0-17.7 14.3-32 32-32l32 0c17.7 0 32 14.3 32 32l0 32-96 0 0-32zm-32 64l0 160-64 0 0-160 64 0z"/>
 </svg>
