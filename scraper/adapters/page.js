@@ -90,7 +90,8 @@ export default {
     const contentHash = hash(page.lines.join('\n'));
     // Changer la zone surveillée ou le mode repart d'un nouvel état de référence, sans fausse alerte.
     const optionsKey = hash(JSON.stringify([source.url, options.selector || '', options.ignore || [], mode]));
-    const nextSnapshot = { hash: contentHash, optionsKey, mode, checkedAt: now.toISOString(), lines: page.lines, links: page.links };
+    // Pas d'horodatage ici : le fichier ne change que si la page change (pas de commit inutile).
+    const nextSnapshot = { hash: contentHash, optionsKey, mode, lines: page.lines, links: page.links };
     const comparable = Boolean(snapshot && snapshot.optionsKey === optionsKey);
     const items = [];
 
