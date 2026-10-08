@@ -5,13 +5,13 @@
       "type": "atexo",
       "ok": true,
       "error": null,
-      "lastRun": "2026-10-08T07:14:22.572Z",
-      "lastSuccess": "2026-10-08T07:14:22.572Z",
+      "lastRun": "2026-10-08T08:20:29.966Z",
+      "lastSuccess": "2026-10-08T08:20:29.966Z",
       "found": 49,
       "total": 49,
       "added": 0,
       "firstCheck": false,
-      "durationMs": 5335,
+      "durationMs": 5437,
       "failures": 0
     },
     "province-sud-avis": {
@@ -19,13 +19,13 @@
       "type": "rss",
       "ok": true,
       "error": null,
-      "lastRun": "2026-10-08T07:14:27.908Z",
-      "lastSuccess": "2026-10-08T07:14:27.908Z",
+      "lastRun": "2026-10-08T08:20:35.403Z",
+      "lastSuccess": "2026-10-08T08:20:35.403Z",
       "found": 27,
       "total": 27,
       "added": 0,
       "firstCheck": false,
-      "durationMs": 1588,
+      "durationMs": 1395,
       "failures": 0
     },
     "province-sud-appels-a-projets": {
@@ -33,13 +33,13 @@
       "type": "rss",
       "ok": true,
       "error": null,
-      "lastRun": "2026-10-08T07:14:29.496Z",
-      "lastSuccess": "2026-10-08T07:14:29.496Z",
+      "lastRun": "2026-10-08T08:20:36.798Z",
+      "lastSuccess": "2026-10-08T08:20:36.798Z",
       "found": 19,
       "total": 19,
       "added": 0,
       "firstCheck": false,
-      "durationMs": 210,
+      "durationMs": 171,
       "failures": 0
     },
     "cafat-marches": {
@@ -47,13 +47,13 @@
       "type": "rss",
       "ok": true,
       "error": null,
-      "lastRun": "2026-10-08T07:14:29.706Z",
-      "lastSuccess": "2026-10-08T07:14:29.706Z",
+      "lastRun": "2026-10-08T08:20:36.969Z",
+      "lastSuccess": "2026-10-08T08:20:36.969Z",
       "found": 1,
       "total": 1,
       "added": 0,
       "firstCheck": false,
-      "durationMs": 1844,
+      "durationMs": 1764,
       "failures": 0
     },
     "cps-appels-offres": {
@@ -61,13 +61,13 @@
       "type": "liste",
       "ok": true,
       "error": null,
-      "lastRun": "2026-10-08T07:14:31.550Z",
-      "lastSuccess": "2026-10-08T07:14:31.550Z",
+      "lastRun": "2026-10-08T08:20:38.733Z",
+      "lastSuccess": "2026-10-08T08:20:38.733Z",
       "found": 31,
       "total": 31,
       "added": 0,
       "firstCheck": false,
-      "durationMs": 1596,
+      "durationMs": 971,
       "failures": 0
     },
     "marchespublics-nc-accueil": {
@@ -75,13 +75,13 @@
       "type": "page",
       "ok": true,
       "error": null,
-      "lastRun": "2026-10-08T07:14:33.146Z",
-      "lastSuccess": "2026-10-08T07:14:33.146Z",
+      "lastRun": "2026-10-08T08:20:39.704Z",
+      "lastSuccess": "2026-10-08T08:20:39.704Z",
       "found": 0,
       "total": 4,
       "added": 0,
       "firstCheck": false,
-      "durationMs": 1397,
+      "durationMs": 1285,
       "failures": 0
     }
   },
@@ -103,16 +103,22 @@
       "checked": 6,
       "added": 0,
       "errors": 0
+    },
+    {
+      "at": "2026-10-08T08:20:29.966Z",
+      "checked": 6,
+      "added": 0,
+      "errors": 0
     }
   ],
   "lastRun": {
-    "startedAt": "2026-10-08T07:14:22.572Z",
-    "finishedAt": "2026-10-08T07:14:34.543Z",
-    "durationMs": 11971,
+    "startedAt": "2026-10-08T08:20:29.966Z",
+    "finishedAt": "2026-10-08T08:20:40.990Z",
+    "durationMs": 11024,
     "checked": 6,
     "errors": 0,
     "added": 0,
     "partial": false
   },
-  "updatedAt": "2026-10-08T07:14:34.543Z"
+  "updatedAt": "2026-10-08T08:20:40.990Z"
 }

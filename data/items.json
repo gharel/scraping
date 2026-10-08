@@ -22,7 +22,8 @@
       "deadline": "2026-10-18T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
       "lastSeen": "2026-10-08T07:01:12.138Z",
-      "seed": true
+      "seed": true,
+      "status": "Advertised"
     },
     {
       "id": "marchespublics-nc:s3d-3457",
@@ -99,7 +100,8 @@
       "deadline": "2026-10-21T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
       "lastSeen": "2026-10-08T07:01:12.138Z",
-      "seed": true
+      "seed": true,
+      "status": "Advertised"
     },
     {
       "id": "cps-appels-offres:1497a916f6f83eb5",
@@ -114,7 +116,8 @@
       "deadline": "2026-11-04T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
       "lastSeen": "2026-10-08T07:01:12.138Z",
-      "seed": true
+      "seed": true,
+      "status": "Advertised"
     },
     {
       "id": "province-sud-avis:753e3925285a7cfe",
@@ -181,7 +184,8 @@
       "deadline": "2026-10-14T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
       "lastSeen": "2026-10-08T07:01:12.138Z",
-      "seed": true
+      "seed": true,
+      "status": "Advertised"
     },
     {
       "id": "cps-appels-offres:af60293b072e8d26",
@@ -196,7 +200,8 @@
       "deadline": "2026-10-25T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
       "lastSeen": "2026-10-08T07:01:12.138Z",
-      "seed": true
+      "seed": true,
+      "status": "Advertised"
     },
     {
       "id": "cps-appels-offres:95a9cf5f0b8730dc",
@@ -211,7 +216,8 @@
       "deadline": "2026-10-18T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
       "lastSeen": "2026-10-08T07:01:12.138Z",
-      "seed": true
+      "seed": true,
+      "status": "Advertised"
     },
     {
       "id": "marchespublics-nc:i9o-3445",
@@ -266,7 +272,8 @@
       "deadline": "2026-11-01T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
       "lastSeen": "2026-10-08T07:01:12.138Z",
-      "seed": true
+      "seed": true,
+      "status": "Advertised"
     },
     {
       "id": "cps-appels-offres:db276db7e7a1ab7f",
@@ -281,7 +288,8 @@
       "deadline": "2026-10-11T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
       "lastSeen": "2026-10-08T07:01:12.138Z",
-      "seed": true
+      "seed": true,
+      "status": "Advertised"
     },
     {
       "id": "marchespublics-nc:m5w-3443",
@@ -357,7 +365,8 @@
       "deadline": "2026-10-18T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
       "lastSeen": "2026-10-08T07:01:12.138Z",
-      "seed": true
+      "seed": true,
+      "status": "Advertised"
     },
     {
       "id": "cps-appels-offres:f660104f238d92ce",
@@ -372,7 +381,8 @@
       "deadline": "2026-10-16T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
       "lastSeen": "2026-10-08T07:01:12.138Z",
-      "seed": true
+      "seed": true,
+      "status": "Advertised"
     },
     {
       "id": "cps-appels-offres:cbb2c91375063fc2",
@@ -387,7 +397,8 @@
       "deadline": "2026-10-11T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
       "lastSeen": "2026-10-08T07:01:12.138Z",
-      "seed": true
+      "seed": true,
+      "status": "Advertised"
     },
     {
       "id": "cps-appels-offres:d352ed8ac61f5b06",
@@ -402,7 +413,8 @@
       "deadline": "2026-10-11T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
       "lastSeen": "2026-10-08T07:01:12.138Z",
-      "seed": true
+      "seed": true,
+      "status": "Advertised"
     },
     {
       "id": "cps-appels-offres:9b7f9c379d07b89e",
@@ -417,7 +429,8 @@
       "deadline": "2026-10-11T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
       "lastSeen": "2026-10-08T07:01:12.138Z",
-      "seed": true
+      "seed": true,
+      "status": "Advertised"
     },
     {
       "id": "province-sud-avis:383943eab7f5a54e",
@@ -484,7 +497,8 @@
       "deadline": "2026-10-13T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
       "lastSeen": "2026-10-08T07:01:12.138Z",
-      "seed": true
+      "seed": true,
+      "status": "Advertised"
     },
     {
       "id": "cps-appels-offres:07b41f9b0043ec60",
@@ -499,7 +513,8 @@
       "deadline": "2026-10-12T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
       "lastSeen": "2026-10-08T07:01:12.138Z",
-      "seed": true
+      "seed": true,
+      "status": "Advertised"
     },
     {
       "id": "cps-appels-offres:7e43c5c6fcbf4378",
@@ -514,7 +529,8 @@
       "deadline": "2026-10-25T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
       "lastSeen": "2026-10-08T07:01:12.138Z",
-      "seed": true
+      "seed": true,
+      "status": "Advertised"
     },
     {
       "id": "cps-appels-offres:59f42ae77fc306c4",
@@ -529,7 +545,8 @@
       "deadline": "2026-10-25T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
       "lastSeen": "2026-10-08T07:01:12.138Z",
-      "seed": true
+      "seed": true,
+      "status": "Advertised"
     },
     {
       "id": "marchespublics-nc:s3d-3431",
@@ -757,7 +774,8 @@
       "deadline": "2026-10-11T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
       "lastSeen": "2026-10-08T07:01:12.138Z",
-      "seed": true
+      "seed": true,
+      "status": "Advertised"
     },
     {
       "id": "cps-appels-offres:701af2de6aa6021c",
@@ -772,7 +790,8 @@
       "deadline": "2026-10-05T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
       "lastSeen": "2026-10-08T07:01:12.138Z",
-      "seed": true
+      "seed": true,
+      "status": "Advertised"
     },
     {
       "id": "cps-appels-offres:b9578b1a368dbf7a",
@@ -787,7 +806,8 @@
       "deadline": "2026-11-04T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
       "lastSeen": "2026-10-08T07:01:12.138Z",
-      "seed": true
+      "seed": true,
+      "status": "Advertised"
     },
     {
       "id": "province-sud-avis:e59b33f22edb809a",
@@ -875,7 +895,8 @@
       "deadline": "2026-10-19T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
       "lastSeen": "2026-10-08T07:01:12.138Z",
-      "seed": true
+      "seed": true,
+      "status": "Advertised"
     },
     {
       "id": "marchespublics-nc:h5j-3428",
@@ -930,7 +951,8 @@
       "deadline": "2026-10-05T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
       "lastSeen": "2026-10-08T07:01:12.138Z",
-      "seed": true
+      "seed": true,
+      "status": "Advertised"
     },
     {
       "id": "province-sud-avis:ece672a8fd5a0d55",
@@ -1102,7 +1124,8 @@
       "deadline": "2026-10-04T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
       "lastSeen": "2026-10-08T07:01:12.138Z",
-      "seed": true
+      "seed": true,
+      "status": "Advertised"
     },
     {
       "id": "province-sud-avis:2492eb3d19d16b40",
@@ -1252,7 +1275,8 @@
       "deadline": "2026-10-14T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
       "lastSeen": "2026-10-08T07:01:12.138Z",
-      "seed": true
+      "seed": true,
+      "status": "Advertised"
     },
     {
       "id": "cps-appels-offres:f1b42d0f9ea8cdb9",
@@ -1267,7 +1291,8 @@
       "deadline": "2026-09-27T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
       "lastSeen": "2026-10-08T07:01:12.138Z",
-      "seed": true
+      "seed": true,
+      "status": "Advertised"
     },
     {
       "id": "marchespublics-nc:h5j-3409",
@@ -1484,7 +1509,8 @@
       "deadline": "2026-10-01T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
       "lastSeen": "2026-10-08T07:01:12.138Z",
-      "seed": true
+      "seed": true,
+      "status": "Advertised"
     },
     {
       "id": "marchespublics-nc:h5j-3386",
@@ -1519,7 +1545,8 @@
       "deadline": "2026-09-22T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
       "lastSeen": "2026-10-08T07:01:12.138Z",
-      "seed": true
+      "seed": true,
+      "status": "Advertised"
     },
     {
       "id": "cps-appels-offres:bfb0d438d359605e",
@@ -1534,7 +1561,8 @@
       "deadline": "2026-09-22T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
       "lastSeen": "2026-10-08T07:01:12.138Z",
-      "seed": true
+      "seed": true,
+      "status": "Advertised"
     },
     {
       "id": "province-sud-avis:6b29580a34439a08",
@@ -1606,7 +1634,8 @@
       "deadline": "2026-10-04T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
       "lastSeen": "2026-10-08T07:01:12.138Z",
-      "seed": true
+      "seed": true,
+      "status": "Advertised"
     },
     {
       "id": "province-sud-avis:0eca73f317b16f97",
@@ -1735,7 +1764,8 @@
       "deadline": "2026-10-25T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
       "lastSeen": "2026-10-08T07:01:12.138Z",
-      "seed": true
+      "seed": true,
+      "status": "Advertised"
     },
     {
       "id": "province-sud-avis:8603a927bc8317bb",
@@ -1819,7 +1849,8 @@
       "deadline": "2026-10-18T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
       "lastSeen": "2026-10-08T07:01:12.138Z",
-      "seed": true
+      "seed": true,
+      "status": "Advertised"
     },
     {
       "id": "province-sud-appels-a-projets:91f69c3fab953631",
