@@ -1,0 +1,20 @@
+{
+  "name": "vigie",
+  "version": "1.0.0",
+  "description": "Vigie : veille automatique des appels d'offres (marchespublics.nc, flux RSS, pages web) avec interface web.",
+  "scripts": {
+    "start": "node server/local.js",
+    "scrape": "node scraper/run.js",
+    "build": "node scripts/build-site.js",
+    "test": "node --test"
+  },
+  "license": "UNLICENSED",
+  "type": "module",
+  "dependencies": {
+    "cheerio": "^1.2.0"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=20.12"
+  }
+}

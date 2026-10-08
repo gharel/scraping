@@ -1,0 +1,91 @@
+name: Veille
+
+on:
+  schedule:
+    # Toutes les 2 heures (à hh:17 UTC, soit hh:17 + 11 h à Nouméa).
+    - cron: '17 */2 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'data/**'
+      - '**/*.md'
+
+permissions:
+  contents: write
+  issues: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: veille
+  cancel-in-progress: false
+
+jobs:
+  veille:
+    name: Vérifier les sources et publier
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v7.0.1
+
+      - name: Installer Node.js
+        uses: actions/setup-node@v7.0.0
+        with:
+          node-version: 22
+
+      - name: Installer les dépendances
+        run: npm ci --no-audit --no-fund
+
+      - name: Lancer les tests
+        if: github.event_name == 'push'
+        run: npm test
+
+      - name: Vérifier les sources
+        env:
+          VIGIE_APP_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+        run: npm run scrape -- --alert alerte.json
+
+      - name: Enregistrer les nouvelles annonces
+        run: |
+          git config user.name "vigie[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/items.json data/snapshots
+          if git diff --cached --quiet; then
+            echo "Aucune nouvelle donnée à enregistrer."
+          else
+            git add data/status.json
+            git commit -m "Veille : mise à jour des annonces"
+            for attempt in 1 2 3; do
+              git pull --rebase origin "$GITHUB_REF_NAME" && git push origin "HEAD:$GITHUB_REF_NAME" && break
+              sleep 5
+            done
+          fi
+
+      - name: Envoyer l'alerte par e-mail (ticket GitHub)
+        if: hashFiles('alerte.json') != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create veille --color 50967c --description "Alertes de Vigie" 2>/dev/null || true
+          node -e "const a=require('./alerte.json');const fs=require('fs');fs.writeFileSync('alerte-titre.txt',a.title);fs.writeFileSync('alerte-corps.md',a.body)"
+          gh issue create --title "$(cat alerte-titre.txt)" --body-file alerte-corps.md --label veille
+
+      - name: Préparer le site
+        run: npm run build
+
+      - name: Configurer GitHub Pages
+        uses: actions/configure-pages@v6.0.0
+
+      - name: Envoyer le site
+        uses: actions/upload-pages-artifact@v5.0.0
+        with:
+          path: _site
+
+      - name: Publier en ligne
+        id: deployment
+        uses: actions/deploy-pages@v5.0.1

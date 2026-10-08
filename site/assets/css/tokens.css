@@ -1,0 +1,210 @@
+/* =============================================================
+   Vigie — tokens du design system Skazy Formation (Claude Design)
+   Source : tokens/colors.css, tokens/typography.css, tokens/spacing.css
+   Le thème sombre dérive des tons sombres du système (#1a1a1a, #2e2e2e).
+   ============================================================= */
+
+:root {
+  /* ── Marque ─────────────────────────────────────────── */
+  --color-primary: #50967c;
+  --color-primary-dark: #3d7a62;
+  --color-primary-light: #6db898;
+  --color-primary-subtle: #e8f5f0;
+  --color-dark: #4a4a4a;
+  --color-dark-2: #2e2e2e;
+  --color-dark-3: #1a1a1a;
+
+  /* ── Neutres ────────────────────────────────────────── */
+  --color-gray-50: #f8f9fa;
+  --color-gray-100: #f1f3f5;
+  --color-gray-200: #e9ecef;
+  --color-gray-300: #dee2e6;
+  --color-gray-400: #ced4da;
+  --color-gray-500: #adb5bd;
+  --color-gray-600: #6c757d;
+  --color-gray-700: #495057;
+  --color-gray-800: #343a40;
+  --color-gray-900: #212529;
+
+  /* ── Typographie ────────────────────────────────────── */
+  --font-web: 'Georama', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-md: 1.125rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 1.875rem;
+  --text-3xl: 2.25rem;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-extrabold: 800;
+  --leading-tight: 1.2;
+  --leading-snug: 1.35;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.65;
+  --tracking-tight: -0.02em;
+  --tracking-wide: 0.04em;
+  --tracking-wider: 0.08em;
+
+  /* ── Espacements (grille de 4 px) ───────────────────── */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  /* ── Rayons ─────────────────────────────────────────── */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+
+  /* ── Ombres ─────────────────────────────────────────── */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.14), 0 8px 16px rgba(0, 0, 0, 0.08);
+
+  /* ── Mise en page ───────────────────────────────────── */
+  --container-xl: 1280px;
+  --header-height: 72px;
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+
+  /* ── Rôles (thème clair) ────────────────────────────── */
+  --bg: var(--color-gray-50);
+  --surface: #ffffff;
+  --surface-2: var(--color-gray-100);
+  --surface-hover: #fbfcfc;
+  --text: var(--color-dark);
+  --text-strong: var(--color-dark-2);
+  --text-2: var(--color-gray-600);
+  --border: var(--color-gray-200);
+  --border-strong: var(--color-gray-400);
+  --brand: var(--color-primary);
+  --brand-text: var(--color-primary-dark);
+  --accent: var(--color-primary-dark);
+  --accent-hover: #336a54;
+  --on-accent: #ffffff;
+  --accent-subtle: var(--color-primary-subtle);
+  --focus: var(--color-primary);
+  --header-bg: rgba(255, 255, 255, 0.92);
+  --overlay: rgba(26, 26, 26, 0.45);
+  --skeleton: var(--color-gray-200);
+
+  /* Sémantiques : fond doux + texte lisible (AA) */
+  --success: #3a9e68;
+  --success-soft: #e3f4ea;
+  --success-text: #24734a;
+  --warning: #e6a817;
+  --warning-soft: #fdf3d8;
+  --warning-text: #7f5a00;
+  --danger: #d64242;
+  --danger-soft: #fbe5e5;
+  --danger-text: #b42f2f;
+  --info-soft: #ddeef8;
+  --info-text: #2f6690;
+
+  /* Catégories : couleurs du système Skazy (barre, fond de badge, texte de badge) */
+  --cat-1: #50967c; --cat-1-soft: #e8f5f0; --cat-1-text: #356b56;
+  --cat-2: #5699c5; --cat-2-soft: #ddeef8; --cat-2-text: #2f6690;
+  --cat-3: #a07bd4; --cat-3-soft: #ede5f9; --cat-3-text: #6f4ca6;
+  --cat-4: #e3764c; --cat-4-soft: #fbe9e0; --cat-4-text: #a8441f;
+  --cat-5: #e78da5; --cat-5-soft: #fce8ee; --cat-5-text: #a33f58;
+  --cat-6: #eacb60; --cat-6-soft: #fdf6da; --cat-6-text: #7a5d0a;
+  --cat-7: #5daba0; --cat-7-soft: #dcf0ee; --cat-7-text: #2c6e66;
+  --cat-8: #6c757d; --cat-8-soft: #f1f3f5; --cat-8-text: #495057;
+
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg: var(--color-dark-3);
+    --surface: #242424;
+    --surface-2: var(--color-dark-2);
+    --surface-hover: #292929;
+    --text: #e9ecef;
+    --text-strong: #f8f9fa;
+    --text-2: #adb5bd;
+    --border: #363636;
+    --border-strong: #5a5a5a;
+    --brand: var(--color-primary-light);
+    --brand-text: var(--color-primary-light);
+    --accent: var(--color-primary-light);
+    --accent-hover: #86c7ab;
+    --on-accent: #142019;
+    --accent-subtle: rgba(109, 184, 152, 0.14);
+    --focus: var(--color-primary-light);
+    --header-bg: rgba(26, 26, 26, 0.9);
+    --overlay: rgba(0, 0, 0, 0.6);
+    --skeleton: #303030;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5);
+    --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.45), 0 2px 4px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 28px rgba(0, 0, 0, 0.55), 0 4px 8px rgba(0, 0, 0, 0.3);
+    --shadow-xl: 0 18px 50px rgba(0, 0, 0, 0.6), 0 8px 16px rgba(0, 0, 0, 0.35);
+    --success-soft: rgba(58, 158, 104, 0.18); --success-text: #7fd3a5;
+    --warning-soft: rgba(230, 168, 23, 0.18); --warning-text: #f2cc6b;
+    --danger-soft: rgba(214, 66, 66, 0.2); --danger-text: #f19a9a;
+    --info-soft: rgba(86, 153, 197, 0.2); --info-text: #9cc6e6;
+    --cat-1: #6db898; --cat-1-soft: rgba(109, 184, 152, 0.16); --cat-1-text: #93d3b8;
+    --cat-2: #6fabd3; --cat-2-soft: rgba(86, 153, 197, 0.2); --cat-2-text: #a6cdea;
+    --cat-3: #b394df; --cat-3-soft: rgba(160, 123, 212, 0.2); --cat-3-text: #cfb7f0;
+    --cat-4: #ea8a65; --cat-4-soft: rgba(227, 118, 76, 0.2); --cat-4-text: #f4ae92;
+    --cat-5: #ec9fb3; --cat-5-soft: rgba(231, 141, 165, 0.2); --cat-5-text: #f5bfcd;
+    --cat-6: #eacb60; --cat-6-soft: rgba(234, 203, 96, 0.18); --cat-6-text: #f1db8c;
+    --cat-7: #72bdb2; --cat-7-soft: rgba(93, 171, 160, 0.2); --cat-7-text: #9fd8cf;
+    --cat-8: #adb5bd; --cat-8-soft: rgba(173, 181, 189, 0.16); --cat-8-text: #ced4da;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme='dark'] {
+  --bg: var(--color-dark-3);
+  --surface: #242424;
+  --surface-2: var(--color-dark-2);
+  --surface-hover: #292929;
+  --text: #e9ecef;
+  --text-strong: #f8f9fa;
+  --text-2: #adb5bd;
+  --border: #363636;
+  --border-strong: #5a5a5a;
+  --brand: var(--color-primary-light);
+  --brand-text: var(--color-primary-light);
+  --accent: var(--color-primary-light);
+  --accent-hover: #86c7ab;
+  --on-accent: #142019;
+  --accent-subtle: rgba(109, 184, 152, 0.14);
+  --focus: var(--color-primary-light);
+  --header-bg: rgba(26, 26, 26, 0.9);
+  --overlay: rgba(0, 0, 0, 0.6);
+  --skeleton: #303030;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.45), 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 28px rgba(0, 0, 0, 0.55), 0 4px 8px rgba(0, 0, 0, 0.3);
+  --shadow-xl: 0 18px 50px rgba(0, 0, 0, 0.6), 0 8px 16px rgba(0, 0, 0, 0.35);
+  --success-soft: rgba(58, 158, 104, 0.18); --success-text: #7fd3a5;
+  --warning-soft: rgba(230, 168, 23, 0.18); --warning-text: #f2cc6b;
+  --danger-soft: rgba(214, 66, 66, 0.2); --danger-text: #f19a9a;
+  --info-soft: rgba(86, 153, 197, 0.2); --info-text: #9cc6e6;
+  --cat-1: #6db898; --cat-1-soft: rgba(109, 184, 152, 0.16); --cat-1-text: #93d3b8;
+  --cat-2: #6fabd3; --cat-2-soft: rgba(86, 153, 197, 0.2); --cat-2-text: #a6cdea;
+  --cat-3: #b394df; --cat-3-soft: rgba(160, 123, 212, 0.2); --cat-3-text: #cfb7f0;
+  --cat-4: #ea8a65; --cat-4-soft: rgba(227, 118, 76, 0.2); --cat-4-text: #f4ae92;
+  --cat-5: #ec9fb3; --cat-5-soft: rgba(231, 141, 165, 0.2); --cat-5-text: #f5bfcd;
+  --cat-6: #eacb60; --cat-6-soft: rgba(234, 203, 96, 0.18); --cat-6-text: #f1db8c;
+  --cat-7: #72bdb2; --cat-7-soft: rgba(93, 171, 160, 0.2); --cat-7-text: #9fd8cf;
+  --cat-8: #adb5bd; --cat-8-soft: rgba(173, 181, 189, 0.16); --cat-8-text: #ced4da;
+  color-scheme: dark;
+}

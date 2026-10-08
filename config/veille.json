@@ -1,0 +1,234 @@
+{
+  "settings": {
+    "timezone": "Pacific/Noumea",
+    "retentionDays": 180,
+    "localIntervalMinutes": 60,
+    "githubAlerts": true,
+    "alertOnlyMatching": true,
+    "appUrl": "https://gharel.github.io/scraping/"
+  },
+  "categories": [
+    {
+      "id": "formation",
+      "name": "Formation",
+      "color": 1,
+      "keywords": [
+        "formation*",
+        "formateur*",
+        "formatrice*",
+        "pédagogi*",
+        "e-learning",
+        "elearning",
+        "LMS",
+        "apprenant*",
+        "montée en compétences",
+        "développement des compétences",
+        "ingénierie de formation",
+        "sensibilisation",
+        "coaching",
+        "tutorat",
+        "training*",
+        "trainer*",
+        "capacity building",
+        "workshop*",
+        "mentoring"
+      ]
+    },
+    {
+      "id": "numerique-ia",
+      "name": "Numérique & IA",
+      "color": 2,
+      "keywords": [
+        "numérique*",
+        "digital*",
+        "informatique*",
+        "logiciel*",
+        "progiciel*",
+        "applicatif*",
+        "application mobile",
+        "application web",
+        "site internet",
+        "site web",
+        "web",
+        "intelligence artificielle",
+        "IA",
+        "chatbot*",
+        "data",
+        "base de données",
+        "cybersécurité",
+        "sécurité informatique",
+        "système d'information",
+        "systèmes d'information",
+        "dématérialisation",
+        "transformation digitale",
+        "cloud",
+        "hébergement web",
+        "infogérance",
+        "SharePoint",
+        "Microsoft 365",
+        "Power Platform",
+        "télécom*",
+        "ICT",
+        "software",
+        "artificial intelligence",
+        "AI"
+      ]
+    },
+    {
+      "id": "conseil-etudes",
+      "name": "Conseil & études",
+      "color": 3,
+      "keywords": [
+        "assistance à maîtrise d'ouvrage",
+        "AMO",
+        "assistance technique",
+        "audit*",
+        "mission de conseil",
+        "prestation de conseil",
+        "prestations intellectuelles",
+        "étude*",
+        "diagnostic*",
+        "accompagnement",
+        "consultant*",
+        "consultancy",
+        "consulting",
+        "évaluation*",
+        "schéma directeur",
+        "stratégi*",
+        "expertise",
+        "feasibility",
+        "assessment",
+        "advisory",
+        "technical assistance"
+      ]
+    },
+    {
+      "id": "communication",
+      "name": "Communication & événementiel",
+      "color": 4,
+      "keywords": [
+        "communication",
+        "événementiel*",
+        "événement*",
+        "graphis*",
+        "charte graphique",
+        "vidéo*",
+        "audiovisuel*",
+        "photograph*",
+        "relations presse",
+        "réseaux sociaux",
+        "community manag*",
+        "impression*",
+        "signalétique",
+        "conférence*",
+        "séminaire*",
+        "social media",
+        "event",
+        "events"
+      ]
+    },
+    {
+      "id": "travaux-btp",
+      "name": "Travaux & BTP",
+      "color": 6,
+      "keywords": [
+        "travaux",
+        "construction*",
+        "réhabilitation",
+        "rénovation",
+        "bâtiment*",
+        "voirie",
+        "VRD",
+        "génie civil",
+        "terrassement*",
+        "gros œuvre",
+        "second œuvre",
+        "maîtrise d'œuvre",
+        "démolition",
+        "assainissement",
+        "réfection",
+        "aménagement*",
+        "ouvrage d'art",
+        "enrobé*",
+        "charpente",
+        "menuiserie*",
+        "plomberie",
+        "climatisation",
+        "works"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "marchespublics-nc",
+      "name": "Marchés publics NC",
+      "url": "https://portail.marchespublics.nc/?page=Entreprise.EntrepriseAdvancedSearch&AllCons",
+      "type": "atexo",
+      "enabled": true,
+      "categories": [],
+      "options": {}
+    },
+    {
+      "id": "province-sud-avis",
+      "name": "Province Sud · commande publique",
+      "url": "https://www.province-sud.nc/aops/feed/",
+      "type": "rss",
+      "enabled": true,
+      "categories": [],
+      "options": {}
+    },
+    {
+      "id": "province-sud-appels-a-projets",
+      "name": "Province Sud · appels à projets",
+      "url": "https://www.province-sud.nc/aaps/feed/",
+      "type": "rss",
+      "enabled": true,
+      "categories": [],
+      "options": {
+        "kind": "appel-a-projets"
+      }
+    },
+    {
+      "id": "cafat-marches",
+      "name": "CAFAT · marchés",
+      "url": "https://www.cafat.nc/category/marches/feed/",
+      "type": "rss",
+      "enabled": true,
+      "categories": [],
+      "options": {}
+    },
+    {
+      "id": "cps-appels-offres",
+      "name": "Communauté du Pacifique (CPS) · appels d'offres",
+      "url": "https://www.spc.int/procurement?field_tender_grant_status_target_id=2247",
+      "type": "liste",
+      "enabled": true,
+      "categories": [],
+      "options": {
+        "item": "table tbody tr",
+        "fields": {
+          "title": "td:nth-child(2) > a",
+          "url": "td:nth-child(2) > a@href",
+          "reference": "td:nth-child(1)",
+          "publishedAt": "time:nth-of-type(1)@datetime",
+          "deadline": "time:nth-of-type(2)@datetime",
+          "location": "td.views-field-field-country-for-deliverables",
+          "nature": "td.views-field-field-tender-category"
+        },
+        "kind": "consultation"
+      }
+    },
+    {
+      "id": "marchespublics-nc-accueil",
+      "name": "Marchés publics NC · informations",
+      "url": "https://marchespublics.nc/accueil",
+      "type": "page",
+      "enabled": true,
+      "categories": [],
+      "options": {
+        "selector": "#content article",
+        "detect": "texte"
+      }
+    }
+  ]
+}

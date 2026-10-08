@@ -1,0 +1,106 @@
+{
+  "sources": {
+    "marchespublics-nc": {
+      "url": "https://portail.marchespublics.nc/?page=Entreprise.EntrepriseAdvancedSearch&AllCons",
+      "type": "atexo",
+      "ok": true,
+      "error": null,
+      "lastRun": "2026-10-08T07:01:04.349Z",
+      "lastSuccess": "2026-10-08T07:01:04.349Z",
+      "found": 49,
+      "total": 49,
+      "added": 0,
+      "firstCheck": true,
+      "durationMs": 6233,
+      "failures": 0
+    },
+    "province-sud-avis": {
+      "url": "https://www.province-sud.nc/aops/feed/",
+      "type": "rss",
+      "ok": true,
+      "error": null,
+      "lastRun": "2026-10-08T07:01:10.583Z",
+      "lastSuccess": "2026-10-08T07:01:10.583Z",
+      "found": 27,
+      "total": 27,
+      "added": 0,
+      "firstCheck": true,
+      "durationMs": 209,
+      "failures": 0
+    },
+    "province-sud-appels-a-projets": {
+      "url": "https://www.province-sud.nc/aaps/feed/",
+      "type": "rss",
+      "ok": true,
+      "error": null,
+      "lastRun": "2026-10-08T07:01:10.792Z",
+      "lastSuccess": "2026-10-08T07:01:10.792Z",
+      "found": 19,
+      "total": 19,
+      "added": 0,
+      "firstCheck": true,
+      "durationMs": 223,
+      "failures": 0
+    },
+    "cafat-marches": {
+      "url": "https://www.cafat.nc/category/marches/feed/",
+      "type": "rss",
+      "ok": true,
+      "error": null,
+      "lastRun": "2026-10-08T07:01:11.015Z",
+      "lastSuccess": "2026-10-08T07:01:11.015Z",
+      "found": 1,
+      "total": 1,
+      "added": 0,
+      "firstCheck": true,
+      "durationMs": 1122,
+      "failures": 0
+    },
+    "cps-appels-offres": {
+      "url": "https://www.spc.int/procurement?field_tender_grant_status_target_id=2247",
+      "type": "liste",
+      "ok": true,
+      "error": null,
+      "lastRun": "2026-10-08T07:01:12.138Z",
+      "lastSuccess": "2026-10-08T07:01:12.138Z",
+      "found": 31,
+      "total": 31,
+      "added": 0,
+      "firstCheck": true,
+      "durationMs": 945,
+      "failures": 0
+    },
+    "marchespublics-nc-accueil": {
+      "url": "https://marchespublics.nc/accueil",
+      "type": "page",
+      "ok": true,
+      "error": null,
+      "lastRun": "2026-10-08T07:01:13.084Z",
+      "lastSuccess": "2026-10-08T07:01:13.084Z",
+      "found": 0,
+      "total": 4,
+      "added": 0,
+      "firstCheck": true,
+      "durationMs": 153,
+      "failures": 0
+    }
+  },
+  "runs": [
+    {
+      "at": "2026-10-08T07:01:04.349Z",
+      "checked": 6,
+      "added": 0,
+      "errors": 0
+    }
+  ],
+  "lastRun": {
+    "startedAt": "2026-10-08T07:01:04.349Z",
+    "finishedAt": "2026-10-08T07:01:13.238Z",
+    "durationMs": 8889,
+    "checked": 6,
+    "errors": 0,
+    "added": 0,
+    "partial": false
+  },
+  "updatedAt": "2026-10-08T07:01:13.238Z"
+}

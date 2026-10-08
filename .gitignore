@@ -1,0 +1,10 @@
+node_modules/
+_site/
+local-data/
+alerte.json
+alerte-titre.txt
+alerte-corps.md
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
