@@ -7,7 +7,7 @@ import { icon } from './icons.js';
 import { plural, relativeTime, setTimeZone } from './format.js';
 import * as prefs from './prefs.js';
 import { connectGitHub, createBackend, detectLocal, disconnectGitHub, loadData } from './data.js';
-import { DEFAULT_FILTERS, enrichItems, toCsv } from './model.js';
+import { DEFAULT_FILTERS, enrichItems, outOfReach, toCsv } from './model.js';
 import { normalizeConfig } from './shared/config.js';
 import { setBusy, toast } from './ui.js';
 import { renderAnnonces } from './views/annonces.js';
@@ -102,7 +102,10 @@ function updateChrome() {
   if (sync) {
     clear(sync);
     const updated = state.status?.updatedAt;
-    const errors = state.config.sources.filter((source) => source.enabled && state.status?.sources?.[source.id]?.ok === false).length;
+    const errors = state.config.sources.filter((source) => {
+      const status = state.status?.sources?.[source.id];
+      return source.enabled && status?.ok === false && !outOfReach(status);
+    }).length;
     const running = state.running || state.local?.running;
     const tone = running ? 'busy' : errors ? 'warning' : updated ? 'ok' : 'idle';
     const text = running ? 'Vérification en cours…' : updated ? `Vérifié ${relativeTime(updated)}` : 'Jamais vérifié';

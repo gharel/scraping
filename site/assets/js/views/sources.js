@@ -4,6 +4,7 @@
 import { clear, h, nextId } from '../dom.js';
 import { icon } from '../icons.js';
 import { formatDate, plural, prettyTitle, relativeTime } from '../format.js';
+import { outOfReach } from '../model.js';
 import { guessSourceType, KIND_LABELS, normalizeSource, REGIONS, SOURCE_TYPES, sourceProblems, uniqueId } from '../shared/config.js';
 import { badge, button, callout, categoryBadge, closeDialog, emptyState, field, input, openDialog, pageHead, segmented, select, selectControl, setBusy, toggle, toast } from '../ui.js';
 
@@ -12,8 +13,27 @@ const TYPE_ICONS = { atexo: 'landmark', rss: 'rss', page: 'globe', liste: 'list'
 function statusPill(source, status) {
   if (!source.enabled) return badge('En pause', 'neutral', { iconName: 'pause' });
   if (!status?.lastRun) return badge('Pas encore vérifiée', 'neutral');
+  if (outOfReach(status)) return badge('Hors de portée en ligne', 'warning', { iconName: 'globe' });
   if (status.ok === false) return badge('Erreur', 'danger', { iconName: 'alert' });
   return badge('À jour', 'success', { iconName: 'check' });
+}
+
+function statusMessage(status) {
+  if (status?.ok !== false || !status.error) return null;
+  if (outOfReach(status)) {
+    return h(
+      'p',
+      { class: 'source-error source-error--reach' },
+      icon('globe', { size: 16 }),
+      h(
+        'span',
+        null,
+        'Ce site ne répond pas aux serveurs de GitHub qui assurent la veille en ligne : il filtre sans doute les connexions venant de l’étranger. Il reste lisible depuis votre PC, avec Vigie en local.',
+        h('small', null, status.error),
+      ),
+    );
+  }
+  return h('p', { class: 'source-error' }, icon('alert', { size: 16 }), h('span', null, status.error, status.lastSuccess ? ` (dernier succès ${relativeTime(status.lastSuccess)})` : ''));
 }
 
 export function modeNotice(ctx) {
@@ -58,9 +78,7 @@ function renderSourceCard(source, ctx, counts, categoriesById) {
       ),
       h('a', { class: 'source-url', href: source.url, target: '_blank', rel: 'noopener noreferrer' }, source.url),
       h('dl', { class: 'source-stats' }, stats.map(([label, value]) => h('div', null, h('dt', null, label), h('dd', null, value)))),
-      status?.ok === false && status.error
-        ? h('p', { class: 'source-error' }, icon('alert', { size: 16 }), h('span', null, status.error, status.lastSuccess ? ` (dernier succès ${relativeTime(status.lastSuccess)})` : ''))
-        : null,
+      statusMessage(status),
       forced.length ? h('div', { class: 'source-cats' }, h('span', { class: 'source-cats-label' }, 'Toujours classée dans :'), forced.map((category) => categoryBadge(category))) : null,
       canEdit
         ? h(
@@ -96,6 +114,7 @@ export function renderSources(ctx) {
   const canEdit = state.backend.canEdit;
   const sources = state.config.sources;
   const okCount = sources.filter((source) => source.enabled && state.status?.sources?.[source.id]?.ok).length;
+  const reachCount = sources.filter((source) => source.enabled && outOfReach(state.status?.sources?.[source.id])).length;
   const activeCount = sources.filter((source) => source.enabled).length;
 
   return h(
@@ -103,7 +122,9 @@ export function renderSources(ctx) {
     { class: 'view' },
     pageHead(
       'Sources',
-      sources.length ? `${plural(activeCount, 'source active', 'sources actives')} · ${okCount} à jour` : 'Les sites et flux que Vigie surveille pour vous',
+      sources.length
+        ? `${plural(activeCount, 'source active', 'sources actives')} · ${okCount} à jour${reachCount ? ` · ${reachCount} hors de portée en ligne` : ''}`
+        : 'Les sites et flux que Vigie surveille pour vous',
       canEdit ? button('Ajouter une source', { iconName: 'plus', onClick: () => openSourceForm(ctx) }) : null,
       canEdit ? button('Vérifier maintenant', { variant: 'secondary', iconName: 'refresh', onClick: (event) => ctx.runNow(event.currentTarget) }) : null,
     ),

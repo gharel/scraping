@@ -4,7 +4,7 @@
 import { h } from '../dom.js';
 import { icon } from '../icons.js';
 import { formatDate, plural, prettyTitle, relativeTime, untilTime } from '../format.js';
-import { applyFilters, countBy, DEFAULT_FILTERS, sortItems } from '../model.js';
+import { applyFilters, countBy, DEFAULT_FILTERS, outOfReach, sortItems } from '../model.js';
 import { KIND_LABELS, REGIONS } from '../shared/config.js';
 import { badge, button, callout, categoryBadge, emptyState, iconButton, pageHead, segmented } from '../ui.js';
 
@@ -154,7 +154,11 @@ export function renderAnnonces(ctx) {
   };
   const scopeHint = filters.category === 'mine' ? 'dans vos catégories' : 'annonces ouvertes';
 
-  const errors = state.config.sources.filter((source) => source.enabled && state.status?.sources?.[source.id]?.ok === false);
+  // Les sites hors de portée de la veille en ligne sont signalés dans l'onglet Sources, pas ici.
+  const errors = state.config.sources.filter((source) => {
+    const status = state.status?.sources?.[source.id];
+    return source.enabled && status?.ok === false && !outOfReach(status);
+  });
   const updatedAt = Date.parse(state.status?.updatedAt || '') || 0;
   const stale = state.backend.kind !== 'local' && updatedAt && Date.now() - updatedAt > 12 * 3600000;
 

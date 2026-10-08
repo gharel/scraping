@@ -12,6 +12,14 @@ export const DEFAULT_FILTERS = { category: 'mine', status: 'open', region: 'all'
 const ARCHIVE_AFTER_MS = 45 * 86400000;
 const STATUS_CLOSED = /expir|cl[ôo]tur|termin[ée]|ferm[ée]|closed|annul|infructu|sans suite/i;
 
+/**
+ * Source que la veille en ligne n'atteint pas (site qui filtre les serveurs de GitHub),
+ * alors qu'elle reste lisible depuis un PC : ce n'est pas une source à corriger.
+ */
+export function outOfReach(status) {
+  return Boolean(status && status.ok === false && status.network && status.where === 'github');
+}
+
 export function enrichItems({ items, config, since, starred, now = new Date() }) {
   const compiled = compileCategories(config.categories, config.settings.excludeKeywords);
   const sources = new Map(config.sources.map((source) => [source.id, source]));

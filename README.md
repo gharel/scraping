@@ -53,7 +53,9 @@ Interface conçue avec le design system **Skazy Formation** (Claude Design) : lo
 | [Marchés publics de l’État (PLACE)](https://www.marches-publics.gouv.fr/) | Portail Atexo | Consultations de l’État exécutées en Nouvelle-Calédonie, Polynésie, Wallis-et-Futuna ou au Vanuatu |
 | [Communauté du Pacifique (CPS)](https://www.spc.int/procurement) | Liste CSS | Appels d’offres ouverts de la CPS (siège à Nouméa) |
 
-Les pages de la Ville de Nouméa, d’Enercal et de l’OPT n’ayant pas de liste exploitable, Vigie y signale toute modification. Le Gouvernement de la Nouvelle-Calédonie et la plupart des communes publient sur marchespublics.nc, déjà couvert.
+Les pages de la Ville de Nouméa, d’Enercal et de l’OPT n’ayant pas de liste exploitable, Vigie y signale toute modification.
+
+**Sites hors de portée en ligne.** Quelques sites refusent les connexions venant des serveurs de GitHub, qui assurent la veille en ligne (filtrage des connexions étrangères) : Haut-commissariats de Nouvelle-Calédonie et de Polynésie, Wallis-et-Futuna, Lexpol, Mont-Dore et Province des Îles. Ils apparaissent « Hors de portée en ligne » dans l’onglet Sources et restent suivis normalement par Vigie sur votre PC. Les avis de l’État (Haut-commissariats, Wallis-et-Futuna) sont de toute façon publiés sur PLACE, suivi en ligne. Le Gouvernement de la Nouvelle-Calédonie et la plupart des communes publient sur marchespublics.nc, déjà couvert.
 
 ## Utiliser Vigie
 

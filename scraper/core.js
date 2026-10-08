@@ -21,6 +21,8 @@ const LIMITS = {
 };
 const TRACKED_FIELDS = ['deadline', 'title'];
 const MAX_ITEMS_PER_SOURCE = 400;
+// Où tourne la vérification : sur les serveurs de GitHub (veille en ligne) ou sur ce PC.
+const RUNNER = process.env.GITHUB_ACTIONS === 'true' ? 'github' : 'local';
 
 export function sanitizeItem(raw) {
   const out = { kind: raw.kind || 'annonce' };
@@ -163,6 +165,7 @@ export async function runVeille({ config, dataDir, only = null, log = () => {}, 
         firstCheck: Boolean(firstRun || result.meta?.firstCheck),
         durationMs: Date.now() - began,
         failures: 0,
+        where: RUNNER,
       };
       report.push({ source, ok: true, found: result.items.length, added: fresh.length });
       log(`✓ ${source.name} : ${result.items.length} élément(s) lu(s), ${fresh.length} nouveauté(s)${firstRun ? ' (premier passage)' : ''}`);
@@ -174,9 +177,12 @@ export async function runVeille({ config, dataDir, only = null, log = () => {}, 
         type: source.type,
         ok: false,
         error: message,
+        // Site injoignable (filtrage, panne) plutôt que source à corriger.
+        network: Boolean(error?.network),
         lastRun: runAt.toISOString(),
         durationMs: Date.now() - began,
         failures: (previous.failures || 0) + 1,
+        where: RUNNER,
       };
       report.push({ source, ok: false, error: message });
       log(`✗ ${source.name} : ${message}`);

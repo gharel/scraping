@@ -53,6 +53,14 @@ test('filtres : « Mes catégories » ne garde que les annonces classées', asyn
   assert.deepEqual(applyFilters(items, { ...DEFAULT_FILTERS, quick: 'starred' }).map((item) => item.id), ['c'], 'les annonces suivies restent visibles');
 });
 
+test('sources : site hors de portée de la veille en ligne, pas une erreur à corriger', async () => {
+  const { outOfReach } = await import('../site/assets/js/model.js');
+  assert.ok(outOfReach({ ok: false, network: true, where: 'github' }));
+  assert.ok(!outOfReach({ ok: false, network: true, where: 'local' }), 'depuis le PC, le site est vraiment injoignable');
+  assert.ok(!outOfReach({ ok: false, network: false, where: 'github' }), 'page modifiée ou adresse fausse : erreur');
+  assert.ok(!outOfReach({ ok: true, where: 'github' }));
+});
+
 test('statut : une annonce « Expirée » n’est plus en cours', async () => {
   const { enrichItems } = await import('../site/assets/js/model.js');
   const config = normalizeConfig({ categories: [], sources: [{ id: 's', name: 'S', url: 'https://exemple.nc' }] });

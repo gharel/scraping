@@ -707,7 +707,20 @@
 }
 
 .source-error svg {
+  flex-shrink: 0;
   margin-top: 2px;
+}
+
+/* Site hors de portée de la veille en ligne : information, pas erreur. */
+.source-error--reach {
+  background: var(--warning-soft);
+  color: var(--warning-text);
+}
+
+.source-error small {
+  display: block;
+  margin-top: 4px;
+  opacity: 0.8;
 }
 
 .source-cats {

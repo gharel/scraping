@@ -8,11 +8,13 @@ export const DEFAULT_USER_AGENT =
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 export class HttpError extends Error {
-  constructor(message, { status, url } = {}) {
+  /** « network » : le site n'a pas répondu ou a refusé la connexion (et non une page introuvable). */
+  constructor(message, { status, url, network = false } = {}) {
     super(message);
     this.name = 'HttpError';
     this.status = status;
     this.url = url;
+    this.network = network;
   }
 }
 
@@ -92,6 +94,8 @@ export function createHttpClient({ userAgent = DEFAULT_USER_AGENT, timeoutMs = 4
         throw new HttpError(`Le site a répondu ${response.status} (${response.statusText || 'erreur'})`, {
           status: response.status,
           url: currentUrl,
+          // Accès interdit ou trop de requêtes : le site filtre ce visiteur.
+          network: response.status === 403 || response.status === 429,
         });
       }
       return { url: currentUrl, status: response.status, headers: response.headers, text };
@@ -136,9 +140,9 @@ function humanize(error, url) {
       return url;
     }
   })();
-  if (error?.name === 'TimeoutError' || error?.name === 'AbortError') return new HttpError(`Le site ${host} n'a pas répondu à temps`, { url });
+  if (error?.name === 'TimeoutError' || error?.name === 'AbortError') return new HttpError(`Le site ${host} n'a pas répondu à temps`, { url, network: true });
   if (cause === 'ENOTFOUND' || cause === 'EAI_AGAIN') return new HttpError(`Adresse introuvable : ${host}`, { url });
-  if (cause === 'ECONNREFUSED' || cause === 'ECONNRESET') return new HttpError(`Connexion refusée par ${host}`, { url });
+  if (cause === 'ECONNREFUSED' || cause === 'ECONNRESET') return new HttpError(`Connexion refusée par ${host}`, { url, network: true });
   if (String(cause).startsWith('ERR_TLS') || String(cause).includes('CERT')) return new HttpError(`Certificat de sécurité invalide pour ${host}`, { url });
-  return new HttpError(`Impossible de joindre ${host} (${cause || error?.message || 'erreur réseau'})`, { url });
+  return new HttpError(`Impossible de joindre ${host} (${cause || error?.message || 'erreur réseau'})`, { url, network: true });
 }
