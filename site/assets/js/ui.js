@@ -122,11 +122,23 @@ export function segmented({ name, label, options, value, onChange }) {
 
 /* ── Notifications ────────────────────────────────────────────────── */
 
-export function toast(message, tone = 'success', { timeout = 5000 } = {}) {
+/**
+ * Notification éphémère. `action` ajoute un bouton (ex. « Annuler ») ;
+ * `key` remplace la notification précédente de même nature au lieu de les empiler.
+ */
+export function toast(message, tone = 'success', { timeout = 5000, action, key } = {}) {
   const region = document.getElementById('toasts');
   if (!region) return;
+  if (key) for (const previous of region.querySelectorAll(`[data-key="${key}"]`)) previous.remove();
   const iconName = tone === 'error' ? 'alert' : tone === 'info' ? 'info' : 'checkCircle';
-  const element = h('div', { class: `toast toast--${tone}`, role: tone === 'error' ? 'alert' : 'status' }, icon(iconName, { size: 20 }), h('p', { class: 'toast-text' }, message));
+  const element = h('div', { class: `toast toast--${tone}`, role: tone === 'error' ? 'alert' : 'status', 'data-key': key }, icon(iconName, { size: 20 }), h('p', { class: 'toast-text' }, message));
+  if (action) {
+    const run = () => {
+      element.remove();
+      action.onClick();
+    };
+    element.append(h('button', { class: 'toast-action', type: 'button', onClick: run }, action.label));
+  }
   const close = iconButton('x', 'Fermer la notification', { onClick: () => element.remove(), size: 16 });
   element.append(close);
   region.append(element);

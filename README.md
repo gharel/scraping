@@ -18,7 +18,7 @@ Chaque outil Skazy Formation a sa couleur de l’arc-en-ciel, dans cet ordre : Q
 - **Lit les consultations en détail** : acheteur, référence, procédure, nature, nombre de lots, date de publication, date limite. Quand la liste ne donne que l’acheteur, Vigie lit la fiche de l’annonce pour en connaître l’objet.
 - **Range** chaque annonce par territoire (Nouvelle-Calédonie, Polynésie française, Wallis-et-Futuna, Vanuatu, Pacifique), avec un filtre dédié.
 - **Classe** chaque annonce dans vos domaines (formation, IA, communication, développement, web, bureautique, audiovisuel, data, gestion de projet) et **écarte** le BTP grâce à des mots-clés exclus. Par défaut, seules les annonces de vos catégories sont affichées.
-- **Signale** les nouveautés depuis votre dernière visite, les clôtures proches (compte à rebours J-n) et les reports de date limite.
+- **Signale** les nouveautés (elles le restent jusqu’à ce que vous les marquiez comme lues), les clôtures proches (compte à rebours J-n) et les reports de date limite.
 - **Alerte par e-mail** via un ticket GitHub quand une nouvelle annonce entre dans vos catégories.
 - **Exporte** les annonces affichées en CSV (Excel).
 
@@ -67,7 +67,7 @@ Seule une empreinte PBKDF2 (SHA-256, 600 000 itérations) est publiée, dans `si
 
 ## Utiliser Vigie
 
-- **Annonces** : les tuiles du haut filtrent en un clic (en cours, nouvelles, clôture proche, suivies). Toutes les options de filtre sont des puces avec leur nombre d’annonces : catégories (« Mes catégories » par défaut, « Toutes » pour tout voir), statut, territoire, source, type ; le tri se fait par date de publication ou par date limite. L’étoile « suit » une annonce sur l’appareil.
+- **Annonces** : les tuiles du haut filtrent en un clic (en cours, nouvelles, clôture proche, suivies). Toutes les options de filtre sont des puces avec leur nombre d’annonces : catégories (« Mes catégories » par défaut, « Toutes » pour tout voir), statut, territoire, source, type ; le tri se fait par date de publication ou par date limite. L’étoile « suit » une annonce sur l’appareil. Une annonce reste « Nouvelle » tant que vous ne l’avez pas marquée comme lue : bouton « Marquer comme lue » sur la carte, ou « Tout marquer comme lu » au-dessus de la liste (nouveautés de la sélection affichée) et dans Réglages (toutes). La notification qui suit propose « Annuler ». Comme les annonces suivies, la lecture est retenue sur l’appareil.
 - **Sources** : rangées par territoire, avec l’état de chaque vérification (à jour, relayée depuis votre PC, hors de portée en ligne, erreur, en pause), ajout et modification.
 - **Catégories** : mots-clés de classement, avec aperçu en direct des annonces trouvées.
 - **Réglages** : thème, connexion GitHub, relais (sur le PC), alertes, fréquence, export.

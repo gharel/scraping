@@ -1,5 +1,5 @@
 /**
- * Préférences propres à cet appareil (thème, filtres, annonces suivies, jeton GitHub).
+ * Préférences propres à cet appareil (thème, filtres, annonces suivies et lues, jeton GitHub).
  * Tout est protégé : en navigation privée, le stockage peut être indisponible.
  */
 const PREFIX = 'vigie.';
@@ -30,33 +30,25 @@ function readSession(key) {
   }
 }
 
-function writeSession(key, value) {
-  try {
-    window.sessionStorage.setItem(PREFIX + key, value);
-  } catch {
-    /* ignoré */
-  }
-}
-
 /**
- * Date de référence des « nouveautés » : la visite précédente.
- * Elle reste stable pendant toute la session pour ne pas effacer les badges au rechargement.
+ * Lecture des nouveautés : une annonce reste « Nouvelle » jusqu'à ce que vous la marquiez comme lue.
+ * `before` : tout ce qui a été repéré avant cette date est lu (« Tout marquer comme lu ») ;
+ * `ids` : annonces plus récentes déjà marquées comme lues, une à une.
  */
-export function noveltyReference(now = new Date()) {
-  let since = readSession('since');
-  if (!since) {
-    since = read('lastVisit') || new Date(now.getTime() - 3 * 86400000).toISOString();
-    writeSession('since', since);
+export function readState(now = new Date()) {
+  let before = read('readBefore');
+  if (!before) {
+    // Avant ce réglage, les nouveautés s'effaçaient à chaque visite : on repart de la visite précédente.
+    before = readSession('since') || read('lastVisit') || new Date(now.getTime() - 3 * 86400000).toISOString();
+    write('readBefore', before);
+    write('lastVisit', null);
   }
-  write('lastVisit', now.toISOString());
-  return since;
+  return { before, ids: new Set(read('readIds', [])) };
 }
 
-export function resetNovelty(now = new Date()) {
-  const iso = now.toISOString();
-  writeSession('since', iso);
-  write('lastVisit', iso);
-  return iso;
+export function saveReadState({ before, ids }) {
+  write('readBefore', before);
+  write('readIds', ids.size ? [...ids] : null);
 }
 
 export function starred() {

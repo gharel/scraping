@@ -25,10 +25,15 @@ export function relayed(status) {
   return Boolean(status && status.ok === true && status.via === 'relais' && status.relayAt);
 }
 
-export function enrichItems({ items, config, since, starred, now = new Date() }) {
+/**
+ * Nouvelle = en cours, repérée après le dernier « Tout marquer comme lu » et pas encore marquée comme lue.
+ * Une annonce clôturée n'est plus à traiter : elle quitte les nouveautés d'elle-même.
+ */
+export function enrichItems({ items, config, read = {}, starred, now = new Date() }) {
   const compiled = compileCategories(config.categories, config.settings.excludeKeywords);
   const sources = new Map(config.sources.map((source) => [source.id, source]));
-  const sinceMs = Date.parse(since) || 0;
+  const readBefore = Date.parse(read.before) || 0;
+  const readIds = read.ids || new Set();
   return items.map((item) => {
     const source = sources.get(item.sourceId);
     // Date limite sans heure (« 06/11/2026 ») : l'annonce reste ouverte jusqu'au soir.
@@ -39,6 +44,7 @@ export function enrichItems({ items, config, since, starred, now = new Date() })
     const sortDate = Date.parse(item.publishedAt || item.firstSeen) || 0;
     const archived = !Number.isFinite(deadlineMs) && now.getTime() - sortDate > ARCHIVE_AFTER_MS;
     const deadlineChange = (item.history || []).filter((entry) => entry.field === 'deadline').pop() || null;
+    const open = !closed && !archived && !item.gone;
     return {
       ...item,
       source,
@@ -46,9 +52,9 @@ export function enrichItems({ items, config, since, starred, now = new Date() })
       regions: itemRegions(item, source),
       closed,
       archived,
-      open: !closed && !archived && !item.gone,
+      open,
       days: Number.isFinite(deadlineMs) ? daysUntil(item.deadline, now) : null,
-      isNew: !item.seed && (Date.parse(item.firstSeen) || 0) > sinceMs,
+      isNew: open && !item.seed && (Date.parse(item.firstSeen) || 0) > readBefore && !readIds.has(item.id),
       starred: starred.has(item.id),
       sortDate,
       deadlineMs,
@@ -56,6 +62,13 @@ export function enrichItems({ items, config, since, starred, now = new Date() })
       searchText: normalizeText([item.title, item.summary, item.buyer, item.buyerLocation, item.reference, item.location, item.nature, item.procedure, source?.name].filter(Boolean).join(' ')),
     };
   });
+}
+
+/** Annonces lues à retenir : celles encore dans les données et repérées après `before` (les autres sont déjà lues). */
+export function keepReadIds({ before, ids }, items) {
+  const readBefore = Date.parse(before) || 0;
+  const recent = new Set(items.filter((item) => (Date.parse(item.firstSeen) || 0) > readBefore).map((item) => item.id));
+  return new Set([...ids].filter((id) => recent.has(id)));
 }
 
 export function applyFilters(items, filters, { ignore = [] } = {}) {

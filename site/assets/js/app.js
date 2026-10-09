@@ -8,7 +8,7 @@ import { icon } from './icons.js';
 import { plural, relativeTime, setTimeZone } from './format.js';
 import * as prefs from './prefs.js';
 import { connectGitHub, createBackend, detectLocal, disconnectGitHub, loadData } from './data.js';
-import { DEFAULT_FILTERS, enrichItems, outOfReach, toCsv } from './model.js';
+import { DEFAULT_FILTERS, enrichItems, keepReadIds, outOfReach, toCsv } from './model.js';
 import { normalizeConfig } from './shared/config.js';
 import { setBusy, toast } from './ui.js';
 import { renderAnnonces } from './views/annonces.js';
@@ -36,7 +36,7 @@ const state = {
   deploy: null,
   local: null,
   backend: createBackend({ local: null, deploy: null }),
-  since: prefs.noveltyReference(),
+  read: prefs.readState(),
   filters: { ...DEFAULT_FILTERS, ...pick(prefs.read(FILTERS_KEY, {}), PERSISTED_FILTERS) },
   filtersOpen: false,
   visibleCount: PAGE_SIZE,
@@ -52,7 +52,21 @@ function pick(source, keys) {
 }
 
 function recompute() {
-  state.enriched = enrichItems({ items: state.items, config: state.config, since: state.since, starred: prefs.starred() });
+  state.enriched = enrichItems({ items: state.items, config: state.config, read: state.read, starred: prefs.starred() });
+}
+
+function setRead(read) {
+  state.read = read;
+  prefs.saveReadState(read);
+  recompute();
+  render();
+}
+
+/** Change l'état de lecture ; la notification propose de revenir en arrière. */
+function changeRead(read, message) {
+  const previous = state.read;
+  setRead(read);
+  toast(message, 'success', { timeout: 6000, key: 'lecture', action: { label: 'Annuler', onClick: () => setRead(previous) } });
 }
 
 /* ── Rendu ────────────────────────────────────────────────────────── */
@@ -125,11 +139,13 @@ function updateChrome() {
     themeButton.title = themeButton.getAttribute('aria-label');
   }
 
-  const fresh = state.enriched.filter((item) => item.isNew).length;
+  // Comme les alertes : seules les nouveautés de vos catégories sont comptées.
+  const mine = state.config.categories.length > 0;
+  const fresh = state.enriched.filter((item) => item.isNew && (!mine || item.categories.length)).length;
   for (const badge of document.querySelectorAll('[data-nav-badge="annonces"]')) {
     badge.textContent = fresh ? String(fresh > 99 ? '99+' : fresh) : '';
     badge.hidden = !fresh;
-    badge.title = fresh ? plural(fresh, 'nouvelle annonce', 'nouvelles annonces') : '';
+    badge.title = fresh ? `${plural(fresh, 'nouvelle annonce', 'nouvelles annonces')}${mine ? ' dans vos catégories' : ''}` : '';
   }
 }
 
@@ -192,6 +208,14 @@ async function reload({ quiet = true } = {}) {
   state.backend = createBackend({ local, deploy: data.deploy });
   state.loading = false;
   setTimeZone(state.config.settings.timezone);
+  // Les annonces lues qui ont quitté les données ne sont plus retenues.
+  if (state.items.length) {
+    const ids = keepReadIds(state.read, state.items);
+    if (ids.size !== state.read.ids.size) {
+      state.read = { ...state.read, ids };
+      prefs.saveReadState(state.read);
+    }
+  }
   recompute();
   notifyNewItems();
   render();
@@ -417,11 +441,15 @@ const ctx = {
     prefs.write('theme', value);
     applyTheme(value);
   },
+  /** Marque des annonces comme lues : elles quittent « Nouvelles », sauf si vous annulez. */
+  markRead(ids) {
+    const unread = ids.filter((id) => !state.read.ids.has(id));
+    if (!unread.length) return;
+    const message = unread.length === 1 ? 'Annonce marquée comme lue.' : `${plural(unread.length, 'annonce marquée comme lue', 'annonces marquées comme lues')}.`;
+    changeRead({ ...state.read, ids: new Set([...state.read.ids, ...unread]) }, message);
+  },
   markAllRead() {
-    state.since = prefs.resetNovelty();
-    recompute();
-    render();
-    toast('Toutes les annonces sont marquées comme lues.', 'success');
+    changeRead({ before: new Date().toISOString(), ids: new Set() }, 'Toutes les annonces sont marquées comme lues.');
   },
   refreshDerived() {
     recompute();

@@ -66,17 +66,36 @@ test('statut : une annonce « Expirée » n’est plus en cours', async () => {
   const config = normalizeConfig({ categories: [], sources: [{ id: 's', name: 'S', url: 'https://exemple.nc' }] });
   const now = new Date('2026-10-08T00:00:00Z');
   const base = { sourceId: 's', title: 'Consultation', publishedAt: '2026-10-01T00:00:00+11:00', firstSeen: now.toISOString() };
-  const [expired, open] = enrichItems({ items: [{ ...base, id: 's:a', status: 'Expirée' }, { ...base, id: 's:b', status: 'Ouvert' }], config, since: null, starred: new Set(), now });
+  const [expired, open] = enrichItems({ items: [{ ...base, id: 's:a', status: 'Expirée' }, { ...base, id: 's:b', status: 'Ouvert' }], config, starred: new Set(), now });
   assert.equal(expired.open, false);
   assert.equal(open.open, true);
   const lastDay = new Date('2026-11-06T05:00:00+11:00');
   const [dayOnly, withTime] = enrichItems({
     items: [{ ...base, id: 's:c', deadline: '2026-11-06T00:00:00+11:00' }, { ...base, id: 's:d', deadline: '2026-11-06T04:00:00+11:00' }],
-    config, since: null, starred: new Set(), now: lastDay,
+    config, starred: new Set(), now: lastDay,
   });
   assert.equal(dayOnly.open, true, 'date sans heure : ouverte toute la journée');
   assert.equal(dayOnly.days, 0);
   assert.equal(withTime.open, false);
+});
+
+test('nouveautés : une annonce reste nouvelle jusqu’à ce qu’elle soit marquée comme lue', async () => {
+  const { enrichItems, keepReadIds } = await import('../site/assets/js/model.js');
+  const config = normalizeConfig({ categories: [], sources: [{ id: 's', name: 'S', url: 'https://exemple.nc' }] });
+  const now = new Date('2026-10-20T00:00:00Z');
+  const base = { sourceId: 's', title: 'Consultation', publishedAt: '2026-10-01T00:00:00+11:00' };
+  const items = [
+    { ...base, id: 's:ancienne', firstSeen: '2026-10-01T00:00:00Z' },
+    { ...base, id: 's:lue', firstSeen: '2026-10-10T00:00:00Z' },
+    { ...base, id: 's:nouvelle', firstSeen: '2026-10-10T00:00:00Z' },
+    { ...base, id: 's:close', firstSeen: '2026-10-10T00:00:00Z', status: 'Clôturée' },
+    { ...base, id: 's:initiale', firstSeen: '2026-10-10T00:00:00Z', seed: true },
+  ];
+  const read = { before: '2026-10-05T00:00:00Z', ids: new Set(['s:lue', 's:disparue']) };
+  const fresh = enrichItems({ items, config, read, starred: new Set(), now }).filter((item) => item.isNew).map((item) => item.id);
+  assert.deepEqual(fresh, ['s:nouvelle'], 'ni lue, ni antérieure au « Tout marquer comme lu », ni clôturée, ni du premier relevé');
+  assert.deepEqual([...keepReadIds(read, items)], ['s:lue'], 'les annonces sorties des données sont oubliées');
+  assert.deepEqual([...keepReadIds({ ...read, before: '2026-10-15T00:00:00Z' }, items)], [], 'déjà couvertes par « Tout marquer comme lu »');
 });
 
 test('territoires : source locale ou source régionale reconnue par le lieu', async () => {

@@ -59,6 +59,9 @@ function renderCard(item, ctx, categoriesById) {
     onClick: () => ctx.toggleStar(item.id),
   });
 
+  // Une nouveauté le reste jusqu'à ce que vous la marquiez comme lue.
+  const readButton = item.isNew ? button('Marquer comme lue', { variant: 'ghost', size: 'sm', iconName: 'check', className: 'ao-read', onClick: () => ctx.markRead([item.id]) }) : null;
+
   const buyerLine = buyer
     ? h('p', { class: 'ao-buyer' }, icon('building', { size: 16 }), h('span', null, buyer, item.buyerLocation ? h('span', { class: 'ao-buyer-place' }, ` · ${item.buyerLocation}`) : null))
     : null;
@@ -94,7 +97,7 @@ function renderCard(item, ctx, categoriesById) {
           'div',
           { class: 'ao-foot' },
           footLeft,
-          h('div', { class: 'ao-actions' }, h('span', { class: 'ao-source' }, item.source?.name || 'Source retirée'), item.url ? button('Voir l’annonce', { variant: 'secondary', size: 'sm', href: item.url, external: true, iconAfter: 'external' }) : null),
+          h('div', { class: 'ao-actions' }, h('span', { class: 'ao-source' }, item.source?.name || 'Source retirée'), readButton, item.url ? button('Voir l’annonce', { variant: 'secondary', size: 'sm', href: item.url, external: true, iconAfter: 'external' }) : null),
         ),
       ),
     ),
@@ -148,7 +151,7 @@ export function renderAnnonces(ctx) {
   const openItems = scoped.filter((item) => item.open);
   const stats = {
     open: openItems.length,
-    fresh: scoped.filter((item) => item.isNew && item.open).length,
+    fresh: scoped.filter((item) => item.isNew).length,
     soon: openItems.filter((item) => item.days != null && item.days <= 7).length,
     starred: all.filter((item) => item.starred).length,
   };
@@ -175,7 +178,7 @@ export function renderAnnonces(ctx) {
     'div',
     { class: 'stats', role: 'group', 'aria-label': 'Raccourcis' },
     statTile('En cours', stats.open, scopeHint, !filters.quick && filters.status === 'open', () => ctx.setFilters({ quick: null, status: 'open' })),
-    statTile('Nouvelles', stats.fresh, 'depuis votre dernière visite', filters.quick === 'new', () => setQuick('new'), 'new'),
+    statTile('Nouvelles', stats.fresh, 'pas encore lues', filters.quick === 'new', () => setQuick('new'), 'new'),
     statTile('Clôture proche', stats.soon, 'dans les 7 jours', filters.quick === 'soon', () => setQuick('soon'), 'soon'),
     statTile('Suivies', stats.starred, 'sur cet appareil', filters.quick === 'starred', () => setQuick('starred')),
   );
@@ -331,6 +334,13 @@ export function renderAnnonces(ctx) {
       'Vigie vous signalera les prochaines. Les autres annonces restent consultables.',
       button('Voir toutes les annonces', { variant: 'secondary', onClick: () => ctx.setFilters({ category: 'all' }) }),
     );
+  } else if (!filtered.length && filters.quick === 'new' && !filters.query) {
+    list = emptyState(
+      'checkCircle',
+      'Vous êtes à jour',
+      'Aucune nouvelle annonce à lire. Celles que vous avez marquées comme lues restent dans « En cours ».',
+      button('Voir les annonces en cours', { variant: 'secondary', onClick: () => ctx.setFilters({ quick: null, status: 'open' }) }),
+    );
   } else if (!filtered.length) {
     list = emptyState('search', 'Aucune annonce ne correspond', 'Élargissez la recherche ou réinitialisez les filtres.', button('Réinitialiser les filtres', { variant: 'secondary', onClick: () => ctx.resetFilters() }));
   } else {
@@ -344,10 +354,22 @@ export function renderAnnonces(ctx) {
     );
   }
 
+  // « Tout marquer comme lu » porte sur les nouveautés de la sélection affichée (toutes pages).
+  const unread = filtered.filter((item) => item.isNew);
+  const markAll =
+    unread.length > 1
+      ? button('Tout marquer comme lu', { variant: 'ghost', size: 'sm', iconName: 'check', className: 'results-read', title: `Marquer comme lues les ${unread.length} nouvelles annonces de cette liste`, onClick: () => ctx.markRead(unread.map((item) => item.id)) })
+      : null;
+
   const results = h(
     'section',
     { class: 'results', 'aria-label': 'Résultats' },
-    h('div', { class: 'results-bar' }, h('p', { class: 'results-count', 'aria-live': 'polite' }, plural(filtered.length, 'annonce')), h('div', { class: 'results-sort' }, h('span', { class: 'results-sort-label' }, 'Trier par'), sortControl)),
+    h(
+      'div',
+      { class: 'results-bar' },
+      h('div', { class: 'results-head' }, h('p', { class: 'results-count', 'aria-live': 'polite' }, plural(filtered.length, 'annonce')), markAll),
+      h('div', { class: 'results-sort' }, h('span', { class: 'results-sort-label' }, 'Trier par'), sortControl),
+    ),
     list,
   );
 
