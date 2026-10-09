@@ -1133,6 +1133,10 @@
   margin-bottom: var(--space-3);
 }
 
+.gate-brand .header-divider {
+  margin-inline: var(--space-4);
+}
+
 .gate-icon {
   display: grid;
   place-items: center;

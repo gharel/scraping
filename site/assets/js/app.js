@@ -3,6 +3,7 @@
  * État de l'application, navigation par onglets, thème, synchronisation des données.
  */
 import { requireAccess } from './access.js';
+import { initBackToTop } from './back-to-top.js';
 import { clear, h } from './dom.js';
 import { icon } from './icons.js';
 import { plural, relativeTime, setTimeZone } from './format.js';
@@ -464,6 +465,7 @@ applyTheme(prefs.read('theme', 'auto'));
 await requireAccess();
 
 document.getElementById('theme-toggle')?.addEventListener('click', () => ctx.setTheme(isDark() ? 'light' : 'dark'));
+initBackToTop(document.getElementById('back-to-top'), () => document.querySelector('.page-title') || document.getElementById('main'));
 window.addEventListener('hashchange', onRoute);
 document.addEventListener('visibilitychange', () => {
   if (document.visibilityState === 'visible') poll();

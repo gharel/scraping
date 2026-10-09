@@ -10,7 +10,15 @@ Vigie surveille automatiquement les appels d’offres publiés en Nouvelle-Calé
 
 Interface conçue avec le design system **Skazy Formation** (Claude Design) : logo officiel en SVG, police Georama, vert `#50967c`, couleurs de catégories du design system, boutons pill, cartes à barre de couleur. Responsive, thème clair et sombre.
 
-Chaque outil Skazy Formation a sa couleur de l’arc-en-ciel, dans cet ordre : Quiz rouge, Mini-jeux orange, Vigie jaune, Atelier d’exercices IA vert, Comprendre l'IA bleu, Prompthèque violet. Le favicon de Vigie (des jumelles blanches sur un dégradé jaune) sert aussi de pastille dans le bandeau : logo Skazy Formation, filet, pastille, nom de l’outil ; `node scripts/generate-icons.js` en dérive les icônes PNG. Titre d’onglet : « Page · Vigie · Skazy Formation ».
+Chaque outil Skazy Formation a sa couleur de l’arc-en-ciel, dans cet ordre : Quiz rouge, Mini-jeux orange, Vigie jaune, Atelier d’exercices IA vert, Comprendre l'IA bleu, Prompthèque violet. Le favicon de Vigie (des jumelles blanches sur un dégradé jaune) sert aussi de pastille dans le bandeau ; `node scripts/generate-icons.js` en dérive les icônes PNG. Titre d’onglet : « Page · Vigie · Skazy Formation ».
+
+**Signature commune des outils Skazy Formation (bandeau), de gauche à droite** :
+
+- la pastille et le nom « Vigie » forment un seul lien vers les annonces (`aria-current="page"` quand elles sont affichées) ;
+- au milieu et à droite, la navigation et les actions de Vigie (onglets, état de la veille, thème) ;
+- en derniers éléments : le lien « Les outils » vers <https://gharel.github.io/home/> (même onglet), avec la roue des outils copiée dans `site/assets/img/les-outils.svg`, réduit à la roue sous 1 100 px de large (le texte reste le nom accessible) ; un filet ; puis le logo Skazy Formation, lien vers <https://formation.skazy.nc> dans un nouvel onglet (36 px de haut sur grand écran, 32 px sur tablette, 30 px sur téléphone).
+
+L’écran de mot de passe reprend cette signature (pastille, Vigie, filet, logo). Sur toutes les vues, un bouton rond « Remonter en haut » apparaît en bas à droite après un écran de défilement, au-dessus de la barre d’onglets sur téléphone.
 
 ## Ce que fait Vigie
 

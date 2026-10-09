@@ -116,8 +116,10 @@ export function requireAccess() {
     const password = h('input', { class: 'input', id: 'gate-password', type: 'password', autocomplete: 'current-password', required: true, 'aria-describedby': 'gate-error' });
     const submit = h('button', { class: 'btn btn--primary btn--md', type: 'submit' }, h('span', null, 'Entrer'), icon('arrowRight', { size: 18 }));
     const form = h('form', { class: 'gate-form' }, h('label', { class: 'field-label', for: 'gate-password' }, 'Mot de passe'), h('div', { class: 'gate-row' }, password, submit), message);
-    // Signature du bandeau (logo, pastille, Vigie), décorative : le titre suffit.
-    const brand = h('div', { class: 'gate-brand', 'aria-hidden': 'true' }, [...document.querySelectorAll('.app-header .brand > *')].map((node) => node.cloneNode(true)));
+    // Signature du bandeau, dans le même ordre (pastille, Vigie, filet, logo Skazy Formation),
+    // décorative : le titre suffit.
+    const signature = ['.brand > *', '.header-divider', '.skazy-link .logo'].flatMap((selector) => [...document.querySelectorAll(`.app-header ${selector}`)]);
+    const brand = h('div', { class: 'gate-brand', 'aria-hidden': 'true' }, signature.map((node) => node.cloneNode(true)));
     const gate = h(
       'div',
       { class: 'gate', role: 'dialog', 'aria-modal': 'true', 'aria-labelledby': 'gate-title' },

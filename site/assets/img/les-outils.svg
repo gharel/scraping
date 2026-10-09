@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- La roue des outils Skazy Formation sur fond blanc : un arc par outil, dans le dégradé de
+       son favicon, en partant du haut dans le sens des aiguilles d'une montre (Quiz, Mini-jeux,
+       Vigie, Atelier d’exercices IA, Comprendre l'IA, Prompthèque). -->
+  <defs>
+    <linearGradient id="rouge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff6557"/>
+      <stop offset="1" stop-color="#d70d40"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffa839"/>
+      <stop offset="1" stop-color="#ec5900"/>
+    </linearGradient>
+    <linearGradient id="jaune" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f9e03f"/>
+      <stop offset="1" stop-color="#ef9d05"/>
+    </linearGradient>
+    <linearGradient id="vert" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7ce963"/>
+      <stop offset="1" stop-color="#02934a"/>
+    </linearGradient>
+    <linearGradient id="bleu" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#29c9fa"/>
+      <stop offset="1" stop-color="#135ae4"/>
+    </linearGradient>
+    <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d578f0"/>
+      <stop offset="1" stop-color="#701fe6"/>
+    </linearGradient>
+  </defs>
+  <rect x="0.75" y="0.75" width="62.5" height="62.5" rx="13.25" fill="#ffffff" stroke="#dee2e6" stroke-width="1.5"/>
+  <g fill="none" stroke-width="10">
+    <path stroke="url(#rouge)" d="M33.13 13.53A18.5 18.5 0 0 1 47.43 21.79"/>
+    <path stroke="url(#orange)" d="M48.56 23.75A18.5 18.5 0 0 1 48.56 40.25"/>
+    <path stroke="url(#jaune)" d="M47.43 42.21A18.5 18.5 0 0 1 33.13 50.47"/>
+    <path stroke="url(#vert)" d="M30.87 50.47A18.5 18.5 0 0 1 16.57 42.21"/>
+    <path stroke="url(#bleu)" d="M15.44 40.25A18.5 18.5 0 0 1 15.44 23.75"/>
+    <path stroke="url(#violet)" d="M16.57 21.79A18.5 18.5 0 0 1 30.87 13.53"/>
+  </g>
+</svg>
