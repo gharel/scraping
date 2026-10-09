@@ -63,6 +63,25 @@
       "lastSeen": "2026-10-09T01:10:07.629Z"
     },
     {
+      "id": "marches-publics-etat:g6l-3082894",
+      "sourceId": "marches-publics-etat",
+      "kind": "consultation",
+      "title": "Réhabilitation du bâtiment R+1 de l'école de Sausau - île de FUTUNA",
+      "summary": "Réhabilitation du bâtiment R+1 de l'école de Sausau - île de FUTUNA",
+      "reference": "2026-E-PA-66-VR",
+      "buyer": "Ministère de l'Intérieur",
+      "location": "(986) Wallis-et-Futuna, Wallis et Futuna",
+      "nature": "Travaux",
+      "procedure": "Procédure adaptée",
+      "procedureCode": "MAPA",
+      "url": "https://www.marches-publics.gouv.fr/app.php/entreprise/consultation/3082894?orgAcronyme=g6l",
+      "publishedAt": "2026-10-09T00:00:00+11:00",
+      "deadline": "2026-11-09T00:30:00+11:00",
+      "lots": 5,
+      "firstSeen": "2026-10-09T02:11:49.072Z",
+      "lastSeen": "2026-10-09T02:11:49.072Z"
+    },
+    {
       "id": "province-sud-avis:b3c361350c9a8880",
       "sourceId": "province-sud-avis",
       "kind": "consultation",
