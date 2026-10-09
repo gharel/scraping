@@ -130,6 +130,11 @@
   color-scheme: light;
 }
 
+/* Clair choisi explicitement : « only light » interdit au navigateur d'assombrir la page de lui-même. */
+:root[data-theme='light'] {
+  color-scheme: only light;
+}
+
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {
     --bg: var(--color-dark-3);

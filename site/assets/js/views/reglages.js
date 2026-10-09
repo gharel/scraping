@@ -6,6 +6,7 @@ import { h } from '../dom.js';
 import { icon } from '../icons.js';
 import { plural, relativeTime } from '../format.js';
 import * as prefs from '../prefs.js';
+import { THEME_ICONS } from '../theme.js';
 import { button, callout, field, input, pageHead, segmented, setBusy, toast, toggle } from '../ui.js';
 
 function section(title, description, ...content) {
@@ -329,11 +330,12 @@ export function renderReglages(ctx) {
         segmented({
           name: 'theme',
           label: 'Thème',
-          value: prefs.read('theme', 'auto'),
+          // Choix commun à tous les outils Skazy Formation, comme le bouton du bandeau (mêmes icônes).
+          value: state.theme,
           options: [
-            { value: 'auto', label: 'Automatique', iconName: 'monitor' },
-            { value: 'light', label: 'Clair', iconName: 'sun' },
-            { value: 'dark', label: 'Sombre', iconName: 'moon' },
+            { value: 'system', label: 'Système', iconName: THEME_ICONS.system },
+            { value: 'light', label: 'Clair', iconName: THEME_ICONS.light },
+            { value: 'dark', label: 'Sombre', iconName: THEME_ICONS.dark },
           ],
           onChange: (value) => ctx.setTheme(value),
         }),

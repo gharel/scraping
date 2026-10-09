@@ -1,26 +1,33 @@
 /**
- * Préférences propres à cet appareil (thème, filtres, annonces suivies et lues, jeton GitHub).
+ * Préférences propres à cet appareil (filtres, annonces suivies et lues, jeton GitHub), sous le
+ * préfixe « vigie. ». Le thème, commun à tous les outils Skazy Formation, a sa propre clé (theme.js).
  * Tout est protégé : en navigation privée, le stockage peut être indisponible.
  */
 const PREFIX = 'vigie.';
 
-export function read(key, fallback = null) {
+/** Valeur d'une clé complète, sans le préfixe (ex. le thème commun aux outils Skazy Formation). */
+export function readShared(key, fallback = null) {
   try {
-    const raw = window.localStorage.getItem(PREFIX + key);
+    const raw = window.localStorage.getItem(key);
     return raw == null ? fallback : JSON.parse(raw);
   } catch {
     return fallback;
   }
 }
 
-export function write(key, value) {
+/** Enregistre une clé complète, sans le préfixe ; `null` la retire. */
+export function writeShared(key, value) {
   try {
-    if (value == null) window.localStorage.removeItem(PREFIX + key);
-    else window.localStorage.setItem(PREFIX + key, JSON.stringify(value));
+    if (value == null) window.localStorage.removeItem(key);
+    else window.localStorage.setItem(key, JSON.stringify(value));
   } catch {
     /* stockage indisponible : la préférence ne sera pas conservée */
   }
 }
+
+export const read = (key, fallback = null) => readShared(PREFIX + key, fallback);
+
+export const write = (key, value) => writeShared(PREFIX + key, value);
 
 function readSession(key) {
   try {

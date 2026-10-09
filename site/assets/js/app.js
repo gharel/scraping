@@ -11,6 +11,7 @@ import * as prefs from './prefs.js';
 import { connectGitHub, createBackend, detectLocal, disconnectGitHub, loadData } from './data.js';
 import { DEFAULT_FILTERS, enrichItems, keepReadIds, outOfReach, toCsv } from './model.js';
 import { normalizeConfig } from './shared/config.js';
+import { THEME_ICONS, THEME_KEY, nextTheme, normalizeTheme, themeLabel } from './theme.js';
 import { setBusy, toast } from './ui.js';
 import { renderAnnonces } from './views/annonces.js';
 import { renderCategories } from './views/categories.js';
@@ -31,6 +32,8 @@ const PAGE_SIZE = 40;
 const state = {
   loading: true,
   route: 'annonces',
+  // 'system', 'light' ou 'dark' : relu au démarrage (applyTheme).
+  theme: 'system',
   config: normalizeConfig({}),
   items: [],
   status: { sources: {}, runs: [] },
@@ -132,13 +135,14 @@ function updateChrome() {
     sync.title = errors ? `${plural(errors, 'source en erreur', 'sources en erreur')}` : text;
   }
 
+  // Le bouton montre le thème actuel ; Réglages coche le même choix.
   const themeButton = document.getElementById('theme-toggle');
   if (themeButton) {
-    const dark = isDark();
-    clear(themeButton).append(icon(dark ? 'sun' : 'moon', { size: 20 }));
-    themeButton.setAttribute('aria-label', dark ? 'Passer en thème clair' : 'Passer en thème sombre');
-    themeButton.title = themeButton.getAttribute('aria-label');
+    clear(themeButton).append(icon(THEME_ICONS[state.theme], { size: 20 }));
+    themeButton.setAttribute('aria-label', themeLabel(state.theme));
+    themeButton.title = themeLabel(state.theme);
   }
+  for (const radio of document.querySelectorAll('input[type="radio"][name="theme"]')) radio.checked = radio.value === state.theme;
 
   // Comme les alertes : seules les nouveautés de vos catégories sont comptées.
   const mine = state.config.categories.length > 0;
@@ -152,23 +156,26 @@ function updateChrome() {
 
 /* ── Thème ────────────────────────────────────────────────────────── */
 
+// Choix commun à tous les outils Skazy Formation (theme.js) : celui du système, clair ou sombre.
 const darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
+const readTheme = () => normalizeTheme(prefs.readShared(THEME_KEY));
+
 function isDark() {
-  const theme = prefs.read('theme', 'auto');
-  return theme === 'dark' || (theme === 'auto' && darkQuery.matches);
+  return state.theme === 'dark' || (state.theme === 'system' && darkQuery.matches);
 }
 
-function applyTheme(value) {
+function applyTheme(theme) {
+  state.theme = normalizeTheme(theme);
   const root = document.documentElement;
-  if (value === 'light' || value === 'dark') root.setAttribute('data-theme', value);
-  else root.removeAttribute('data-theme');
+  if (state.theme === 'system') root.removeAttribute('data-theme');
+  else root.setAttribute('data-theme', state.theme);
   const meta = document.querySelector('meta[name="theme-color"]:not([media])');
   if (meta) meta.setAttribute('content', isDark() ? '#1a1a1a' : '#ffffff');
   updateChrome();
 }
 
-darkQuery.addEventListener?.('change', () => applyTheme(prefs.read('theme', 'auto')));
+darkQuery.addEventListener?.('change', () => applyTheme(state.theme));
 
 /* ── Données ──────────────────────────────────────────────────────── */
 
@@ -438,9 +445,11 @@ const ctx = {
       setBusy(buttonElement, false);
     }
   },
+  /** 'system' retire la clé commune : chaque outil suit alors le système. */
   setTheme(value) {
-    prefs.write('theme', value);
-    applyTheme(value);
+    const theme = normalizeTheme(value);
+    prefs.writeShared(THEME_KEY, theme === 'system' ? null : theme);
+    applyTheme(theme);
   },
   /** Marque des annonces comme lues : elles quittent « Nouvelles », sauf si vous annulez. */
   markRead(ids) {
@@ -460,11 +469,20 @@ const ctx = {
 
 /* ── Démarrage ────────────────────────────────────────────────────── */
 
-applyTheme(prefs.read('theme', 'auto'));
+applyTheme(readTheme());
+// Thème changé dans un autre onglet ou un autre outil Skazy Formation (même stockage), ou page
+// restaurée par le bouton Retour (cache de navigation) : on relit le choix commun.
+window.addEventListener('storage', (event) => {
+  if (event.key === THEME_KEY || event.key === null) applyTheme(readTheme());
+});
+window.addEventListener('pageshow', (event) => {
+  if (event.persisted) applyTheme(readTheme());
+});
 // Rien ne se charge (ni données ni surveillance) avant le mot de passe.
 await requireAccess();
 
-document.getElementById('theme-toggle')?.addEventListener('click', () => ctx.setTheme(isDark() ? 'light' : 'dark'));
+// Système → clair → sombre → système.
+document.getElementById('theme-toggle')?.addEventListener('click', () => ctx.setTheme(nextTheme(state.theme)));
 initBackToTop(document.getElementById('back-to-top'), () => document.querySelector('.page-title') || document.getElementById('main'));
 window.addEventListener('hashchange', onRoute);
 document.addEventListener('visibilitychange', () => {

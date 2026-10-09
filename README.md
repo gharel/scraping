@@ -8,7 +8,9 @@ Vigie surveille automatiquement les appels d’offres publiés en Nouvelle-Calé
 | --- | --- |
 | ![Vigie sur ordinateur](docs/apercu-bureau.png) | ![Vigie sur mobile](docs/apercu-mobile.png) |
 
-Interface conçue avec le design system **Skazy Formation** (Claude Design) : logo officiel en SVG, police Georama, vert `#50967c`, couleurs de catégories du design system, boutons pill, cartes à barre de couleur. Responsive, thème clair et sombre.
+Interface conçue avec le design system **Skazy Formation** (Claude Design) : logo officiel en SVG, police Georama, vert `#50967c`, couleurs de catégories du design system, boutons pill, cartes à barre de couleur. Responsive.
+
+**Thème commun aux outils Skazy Formation** : trois modes, celui du système, clair ou sombre. Le bouton du bandeau les fait défiler dans cet ordre et montre le thème actuel (demi-cercle, soleil, lune) ; Réglages propose le même choix. Ce choix vaut pour tous les outils Skazy Formation : ils partagent l’origine <https://gharel.github.io>, donc la clé `skazy-outils:theme` du stockage local (`"light"` ou `"dark"` en JSON ; sans clé, chaque outil suit le système). Un changement fait dans un autre onglet ou un autre outil s’applique aussitôt. `site/assets/js/theme-init.js` applique le choix avant l’affichage (la politique de sécurité interdit le script en ligne). La page a son propre thème sombre : la balise `<meta name="darkreader-lock" />` empêche le mode nuit de Brave (Dark Reader) de la repeindre.
 
 Chaque outil Skazy Formation a sa couleur de l’arc-en-ciel, dans cet ordre : Quiz rouge, Mini-jeux orange, Vigie jaune, Atelier d’exercices IA vert, Comprendre l'IA bleu, Prompthèque violet. Le favicon de Vigie (des jumelles blanches sur un dégradé jaune) sert aussi de pastille dans le bandeau ; `node scripts/generate-icons.js` en dérive les icônes PNG. Titre d’onglet : « Page · Vigie · Skazy Formation ».
 

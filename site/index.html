@@ -7,6 +7,8 @@
     <meta name="description" content="Vigie surveille automatiquement les appels d’offres de Nouvelle-Calédonie (marchespublics.nc, Province Sud, CAFAT, CPS) et les pages web de votre choix." />
     <meta name="theme-color" content="#ffffff" />
     <meta name="color-scheme" content="light dark" />
+    <!-- Vigie a son propre thème sombre : sans cette balise, le mode nuit de Brave (Dark Reader) la repeindrait. Jusqu'ici, seule la politique de sécurité (CSP) l'en empêchait. -->
+    <meta name="darkreader-lock" />
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://api.github.com; manifest-src 'self'; base-uri 'self'; form-action 'none'; object-src 'none'" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <link rel="icon" href="assets/img/favicon-32.png?v=3" type="image/png" sizes="32x32" />
@@ -42,7 +44,7 @@
 
         <div class="header-actions">
           <p class="sync-status" id="sync-status" aria-live="polite"></p>
-          <button class="icon-btn" id="theme-toggle" type="button" aria-label="Changer de thème"></button>
+          <button class="icon-btn" id="theme-toggle" type="button" aria-label="Thème : celui du système. Changer de thème" title="Thème : celui du système. Changer de thème"></button>
           <a class="tools-link" href="https://gharel.github.io/home/" title="Tous les outils Skazy Formation">
             <img class="tools-icon" src="assets/img/les-outils.svg" width="26" height="26" alt="" />
             <span class="tools-text">Les outils</span>
