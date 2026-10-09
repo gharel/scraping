@@ -48,6 +48,21 @@
       "seed": true
     },
     {
+      "id": "province-nord:f6df8e497cc3288a",
+      "sourceId": "province-nord",
+      "kind": "consultation",
+      "title": "Exploitation du services de transport scolaire sur la commune de Poya 2027-2030",
+      "reference": "03/2026",
+      "buyer": "Commune de Nèkö (Poya)",
+      "nature": "Service",
+      "status": "Ouvert",
+      "url": "https://marchespublics.province-nord.nc/sallemarche.aspx",
+      "publishedAt": "2026-10-10T00:00:00+11:00",
+      "deadline": "2026-11-02T15:00:00+11:00",
+      "firstSeen": "2026-10-09T17:00:29.795Z",
+      "lastSeen": "2026-10-09T17:00:29.795Z"
+    },
+    {
       "id": "province-nord:ea80d7239f03f70a",
       "sourceId": "province-nord",
       "kind": "consultation",
@@ -61,6 +76,26 @@
       "deadline": "2026-11-12T12:00:00+11:00",
       "firstSeen": "2026-10-08T23:48:02.895Z",
       "lastSeen": "2026-10-09T01:10:07.629Z"
+    },
+    {
+      "id": "marchespublics-nc:y6u-3465",
+      "sourceId": "marchespublics-nc",
+      "kind": "consultation",
+      "title": "TRAVAUX DE REPARATION ET DE PROTECTION DU PONTON DU VALLON-DORE",
+      "summary": "TRAVAUX DE REPARATION ET DE PROTECTION DU PONTON DU VALLON-DORE",
+      "reference": "26-M-16",
+      "buyer": "Syndicat Mixte des Transports Urbains du Grand Nouméa",
+      "buyerLocation": "Nouméa",
+      "location": "Province Sud",
+      "nature": "Travaux",
+      "procedure": "Appel d'offres ouvert",
+      "procedureCode": "AOO",
+      "url": "https://portail.marchespublics.nc/entreprise/consultation/3465?orgAcronyme=y6u",
+      "publishedAt": "2026-10-09T00:00:00+11:00",
+      "deadline": "2026-11-02T11:00:00+11:00",
+      "lots": 3,
+      "firstSeen": "2026-10-09T16:59:26.304Z",
+      "lastSeen": "2026-10-09T16:59:26.304Z"
     },
     {
       "id": "marches-publics-etat:g6l-3082894",
