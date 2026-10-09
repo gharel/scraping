@@ -59,6 +59,12 @@ Les pages de la Ville de Nouméa, d’Enercal et de l’OPT n’ayant pas de lis
 
 **Sites hors de portée en ligne.** Quelques sites refusent les connexions venant des serveurs de GitHub, qui assurent la veille en ligne (filtrage des connexions étrangères) : Haut-commissariats de Nouvelle-Calédonie et de Polynésie, Wallis-et-Futuna, Lexpol, Mont-Dore et Province des Îles. Vigie lancé sur votre PC les lit normalement et, avec le [relais](#relayer-les-sites-hors-de-portée-vers-la-version-en-ligne), publie leurs annonces sur la version en ligne : elles y apparaissent « Relayée depuis votre PC · il y a 1 h ». Sans relevé récent (PC éteint depuis plus de 6 heures, relais désactivé), ils apparaissent « Hors de portée en ligne » dans l’onglet Sources. Les avis de l’État (Haut-commissariats, Wallis-et-Futuna) sont de toute façon publiés sur PLACE, suivi en ligne. Le Gouvernement de la Nouvelle-Calédonie et la plupart des communes publient sur marchespublics.nc, déjà couvert.
 
+## Accès réservé
+
+Un **mot de passe** est demandé avant d’afficher la veille (le même que les mini-jeux et le quiz Skazy Formation), en ligne comme sur votre PC. Le navigateur s’en souvient ensuite ; « Verrouiller l’accès » (Réglages, carte « Sur cet appareil ») le fait redemander. Chaque mot de passe incorrect bloque la saisie sur ce navigateur, de plus en plus longtemps : 5 minutes, 1 heure, 24 heures, 1 semaine, 1 mois, puis définitivement ; le bon mot de passe remet le compte à zéro.
+
+Seule une empreinte PBKDF2 (SHA-256, 600 000 itérations) est publiée, dans `site/assets/js/access.js`. C’est une protection dissuasive : le site reste statique et ses données publiques.
+
 ## Utiliser Vigie
 
 - **Annonces** : les tuiles du haut filtrent en un clic (en cours, nouvelles, clôture proche, suivies). Toutes les options de filtre sont des puces avec leur nombre d’annonces : catégories (« Mes catégories » par défaut, « Toutes » pour tout voir), statut, territoire, source, type ; le tri se fait par date de publication ou par date limite. L’étoile « suit » une annonce sur l’appareil.

@@ -1076,3 +1076,92 @@
   font-size: var(--text-sm);
   overflow-wrap: anywhere;
 }
+
+/* ── Écran de mot de passe (access.js) ───────────────────────────── */
+
+.gate {
+  position: fixed;
+  inset: 0;
+  z-index: 400;
+  display: grid;
+  place-items: center;
+  padding: var(--space-4);
+  overflow-y: auto;
+  background: var(--bg);
+}
+
+.gate-card {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-3);
+  width: min(100%, 27rem);
+  padding: 32px 24px;
+  border-radius: var(--radius-xl);
+  background: var(--surface);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .gate-card {
+    padding: 40px 36px;
+  }
+}
+
+.gate-brand {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--space-3);
+}
+
+.gate-icon {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--accent-subtle);
+  color: var(--brand-text);
+}
+
+.gate-title {
+  font-size: var(--text-xl);
+  font-weight: var(--weight-extrabold);
+  color: var(--text-strong);
+}
+
+.gate-text {
+  color: var(--text-2);
+  text-wrap: pretty;
+}
+
+.gate-form {
+  display: grid;
+  gap: 6px;
+  width: 100%;
+  margin-top: var(--space-2);
+  text-align: left;
+}
+
+.gate-row {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.gate-row .input {
+  flex: 1;
+  min-width: 0;
+}
+
+.gate-row .input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.gate-error {
+  min-height: 1.5em;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-normal);
+  color: var(--danger-text);
+}

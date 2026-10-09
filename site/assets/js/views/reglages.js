@@ -1,6 +1,7 @@
 /**
  * Vue « Réglages » : thème, connexion GitHub, alertes, fréquence, données de l'appareil.
  */
+import { lock } from '../access.js';
 import { h } from '../dom.js';
 import { icon } from '../icons.js';
 import { plural, relativeTime } from '../format.js';
@@ -282,6 +283,15 @@ function deviceSection(ctx) {
             },
           })
         : null,
+      button('Verrouiller l’accès', {
+        variant: 'ghost',
+        iconName: 'lock',
+        title: 'Le mot de passe sera redemandé sur cet appareil',
+        onClick: () => {
+          lock();
+          window.location.reload();
+        },
+      }),
     ),
   );
 }

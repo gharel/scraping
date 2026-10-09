@@ -2,6 +2,7 @@
  * Vigie — interface web.
  * État de l'application, navigation par onglets, thème, synchronisation des données.
  */
+import { requireAccess } from './access.js';
 import { clear, h } from './dom.js';
 import { icon } from './icons.js';
 import { plural, relativeTime, setTimeZone } from './format.js';
@@ -430,6 +431,10 @@ const ctx = {
 
 /* ── Démarrage ────────────────────────────────────────────────────── */
 
+applyTheme(prefs.read('theme', 'auto'));
+// Rien ne se charge (ni données ni surveillance) avant le mot de passe.
+await requireAccess();
+
 document.getElementById('theme-toggle')?.addEventListener('click', () => ctx.setTheme(isDark() ? 'light' : 'dark'));
 window.addEventListener('hashchange', onRoute);
 document.addEventListener('visibilitychange', () => {
@@ -438,7 +443,6 @@ document.addEventListener('visibilitychange', () => {
 setInterval(updateChrome, 60000);
 
 state.route = ROUTES[window.location.hash.replace('#', '')] ? window.location.hash.replace('#', '') : 'annonces';
-applyTheme(prefs.read('theme', 'auto'));
 render();
 reload({ quiet: false })
   .catch(() => {
