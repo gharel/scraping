@@ -44,7 +44,7 @@
       "publishedAt": "2026-10-21T00:00:00+11:00",
       "deadline": "2026-10-13T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -60,7 +60,7 @@
       "publishedAt": "2026-10-10T00:00:00+11:00",
       "deadline": "2026-11-02T15:00:00+11:00",
       "firstSeen": "2026-10-09T17:00:29.795Z",
-      "lastSeen": "2026-10-09T17:00:29.795Z"
+      "lastSeen": "2026-10-10T05:51:42.573Z"
     },
     {
       "id": "province-nord:ea80d7239f03f70a",
@@ -75,7 +75,7 @@
       "publishedAt": "2026-10-09T09:30:00+11:00",
       "deadline": "2026-11-12T12:00:00+11:00",
       "firstSeen": "2026-10-08T23:48:02.895Z",
-      "lastSeen": "2026-10-09T01:10:07.629Z"
+      "lastSeen": "2026-10-10T05:51:42.573Z"
     },
     {
       "id": "marchespublics-nc:y6u-3465",
@@ -95,7 +95,7 @@
       "deadline": "2026-11-02T11:00:00+11:00",
       "lots": 3,
       "firstSeen": "2026-10-09T16:59:26.304Z",
-      "lastSeen": "2026-10-09T16:59:26.304Z"
+      "lastSeen": "2026-10-10T05:50:04.286Z"
     },
     {
       "id": "marches-publics-etat:g6l-3082894",
@@ -114,7 +114,7 @@
       "deadline": "2026-11-09T00:30:00+11:00",
       "lots": 5,
       "firstSeen": "2026-10-09T02:11:49.072Z",
-      "lastSeen": "2026-10-09T02:11:49.072Z"
+      "lastSeen": "2026-10-10T05:55:11.174Z"
     },
     {
       "id": "province-sud-avis:b3c361350c9a8880",
@@ -126,7 +126,7 @@
       "publishedAt": "2026-10-09T00:00:00+11:00",
       "deadline": "2026-11-12T00:00:00+11:00",
       "firstSeen": "2026-10-09T01:10:10.436Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z"
+      "lastSeen": "2026-10-10T05:51:45.837Z"
     },
     {
       "id": "lnc-legales:129251939986cc60",
@@ -138,7 +138,7 @@
       "url": "https://legales.lnc.nc/annonce/ville-de-dumbea-direction-du-developpement-durable-et-de-la-proximite-09-10-2026-30523",
       "publishedAt": "2026-10-09T00:00:00+11:00",
       "firstSeen": "2026-10-09T01:09:25.932Z",
-      "lastSeen": "2026-10-09T01:09:25.932Z"
+      "lastSeen": "2026-10-10T05:51:00.861Z"
     },
     {
       "id": "lnc-legales:e5894d7f2808c12f",
@@ -150,7 +150,7 @@
       "url": "https://legales.lnc.nc/annonce/ville-de-dumbea-direction-du-developpement-durable-et-de-la-proximite-09-10-2026-30524",
       "publishedAt": "2026-10-09T00:00:00+11:00",
       "firstSeen": "2026-10-08T23:47:17.509Z",
-      "lastSeen": "2026-10-09T01:09:25.932Z"
+      "lastSeen": "2026-10-10T05:51:00.861Z"
     },
     {
       "id": "lnc-legales:838d0fe83babf0f1",
@@ -162,7 +162,7 @@
       "url": "https://legales.lnc.nc/annonce/ville-de-dumbea-direction-du-developpement-durable-et-de-la-proximite-09-10-2026-30521",
       "publishedAt": "2026-10-09T00:00:00+11:00",
       "firstSeen": "2026-10-08T23:47:17.509Z",
-      "lastSeen": "2026-10-09T01:09:25.932Z"
+      "lastSeen": "2026-10-10T05:51:00.861Z"
     },
     {
       "id": "lnc-legales:f131fae6d5d94e65",
@@ -174,7 +174,7 @@
       "url": "https://legales.lnc.nc/annonce/ville-de-dumbea-direction-du-developpement-durable-et-de-la-proximite-09-10-2026-30520",
       "publishedAt": "2026-10-09T00:00:00+11:00",
       "firstSeen": "2026-10-08T23:47:17.509Z",
-      "lastSeen": "2026-10-09T01:09:25.932Z"
+      "lastSeen": "2026-10-10T05:51:00.861Z"
     },
     {
       "id": "marchespublics-nc:r8t-3459",
@@ -193,7 +193,7 @@
       "publishedAt": "2026-10-09T00:00:00+11:00",
       "deadline": "2026-11-16T15:00:00+11:00",
       "firstSeen": "2026-10-08T23:46:53.271Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z"
+      "lastSeen": "2026-10-10T05:50:04.286Z"
     },
     {
       "id": "marchespublics-nc:g3h-3454",
@@ -213,7 +213,7 @@
       "deadline": "2026-11-02T12:00:00+11:00",
       "lots": 2,
       "firstSeen": "2026-10-08T21:12:44.699Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z"
+      "lastSeen": "2026-10-10T05:50:04.286Z"
     },
     {
       "id": "marchespublics-nc:g3h-3456",
@@ -233,7 +233,7 @@
       "deadline": "2026-11-02T12:00:00+11:00",
       "lots": 2,
       "firstSeen": "2026-10-08T21:12:44.699Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z"
+      "lastSeen": "2026-10-10T05:50:04.286Z"
     },
     {
       "id": "lexpol-marches:a021705b25a44e23",
@@ -334,7 +334,7 @@
       "summary": "BTA WARU Pierre Doui à NETCHAOT et BTA GOROMOEDO et MAHOSSEM à TIAKANA La mairie de Koné informe les entrepreneurs du lancement de deux appels d’offres pour la réalisation des travaux d’électrification filaire : Électrification BTA WARU Pierre Doui à NETCHAOT (FER- 2023) sur la commune de Koné Électrification BTA GOROMOEDO et MAHOSSEM à TIAKANA (FER – 2023)... 03/05/2025",
       "url": "https://www.koohne.nc/bta-waru-pierre-doui-a-netchaot-et-bta-goromoedo-et-mahossem-a-tiakana/",
       "firstSeen": "2026-10-08T09:13:00.240Z",
-      "lastSeen": "2026-10-09T01:10:17.947Z",
+      "lastSeen": "2026-10-10T05:53:01.414Z",
       "seed": true,
       "updatedAt": "2026-10-08T23:48:14.104Z",
       "history": [
@@ -354,7 +354,7 @@
       "summary": "Réalisation des repas dans les écoles maternelles et primaires publiques Le Maire de la Commune de KONE informe les entreprises qu’il lance un appel d’offres ouvert concernant : Le transport des repas dans les écoles maternelles et primaires publiques de Koné pour les années 2024, 2025 et 2026. 06/10/2023",
       "url": "https://www.koohne.nc/realisation-des-repas-dans-les-ecoles-maternelles-et-primaires-publiques/",
       "firstSeen": "2026-10-08T09:13:00.240Z",
-      "lastSeen": "2026-10-09T01:10:17.947Z",
+      "lastSeen": "2026-10-10T05:53:01.414Z",
       "seed": true,
       "updatedAt": "2026-10-08T23:48:14.104Z",
       "history": [
@@ -374,7 +374,7 @@
       "summary": "Le transport des repas dans les écoles maternelles et primaires publiques Le Maire de la Commune de KONE informe les entreprises qu’il lance un appel d’offres ouvert concernant : le transport des repas dans les écoles maternelles et primaires publiques de Koné pour les années 2024, 2025 et 2026. L’appel d’offres est constitué de six (6) lots : ... 06/10/2023",
       "url": "https://www.koohne.nc/le-transport-des-repas-dans-les-ecoles-maternelles-et-primaires-publiques/",
       "firstSeen": "2026-10-08T09:13:00.240Z",
-      "lastSeen": "2026-10-09T01:10:17.947Z",
+      "lastSeen": "2026-10-10T05:53:01.414Z",
       "seed": true,
       "updatedAt": "2026-10-08T23:48:14.104Z",
       "history": [
@@ -433,7 +433,7 @@
       "title": "Viabilisation de la 1ère tranche du lotissement TOUGOUPE situé à l'Est du village de Koumac.",
       "url": "https://www.mairie-koumac.nc/_files/ugd/07532d_3dfee2f822db4b4a8464782c311f2049.pdf",
       "firstSeen": "2026-10-08T09:12:53.375Z",
-      "lastSeen": "2026-10-09T01:09:28.000Z",
+      "lastSeen": "2026-10-10T05:51:02.054Z",
       "seed": true
     },
     {
@@ -444,7 +444,7 @@
       "summary": "Avis d'enquête publique Approbation du plan de servitudes aéronautiques de dégagement (PSA de l'aérodrome de Koumac",
       "url": "https://www.mairie-koumac.nc/_files/ugd/07532d_ca9aaa50de334e8c94865c9b65ac1c07.pdf",
       "firstSeen": "2026-10-08T09:12:53.375Z",
-      "lastSeen": "2026-10-09T01:09:28.000Z",
+      "lastSeen": "2026-10-10T05:51:02.054Z",
       "seed": true,
       "updatedAt": "2026-10-08T09:32:00.411Z",
       "history": [
@@ -500,7 +500,7 @@
       "summary": "Avis appel public à concurrence : entretien clims (91.22 Ko)",
       "url": "https://www.cci.nc/sites/default/files/media-files/Dossier%20de%20consultation.docx",
       "firstSeen": "2026-10-08T09:12:46.729Z",
-      "lastSeen": "2026-10-09T01:09:09.292Z",
+      "lastSeen": "2026-10-10T05:50:10.152Z",
       "seed": true
     },
     {
@@ -511,7 +511,7 @@
       "summary": "Avis appel public à concurrence : prestation d’entretien et de nettoyage (85.9 Ko)",
       "url": "https://www.cci.nc/sites/default/files/media-files/Lettre%20de%20consultation_entretien_locaux.docx",
       "firstSeen": "2026-10-08T09:12:46.729Z",
-      "lastSeen": "2026-10-09T01:09:09.292Z",
+      "lastSeen": "2026-10-10T05:50:10.152Z",
       "seed": true
     },
     {
@@ -522,7 +522,7 @@
       "summary": "Avis d'appel public à concurrence \"Prestation touristique\" gare maritime : cliquer ICI.",
       "url": "https://www.cci.nc/sites/default/files/media-files/AC%20-%20Prestataire%20touristique.pdf",
       "firstSeen": "2026-10-08T09:12:46.729Z",
-      "lastSeen": "2026-10-09T01:09:09.292Z",
+      "lastSeen": "2026-10-10T05:50:10.152Z",
       "seed": true
     },
     {
@@ -538,7 +538,7 @@
       "publishedAt": "2026-10-08T16:35:00+11:00",
       "deadline": "2026-11-02T16:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:55.574Z",
-      "lastSeen": "2026-10-09T01:10:07.629Z",
+      "lastSeen": "2026-10-10T05:51:42.573Z",
       "seed": true
     },
     {
@@ -553,7 +553,7 @@
       "publishedAt": "2026-10-08T03:19:01.000Z",
       "deadline": "2026-10-18T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
-      "lastSeen": "2026-10-09T01:12:29.873Z",
+      "lastSeen": "2026-10-10T05:55:18.254Z",
       "seed": true,
       "status": "Advertised"
     },
@@ -567,7 +567,7 @@
       "url": "https://legales.lnc.nc/annonce/province-nord-defij-direction-de-lenseignement-de-la-formation-de-linsertion-et-de-la-jeunesse-08-10-2026-30513",
       "publishedAt": "2026-10-08T00:00:00+11:00",
       "firstSeen": "2026-10-08T23:47:17.509Z",
-      "lastSeen": "2026-10-09T01:09:25.932Z"
+      "lastSeen": "2026-10-10T05:51:00.861Z"
     },
     {
       "id": "lnc-legales:ef81285f655ab0f9",
@@ -580,7 +580,7 @@
       "url": "https://legales.lnc.nc/annonce/province-nord-dassps-direction-des-affaires-sanitaires-et-sociales-et-des-problemes-de-societe-08-10-2026-30514",
       "publishedAt": "2026-10-08T00:00:00+11:00",
       "firstSeen": "2026-10-08T23:47:17.509Z",
-      "lastSeen": "2026-10-09T01:09:25.932Z"
+      "lastSeen": "2026-10-10T05:51:00.861Z"
     },
     {
       "id": "lnc-legales:87d30e5ec4d3811e",
@@ -593,7 +593,7 @@
       "url": "https://legales.lnc.nc/annonce/province-nord-ddee-direction-du-developpement-economique-et-de-lenvironnement-08-10-2026-30515",
       "publishedAt": "2026-10-08T00:00:00+11:00",
       "firstSeen": "2026-10-08T23:47:17.509Z",
-      "lastSeen": "2026-10-09T01:09:25.932Z"
+      "lastSeen": "2026-10-10T05:51:00.861Z"
     },
     {
       "id": "lnc-legales:d8ade754eb87fb54",
@@ -606,7 +606,7 @@
       "url": "https://legales.lnc.nc/annonce/province-nord-ddee-direction-du-developpement-economique-et-de-lenvironnement-08-10-2026-30517",
       "publishedAt": "2026-10-08T00:00:00+11:00",
       "firstSeen": "2026-10-08T23:47:17.509Z",
-      "lastSeen": "2026-10-09T01:09:25.932Z"
+      "lastSeen": "2026-10-10T05:51:00.861Z"
     },
     {
       "id": "lnc-legales:c4e87bce642eea7c",
@@ -618,7 +618,7 @@
       "url": "https://legales.lnc.nc/annonce/mairie-de-bourail-08-10-2026-30526",
       "publishedAt": "2026-10-08T00:00:00+11:00",
       "firstSeen": "2026-10-08T23:47:17.509Z",
-      "lastSeen": "2026-10-09T01:09:25.932Z"
+      "lastSeen": "2026-10-10T05:51:00.861Z"
     },
     {
       "id": "lnc-legales:97b79693003f3246",
@@ -630,7 +630,7 @@
       "url": "https://legales.lnc.nc/annonce/cci-chambre-de-commerce-et-dindustrie-de-nouvelle-caledonie-08-10-2026-30525",
       "publishedAt": "2026-10-08T00:00:00+11:00",
       "firstSeen": "2026-10-08T23:47:17.509Z",
-      "lastSeen": "2026-10-09T01:09:25.932Z"
+      "lastSeen": "2026-10-10T05:51:00.861Z"
     },
     {
       "id": "lnc-legales:bd8fe95fe1170579",
@@ -642,7 +642,7 @@
       "url": "https://legales.lnc.nc/annonce/commune-de-hienghene-08-10-2026-30522",
       "publishedAt": "2026-10-08T00:00:00+11:00",
       "firstSeen": "2026-10-08T23:47:17.509Z",
-      "lastSeen": "2026-10-09T01:09:25.932Z"
+      "lastSeen": "2026-10-10T05:51:00.861Z"
     },
     {
       "id": "lnc-legales:105d3728ef76e282",
@@ -655,7 +655,7 @@
       "url": "https://legales.lnc.nc/annonce/province-nord-defij-direction-de-lenseignement-de-la-formation-de-linsertion-et-de-la-jeunesse-08-10-2026-30519",
       "publishedAt": "2026-10-08T00:00:00+11:00",
       "firstSeen": "2026-10-08T23:47:17.509Z",
-      "lastSeen": "2026-10-09T01:09:25.932Z"
+      "lastSeen": "2026-10-10T05:51:00.861Z"
     },
     {
       "id": "lnc-legales:7bf2b7394ee1f866",
@@ -668,7 +668,7 @@
       "url": "https://legales.lnc.nc/annonce/province-nord-ddee-direction-du-developpement-economique-et-de-lenvironnement-08-10-2026-30516",
       "publishedAt": "2026-10-08T00:00:00+11:00",
       "firstSeen": "2026-10-08T23:47:17.509Z",
-      "lastSeen": "2026-10-09T01:09:25.932Z"
+      "lastSeen": "2026-10-10T05:51:00.861Z"
     },
     {
       "id": "lnc-legales:bef4eec37280132e",
@@ -681,7 +681,7 @@
       "url": "https://legales.lnc.nc/annonce/ville-de-noumea-08-10-2026-30518",
       "publishedAt": "2026-10-08T00:00:00+11:00",
       "firstSeen": "2026-10-08T23:47:17.509Z",
-      "lastSeen": "2026-10-09T01:09:25.932Z"
+      "lastSeen": "2026-10-10T05:51:00.861Z"
     },
     {
       "id": "marches-publics-etat:g6l-3080344",
@@ -700,7 +700,7 @@
       "deadline": "2026-10-29T01:00:00+11:00",
       "lots": 3,
       "firstSeen": "2026-10-08T09:13:16.353Z",
-      "lastSeen": "2026-10-09T01:12:22.226Z",
+      "lastSeen": "2026-10-10T05:55:11.174Z",
       "seed": true
     },
     {
@@ -712,7 +712,7 @@
       "url": "https://legales.lnc.nc/annonce/ville-de-noumea-telesurveillance-surveillance-08-10-2026-30484",
       "publishedAt": "2026-10-08T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:52.687Z",
-      "lastSeen": "2026-10-09T01:09:25.932Z",
+      "lastSeen": "2026-10-10T05:51:00.861Z",
       "seed": true,
       "summary": "TÉLÉSURVEILLANCE, SURVEILLANCE ET GARDIENNAGE DES ÉDIFICES ET ESPACES COMMUNAUX Le maire de la ville de Nouméa informe les personnes intéressées du lancement de l'appel d'offres concernant la télésurveillance, la surveillance et le gardiennage des édifices et espaces communaux. Le dossier peut être consulté et retiré sur la plateforme www.marchespublics.nc . Les offres devront être déposées sous format papier au secrétariat de la direction des finances, 2 e étage de l'hôtel de ville ou sous format électronique sur la plateforme www.marchespublics.nc , avant le vendredi 06 novembre 2026, 15h30, heure de Nouméa, dernier délai. Les dispositions relatives au jugement des candidatures et des offres sont définies au règlement particulier d'appel d'offres (RPAO). L'attention des soumissionnaires est attirée sur la nécessité du strict respect des clauses figurant au RPAO intégré au dossier de consultation des entreprises. La ville de Nouméa se réserve le droit de ne pas donner suite ou de ne donner qu'une suite partielle au présent appel d'offres.",
       "updatedAt": "2026-10-08T09:16:04.940Z",
@@ -735,7 +735,7 @@
       "url": "https://legales.lnc.nc/annonce/province-nord-dajap-direction-des-affaires-administratives-08-10-2026-30454",
       "publishedAt": "2026-10-08T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:52.687Z",
-      "lastSeen": "2026-10-09T01:09:25.932Z",
+      "lastSeen": "2026-10-10T05:51:00.861Z",
       "seed": true,
       "summary": "N° de Consultation : 2026/S3003 DACIA DUSTER 2 CONF 440368 NC REVISION 109000 KMS TRAVAUX A REALISER : PIECES A FO...",
       "reference": "2026/S3003",
@@ -758,7 +758,7 @@
       "url": "https://legales.lnc.nc/annonce/province-nord-daf-direction-de-lamenagement-et-du-foncier-08-10-2026-30459",
       "publishedAt": "2026-10-08T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:52.687Z",
-      "lastSeen": "2026-10-09T01:09:25.932Z",
+      "lastSeen": "2026-10-10T05:51:00.861Z",
       "seed": true,
       "summary": "N° de Consultation : 2026/S3002 Fourniture d’amortisseur pour chargeuse LIEBHERR pour la DAF Canala Un devis pour 2...",
       "reference": "2026/S3002",
@@ -781,7 +781,7 @@
       "url": "https://legales.lnc.nc/annonce/province-nord-defij-direction-de-lenseignement-de-la-formation-de-linsertion-et-de-la-jeunesse-08-10-2026-30458",
       "publishedAt": "2026-10-08T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:52.687Z",
-      "lastSeen": "2026-10-09T01:09:25.932Z",
+      "lastSeen": "2026-10-10T05:51:00.861Z",
       "seed": true,
       "summary": "N° de Consultation : 2026/S2999 TRANSPORT D’ELEVES DE KOUMAC A POUEBO (OUANEBA...",
       "reference": "2026/S2999",
@@ -804,7 +804,7 @@
       "url": "https://legales.lnc.nc/annonce/province-nord-defij-direction-de-lenseignement-de-la-formation-de-linsertion-et-de-la-jeunesse-08-10-2026-30457",
       "publishedAt": "2026-10-08T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:52.687Z",
-      "lastSeen": "2026-10-09T01:09:25.932Z",
+      "lastSeen": "2026-10-10T05:51:00.861Z",
       "seed": true,
       "summary": "N° de Consultation : 2026/S2998 TRANSPORT D’ELEVES DE KOUMAC A CANALA EN AR ET...",
       "reference": "2026/S2998",
@@ -836,7 +836,7 @@
       "deadline": "2026-11-06T15:30:00+11:00",
       "lots": 16,
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -857,7 +857,7 @@
       "deadline": "2026-11-02T15:00:00+11:00",
       "lots": 2,
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -877,7 +877,7 @@
       "publishedAt": "2026-10-08T00:00:00+11:00",
       "deadline": "2026-10-15T12:00:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -892,7 +892,7 @@
       "publishedAt": "2026-10-07T04:09:52.000Z",
       "deadline": "2026-10-21T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
-      "lastSeen": "2026-10-09T01:12:29.873Z",
+      "lastSeen": "2026-10-10T05:55:18.254Z",
       "seed": true,
       "status": "Advertised"
     },
@@ -908,7 +908,7 @@
       "publishedAt": "2026-10-07T03:47:54.000Z",
       "deadline": "2026-11-04T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
-      "lastSeen": "2026-10-09T01:12:29.873Z",
+      "lastSeen": "2026-10-10T05:55:18.254Z",
       "seed": true,
       "status": "Advertised"
     },
@@ -928,7 +928,7 @@
       "publishedAt": "2026-10-07T00:00:00+11:00",
       "deadline": "2026-11-12T01:30:00+11:00",
       "firstSeen": "2026-10-08T09:13:16.353Z",
-      "lastSeen": "2026-10-09T01:12:22.226Z",
+      "lastSeen": "2026-10-10T05:55:11.174Z",
       "seed": true
     },
     {
@@ -1031,7 +1031,7 @@
       "url": "https://legales.lnc.nc/annonce/province-nord-drh-direction-des-ressources-humaines-07-10-2026-30449",
       "publishedAt": "2026-10-07T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:52.687Z",
-      "lastSeen": "2026-10-09T01:09:25.932Z",
+      "lastSeen": "2026-10-10T05:51:00.861Z",
       "seed": true,
       "summary": "N° de Consultation : 2026/S2994 Commande de Produits d'Entretien - 50 ESSUIE MAINS 2P ENCHEVETRES Z X150 - 16 PAPIER TOILETTE ...",
       "reference": "2026/S2994",
@@ -1054,7 +1054,7 @@
       "url": "https://legales.lnc.nc/annonce/province-nord-defij-direction-de-lenseignement-de-la-formation-de-linsertion-et-de-la-jeunesse-07-10-2026-30450",
       "publishedAt": "2026-10-07T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:52.687Z",
-      "lastSeen": "2026-10-09T01:09:25.932Z",
+      "lastSeen": "2026-10-10T05:51:00.861Z",
       "seed": true,
       "summary": "N° de Consultation : 2026/S2991 Consultation pour entretien d'un véhicule d...",
       "reference": "2026/S2991",
@@ -1077,7 +1077,7 @@
       "url": "https://legales.lnc.nc/annonce/province-nord-dajap-direction-des-affaires-administratives-07-10-2026-30452",
       "publishedAt": "2026-10-07T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:52.687Z",
-      "lastSeen": "2026-10-09T01:09:25.932Z",
+      "lastSeen": "2026-10-10T05:51:00.861Z",
       "seed": true,
       "summary": "N° de Consultation : 2026/S3000 ETUDE AMENAGEMENT PONTON BAIE DE OUASSE COMMUNE DE CANALA - TRIBU DE OUASSE ETUDE INST...",
       "reference": "2026/S3000",
@@ -1123,7 +1123,7 @@
       "url": "https://legales.lnc.nc/annonce/province-nord-daf-direction-de-lamenagement-et-du-foncier-07-10-2026-30455",
       "publishedAt": "2026-10-07T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:52.687Z",
-      "lastSeen": "2026-10-09T01:09:25.932Z",
+      "lastSeen": "2026-10-10T05:51:00.861Z",
       "seed": true,
       "summary": "N° de Consultation : 2026/S2995 Travaux de désamiantage à l'aérogare sur la commune de Tuo Cèmuhî (Touho) Date de...",
       "reference": "2026/S2995",
@@ -1146,7 +1146,7 @@
       "url": "https://legales.lnc.nc/annonce/province-nord-ddee-direction-du-developpement-economique-et-de-lenvironnement-07-10-2026-30456",
       "publishedAt": "2026-10-07T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:52.687Z",
-      "lastSeen": "2026-10-09T01:09:25.932Z",
+      "lastSeen": "2026-10-10T05:51:00.861Z",
       "seed": true,
       "summary": "N° de Consultation : 2026/S2992 Fourniture de deux extincteurs 4 KG / Poudre Objet : Fourniture d...",
       "reference": "2026/S2992",
@@ -1169,7 +1169,7 @@
       "url": "https://legales.lnc.nc/annonce/province-nord-ddee-direction-du-developpement-economique-et-de-lenvironnement-07-10-2026-30465",
       "publishedAt": "2026-10-07T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:52.687Z",
-      "lastSeen": "2026-10-09T01:09:25.932Z",
+      "lastSeen": "2026-10-10T05:51:00.861Z",
       "seed": true,
       "summary": "N° de Consultation : 2026/S2986 Révision 200h Sphyraena BGN Sud SBGN 2026 Révision 200 h Sp...",
       "reference": "2026/S2986",
@@ -1290,7 +1290,7 @@
       "publishedAt": "2026-10-07T00:00:00+11:00",
       "deadline": "2026-11-02T15:00:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -1311,7 +1311,7 @@
       "deadline": "2026-11-02T14:00:00+11:00",
       "lots": 3,
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -1326,7 +1326,7 @@
         "Procurements"
       ],
       "firstSeen": "2026-10-08T23:50:01.488Z",
-      "lastSeen": "2026-10-09T01:12:07.577Z"
+      "lastSeen": "2026-10-10T05:55:10.082Z"
     },
     {
       "id": "pwd-vanuatu:3a0025ca518e41fc",
@@ -1354,7 +1354,7 @@
       "publishedAt": "2026-10-06T02:55:05.000Z",
       "deadline": "2026-10-14T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
-      "lastSeen": "2026-10-09T01:12:29.873Z",
+      "lastSeen": "2026-10-10T05:55:18.254Z",
       "seed": true,
       "status": "Advertised"
     },
@@ -1370,7 +1370,7 @@
       "publishedAt": "2026-10-06T02:10:37.000Z",
       "deadline": "2026-10-25T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
-      "lastSeen": "2026-10-09T01:12:29.873Z",
+      "lastSeen": "2026-10-10T05:55:18.254Z",
       "seed": true,
       "status": "Advertised"
     },
@@ -1386,7 +1386,7 @@
       "publishedAt": "2026-10-06T00:58:11.000Z",
       "deadline": "2026-10-18T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
-      "lastSeen": "2026-10-09T01:12:29.873Z",
+      "lastSeen": "2026-10-10T05:55:18.254Z",
       "seed": true,
       "status": "Advertised"
     },
@@ -1406,7 +1406,7 @@
       "publishedAt": "2026-10-06T00:00:00+11:00",
       "deadline": "2026-11-06T23:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:16.353Z",
-      "lastSeen": "2026-10-09T01:12:22.226Z",
+      "lastSeen": "2026-10-10T05:55:11.174Z",
       "seed": true
     },
     {
@@ -1581,7 +1581,7 @@
       "publishedAt": "2026-10-05T10:00:00+11:00",
       "deadline": "2026-10-30T15:30:00+11:00",
       "firstSeen": "2026-10-08T09:12:55.574Z",
-      "lastSeen": "2026-10-09T01:10:07.629Z",
+      "lastSeen": "2026-10-10T05:51:42.573Z",
       "seed": true
     },
     {
@@ -1601,7 +1601,7 @@
       "deadline": "2026-12-04T12:00:00+11:00",
       "lots": 7,
       "firstSeen": "2026-10-08T09:13:16.353Z",
-      "lastSeen": "2026-10-09T01:12:22.226Z",
+      "lastSeen": "2026-10-10T05:55:11.174Z",
       "seed": true
     },
     {
@@ -1621,7 +1621,7 @@
       "publishedAt": "2026-10-05T00:00:00+11:00",
       "deadline": "2026-10-29T11:00:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -1641,7 +1641,7 @@
       "publishedAt": "2026-10-05T00:00:00+11:00",
       "deadline": "2026-10-27T15:00:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -1660,7 +1660,7 @@
       "publishedAt": "2026-10-03T00:00:00+11:00",
       "deadline": "2026-11-02T16:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:16.353Z",
-      "lastSeen": "2026-10-09T01:12:22.226Z",
+      "lastSeen": "2026-10-10T05:55:11.174Z",
       "seed": true
     },
     {
@@ -1675,7 +1675,7 @@
       "publishedAt": "2026-10-02T03:19:34.000Z",
       "deadline": "2026-11-01T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
-      "lastSeen": "2026-10-09T01:12:29.873Z",
+      "lastSeen": "2026-10-10T05:55:18.254Z",
       "seed": true,
       "status": "Advertised"
     },
@@ -1692,7 +1692,7 @@
         "appels offres"
       ],
       "firstSeen": "2026-10-08T09:12:48.919Z",
-      "lastSeen": "2026-10-09T01:09:15.862Z",
+      "lastSeen": "2026-10-10T05:50:16.824Z",
       "seed": true
     },
     {
@@ -1707,7 +1707,7 @@
       "publishedAt": "2026-10-02T00:30:39.000Z",
       "deadline": "2026-10-11T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
-      "lastSeen": "2026-10-09T01:12:29.873Z",
+      "lastSeen": "2026-10-10T05:55:18.254Z",
       "seed": true,
       "status": "Advertised"
     },
@@ -1724,7 +1724,7 @@
       "publishedAt": "2026-10-02T10:30:00+11:00",
       "deadline": "2026-10-30T15:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:55.574Z",
-      "lastSeen": "2026-10-09T01:10:07.629Z",
+      "lastSeen": "2026-10-10T05:51:42.573Z",
       "seed": true
     },
     {
@@ -1740,7 +1740,7 @@
       "publishedAt": "2026-10-02T08:00:00+11:00",
       "deadline": "2026-11-30T15:30:00+11:00",
       "firstSeen": "2026-10-08T09:12:55.574Z",
-      "lastSeen": "2026-10-09T01:10:07.629Z",
+      "lastSeen": "2026-10-10T05:51:42.573Z",
       "seed": true
     },
     {
@@ -1756,7 +1756,7 @@
       "publishedAt": "2026-10-02T08:00:00+11:00",
       "deadline": "2026-11-30T15:30:00+11:00",
       "firstSeen": "2026-10-08T09:12:55.574Z",
-      "lastSeen": "2026-10-09T01:10:07.629Z",
+      "lastSeen": "2026-10-10T05:51:42.573Z",
       "seed": true
     },
     {
@@ -1777,7 +1777,7 @@
       "deadline": "2026-11-13T11:30:00+11:00",
       "lots": 31,
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -1797,7 +1797,7 @@
       "publishedAt": "2026-10-02T00:00:00+11:00",
       "deadline": "2026-11-02T16:00:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -1817,7 +1817,7 @@
       "publishedAt": "2026-10-02T00:00:00+11:00",
       "deadline": "2026-10-26T14:00:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -1832,7 +1832,7 @@
       "publishedAt": "2026-10-01T04:00:11.000Z",
       "deadline": "2026-10-18T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
-      "lastSeen": "2026-10-09T01:12:29.873Z",
+      "lastSeen": "2026-10-10T05:55:18.254Z",
       "seed": true,
       "status": "Advertised"
     },
@@ -1848,7 +1848,7 @@
       "publishedAt": "2026-10-01T03:40:19.000Z",
       "deadline": "2026-10-16T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
-      "lastSeen": "2026-10-09T01:12:29.873Z",
+      "lastSeen": "2026-10-10T05:55:18.254Z",
       "seed": true,
       "status": "Advertised"
     },
@@ -1864,7 +1864,7 @@
       "publishedAt": "2026-09-30T19:53:52.000Z",
       "deadline": "2026-10-11T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
-      "lastSeen": "2026-10-09T01:12:29.873Z",
+      "lastSeen": "2026-10-10T05:55:18.254Z",
       "seed": true,
       "status": "Advertised"
     },
@@ -1880,7 +1880,7 @@
       "publishedAt": "2026-09-30T19:35:50.000Z",
       "deadline": "2026-10-11T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
-      "lastSeen": "2026-10-09T01:12:29.873Z",
+      "lastSeen": "2026-10-10T05:55:18.254Z",
       "seed": true,
       "status": "Advertised"
     },
@@ -1953,7 +1953,7 @@
       "publishedAt": "2026-09-30T03:28:01.000Z",
       "deadline": "2026-10-11T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
-      "lastSeen": "2026-10-09T01:12:29.873Z",
+      "lastSeen": "2026-10-10T05:55:18.254Z",
       "seed": true,
       "status": "Advertised"
     },
@@ -1970,7 +1970,7 @@
       "publishedAt": "2026-09-30T08:00:00+11:00",
       "deadline": "2026-11-13T16:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:55.574Z",
-      "lastSeen": "2026-10-09T01:10:07.629Z",
+      "lastSeen": "2026-10-10T05:51:42.573Z",
       "seed": true
     },
     {
@@ -1989,7 +1989,7 @@
       "publishedAt": "2026-09-30T00:00:00+11:00",
       "deadline": "2026-11-01T13:59:00+11:00",
       "firstSeen": "2026-10-08T09:13:16.353Z",
-      "lastSeen": "2026-10-09T01:12:22.226Z",
+      "lastSeen": "2026-10-10T05:55:11.174Z",
       "seed": true
     },
     {
@@ -2035,7 +2035,7 @@
       "publishedAt": "2026-09-30T00:00:00+11:00",
       "deadline": "2026-10-26T15:30:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -2055,7 +2055,7 @@
       "publishedAt": "2026-09-30T00:00:00+11:00",
       "deadline": "2026-10-19T15:00:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -2070,7 +2070,7 @@
       "publishedAt": "2026-09-29T03:36:36.000Z",
       "deadline": "2026-10-13T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
-      "lastSeen": "2026-10-09T01:12:29.873Z",
+      "lastSeen": "2026-10-10T05:55:18.254Z",
       "seed": true,
       "status": "Advertised"
     },
@@ -2086,7 +2086,7 @@
       "publishedAt": "2026-09-28T23:33:21.000Z",
       "deadline": "2026-10-12T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
-      "lastSeen": "2026-10-09T01:12:29.873Z",
+      "lastSeen": "2026-10-10T05:55:18.254Z",
       "seed": true,
       "status": "Advertised"
     },
@@ -2102,7 +2102,7 @@
       "publishedAt": "2026-09-28T22:42:58.000Z",
       "deadline": "2026-10-25T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
-      "lastSeen": "2026-10-09T01:12:29.873Z",
+      "lastSeen": "2026-10-10T05:55:18.254Z",
       "seed": true,
       "status": "Advertised"
     },
@@ -2118,7 +2118,7 @@
       "publishedAt": "2026-09-28T22:27:56.000Z",
       "deadline": "2026-10-25T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
-      "lastSeen": "2026-10-09T01:12:29.873Z",
+      "lastSeen": "2026-10-10T05:55:18.254Z",
       "seed": true,
       "status": "Advertised"
     },
@@ -2138,7 +2138,7 @@
       "publishedAt": "2026-09-29T00:00:00+11:00",
       "deadline": "2026-12-02T16:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:16.353Z",
-      "lastSeen": "2026-10-09T01:12:22.226Z",
+      "lastSeen": "2026-10-10T05:55:11.174Z",
       "seed": true
     },
     {
@@ -2157,7 +2157,7 @@
       "publishedAt": "2026-09-29T00:00:00+11:00",
       "deadline": "2026-10-30T00:30:00+11:00",
       "firstSeen": "2026-10-08T09:13:16.353Z",
-      "lastSeen": "2026-10-09T01:12:22.226Z",
+      "lastSeen": "2026-10-10T05:55:11.174Z",
       "seed": true
     },
     {
@@ -2176,7 +2176,7 @@
       "publishedAt": "2026-09-29T00:00:00+11:00",
       "deadline": "2026-10-28T00:30:00+11:00",
       "firstSeen": "2026-10-08T09:13:16.353Z",
-      "lastSeen": "2026-10-09T01:12:22.226Z",
+      "lastSeen": "2026-10-10T05:55:11.174Z",
       "seed": true
     },
     {
@@ -2212,7 +2212,7 @@
       "publishedAt": "2026-09-29T00:00:00+11:00",
       "deadline": "2026-10-20T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -2232,7 +2232,7 @@
       "publishedAt": "2026-09-29T00:00:00+11:00",
       "deadline": "2026-10-30T15:30:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -2252,7 +2252,7 @@
       "publishedAt": "2026-09-29T00:00:00+11:00",
       "deadline": "2026-11-03T15:30:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true,
       "updatedAt": "2026-10-08T23:46:53.271Z",
       "history": [
@@ -2281,7 +2281,7 @@
       "publishedAt": "2026-09-29T00:00:00+11:00",
       "deadline": "2026-10-20T14:00:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -2301,7 +2301,7 @@
       "publishedAt": "2026-09-29T00:00:00+11:00",
       "deadline": "2026-10-19T16:00:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -2339,7 +2339,7 @@
       "publishedAt": "2026-09-28T09:00:00+11:00",
       "deadline": "2026-10-26T15:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:55.574Z",
-      "lastSeen": "2026-10-09T01:10:07.629Z",
+      "lastSeen": "2026-10-10T05:51:42.573Z",
       "seed": true
     },
     {
@@ -2375,7 +2375,7 @@
       "deadline": "2026-10-28T22:30:00+11:00",
       "lots": 4,
       "firstSeen": "2026-10-08T09:13:16.353Z",
-      "lastSeen": "2026-10-09T01:12:22.226Z",
+      "lastSeen": "2026-10-10T05:55:11.174Z",
       "seed": true
     },
     {
@@ -2414,7 +2414,7 @@
       "publishedAt": "2026-09-28T00:00:00+11:00",
       "deadline": "2026-10-23T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -2434,7 +2434,7 @@
       "publishedAt": "2026-09-28T00:00:00+11:00",
       "deadline": "2026-10-23T11:00:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -2455,7 +2455,7 @@
       "deadline": "2026-10-19T15:00:00+11:00",
       "lots": 2,
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -2475,7 +2475,7 @@
       "publishedAt": "2026-09-25T00:00:00+11:00",
       "deadline": "2026-10-27T16:00:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -2495,7 +2495,7 @@
       "publishedAt": "2026-09-25T00:00:00+11:00",
       "deadline": "2026-10-27T16:00:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -2515,7 +2515,7 @@
       "publishedAt": "2026-09-25T00:00:00+11:00",
       "deadline": "2026-10-20T15:30:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -2530,7 +2530,7 @@
       "publishedAt": "2026-09-24T03:45:29.000Z",
       "deadline": "2026-10-11T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
-      "lastSeen": "2026-10-09T01:12:29.873Z",
+      "lastSeen": "2026-10-10T05:55:18.254Z",
       "seed": true,
       "status": "Advertised"
     },
@@ -2546,7 +2546,7 @@
       "publishedAt": "2026-09-24T01:45:57.000Z",
       "deadline": "2026-10-05T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
-      "lastSeen": "2026-10-09T01:12:29.873Z",
+      "lastSeen": "2026-10-10T05:55:18.254Z",
       "seed": true,
       "status": "Advertised"
     },
@@ -2566,7 +2566,7 @@
       "publishedAt": "2026-09-24T00:00:00+11:00",
       "deadline": "2026-10-30T22:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:16.353Z",
-      "lastSeen": "2026-10-09T01:12:22.226Z",
+      "lastSeen": "2026-10-10T05:55:11.174Z",
       "seed": true
     },
     {
@@ -2581,7 +2581,7 @@
       "publishedAt": "2026-09-23T04:14:37.000Z",
       "deadline": "2026-11-04T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
-      "lastSeen": "2026-10-09T01:12:29.873Z",
+      "lastSeen": "2026-10-10T05:55:18.254Z",
       "seed": true,
       "status": "Advertised"
     },
@@ -2602,7 +2602,7 @@
       "deadline": "2026-10-26T21:00:00+11:00",
       "lots": 2,
       "firstSeen": "2026-10-08T09:13:16.353Z",
-      "lastSeen": "2026-10-09T01:12:22.226Z",
+      "lastSeen": "2026-10-10T05:55:11.174Z",
       "seed": true
     },
     {
@@ -2622,7 +2622,7 @@
       "deadline": "2026-10-23T12:00:00+11:00",
       "lots": 2,
       "firstSeen": "2026-10-08T09:13:16.353Z",
-      "lastSeen": "2026-10-09T01:12:22.226Z",
+      "lastSeen": "2026-10-10T05:55:11.174Z",
       "seed": true
     },
     {
@@ -2635,7 +2635,7 @@
       "publishedAt": "2026-09-23T00:00:00+11:00",
       "deadline": "2026-10-19T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -2651,7 +2651,7 @@
       "publishedAt": "2026-09-23T00:00:00+11:00",
       "deadline": "2026-10-30T12:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:55.574Z",
-      "lastSeen": "2026-10-09T01:10:07.629Z",
+      "lastSeen": "2026-10-10T05:51:42.573Z",
       "seed": true
     },
     {
@@ -2672,7 +2672,7 @@
       "deadline": "2026-10-19T15:30:00+11:00",
       "lots": 7,
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -2692,7 +2692,7 @@
       "publishedAt": "2026-09-23T00:00:00+11:00",
       "deadline": "2026-10-13T15:30:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -2712,7 +2712,7 @@
       "publishedAt": "2026-09-23T00:00:00+11:00",
       "deadline": "2026-10-12T15:30:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -2727,7 +2727,7 @@
       "publishedAt": "2026-09-21T21:36:30.000Z",
       "deadline": "2026-10-19T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
-      "lastSeen": "2026-10-09T01:12:29.873Z",
+      "lastSeen": "2026-10-10T05:55:18.254Z",
       "seed": true,
       "status": "Advertised"
     },
@@ -2747,7 +2747,7 @@
       "publishedAt": "2026-09-22T00:00:00+11:00",
       "deadline": "2026-10-26T01:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:16.353Z",
-      "lastSeen": "2026-10-09T01:12:22.226Z",
+      "lastSeen": "2026-10-10T05:55:11.174Z",
       "seed": true
     },
     {
@@ -2767,7 +2767,7 @@
       "deadline": "2026-10-19T02:00:00+11:00",
       "lots": 14,
       "firstSeen": "2026-10-08T09:13:16.353Z",
-      "lastSeen": "2026-10-09T01:12:22.226Z",
+      "lastSeen": "2026-10-10T05:55:11.174Z",
       "seed": true
     },
     {
@@ -2787,7 +2787,7 @@
       "publishedAt": "2026-09-22T00:00:00+11:00",
       "deadline": "2026-11-18T15:00:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -2807,7 +2807,7 @@
       "publishedAt": "2026-09-22T00:00:00+11:00",
       "deadline": "2026-10-19T16:00:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -2822,7 +2822,7 @@
       "publishedAt": "2026-09-21T04:05:39.000Z",
       "deadline": "2026-10-05T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
-      "lastSeen": "2026-10-09T01:12:29.873Z",
+      "lastSeen": "2026-10-10T05:55:18.254Z",
       "seed": true,
       "status": "Advertised"
     },
@@ -2842,7 +2842,7 @@
       "publishedAt": "2026-09-21T00:00:00+11:00",
       "deadline": "2026-10-27T00:30:00+11:00",
       "firstSeen": "2026-10-08T09:13:16.353Z",
-      "lastSeen": "2026-10-09T01:12:22.226Z",
+      "lastSeen": "2026-10-10T05:55:11.174Z",
       "seed": true
     },
     {
@@ -2861,7 +2861,7 @@
       "publishedAt": "2026-09-21T00:00:00+11:00",
       "deadline": "2026-10-16T02:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:16.353Z",
-      "lastSeen": "2026-10-09T01:12:22.226Z",
+      "lastSeen": "2026-10-10T05:55:11.174Z",
       "seed": true
     },
     {
@@ -2881,7 +2881,7 @@
       "deadline": "2026-10-12T02:30:00+11:00",
       "lots": 2,
       "firstSeen": "2026-10-08T09:13:16.353Z",
-      "lastSeen": "2026-10-09T01:12:22.226Z",
+      "lastSeen": "2026-10-10T05:55:11.174Z",
       "seed": true
     },
     {
@@ -2917,7 +2917,7 @@
       "publishedAt": "2026-09-21T00:00:00+11:00",
       "deadline": "2026-10-12T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -2937,7 +2937,7 @@
       "publishedAt": "2026-09-21T00:00:00+11:00",
       "deadline": "2026-11-06T15:00:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -2957,7 +2957,7 @@
       "publishedAt": "2026-09-21T00:00:00+11:00",
       "deadline": "2026-10-28T15:00:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -2977,7 +2977,7 @@
       "publishedAt": "2026-09-21T00:00:00+11:00",
       "deadline": "2026-10-26T15:00:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -2998,7 +2998,7 @@
       "deadline": "2026-10-19T09:30:00+11:00",
       "lots": 4,
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -3018,7 +3018,7 @@
       "publishedAt": "2026-09-21T00:00:00+11:00",
       "deadline": "2026-10-16T15:00:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -3038,7 +3038,7 @@
       "publishedAt": "2026-09-21T00:00:00+11:00",
       "deadline": "2026-10-12T15:30:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -3053,7 +3053,7 @@
       "publishedAt": "2026-09-18T02:48:55.000Z",
       "deadline": "2026-10-04T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
-      "lastSeen": "2026-10-09T01:12:29.873Z",
+      "lastSeen": "2026-10-10T05:55:18.254Z",
       "seed": true,
       "status": "Advertised"
     },
@@ -3070,7 +3070,7 @@
         "appels offres"
       ],
       "firstSeen": "2026-10-08T09:12:48.919Z",
-      "lastSeen": "2026-10-09T01:09:15.862Z",
+      "lastSeen": "2026-10-10T05:50:16.824Z",
       "seed": true
     },
     {
@@ -3083,7 +3083,7 @@
       "publishedAt": "2026-09-18T00:00:00+11:00",
       "deadline": "2026-10-26T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -3096,7 +3096,7 @@
       "publishedAt": "2026-09-18T00:00:00+11:00",
       "deadline": "2026-10-26T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -3109,7 +3109,7 @@
       "publishedAt": "2026-09-18T00:00:00+11:00",
       "deadline": "2026-10-14T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -3129,7 +3129,7 @@
       "publishedAt": "2026-09-18T00:00:00+11:00",
       "deadline": "2026-10-26T16:00:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -3150,7 +3150,7 @@
       "deadline": "2026-10-26T16:00:00+11:00",
       "lots": 2,
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -3171,7 +3171,7 @@
       "deadline": "2026-10-19T09:30:00+11:00",
       "lots": 4,
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -3191,7 +3191,7 @@
       "publishedAt": "2026-09-18T00:00:00+11:00",
       "deadline": "2026-10-14T15:00:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -3212,7 +3212,7 @@
       "deadline": "2026-10-12T14:00:00+11:00",
       "lots": 2,
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -3232,7 +3232,7 @@
       "publishedAt": "2026-09-18T00:00:00+11:00",
       "deadline": "2026-10-12T12:00:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -3247,7 +3247,7 @@
       "publishedAt": "2026-09-17T02:45:51.000Z",
       "deadline": "2026-10-14T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
-      "lastSeen": "2026-10-09T01:12:29.873Z",
+      "lastSeen": "2026-10-10T05:55:18.254Z",
       "seed": true,
       "status": "Advertised"
     },
@@ -3263,7 +3263,7 @@
       "publishedAt": "2026-09-16T19:36:15.000Z",
       "deadline": "2026-09-27T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
-      "lastSeen": "2026-10-09T01:12:29.873Z",
+      "lastSeen": "2026-10-10T05:55:18.254Z",
       "seed": true,
       "status": "Advertised"
     },
@@ -3283,7 +3283,7 @@
       "publishedAt": "2026-09-17T00:00:00+11:00",
       "deadline": "2026-10-30T04:30:00+11:00",
       "firstSeen": "2026-10-08T09:13:16.353Z",
-      "lastSeen": "2026-10-09T01:12:22.226Z",
+      "lastSeen": "2026-10-10T05:55:11.174Z",
       "seed": true
     },
     {
@@ -3302,7 +3302,7 @@
       "publishedAt": "2026-09-17T00:00:00+11:00",
       "deadline": "2026-10-14T02:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:16.353Z",
-      "lastSeen": "2026-10-09T01:12:22.226Z",
+      "lastSeen": "2026-10-10T05:55:11.174Z",
       "seed": true
     },
     {
@@ -3322,7 +3322,7 @@
       "publishedAt": "2026-09-17T00:00:00+11:00",
       "deadline": "2026-10-12T12:00:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -3357,7 +3357,7 @@
       "publishedAt": "2026-09-16T00:00:00+11:00",
       "deadline": "2026-10-20T02:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:16.353Z",
-      "lastSeen": "2026-10-09T01:12:22.226Z",
+      "lastSeen": "2026-10-10T05:55:11.174Z",
       "seed": true
     },
     {
@@ -3377,7 +3377,7 @@
       "deadline": "2026-10-14T02:00:00+11:00",
       "lots": 2,
       "firstSeen": "2026-10-08T09:13:16.353Z",
-      "lastSeen": "2026-10-09T01:12:22.226Z",
+      "lastSeen": "2026-10-10T05:55:11.174Z",
       "seed": true
     },
     {
@@ -3419,7 +3419,7 @@
       "publishedAt": "2026-09-16T00:00:00+11:00",
       "deadline": "2026-10-30T16:00:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -3440,7 +3440,7 @@
       "deadline": "2026-10-16T11:30:00+11:00",
       "lots": 10,
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -3504,7 +3504,7 @@
       "deadline": "2026-10-19T02:00:00+11:00",
       "lots": 6,
       "firstSeen": "2026-10-08T09:13:16.353Z",
-      "lastSeen": "2026-10-09T01:12:22.226Z",
+      "lastSeen": "2026-10-10T05:55:11.174Z",
       "seed": true
     },
     {
@@ -3516,7 +3516,7 @@
       "url": "https://www.province-sud.nc/aops/apc/daem-apc-02-26/",
       "publishedAt": "2026-09-15T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -3527,7 +3527,7 @@
       "url": "https://www.province-sud.nc/aops/aa/202608/",
       "publishedAt": "2026-09-15T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -3547,7 +3547,7 @@
       "publishedAt": "2026-09-15T00:00:00+11:00",
       "deadline": "2026-10-12T15:00:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -3562,7 +3562,7 @@
         "Marchés"
       ],
       "firstSeen": "2026-10-08T07:01:11.015Z",
-      "lastSeen": "2026-10-09T01:09:07.831Z",
+      "lastSeen": "2026-10-10T05:50:08.583Z",
       "seed": true
     },
     {
@@ -3581,7 +3581,7 @@
       "publishedAt": "2026-09-14T00:00:00+11:00",
       "deadline": "2026-11-03T12:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:16.353Z",
-      "lastSeen": "2026-10-09T01:12:22.226Z",
+      "lastSeen": "2026-10-10T05:55:11.174Z",
       "seed": true
     },
     {
@@ -3600,7 +3600,7 @@
       "publishedAt": "2026-09-14T00:00:00+11:00",
       "deadline": "2026-10-19T12:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:16.353Z",
-      "lastSeen": "2026-10-09T01:12:22.226Z",
+      "lastSeen": "2026-10-10T05:55:11.174Z",
       "seed": true
     },
     {
@@ -3611,7 +3611,7 @@
       "url": "https://www.province-sud.nc/aops/aa/avis-dattribution-de-marche-public-daem-aout-2026/",
       "publishedAt": "2026-09-14T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -3623,7 +3623,7 @@
       "url": "https://www.province-sud.nc/aops/apc/avis-dappel-public-a-concurrence-ndaem-apc-15-26-entretien-anti-graffitis-des-ouvrages-dart-sur-les-voies-express-de-la-province-sud/",
       "publishedAt": "2026-09-14T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -3656,7 +3656,7 @@
       "publishedAt": "2026-09-14T00:00:00+11:00",
       "deadline": "2026-10-12T15:30:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -3671,7 +3671,7 @@
       "publishedAt": "2026-09-11T02:37:46.000Z",
       "deadline": "2026-10-01T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
-      "lastSeen": "2026-10-09T01:12:29.873Z",
+      "lastSeen": "2026-10-10T05:55:18.254Z",
       "seed": true,
       "status": "Advertised"
     },
@@ -3691,7 +3691,7 @@
       "publishedAt": "2026-09-11T00:00:00+11:00",
       "deadline": "2026-10-12T23:30:00+11:00",
       "firstSeen": "2026-10-08T09:13:16.353Z",
-      "lastSeen": "2026-10-09T01:12:22.226Z",
+      "lastSeen": "2026-10-10T05:55:11.174Z",
       "seed": true
     },
     {
@@ -3734,7 +3734,7 @@
       "publishedAt": "2026-09-10T00:00:00+11:00",
       "deadline": "2026-10-13T11:00:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -3750,7 +3750,7 @@
         "Consultations"
       ],
       "firstSeen": "2026-10-08T09:12:48.404Z",
-      "lastSeen": "2026-10-09T01:09:15.000Z",
+      "lastSeen": "2026-10-10T05:50:15.014Z",
       "seed": true
     },
     {
@@ -3765,7 +3765,7 @@
       "publishedAt": "2026-09-08T05:09:18.000Z",
       "deadline": "2026-09-22T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
-      "lastSeen": "2026-10-09T01:12:29.873Z",
+      "lastSeen": "2026-10-10T05:55:18.254Z",
       "seed": true,
       "status": "Advertised"
     },
@@ -3785,7 +3785,7 @@
       "publishedAt": "2026-09-08T00:00:00+11:00",
       "deadline": "2026-10-12T02:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:16.353Z",
-      "lastSeen": "2026-10-09T01:12:22.226Z",
+      "lastSeen": "2026-10-10T05:55:11.174Z",
       "seed": true
     },
     {
@@ -3800,7 +3800,7 @@
       "publishedAt": "2026-09-07T03:17:09.000Z",
       "deadline": "2026-09-22T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
-      "lastSeen": "2026-10-09T01:12:29.873Z",
+      "lastSeen": "2026-10-10T05:55:18.254Z",
       "seed": true,
       "status": "Advertised"
     },
@@ -3834,7 +3834,7 @@
       "url": "https://www.province-sud.nc/aops/ao/avis-dappel-doffre-ndaem-ao-13-26-maintenance-et-entretien-des-installations-de-climatisation-ventilation-et-traitement-dair-des-batiments-alloues-a-la-province-sud/",
       "publishedAt": "2026-09-07T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -3846,7 +3846,7 @@
       "url": "https://www.province-sud.nc/aops/apc/daem-ao-09-26/",
       "publishedAt": "2026-09-07T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -3858,7 +3858,7 @@
       "url": "https://www.province-sud.nc/aops/ao/daem-ao-15-25/",
       "publishedAt": "2026-09-07T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -3879,7 +3879,7 @@
       "deadline": "2026-10-14T11:30:00+11:00",
       "lots": 5,
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -3894,7 +3894,7 @@
       "publishedAt": "2026-09-04T06:10:25.000Z",
       "deadline": "2026-10-04T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
-      "lastSeen": "2026-10-09T01:12:29.873Z",
+      "lastSeen": "2026-10-10T05:55:18.254Z",
       "seed": true,
       "status": "Advertised"
     },
@@ -3907,7 +3907,7 @@
       "url": "https://www.province-sud.nc/aops/apc/avis-dappel-public-a-concurrence-ndpass-apc-02-26-gestion-du-parc-de-materiel-medical-mis-a-la-disposition-de-beneficiaires-du-regime-daide-medicale-gere-par-la-province-sud/",
       "publishedAt": "2026-09-04T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -3919,7 +3919,7 @@
       "url": "https://www.province-sud.nc/aops/apc/avis-dappel-public-a-concurrence-n-daem-apc-16-26-travaux-de-curage-de-fosses-sur-les-routes-provinciales-sud/",
       "publishedAt": "2026-09-04T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -3931,7 +3931,7 @@
       "url": "https://www.province-sud.nc/aops/apc/avis-dappel-public-a-concurrence-n-daem-apc-14-26-travaux-de-reprofilage-daccotements-sur-les-routes-provinciales-sud/",
       "publishedAt": "2026-09-04T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -3942,7 +3942,7 @@
       "url": "https://www.province-sud.nc/aops/apc/apc-deres0309-restauration-de-linternat-provincial-henriette-pentecost-durant-lannee-scolaire-2027/",
       "publishedAt": "2026-09-03T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -3956,7 +3956,7 @@
         "Art et culture"
       ],
       "firstSeen": "2026-10-08T07:01:10.792Z",
-      "lastSeen": "2026-10-09T01:10:08.951Z",
+      "lastSeen": "2026-10-10T05:51:44.312Z",
       "seed": true
     },
     {
@@ -3990,7 +3990,7 @@
       "url": "https://www.province-sud.nc/aops/apc/ao-dpass09001-contrats-de-prestations-medico-sociales-pour-la-direction-de-laction-sanitaire-et-sociale-pour-lannee-2027/",
       "publishedAt": "2026-09-02T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -4034,7 +4034,7 @@
       "url": "https://www.province-sud.nc/aops/apc/dddt-apc-03-26/",
       "publishedAt": "2026-09-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -4045,7 +4045,7 @@
       "url": "https://www.province-sud.nc/aops/apc/dddt-apc-02-26/",
       "publishedAt": "2026-09-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -4064,7 +4064,7 @@
       "publishedAt": "2026-08-31T00:00:00+11:00",
       "deadline": "2026-10-12T16:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:16.353Z",
-      "lastSeen": "2026-10-09T01:12:22.226Z",
+      "lastSeen": "2026-10-10T05:55:11.174Z",
       "seed": true
     },
     {
@@ -4084,7 +4084,7 @@
       "publishedAt": "2026-08-28T00:00:00+11:00",
       "deadline": "2026-10-28T14:00:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
-      "lastSeen": "2026-10-09T01:09:02.462Z",
+      "lastSeen": "2026-10-10T05:50:04.286Z",
       "seed": true
     },
     {
@@ -4215,7 +4215,7 @@
       "publishedAt": "2026-08-17T02:08:22.000Z",
       "deadline": "2026-10-25T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
-      "lastSeen": "2026-10-09T01:12:29.873Z",
+      "lastSeen": "2026-10-10T05:55:18.254Z",
       "seed": true,
       "status": "Advertised"
     },
@@ -4227,7 +4227,7 @@
       "url": "https://www.province-sud.nc/aops/ao/ao-del-ssp-08-2026/",
       "publishedAt": "2026-08-17T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -4246,7 +4246,7 @@
       "publishedAt": "2026-08-14T00:00:00+11:00",
       "deadline": "2026-10-19T11:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:16.353Z",
-      "lastSeen": "2026-10-09T01:12:22.226Z",
+      "lastSeen": "2026-10-10T05:55:11.174Z",
       "seed": true
     },
     {
@@ -4283,7 +4283,7 @@
       "url": "https://www.province-sud.nc/aops/ao/dddtao-01-2026/",
       "publishedAt": "2026-08-12T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -4352,7 +4352,7 @@
       "url": "https://www.province-sud.nc/aops/apc/apcderes060/",
       "publishedAt": "2026-08-06T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -4366,7 +4366,7 @@
         "Art et culture"
       ],
       "firstSeen": "2026-10-08T07:01:10.792Z",
-      "lastSeen": "2026-10-09T01:10:08.951Z",
+      "lastSeen": "2026-10-10T05:51:44.312Z",
       "seed": true
     },
     {
@@ -4385,7 +4385,7 @@
       "publishedAt": "2026-08-04T00:00:00+11:00",
       "deadline": "2026-10-14T12:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:16.353Z",
-      "lastSeen": "2026-10-09T01:12:22.226Z",
+      "lastSeen": "2026-10-10T05:55:11.174Z",
       "seed": true
     },
     {
@@ -4396,7 +4396,7 @@
       "url": "https://www.province-sud.nc/aops/ao/daem-ao-06-26/",
       "publishedAt": "2026-08-04T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -4467,7 +4467,7 @@
       "url": "https://www.portdepapeete.pf/2026/08/26/avis-dappel-public-a-candidatures-n2026-27pour-lattribution-dautorisations-doutillage-prive-avec-obligation-de-service-public-sur-le-terminal-de-commerce-inte/",
       "publishedAt": "2026-08-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:09.865Z",
-      "lastSeen": "2026-10-09T01:11:47.913Z",
+      "lastSeen": "2026-10-10T05:55:03.732Z",
       "seed": true,
       "updatedAt": "2026-10-08T23:49:40.798Z",
       "history": [
@@ -4564,7 +4564,7 @@
       "publishedAt": "2026-07-31T03:51:11.000Z",
       "deadline": "2026-10-18T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
-      "lastSeen": "2026-10-09T01:12:29.873Z",
+      "lastSeen": "2026-10-10T05:55:18.254Z",
       "seed": true,
       "status": "Advertised"
     },
@@ -4796,7 +4796,7 @@
       "url": "https://www.province-sud.nc/aops/aa/attribution-de-marche-public-dsin-juillet-2026/",
       "publishedAt": "2026-07-09T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -4811,7 +4811,7 @@
         "Procurements"
       ],
       "firstSeen": "2026-10-08T09:13:15.736Z",
-      "lastSeen": "2026-10-09T01:12:07.577Z",
+      "lastSeen": "2026-10-10T05:55:10.082Z",
       "seed": true
     },
     {
@@ -4879,7 +4879,7 @@
       "url": "https://www.province-sud.nc/aops/ao/avis-dappel-doffre-n-daem-ao-11-26-exploitation-de-la-desserte-maritime-de-passagers-entre-noumea-et-lile-des-pins/",
       "publishedAt": "2026-07-02T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -4891,7 +4891,7 @@
       "url": "https://www.province-sud.nc/aops/daem-ao-14-25/",
       "publishedAt": "2026-07-02T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -4903,7 +4903,7 @@
       "url": "https://www.province-sud.nc/aops/ao/ao-deres-0207/",
       "publishedAt": "2026-07-02T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -4936,7 +4936,7 @@
       "url": "https://www.portdepapeete.pf/2026/07/08/appel-a-projets/",
       "publishedAt": "2026-07-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:09.865Z",
-      "lastSeen": "2026-10-09T01:11:47.913Z",
+      "lastSeen": "2026-10-10T05:55:03.732Z",
       "seed": true
     },
     {
@@ -4948,7 +4948,7 @@
       "url": "https://www.unc.nc/wp-content/uploads/2026/07/Avis-appel-offre-marche-aerien-2026.pdf",
       "publishedAt": "2026-07-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:59.021Z",
-      "lastSeen": "2026-10-09T01:10:14.869Z",
+      "lastSeen": "2026-10-10T05:52:23.481Z",
       "seed": true,
       "deadline": "2026-08-31T15:00:00+11:00",
       "updatedAt": "2026-10-08T09:32:03.086Z",
@@ -4994,7 +4994,7 @@
       "url": "https://www.province-sud.nc/aops/aa/avis-dattribution-de-marche-public-daem-juillet-2026/",
       "publishedAt": "2026-07-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -5005,7 +5005,7 @@
       "url": "https://www.province-sud.nc/aops/aa/avis-dattribution-de-marche-public-deres-juillet-2026/",
       "publishedAt": "2026-07-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -5017,7 +5017,7 @@
       "url": "https://www.province-sud.nc/aops/apc/apcderes0107/",
       "publishedAt": "2026-07-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -5050,7 +5050,7 @@
       "url": "https://www.province-sud.nc/aops/ao/avis-dappel-doffre-n-daem-07-26-reamenagement-et-extension-de-laccueil-et-renovation-de-la-maison-de-la-nature-au-parc-provincial-zoologique-et-forestier-ppzf-michel-corbasson-a-noum/",
       "publishedAt": "2026-06-26T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -5096,7 +5096,7 @@
       "url": "https://www.province-sud.nc/aops/ao/daem-ao-03-26/",
       "publishedAt": "2026-06-16T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -5108,7 +5108,7 @@
       "url": "https://www.province-sud.nc/aops/ao/daem-ao-10-26/",
       "publishedAt": "2026-06-16T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -5162,7 +5162,7 @@
       "url": "https://www.province-sud.nc/aops/apc/daem-apc-38-25/",
       "publishedAt": "2026-06-09T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -5173,7 +5173,7 @@
       "url": "https://www.province-sud.nc/aops/apc/avis-dappel-public-a-concurrence-modificatif-n2-daem-apc-07-26-travaux-de-rehabilitation-des-batiments-du-site-touristique-de-lilot-amedee/",
       "publishedAt": "2026-06-08T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -5184,7 +5184,7 @@
       "url": "https://www.province-sud.nc/apc-audits-classement-atout-france-2026/",
       "publishedAt": "2026-06-04T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -5195,7 +5195,7 @@
       "url": "https://www.province-sud.nc/aops/aa/202605/",
       "publishedAt": "2026-06-03T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -5207,7 +5207,7 @@
       "url": "https://www.province-sud.nc/aops/ao/avis-dappel-doffre-n-daem-ao-04-26-travaux-de-point-a-temps-sur-les-routes-provinciales-sud/",
       "publishedAt": "2026-06-02T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -5223,7 +5223,7 @@
         "Procurements"
       ],
       "firstSeen": "2026-10-08T09:13:15.736Z",
-      "lastSeen": "2026-10-09T01:12:07.577Z",
+      "lastSeen": "2026-10-10T05:55:10.082Z",
       "seed": true
     },
     {
@@ -5234,7 +5234,7 @@
       "url": "https://www.province-sud.nc/aops/aa/avis-dattribution-de-marche-public-daem-mois-de-juin-2026/",
       "publishedAt": "2026-06-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -5245,7 +5245,7 @@
       "url": "https://www.province-sud.nc/aops/apc/appel-public-a-concurrence-realisation-de-capsules-videos-pour-diffusion-sur-les-reseaux-sociaux-pour-la-promotion-ppat/",
       "publishedAt": "2026-06-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -5324,7 +5324,7 @@
       "url": "https://www.province-sud.nc/aops/apc/avis-dappel-public-a-concurrence-modificatif-n1-daem-apc-08-26-etude-de-risques-et-dimpact-environnemental-projet-viaduc-mont-dore/",
       "publishedAt": "2026-05-26T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -5336,7 +5336,7 @@
       "url": "https://www.province-sud.nc/aops/apc/daem-apc-08-26/",
       "publishedAt": "2026-05-26T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -5347,7 +5347,7 @@
       "url": "https://www.province-sud.nc/aops/ao/dsin-ao-01-2026/",
       "publishedAt": "2026-05-26T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -5359,7 +5359,7 @@
       "url": "https://www.province-sud.nc/aops/apc/avis-dappel-public-a-concurrence-n-daem-apc-07-26-rehabilitation-des-batiments-du-site-touristique-de-lilot-amedee/",
       "publishedAt": "2026-05-22T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -5371,7 +5371,7 @@
       "url": "https://www.province-sud.nc/aops/apc/avis-dappel-public-a-concurrence-n-deres-apc-fourniture-livraison-et-service-apres-vente-garantie-de-commutateurs-reseaux-pour-les-ecoles-publiques-situees-en-province-sud/",
       "publishedAt": "2026-05-22T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -5397,7 +5397,7 @@
         "Égalité des genres et des droits interfamiliaux"
       ],
       "firstSeen": "2026-10-08T07:01:10.792Z",
-      "lastSeen": "2026-10-09T01:10:08.951Z",
+      "lastSeen": "2026-10-10T05:51:44.312Z",
       "seed": true
     },
     {
@@ -5434,7 +5434,7 @@
       "url": "https://www.province-sud.nc/aops/aa/attribution-daem-202604/",
       "publishedAt": "2026-05-12T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:56.137Z",
-      "lastSeen": "2026-10-09T01:10:10.436Z",
+      "lastSeen": "2026-10-10T05:51:45.837Z",
       "seed": true
     },
     {
@@ -5545,7 +5545,7 @@
         "Art et culture"
       ],
       "firstSeen": "2026-10-08T07:01:10.792Z",
-      "lastSeen": "2026-10-09T01:10:08.951Z",
+      "lastSeen": "2026-10-10T05:51:44.312Z",
       "seed": true
     },
     {
@@ -5584,7 +5584,7 @@
         "Procurements"
       ],
       "firstSeen": "2026-10-08T09:13:15.736Z",
-      "lastSeen": "2026-10-09T01:12:07.577Z",
+      "lastSeen": "2026-10-10T05:55:10.082Z",
       "seed": true
     },
     {
@@ -5598,7 +5598,7 @@
         "Art et culture"
       ],
       "firstSeen": "2026-10-08T07:01:10.792Z",
-      "lastSeen": "2026-10-09T01:10:08.951Z",
+      "lastSeen": "2026-10-10T05:51:44.312Z",
       "seed": true
     },
     {
@@ -5761,7 +5761,7 @@
         "Art et culture"
       ],
       "firstSeen": "2026-10-08T07:01:10.792Z",
-      "lastSeen": "2026-10-09T01:10:08.951Z",
+      "lastSeen": "2026-10-10T05:51:44.312Z",
       "seed": true
     },
     {
@@ -5928,7 +5928,7 @@
         "Environnement"
       ],
       "firstSeen": "2026-10-08T07:01:10.792Z",
-      "lastSeen": "2026-10-09T01:10:08.951Z",
+      "lastSeen": "2026-10-10T05:51:44.312Z",
       "seed": true
     },
     {
@@ -5980,7 +5980,7 @@
         "Art et culture"
       ],
       "firstSeen": "2026-10-08T07:01:10.792Z",
-      "lastSeen": "2026-10-09T01:10:08.951Z",
+      "lastSeen": "2026-10-10T05:51:44.312Z",
       "seed": true
     },
     {
@@ -5994,7 +5994,7 @@
         "Art et culture"
       ],
       "firstSeen": "2026-10-08T07:01:10.792Z",
-      "lastSeen": "2026-10-09T01:10:08.951Z",
+      "lastSeen": "2026-10-10T05:51:44.312Z",
       "seed": true
     },
     {
@@ -6008,7 +6008,7 @@
         "Art et culture"
       ],
       "firstSeen": "2026-10-08T07:01:10.792Z",
-      "lastSeen": "2026-10-09T01:10:08.951Z",
+      "lastSeen": "2026-10-10T05:51:44.312Z",
       "seed": true
     },
     {
@@ -6022,7 +6022,7 @@
         "Art et culture"
       ],
       "firstSeen": "2026-10-08T07:01:10.792Z",
-      "lastSeen": "2026-10-09T01:10:08.951Z",
+      "lastSeen": "2026-10-10T05:51:44.312Z",
       "seed": true
     },
     {
@@ -6036,7 +6036,7 @@
         "Art et culture"
       ],
       "firstSeen": "2026-10-08T07:01:10.792Z",
-      "lastSeen": "2026-10-09T01:10:08.951Z",
+      "lastSeen": "2026-10-10T05:51:44.312Z",
       "seed": true
     },
     {
@@ -6050,7 +6050,7 @@
         "Art et culture"
       ],
       "firstSeen": "2026-10-08T07:01:10.792Z",
-      "lastSeen": "2026-10-09T01:10:08.951Z",
+      "lastSeen": "2026-10-10T05:51:44.312Z",
       "seed": true
     },
     {
@@ -6064,7 +6064,7 @@
         "Art et culture"
       ],
       "firstSeen": "2026-10-08T07:01:10.792Z",
-      "lastSeen": "2026-10-09T01:10:08.951Z",
+      "lastSeen": "2026-10-10T05:51:44.312Z",
       "seed": true
     },
     {
@@ -6423,7 +6423,7 @@
         "Développement des entreprises"
       ],
       "firstSeen": "2026-10-08T07:01:10.792Z",
-      "lastSeen": "2026-10-09T01:10:08.951Z",
+      "lastSeen": "2026-10-10T05:51:44.312Z",
       "seed": true
     },
     {
@@ -6610,7 +6610,7 @@
         "Égalité des genres et des droits interfamiliaux"
       ],
       "firstSeen": "2026-10-08T07:01:10.792Z",
-      "lastSeen": "2026-10-09T01:10:08.951Z",
+      "lastSeen": "2026-10-10T05:51:44.312Z",
       "seed": true
     },
     {
@@ -6674,7 +6674,7 @@
         "Art et culture"
       ],
       "firstSeen": "2026-10-08T07:01:10.792Z",
-      "lastSeen": "2026-10-09T01:10:08.951Z",
+      "lastSeen": "2026-10-10T05:51:44.312Z",
       "seed": true
     },
     {
@@ -6688,7 +6688,7 @@
         "Art et culture"
       ],
       "firstSeen": "2026-10-08T07:01:10.792Z",
-      "lastSeen": "2026-10-09T01:10:08.951Z",
+      "lastSeen": "2026-10-10T05:51:44.312Z",
       "seed": true
     },
     {
@@ -6710,7 +6710,7 @@
       "url": "https://ctb.gov.vu/en/tenders-category/221-construction-works-of-the-mfem-malampa-office-extension-building-lakatoro-malekula-malampa-province",
       "publishedAt": "2025-06-19T22:24:28.000Z",
       "firstSeen": "2026-10-08T09:13:15.494Z",
-      "lastSeen": "2026-10-09T01:11:52.675Z",
+      "lastSeen": "2026-10-10T05:55:08.719Z",
       "seed": true
     },
     {
@@ -6773,7 +6773,7 @@
       "url": "https://ctb.gov.vu/en/tenders-category/220-routine-maintenance-by-vegetation-control-tree-pruning-and-drainage-clearance-3-cycle-of-cemetry-to-port-olry-and-airport-junction-to-teproma-67-8km-santo-sanma-province",
       "publishedAt": "2025-06-03T03:48:18.000Z",
       "firstSeen": "2026-10-08T09:13:15.494Z",
-      "lastSeen": "2026-10-09T01:11:52.675Z",
+      "lastSeen": "2026-10-10T05:55:08.719Z",
       "seed": true
     },
     {
@@ -6784,7 +6784,7 @@
       "url": "https://ctb.gov.vu/en/tenders-category/219-construction-of-new-pwd-malampa-office-building-at-lakatoro-malekula-malampa-province",
       "publishedAt": "2025-06-03T03:34:45.000Z",
       "firstSeen": "2026-10-08T09:13:15.494Z",
-      "lastSeen": "2026-10-09T01:11:52.675Z",
+      "lastSeen": "2026-10-10T05:55:08.719Z",
       "seed": true
     },
     {
@@ -6799,7 +6799,7 @@
         "Procurements"
       ],
       "firstSeen": "2026-10-08T09:13:15.736Z",
-      "lastSeen": "2026-10-09T01:12:07.577Z",
+      "lastSeen": "2026-10-10T05:55:10.082Z",
       "seed": true
     },
     {
@@ -6810,7 +6810,7 @@
       "url": "https://ctb.gov.vu/en/tenders-category/218-routine-maintenance-of-tagabe-rbd-korman-roundabout-efate-ring-road-115km-efate",
       "publishedAt": "2025-05-21T00:06:00.000Z",
       "firstSeen": "2026-10-08T09:13:15.494Z",
-      "lastSeen": "2026-10-09T01:11:52.675Z",
+      "lastSeen": "2026-10-10T05:55:08.719Z",
       "seed": true
     },
     {
@@ -6821,7 +6821,7 @@
       "url": "https://ctb.gov.vu/en/tenders-category/217-design-and-build-sea-front-cruise-tender-boat-access-project",
       "publishedAt": "2025-05-20T21:36:45.000Z",
       "firstSeen": "2026-10-08T09:13:15.494Z",
-      "lastSeen": "2026-10-09T01:11:52.675Z",
+      "lastSeen": "2026-10-10T05:55:08.719Z",
       "seed": true
     },
     {
@@ -6835,7 +6835,7 @@
         "Égalité des genres et des droits interfamiliaux"
       ],
       "firstSeen": "2026-10-08T07:01:10.792Z",
-      "lastSeen": "2026-10-09T01:10:08.951Z",
+      "lastSeen": "2026-10-10T05:51:44.312Z",
       "seed": true
     },
     {
@@ -6846,7 +6846,7 @@
       "url": "https://ctb.gov.vu/en/tenders-category/216-construction-of-frc-pavement-280m-length-5m-wide-drainage-and-retaining-wall-at-kings-cross-on-manuapen-to-lowanialu-hilltop-road-yasur-volcano-to-lawanialu-hill-top-section-in-tanna-island",
       "publishedAt": "2025-04-14T04:26:32.000Z",
       "firstSeen": "2026-10-08T09:13:15.494Z",
-      "lastSeen": "2026-10-09T01:11:52.675Z",
+      "lastSeen": "2026-10-10T05:55:08.719Z",
       "seed": true
     },
     {
@@ -6909,7 +6909,7 @@
       "url": "https://ctb.gov.vu/en/tenders-category/214-construction-of-steel-reinforced-concrete-cross-drainage-structures-culverts-and-drifts-at-utche-to-umetch-road-aneityum-island-tafea-province",
       "publishedAt": "2025-01-29T23:39:48.000Z",
       "firstSeen": "2026-10-08T09:13:15.494Z",
-      "lastSeen": "2026-10-09T01:11:52.675Z",
+      "lastSeen": "2026-10-10T05:55:08.719Z",
       "seed": true
     },
     {
@@ -6920,7 +6920,7 @@
       "url": "https://ctb.gov.vu/en/tenders-category/213-construction-of-400m-fibre-reinforced-concrete-pavement-classhill-to-kovu-junction-road-santo-sanma-province",
       "publishedAt": "2025-01-29T23:12:25.000Z",
       "firstSeen": "2026-10-08T09:13:15.494Z",
-      "lastSeen": "2026-10-09T01:11:52.675Z",
+      "lastSeen": "2026-10-10T05:55:08.719Z",
       "seed": true
     },
     {
@@ -6982,7 +6982,7 @@
       "url": "https://ctb.gov.vu/en/tenders-category/210-construction-of-450-frc-pavement-cemetery-to-hydro-junction-monix-hill-segment-2-santo-island-sanma-province",
       "publishedAt": "2024-09-23T04:10:18.000Z",
       "firstSeen": "2026-10-08T09:13:15.494Z",
-      "lastSeen": "2026-10-09T01:11:52.675Z",
+      "lastSeen": "2026-10-10T05:55:08.719Z",
       "seed": true
     },
     {
@@ -6993,7 +6993,7 @@
       "url": "https://ctb.gov.vu/en/tenders-category/209-construction-of-the-new-extension-for-the-department-of-ports-and-harbour-office-building-main-wharf-port-vila",
       "publishedAt": "2024-09-20T05:24:54.000Z",
       "firstSeen": "2026-10-08T09:13:15.494Z",
-      "lastSeen": "2026-10-09T01:11:52.675Z",
+      "lastSeen": "2026-10-10T05:55:08.719Z",
       "seed": true
     },
     {
@@ -8038,7 +8038,7 @@
       "url": "https://www.koohne.nc/nouveaux-marches-fer-2022-et-2023/",
       "publishedAt": "2023-01-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:00.240Z",
-      "lastSeen": "2026-10-09T01:10:17.947Z",
+      "lastSeen": "2026-10-10T05:53:01.414Z",
       "seed": true,
       "updatedAt": "2026-10-08T23:48:14.104Z",
       "history": [
@@ -8911,7 +8911,7 @@
       "url": "https://www.koohne.nc/hta-bta-habitations-a-la-tribu-de-neami-fer-2022/",
       "publishedAt": "2022-01-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:00.240Z",
-      "lastSeen": "2026-10-09T01:10:17.947Z",
+      "lastSeen": "2026-10-10T05:53:01.414Z",
       "seed": true,
       "updatedAt": "2026-10-08T23:48:14.104Z",
       "history": [
