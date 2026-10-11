@@ -48,6 +48,102 @@
       "seed": true
     },
     {
+      "id": "lnc-legales:650ed148e7a8eef0",
+      "sourceId": "lnc-legales",
+      "kind": "consultation",
+      "title": "1 ère publication le 12 octobre 2026 sur la plateforme de dématérialisation des marchés publics de la Nouvelle-Calédonie (adresse : www.marchespublics.nc ) .",
+      "summary": "1 ère publication le 12 octobre 2026 sur la plateforme de dématérialisation des marchés publics de la Nouvelle-Calédonie (adresse : www.marchespublics.nc ) . Le Syndicat Mixte de Transport Interurbain (S.M.T.I.), acheteur public, lance un appel d'offres ouvert en vue de la passation du marché public n°2026-05/SMTI relatif AUX PRESTATIONS DE TRANSPORT SUR LE RESEAU D'AUTOCARS INTERURBAIN (RAÏ) : Lot n°1 : ligne Voh (Nouméa) Lot n°3 : ligne Panié (Nouméa) Lot n°5 : lignes Poindimié (Nouméa) et Ponérihouen (Nouméa) Lot n°7 : ligne Kouaoua (Nouméa) Lot n°8 : lignes Canala (Nouméa) et Canala-Koné Lot n°12 : ligne Pouébo-Koné . Le présent appel d'offres est lancé en application de la délibération modifiée n° 424 du 20 mars 2019 portant règlementation des marchés publics en Nouvelle-Calédonie. Le dossier de consultation peut être téléchargé en ligne depuis la plateforme de dématérialisation des marchés publics de la Nouvelle-Calédonie (adresse : www.marchespublics.nc ) ou retiré au SMTI sous format papier à l'adresse mentionnée ci-dessous. L'attention des candidats est attirée sur la nécessité du strict respect des clauses figurant au règlement particulier de l'appel d'offres (RPAO) inclu",
+      "reference": "2026-05/SMTI",
+      "buyer": "Syndicat Mixte de Transport Interurbain",
+      "url": "https://legales.lnc.nc/annonce/syndicat-mixte-de-transport-interurbain-12-10-2026-30549",
+      "publishedAt": "2026-10-12T00:00:00+11:00",
+      "firstSeen": "2026-10-11T23:39:13.393Z",
+      "lastSeen": "2026-10-11T23:39:13.393Z"
+    },
+    {
+      "id": "ifap:830e022198cfc3bd",
+      "sourceId": "ifap",
+      "kind": "consultation",
+      "title": "Parcours socle pour les managers intermédiaires",
+      "status": "13/11/2026",
+      "url": "https://www.ifap.nc/sites/default/files/2026-10/26_RHM07_CONS.pdf",
+      "publishedAt": "2026-10-12T00:00:00+11:00",
+      "deadline": "2026-11-13T00:00:00+11:00",
+      "firstSeen": "2026-10-11T23:39:12.024Z",
+      "lastSeen": "2026-10-11T23:39:12.024Z"
+    },
+    {
+      "id": "ifap:29ce5468c618333f",
+      "sourceId": "ifap",
+      "kind": "consultation",
+      "title": "Parcours socle pour les managers de proximité",
+      "status": "13/11/2026",
+      "url": "https://www.ifap.nc/sites/default/files/2026-10/26_RHM06_CONS.pdf",
+      "publishedAt": "2026-10-12T00:00:00+11:00",
+      "deadline": "2026-11-13T00:00:00+11:00",
+      "firstSeen": "2026-10-11T23:39:12.024Z",
+      "lastSeen": "2026-10-11T23:39:12.024Z"
+    },
+    {
+      "id": "marchespublics-nc:g1s-3464",
+      "sourceId": "marchespublics-nc",
+      "kind": "consultation",
+      "title": "MARCHE PUBLIC D’AMENAGEMENT DES ARRETS DU RAI",
+      "summary": "Aménagement des arrêts du RAI",
+      "reference": "2026-SMTI-Arrets-RAI",
+      "buyer": "Syndicat Mixte De Transport Interurbain",
+      "buyerLocation": "Nouméa",
+      "location": "Province Sud, Province Nord",
+      "nature": "Travaux",
+      "procedure": "Appel d'offres ouvert",
+      "procedureCode": "AOO",
+      "url": "https://portail.marchespublics.nc/entreprise/consultation/3464?orgAcronyme=g1s",
+      "publishedAt": "2026-10-12T00:00:00+11:00",
+      "deadline": "2026-11-06T12:00:00+11:00",
+      "lots": 7,
+      "firstSeen": "2026-10-11T23:38:50.589Z",
+      "lastSeen": "2026-10-11T23:38:50.589Z"
+    },
+    {
+      "id": "marchespublics-nc:g1s-3462",
+      "sourceId": "marchespublics-nc",
+      "kind": "consultation",
+      "title": "2026-05_prestation de transport pour le RAI - lots 1-3-5-7-8-12",
+      "summary": "Prestation de transport pour le réseau autocar interurbain pour les lots 1, 3, 5, 7 8 et 12",
+      "reference": "2026-05-SMTI-transport",
+      "buyer": "Syndicat Mixte De Transport Interurbain",
+      "buyerLocation": "Nouméa",
+      "location": "NOUVELLE-CALÉDONIE",
+      "nature": "Services",
+      "procedure": "Appel d'offres ouvert",
+      "procedureCode": "AOO",
+      "url": "https://portail.marchespublics.nc/entreprise/consultation/3462?orgAcronyme=g1s",
+      "publishedAt": "2026-10-12T00:00:00+11:00",
+      "deadline": "2026-11-04T15:00:00+11:00",
+      "lots": 6,
+      "firstSeen": "2026-10-11T23:38:50.589Z",
+      "lastSeen": "2026-10-11T23:38:50.589Z"
+    },
+    {
+      "id": "marchespublics-nc:h5j-3446",
+      "sourceId": "marchespublics-nc",
+      "kind": "consultation",
+      "title": "Renouvellement de la licence de signature électronique - Guichet Unique Entreprise [GUE]",
+      "summary": "La présente consultation a pour objet la fourniture et la maintenance d'une solution de signature électronique intégrée par API, ou équivalente, pour les besoins du Guichet Entreprises, pour une durée de 12 mois à compter du 9 décembre 2026.",
+      "reference": "2026-DECAT-54925",
+      "buyer": "Gouvernement de la Nouvelle-Calédonie",
+      "buyerLocation": "Nouméa",
+      "location": "Province Sud",
+      "nature": "Fournitures",
+      "procedure": "Procédure simplifiée",
+      "procedureCode": "SIMP",
+      "url": "https://portail.marchespublics.nc/entreprise/consultation/3446?orgAcronyme=h5j",
+      "publishedAt": "2026-10-12T00:00:00+11:00",
+      "deadline": "2026-10-30T16:00:00+11:00",
+      "firstSeen": "2026-10-11T23:38:50.589Z",
+      "lastSeen": "2026-10-11T23:38:50.589Z"
+    },
+    {
       "id": "province-nord:f6df8e497cc3288a",
       "sourceId": "province-nord",
       "kind": "consultation",
@@ -940,7 +1036,7 @@
       "url": "https://legales.lnc.nc/annonce/province-nord-defij-direction-de-lenseignement-de-la-formation-de-linsertion-et-de-la-jeunesse-07-10-2026-30451",
       "publishedAt": "2026-10-07T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:52.687Z",
-      "lastSeen": "2026-10-08T09:12:52.687Z",
+      "lastSeen": "2026-10-11T23:39:13.393Z",
       "seed": true,
       "summary": "N° de Consultation : 2026/S2993 Appui individualisé à la consolidation du proje...",
       "reference": "2026/S2993",
@@ -5329,7 +5425,9 @@
           "from": "26 EFO02 CONS Intelligence artificielle générative au service de l’inclusion, du handicap et de l’accessibilité",
           "to": "26_EFO02_CONS Intelligence artificielle générative au service de l’inclusion, du handicap et de l’accessibilité"
         }
-      ]
+      ],
+      "gone": true,
+      "goneAt": "2026-10-11T23:39:12.024Z"
     },
     {
       "id": "province-sud-avis:b646021b7779c019",
@@ -5482,7 +5580,9 @@
           "from": "26 STS17 CONS Adduction eau potable",
           "to": "26_STS17_CONS Adduction eau potable"
         }
-      ]
+      ],
+      "gone": true,
+      "goneAt": "2026-10-11T23:39:12.024Z"
     },
     {
       "id": "haut-commissariat-nc:745411974ba193dc",
