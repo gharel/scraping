@@ -48,6 +48,26 @@
       "seed": true
     },
     {
+      "id": "marchespublics-nc:b8r-3471",
+      "sourceId": "marchespublics-nc",
+      "kind": "consultation",
+      "title": "Seconde consultation (Lot 4,5,8 et 9) RENOVATION ET EXTENSION DU CENTRE D’INCENDIE ET DE SECOURS DE LIFOU - CISL",
+      "summary": "La Commune de Lifou, Maître d’Ouvrage, informe Messieurs les entrepreneurs qu’elle lance un Appel d’Offres Ouvert pour les lots 4,5,8 et 9 relatifs à la Rénovation et Extension du Centre d’Incendie et de Secours de Lifou – CISL – Commune de Lifou – Province des Iles Loyauté. Les entreprises ont la possibilité de répondre à un ou plusieurs lots. Le marché sera conclu avec un groupement d'entreprises agissant conjointement avec pour mandataire le titulaire du lot 02 : Fondations – Gros OEuvre – Maçonnerie",
+      "reference": "2ndRENOV-CIS-LIF",
+      "buyer": "Commune de Lifou",
+      "buyerLocation": "Lifou",
+      "location": "Province des Îles Loyauté",
+      "nature": "Travaux",
+      "procedure": "Appel d'offres ouvert",
+      "procedureCode": "AOO",
+      "url": "https://portail.marchespublics.nc/entreprise/consultation/3471?orgAcronyme=b8r",
+      "publishedAt": "2026-10-13T00:00:00+11:00",
+      "deadline": "2026-11-04T15:30:00+11:00",
+      "lots": 4,
+      "firstSeen": "2026-10-13T15:56:51.573Z",
+      "lastSeen": "2026-10-13T15:56:51.573Z"
+    },
+    {
       "id": "lnc-legales:b8a5fbff05070d29",
       "sourceId": "lnc-legales",
       "kind": "consultation",
