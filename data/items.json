@@ -48,6 +48,55 @@
       "seed": true
     },
     {
+      "id": "province-nord:84ce25d442b36954",
+      "sourceId": "province-nord",
+      "kind": "consultation",
+      "title": "Nettoyage et entretien des espaces verts communaux",
+      "reference": "03-2026",
+      "buyer": "Commune de Koumac",
+      "nature": "Service",
+      "status": "Ouvert",
+      "url": "https://marchespublics.province-nord.nc/sallemarche.aspx",
+      "publishedAt": "2026-10-14T05:00:00+11:00",
+      "deadline": "2026-11-13T15:00:00+11:00",
+      "firstSeen": "2026-10-08T09:12:55.574Z",
+      "lastSeen": "2026-10-13T21:15:10.120Z",
+      "seed": true,
+      "updatedAt": "2026-10-13T21:15:10.120Z",
+      "history": [
+        {
+          "at": "2026-10-13T21:15:10.120Z",
+          "field": "deadline",
+          "from": "2026-10-21T14:00:00+11:00",
+          "to": "2026-11-13T15:00:00+11:00"
+        },
+        {
+          "at": "2026-10-13T21:15:10.120Z",
+          "field": "title",
+          "from": "REALISATION DU PONT DE GODU",
+          "to": "Nettoyage et entretien des espaces verts communaux"
+        }
+      ]
+    },
+    {
+      "id": "marches-publics-etat:g7h-3084899",
+      "sourceId": "marches-publics-etat",
+      "kind": "consultation",
+      "title": "Découpe de la flèche de la grue DRAVO",
+      "summary": "Découpe de la flèche de la grue DRAVO",
+      "reference": "M26H00009",
+      "buyer": "Ministère des armées",
+      "location": "(987) Polynésie Française, POLYNÉSIE FRANÇAISE",
+      "nature": "Services",
+      "procedure": "Procédure avec négociations",
+      "procedureCode": "PAN",
+      "url": "https://www.marches-publics.gouv.fr/app.php/entreprise/consultation/3084899?orgAcronyme=g7h",
+      "publishedAt": "2026-10-13T00:00:00+11:00",
+      "deadline": "2026-11-16T21:00:00+11:00",
+      "firstSeen": "2026-10-13T21:16:54.979Z",
+      "lastSeen": "2026-10-13T21:16:54.979Z"
+    },
+    {
       "id": "marchespublics-nc:b8r-3471",
       "sourceId": "marchespublics-nc",
       "kind": "consultation",
@@ -2881,22 +2930,6 @@
       "deadline": "2026-10-26T15:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:55.574Z",
       "lastSeen": "2026-10-13T06:47:11.759Z",
-      "seed": true
-    },
-    {
-      "id": "province-nord:84ce25d442b36954",
-      "sourceId": "province-nord",
-      "kind": "consultation",
-      "title": "REALISATION DU PONT DE GODU",
-      "reference": "03-2026",
-      "buyer": "Commune de Waa Wi Luu (Houaïlou)",
-      "nature": "Travaux",
-      "status": "Ouvert",
-      "url": "https://marchespublics.province-nord.nc/sallemarche.aspx",
-      "publishedAt": "2026-09-28T08:00:00+11:00",
-      "deadline": "2026-10-21T14:00:00+11:00",
-      "firstSeen": "2026-10-08T09:12:55.574Z",
-      "lastSeen": "2026-10-08T09:12:55.574Z",
       "seed": true
     },
     {
