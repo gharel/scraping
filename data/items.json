@@ -48,6 +48,35 @@
       "seed": true
     },
     {
+      "id": "sic:8a38101362018073",
+      "sourceId": "sic",
+      "kind": "annonce",
+      "title": "A remettre avant le mardi 10 novembre 2026 à 15h00 RESIDENCE LE BOSQUET Travaux de Rénovation des revêtements des voiries du lotissement Koné",
+      "url": "https://www.sic.nc/appelsdoffre/residence-le-bosquet-travaux-de-renovation-des-revetements-des-voiries-du-lotissement/",
+      "deadline": "2026-11-10T15:00:00+11:00",
+      "firstSeen": "2026-10-15T21:23:44.063Z",
+      "lastSeen": "2026-10-15T21:23:44.063Z"
+    },
+    {
+      "id": "marchespublics-nc:h5j-3478",
+      "sourceId": "marchespublics-nc",
+      "kind": "consultation",
+      "title": "Remplacement de jalousies au CDI du lycée du Mont-Dore",
+      "summary": "Le vice-rectorat de la Nouvelle-Calédonie, direction générale des enseignements, lance, pour le compte du gouvernement de la Nouvelle-Calédonie, une consultation pour les travaux de :\nLycée du Mont Dore\nLMD 08-01\nRemplacement de jalousies au CDI.",
+      "reference": "TRX_LMD_08-01",
+      "buyer": "Gouvernement de la Nouvelle-Calédonie",
+      "buyerLocation": "Nouméa",
+      "location": "Province Sud",
+      "nature": "Travaux",
+      "procedure": "Procédure simplifiée",
+      "procedureCode": "SIMP",
+      "url": "https://portail.marchespublics.nc/entreprise/consultation/3478?orgAcronyme=h5j",
+      "publishedAt": "2026-10-16T00:00:00+11:00",
+      "deadline": "2026-11-04T15:00:00+11:00",
+      "firstSeen": "2026-10-15T21:21:57.813Z",
+      "lastSeen": "2026-10-15T21:21:57.813Z"
+    },
+    {
       "id": "cps-appels-offres:146f5950c76807ef",
       "sourceId": "cps-appels-offres",
       "kind": "consultation",
