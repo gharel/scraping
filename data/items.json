@@ -48,6 +48,38 @@
       "seed": true
     },
     {
+      "id": "lnc-legales:190595973d8d4f05",
+      "sourceId": "lnc-legales",
+      "kind": "consultation",
+      "title": "La SOCIETE IMMOBIL...",
+      "summary": "SOCIETE IMMOBILIERE DE NOUVELLE-CALEDONIE",
+      "buyer": "SOCIETE IMMOBILIERE DE NOUVELLE-CALEDONIE",
+      "url": "https://legales.lnc.nc/annonce/societe-immobiliere-de-nouvelle-caledonie-19-10-2026-30753",
+      "publishedAt": "2026-10-19T00:00:00+11:00",
+      "firstSeen": "2026-10-18T22:25:22.030Z",
+      "lastSeen": "2026-10-18T22:25:22.030Z"
+    },
+    {
+      "id": "marchespublics-nc:s3d-3470",
+      "sourceId": "marchespublics-nc",
+      "kind": "consultation",
+      "title": "Gestion et réalisation du nettoyage des parties communes du centre commercial Les Quais",
+      "summary": "Il s'agit de nettoyer les partie communes des Quais ferry qui se situe entre le 12 et 18 rue Jules Ferry, au centre-ville de Nouméa, côté quai. Il s'agit de l'ensemble du centre commercial LES QUAIS comprenant deux bâtiments en R+1.\nLe bâtiment du milieu (nommé bâtiment A) d'une superficie de 1200 m²\nLe bâtiment côté gare maritime (nommé bâtiment B) d'une superficie de 1200 m².",
+      "reference": "26C036",
+      "buyer": "Ville de Nouméa",
+      "buyerLocation": "Nouméa",
+      "location": "Province Sud",
+      "nature": "Services",
+      "procedure": "Procédure Autre (Subvention, Appel à projets, Délégation de service public)",
+      "procedureCode": "AUT",
+      "url": "https://portail.marchespublics.nc/entreprise/consultation/3470?orgAcronyme=s3d",
+      "publishedAt": "2026-10-19T00:00:00+11:00",
+      "deadline": "2026-11-18T15:30:00+11:00",
+      "lots": 2,
+      "firstSeen": "2026-10-18T22:24:59.250Z",
+      "lastSeen": "2026-10-18T22:24:59.250Z"
+    },
+    {
       "id": "province-nord:f535ed1f769b5dc9",
       "sourceId": "province-nord",
       "kind": "consultation",
@@ -5821,7 +5853,7 @@
       "url": "https://www.polynesie-francaise.gouv.fr/contenu/telechargement/54781/350422/file/Avis%20de%20publicit%C3%A9_2026_SOLIMPRESS.pdf",
       "publishedAt": "2026-08-03T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:03.204Z",
-      "lastSeen": "2026-10-09T01:11:05.964Z",
+      "lastSeen": "2026-10-18T22:26:58.987Z",
       "seed": true
     },
     {
@@ -6236,7 +6268,7 @@
       "url": "https://www.polynesie-francaise.gouv.fr/contenu/telechargement/54738/350109/file/Avis%20de%20publicit%C3%A9_2026_Securisation_hall_accueil_HCRPF.pdf",
       "publishedAt": "2026-07-07T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:03.204Z",
-      "lastSeen": "2026-10-09T01:11:05.964Z",
+      "lastSeen": "2026-10-18T22:26:58.987Z",
       "seed": true
     },
     {
