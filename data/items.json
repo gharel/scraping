@@ -62,6 +62,34 @@
       "lastSeen": "2026-10-19T04:41:27.061Z"
     },
     {
+      "id": "marches-publics-etat:g7h-3088846",
+      "sourceId": "marches-publics-etat",
+      "kind": "consultation",
+      "title": "Polynésie française - Île de Tahiti - Commune de Papeete - Base Navale - Amarrage - Mise en place des bollards et anneaux de quai -",
+      "summary": "Polynésie française - Île de Tahiti - Commune de Papeete - Base Navale - Amarrage - Mise en place des bollards et anneaux de quai - Marché de maîtrise d'oeuvre privée",
+      "reference": "DIDPPT26011",
+      "buyer": "Ministère des armées",
+      "location": "(987) Polynésie Française, POLYNÉSIE FRANÇAISE",
+      "nature": "Services",
+      "procedure": "Appel d'offres ouvert",
+      "procedureCode": "AOO",
+      "url": "https://www.marches-publics.gouv.fr/app.php/entreprise/consultation/3088846?orgAcronyme=g7h",
+      "publishedAt": "2026-10-19T00:00:00+11:00",
+      "deadline": "2026-11-19T22:30:00+11:00",
+      "firstSeen": "2026-10-19T19:57:44.386Z",
+      "lastSeen": "2026-10-19T19:57:44.386Z"
+    },
+    {
+      "id": "province-sud-avis:1f57ec02d89ae761",
+      "sourceId": "province-sud-avis",
+      "kind": "attribution",
+      "title": "Avis d’attribution de marché public DERES octobre 2026",
+      "url": "https://www.province-sud.nc/aops/aa/avis-dattribution-de-marche-public-deres-octobre-2026/",
+      "publishedAt": "2026-10-19T00:00:00+11:00",
+      "firstSeen": "2026-10-19T19:56:01.239Z",
+      "lastSeen": "2026-10-19T19:56:01.239Z"
+    },
+    {
       "id": "marchespublics-nc:f4g-3486",
       "sourceId": "marchespublics-nc",
       "kind": "consultation",
