@@ -48,6 +48,25 @@
       "seed": true
     },
     {
+      "id": "marchespublics-nc:h5j-3487",
+      "sourceId": "marchespublics-nc",
+      "kind": "consultation",
+      "title": "Rénovation zone arrière cuisine (dalle, VRD, façades)",
+      "summary": "Le vice-rectorat de la Nouvelle-Calédonie, direction générale des enseignements, lance, pour le compte du gouvernement de la Nouvelle-Calédonie, une consultation pour les travaux de :\n\nLWH 00-01 - Rénovation zone arrière cuisine (dalle, VRD, façades)",
+      "reference": "TRX_LWH_00-01",
+      "buyer": "Gouvernement de la Nouvelle-Calédonie",
+      "buyerLocation": "Nouméa",
+      "location": "Province des Îles Loyauté",
+      "nature": "Travaux",
+      "procedure": "Procédure simplifiée",
+      "procedureCode": "SIMP",
+      "url": "https://portail.marchespublics.nc/entreprise/consultation/3487?orgAcronyme=h5j",
+      "publishedAt": "2026-10-20T00:00:00+11:00",
+      "deadline": "2026-11-05T11:00:00+11:00",
+      "firstSeen": "2026-10-19T23:39:17.003Z",
+      "lastSeen": "2026-10-19T23:39:17.003Z"
+    },
+    {
       "id": "cps-appels-offres:75d9bd2cf6edde05",
       "sourceId": "cps-appels-offres",
       "kind": "consultation",
@@ -60,6 +79,83 @@
       "deadline": "2026-11-02T12:00:00.000Z",
       "firstSeen": "2026-10-19T04:41:27.061Z",
       "lastSeen": "2026-10-19T04:41:27.061Z"
+    },
+    {
+      "id": "lnc-legales:28f39cc62cbf0b9c",
+      "sourceId": "lnc-legales",
+      "kind": "consultation",
+      "title": "Direction de l'Enseignement, de la Formation, de l'Insertion et de la Jeunesse",
+      "summary": "PROVINCE NORD DEFIJ - Direction de l'Enseignement, de la Formation, de l'Insertion et de la Jeunesse",
+      "buyer": "PROVINCE NORD DEFIJ",
+      "url": "https://legales.lnc.nc/annonce/province-nord-defij-direction-de-lenseignement-de-la-formation-de-linsertion-et-de-la-jeunesse-19-10-2026-30863",
+      "publishedAt": "2026-10-19T00:00:00+11:00",
+      "firstSeen": "2026-10-19T23:39:39.772Z",
+      "lastSeen": "2026-10-19T23:39:39.772Z"
+    },
+    {
+      "id": "lnc-legales:4870f0c92eeaa66c",
+      "sourceId": "lnc-legales",
+      "kind": "consultation",
+      "title": "2026-17-1092",
+      "summary": "2026-17-1092 OP 1092 - Avis d'Appel D'offres - Travaux de rénovation de la tribune Ouest du Stade Numa DALY - 2 lots : Lot 04 \" Cha...",
+      "buyer": "GOUVERNEMENT DE LA NOUVELLE-CALEDONIE SECAL",
+      "url": "https://legales.lnc.nc/annonce/gouvernement-de-la-nouvelle-caledonie-secal-19-10-2026-30858",
+      "publishedAt": "2026-10-19T00:00:00+11:00",
+      "firstSeen": "2026-10-19T23:39:39.772Z",
+      "lastSeen": "2026-10-19T23:39:39.772Z"
+    },
+    {
+      "id": "lnc-legales:cfff42a1e7acfd3e",
+      "sourceId": "lnc-legales",
+      "kind": "consultation",
+      "title": "D DUSTER 441 014 NC DIAG VOYANT",
+      "summary": "N° de Consultation : 2026/S3108 D DUSTER 441 014 NC DIAG VOYANT DIAG VOYANT DIRECTION ASSISTEE ET CAPTEUR Date de clôture : 21/10/20...",
+      "reference": "2026/S3108",
+      "buyer": "PROVINCE NORD DAJAP",
+      "url": "https://legales.lnc.nc/annonce/province-nord-dajap-direction-des-affaires-administratives-19-10-2026-30860",
+      "publishedAt": "2026-10-19T00:00:00+11:00",
+      "deadline": "2020-10-21T00:00:00+11:00",
+      "firstSeen": "2026-10-19T23:39:39.772Z",
+      "lastSeen": "2026-10-19T23:39:39.772Z"
+    },
+    {
+      "id": "lnc-legales:7b36a2daf8a7b53c",
+      "sourceId": "lnc-legales",
+      "kind": "consultation",
+      "title": "FOURNITURES D’ENTRETIEN",
+      "summary": "N° de Consultation : 2026/S3110 FOURNITURES D’ENTRETIEN Date de clôture : 26/10/2026 08:00:00 Lieu d’exécu...",
+      "reference": "2026/S3110",
+      "buyer": "PROVINCE NORD DDEE",
+      "url": "https://legales.lnc.nc/annonce/province-nord-ddee-direction-du-developpement-economique-et-de-lenvironnement-19-10-2026-30862",
+      "publishedAt": "2026-10-19T00:00:00+11:00",
+      "deadline": "2026-10-26T08:00:00+11:00",
+      "firstSeen": "2026-10-19T23:39:39.772Z",
+      "lastSeen": "2026-10-19T23:39:39.772Z"
+    },
+    {
+      "id": "lnc-legales:4437a4e22b2dda31",
+      "sourceId": "lnc-legales",
+      "kind": "consultation",
+      "title": "P 308 360 578 NC BRUIT AVD FREINS AV ET RADIO HS",
+      "summary": "N° de Consultation : 2026/S3109 P 308 360 578 NC BRUIT AVD FREINS AV ET RADIO HS DIAG BRUIT AVD + FREINS AV + RADIO HS Date de clôtu...",
+      "reference": "2026/S3109",
+      "buyer": "PROVINCE NORD DAJAP",
+      "url": "https://legales.lnc.nc/annonce/province-nord-dajap-direction-des-affaires-administratives-19-10-2026-30861",
+      "publishedAt": "2026-10-19T00:00:00+11:00",
+      "firstSeen": "2026-10-19T23:39:39.772Z",
+      "lastSeen": "2026-10-19T23:39:39.772Z"
+    },
+    {
+      "id": "lnc-legales:2de7dd37d2ba73be",
+      "sourceId": "lnc-legales",
+      "kind": "consultation",
+      "title": "DPASS-AO-01-26",
+      "summary": "DPASS-AO-01-26 ANALYSE DE BIOLOGIE MEDICALE DES PRELEVEMENTS SANGUINS EFFECTUES PAR LES CENTRES MEDICO-SOCIAUX ...",
+      "buyer": "PROVINCE SUD DPASS",
+      "url": "https://legales.lnc.nc/annonce/province-sud-dpass-direction-de-laction-sanitaire-et-sociale-19-10-2026-30859",
+      "publishedAt": "2026-10-19T00:00:00+11:00",
+      "firstSeen": "2026-10-19T23:39:39.772Z",
+      "lastSeen": "2026-10-19T23:39:39.772Z"
     },
     {
       "id": "marches-publics-etat:g7h-3088846",
@@ -688,7 +784,7 @@
       "url": "https://legales.lnc.nc/annonce/commune-de-poya-collecte-des-ordures-menageres-de-la-commune-de-poya-15-10-2026-30738",
       "publishedAt": "2026-10-15T00:00:00+11:00",
       "firstSeen": "2026-10-16T00:24:01.297Z",
-      "lastSeen": "2026-10-18T00:05:15.832Z"
+      "lastSeen": "2026-10-19T23:39:39.772Z"
     },
     {
       "id": "lnc-legales:d250741a16b43905",
