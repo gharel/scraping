@@ -62,6 +62,25 @@
       "lastSeen": "2026-10-19T04:41:27.061Z"
     },
     {
+      "id": "marchespublics-nc:f4g-3486",
+      "sourceId": "marchespublics-nc",
+      "kind": "consultation",
+      "title": "ANALYSE DE BIOLOGIE MEDICALE DES PRELEVEMENTS SANGUINS EFFECTUES PAR LES CENTRES MEDICO-SOCIAUX DE LA DIRECTION D’ACTION SANITAIRE ET",
+      "summary": "La province Sud - Direction de l’action sanitaire et sociale - lance un appel d'offres pour d’établir un contrat de prestation avec un ou plusieurs laboratoires pour l’analyse de biologie médicale des prélèvements sanguins effectués par les centres médico-sociaux.",
+      "reference": "DPASS-AO-01-26",
+      "buyer": "Province Sud",
+      "buyerLocation": "Nouméa",
+      "location": "Province Sud",
+      "nature": "Services",
+      "procedure": "Appel d'offres ouvert",
+      "procedureCode": "AOO",
+      "url": "https://portail.marchespublics.nc/entreprise/consultation/3486?orgAcronyme=f4g",
+      "publishedAt": "2026-10-19T00:00:00+11:00",
+      "deadline": "2026-11-20T15:30:00+11:00",
+      "firstSeen": "2026-10-19T13:10:24.582Z",
+      "lastSeen": "2026-10-19T13:10:24.582Z"
+    },
+    {
       "id": "marches-publics-etat:g6l-3088866",
       "sourceId": "marches-publics-etat",
       "kind": "consultation",
@@ -1896,7 +1915,7 @@
       "summary": "BTA WARU Pierre Doui à NETCHAOT et BTA GOROMOEDO et MAHOSSEM à TIAKANA La mairie de Koné informe les entrepreneurs du lancement de deux appels d’offres pour la réalisation des travaux d’électrification filaire : Électrification BTA WARU Pierre Doui à NETCHAOT (FER- 2023) sur la commune de Koné Électrification BTA GOROMOEDO et MAHOSSEM à TIAKANA (FER – 2023)... 03/05/2025",
       "url": "https://www.koohne.nc/bta-waru-pierre-doui-a-netchaot-et-bta-goromoedo-et-mahossem-a-tiakana/",
       "firstSeen": "2026-10-08T09:13:00.240Z",
-      "lastSeen": "2026-10-18T00:06:06.681Z",
+      "lastSeen": "2026-10-19T13:11:41.153Z",
       "seed": true,
       "updatedAt": "2026-10-08T23:48:14.104Z",
       "history": [
@@ -1916,7 +1935,7 @@
       "summary": "Réalisation des repas dans les écoles maternelles et primaires publiques Le Maire de la Commune de KONE informe les entreprises qu’il lance un appel d’offres ouvert concernant : Le transport des repas dans les écoles maternelles et primaires publiques de Koné pour les années 2024, 2025 et 2026. 06/10/2023",
       "url": "https://www.koohne.nc/realisation-des-repas-dans-les-ecoles-maternelles-et-primaires-publiques/",
       "firstSeen": "2026-10-08T09:13:00.240Z",
-      "lastSeen": "2026-10-18T00:06:06.681Z",
+      "lastSeen": "2026-10-19T13:11:41.153Z",
       "seed": true,
       "updatedAt": "2026-10-08T23:48:14.104Z",
       "history": [
@@ -1936,7 +1955,7 @@
       "summary": "Le transport des repas dans les écoles maternelles et primaires publiques Le Maire de la Commune de KONE informe les entreprises qu’il lance un appel d’offres ouvert concernant : le transport des repas dans les écoles maternelles et primaires publiques de Koné pour les années 2024, 2025 et 2026. L’appel d’offres est constitué de six (6) lots : ... 06/10/2023",
       "url": "https://www.koohne.nc/le-transport-des-repas-dans-les-ecoles-maternelles-et-primaires-publiques/",
       "firstSeen": "2026-10-08T09:13:00.240Z",
-      "lastSeen": "2026-10-18T00:06:06.681Z",
+      "lastSeen": "2026-10-19T13:11:41.153Z",
       "seed": true,
       "updatedAt": "2026-10-08T23:48:14.104Z",
       "history": [
@@ -3909,7 +3928,9 @@
       "deadline": "2026-10-19T16:00:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
       "lastSeen": "2026-10-19T04:38:20.839Z",
-      "seed": true
+      "seed": true,
+      "gone": true,
+      "goneAt": "2026-10-19T13:10:24.582Z"
     },
     {
       "id": "marchespublics-nc:t5y-3435",
@@ -4435,7 +4456,9 @@
       "deadline": "2026-10-19T16:00:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
       "lastSeen": "2026-10-19T04:38:20.839Z",
-      "seed": true
+      "seed": true,
+      "gone": true,
+      "goneAt": "2026-10-19T13:10:24.582Z"
     },
     {
       "id": "cps-appels-offres:212861a010e3d111",
@@ -5264,7 +5287,9 @@
       "deadline": "2026-10-19T12:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:16.353Z",
       "lastSeen": "2026-10-19T04:41:18.449Z",
-      "seed": true
+      "seed": true,
+      "gone": true,
+      "goneAt": "2026-10-19T13:13:18.357Z"
     },
     {
       "id": "province-sud-avis:5ea6f7037cd14aa3",
@@ -5930,7 +5955,9 @@
       "deadline": "2026-10-19T11:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:16.353Z",
       "lastSeen": "2026-10-19T04:41:18.449Z",
-      "seed": true
+      "seed": true,
+      "gone": true,
+      "goneAt": "2026-10-19T13:13:18.357Z"
     },
     {
       "id": "secal:abe2ea4c440260eb",
@@ -9734,7 +9761,7 @@
       "url": "https://www.koohne.nc/nouveaux-marches-fer-2022-et-2023/",
       "publishedAt": "2023-01-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:00.240Z",
-      "lastSeen": "2026-10-18T00:06:06.681Z",
+      "lastSeen": "2026-10-19T13:11:41.153Z",
       "seed": true,
       "updatedAt": "2026-10-08T23:48:14.104Z",
       "history": [
@@ -10607,7 +10634,7 @@
       "url": "https://www.koohne.nc/hta-bta-habitations-a-la-tribu-de-neami-fer-2022/",
       "publishedAt": "2022-01-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:00.240Z",
-      "lastSeen": "2026-10-18T00:06:06.681Z",
+      "lastSeen": "2026-10-19T13:11:41.153Z",
       "seed": true,
       "updatedAt": "2026-10-08T23:48:14.104Z",
       "history": [
