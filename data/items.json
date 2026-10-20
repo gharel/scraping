@@ -36,6 +36,33 @@
   },
   "items": [
     {
+      "id": "province-nord:2418e3b80d285cc3",
+      "sourceId": "province-nord",
+      "kind": "consultation",
+      "title": "Nettoyage et de l'entretien des bâtiments municipaux",
+      "reference": "04-2026",
+      "buyer": "Commune de Koumac",
+      "nature": "Service",
+      "status": "Ouvert",
+      "url": "https://marchespublics.province-nord.nc/sallemarche.aspx",
+      "publishedAt": "2026-10-21T06:00:00+11:00",
+      "deadline": "2026-11-23T15:00:00+11:00",
+      "firstSeen": "2026-10-20T21:37:01.801Z",
+      "lastSeen": "2026-10-20T21:37:01.801Z"
+    },
+    {
+      "id": "ifap:be40e1a0343d5b11",
+      "sourceId": "ifap",
+      "kind": "consultation",
+      "title": "Installation d’un réseau Wi-Fi public",
+      "status": "11/11/2026",
+      "url": "https://www.ifap.nc/sites/default/files/2026-10/26_IFAP02_CONS.pdf",
+      "publishedAt": "2026-10-21T00:00:00+11:00",
+      "deadline": "2026-11-11T00:00:00+11:00",
+      "firstSeen": "2026-10-20T21:36:20.245Z",
+      "lastSeen": "2026-10-20T21:36:20.245Z"
+    },
+    {
       "id": "province-sud-avis:024439864dc26bca",
       "sourceId": "province-sud-avis",
       "kind": "attribution",
@@ -76,6 +103,25 @@
       "deadline": "2026-10-25T12:00:00.000Z",
       "firstSeen": "2026-10-20T04:51:56.560Z",
       "lastSeen": "2026-10-20T04:51:56.560Z"
+    },
+    {
+      "id": "marches-publics-etat:g7h-3090781",
+      "sourceId": "marches-publics-etat",
+      "kind": "consultation",
+      "title": "Acquisition de véhicules automobiles au profit des Forces Armées en Polynésie française",
+      "summary": "Acquisition de véhicules automobiles au profit des Forces Armées en Polynésie française",
+      "reference": "DICOM_ACQUISITION_VEHICULES",
+      "buyer": "Ministère des armées",
+      "location": "(987) Polynésie Française, POLYNÉSIE FRANÇAISE",
+      "nature": "Fournitures",
+      "procedure": "Appel d'offres ouvert",
+      "procedureCode": "AOO",
+      "url": "https://www.marches-publics.gouv.fr/app.php/entreprise/consultation/3090781?orgAcronyme=g7h",
+      "publishedAt": "2026-10-20T00:00:00+11:00",
+      "deadline": "2026-11-19T22:00:00+11:00",
+      "lots": 5,
+      "firstSeen": "2026-10-20T21:39:56.181Z",
+      "lastSeen": "2026-10-20T21:39:56.181Z"
     },
     {
       "id": "province-sud-avis:a0f6246dc85e0174",
@@ -7497,7 +7543,9 @@
           "from": "26 MFI02 CONS Groupe d’analyse de pratique professionnelle pour les formateurs de l’IFPSS",
           "to": "26_MFI02_CONS Groupe d’analyse de pratique professionnelle pour les formateurs de l’IFPSS"
         }
-      ]
+      ],
+      "gone": true,
+      "goneAt": "2026-10-20T21:36:20.245Z"
     },
     {
       "id": "ifap:9bf65da6ba81d747",
