@@ -78,6 +78,30 @@
       "lastSeen": "2026-10-20T04:51:56.560Z"
     },
     {
+      "id": "province-sud-avis:a0f6246dc85e0174",
+      "sourceId": "province-sud-avis",
+      "kind": "consultation",
+      "title": "Avis d’appel public a concurrence n° DAEM-APC-25-26 : Travaux de balayage mécanique et manuel ...",
+      "reference": "DAEM-APC-25-26",
+      "url": "https://www.province-sud.nc/aops/ao/daem-apc-25-26/",
+      "publishedAt": "2026-10-20T00:00:00+11:00",
+      "deadline": "2026-11-09T00:00:00+11:00",
+      "firstSeen": "2026-10-20T17:02:47.033Z",
+      "lastSeen": "2026-10-20T17:02:47.033Z"
+    },
+    {
+      "id": "province-sud-avis:eea90eb1227c2c37",
+      "sourceId": "province-sud-avis",
+      "kind": "consultation",
+      "title": "Avis d’appel public a concurrence n° DAEM-APC-24-26 : Entretien des voiries et dépendances des...",
+      "reference": "DAEM-APC-24-26",
+      "url": "https://www.province-sud.nc/aops/ao/daem-apc-24-26/",
+      "publishedAt": "2026-10-20T00:00:00+11:00",
+      "deadline": "2026-11-09T00:00:00+11:00",
+      "firstSeen": "2026-10-20T17:02:47.033Z",
+      "lastSeen": "2026-10-20T17:02:47.033Z"
+    },
+    {
       "id": "marchespublics-nc:c5d-3500",
       "sourceId": "marchespublics-nc",
       "kind": "consultation",
