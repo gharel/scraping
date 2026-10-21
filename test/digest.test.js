@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { buildDigest, enqueue, isDigestDue, localDay } from '../scraper/alerts.js';
+import { buildDigest, buildTestDigest, enqueue, isDigestDue, localDay } from '../scraper/alerts.js';
 import { normalizeConfig } from '../site/assets/js/shared/config.js';
 
 const config = normalizeConfig({
@@ -78,4 +78,20 @@ test('récapitulatif : rien à signaler', () => {
   const digest = buildDigest({ queue: { items: [{ id: 'x' }] }, items: [item('x', 'Travaux de formation des sols')], config, now });
   assert.equal(digest.subject, null);
   assert.deepEqual(digest.ids, ['x']);
+});
+
+test('récapitulatif : e-mail de test sans toucher à la file', () => {
+  const now = at('2026-10-21T21:00:00+11:00');
+  const items = [
+    item('r', 'Formation Excel', { firstSeen: '2026-10-19T00:00:00Z' }),
+    item('v', 'Formation ancienne', { firstSeen: '2026-10-01T00:00:00Z' }),
+    item('s', 'Formation déjà en ligne', { firstSeen: '2026-10-20T00:00:00Z', seed: true }),
+  ];
+  const digest = buildTestDigest({ items, config, now });
+  assert.equal(digest.test, true);
+  assert.deepEqual(digest.ids, []);
+  assert.equal(digest.subject, 'Vigie · E-mail de test : 1 annonce des 7 derniers jours');
+  assert.match(digest.html, /Formation Excel/);
+  assert.doesNotMatch(digest.html, /ancienne|déjà en ligne/);
+  assert.equal(buildTestDigest({ items: [], config, now }).subject, 'Vigie · E-mail de test : l’envoi fonctionne');
 });

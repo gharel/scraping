@@ -154,11 +154,10 @@ function itemHtml({ item, categories }, { accent, sources, categoryById, now, ti
 </td></tr>`;
 }
 
-function renderHtml({ groups, count, dayLabel, appUrl, config, now }) {
+function renderHtml({ groups, heading, intro, dayLabel, appUrl, config, now }) {
   const timezone = config.settings.timezone;
   const sources = new Map(config.sources.map((source) => [source.id, source]));
   const categoryById = new Map(config.categories.map((category) => [category.id, category]));
-  const heading = `${count} ${plural(count, 'nouvelle annonce', 'nouvelles annonces')}`;
   const preheader = groups
     .map(({ category, entries }) => `${category ? category.name : 'Autres'} (${entries.length})`)
     .join(' · ');
@@ -219,7 +218,7 @@ function renderHtml({ groups, count, dayLabel, appUrl, config, now }) {
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr><td style="padding:0 0 4px;">
           <h1 class="v-strong" style="margin:0;font-size:24px;line-height:30px;font-weight:700;color:#2f2f2f;">${escapeHtml(heading)}</h1>
-          <p class="v-muted" style="margin:6px 0 8px;font-size:14px;line-height:20px;color:#6c757d;">Dans vos catégories, repérées depuis le dernier récapitulatif · ${escapeHtml(dayLabel)}</p>
+          <p class="v-muted" style="margin:6px 0 8px;font-size:14px;line-height:20px;color:#6c757d;">${escapeHtml(intro)} · ${escapeHtml(dayLabel)}</p>
         </td></tr>
         ${sections}
         ${button}
@@ -235,10 +234,10 @@ function renderHtml({ groups, count, dayLabel, appUrl, config, now }) {
 </html>`;
 }
 
-function renderText({ groups, count, dayLabel, appUrl, config }) {
+function renderText({ groups, heading, intro, dayLabel, appUrl, config }) {
   const timezone = config.settings.timezone;
   const sources = new Map(config.sources.map((source) => [source.id, source]));
-  const lines = [`${count} ${plural(count, 'nouvelle annonce', 'nouvelles annonces')} dans vos catégories (${dayLabel})`, ''];
+  const lines = [heading, `${intro} (${dayLabel})`, ''];
   for (const { category, entries } of groups) {
     lines.push(`== ${category ? category.name : 'Autres annonces'} ==`, '');
     for (const { item } of entries) {
@@ -254,6 +253,26 @@ function renderText({ groups, count, dayLabel, appUrl, config }) {
   return lines.join('\n');
 }
 
+function composeDigest(relevant, { config, appUrl, now, test = false, days = 0 }) {
+  const groups = groupEntries(relevant, config);
+  const count = relevant.length;
+  const names = groups.filter((group) => group.category).map((group) => group.category.name);
+  const themes = names.length ? ` : ${names.slice(0, 3).join(', ')}${names.length > 3 ? '…' : ''}` : '';
+  const announcements = `${count} ${plural(count, 'annonce')}`;
+  const fresh = `${count} ${plural(count, 'nouvelle annonce', 'nouvelles annonces')}`;
+  let subject = `Vigie · ${fresh}${themes}`;
+  let heading = fresh;
+  let intro = 'Dans vos catégories, repérées depuis le dernier récapitulatif';
+  if (test) {
+    subject = `Vigie · E-mail de test : ${count ? `${announcements} des ${days} derniers jours` : 'l’envoi fonctionne'}`;
+    heading = count ? `E-mail de test · ${announcements}` : 'E-mail de test : l’envoi fonctionne';
+    intro = `${count ? `Annonces de vos catégories repérées ces ${days} derniers jours` : `Aucune annonce de vos catégories ces ${days} derniers jours`}. Le récapitulatif de ${config.settings.digestHour} h n’est pas modifié`;
+  }
+  const dayLabel = formatDate(now.toISOString(), config.settings.timezone, { withTime: false, weekday: true });
+  const view = { groups, heading, intro, dayLabel, appUrl, config, now };
+  return { subject, html: renderHtml(view), text: renderText(view) };
+}
+
 /**
  * Prépare le récapitulatif à partir de la file : les annonces sont relues dans items.json
  * (informations à jour) et refiltrées avec les règles actuelles.
@@ -267,11 +286,18 @@ export function buildDigest({ queue, items, config, appUrl = '', now = new Date(
   const date = localDay(now, config.settings.timezone);
   if (!relevant.length) return { date, ids, subject: null, html: null, text: null };
 
-  const groups = groupEntries(relevant, config);
-  const count = relevant.length;
-  const names = groups.filter((group) => group.category).map((group) => group.category.name);
-  const subject = `Vigie · ${count} ${plural(count, 'nouvelle annonce', 'nouvelles annonces')}${names.length ? ` : ${names.slice(0, 3).join(', ')}${names.length > 3 ? '…' : ''}` : ''}`;
-  const dayLabel = formatDate(now.toISOString(), config.settings.timezone, { withTime: false, weekday: true });
-  const view = { groups, count, dayLabel, appUrl, config, now };
-  return { date, ids, subject, html: renderHtml(view), text: renderText(view) };
+  return { date, ids, ...composeDigest(relevant, { config, appUrl, now }) };
+}
+
+/**
+ * E-mail de test (envoi forcé alors que la file est vide) : annonces de vos catégories repérées
+ * ces derniers jours, ou un simple message s'il n'y en a pas. La file n'est pas touchée (`test: true`).
+ */
+export function buildTestDigest({ items, config, appUrl = '', now = new Date(), days = 7 }) {
+  const since = now.getTime() - days * 86_400_000;
+  const recent = items
+    .filter((item) => !item.seed && Date.parse(item.firstSeen) >= since)
+    .sort((a, b) => Date.parse(b.firstSeen) - Date.parse(a.firstSeen));
+  const relevant = selectRelevant(recent, config);
+  return { date: localDay(now, config.settings.timezone), ids: [], test: true, ...composeDigest(relevant, { config, appUrl, now, test: true, days }) };
 }
