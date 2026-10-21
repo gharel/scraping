@@ -103,7 +103,7 @@ L’envoi passe par [Resend](https://resend.com) (gratuit jusqu’à 3 000 e-mai
 1. Créez un compte Resend **avec l’adresse qui doit recevoir le récapitulatif**. Sans domaine vérifié, l’expéditeur `onboarding@resend.dev` ne peut écrire qu’à cette adresse.
 2. Dans Resend > *API Keys*, créez une clé avec l’autorisation *Sending access*.
 3. Dans le dépôt GitHub > *Settings* > *Secrets and variables* > *Actions*, ajoutez deux secrets : `RESEND_API_KEY` (la clé) et `VIGIE_EMAIL_TO` (l’adresse de réception).
-4. Pour tester : *Actions* > *Veille* > *Run workflow*, cochez « Envoyer tout de suite le récapitulatif par e-mail ».
+4. Pour tester : *Actions* > *Veille* > *Run workflow*, cochez « Envoyer tout de suite le récapitulatif par e-mail ». Si aucune annonce n’est en attente, vous recevez un e-mail de test avec les annonces de vos catégories des 7 derniers jours ; la file et le récapitulatif de 17 h ne sont pas modifiés.
 
 Si un secret manque ou si Resend refuse l’envoi, le passage affiche un avertissement dans GitHub Actions et garde les annonces en attente pour le passage suivant.
 

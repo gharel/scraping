@@ -46,6 +46,10 @@ async function main() {
     return;
   }
 
+  if (digest.test) {
+    console.log(`E-mail de test envoyé : ${digest.subject}`);
+    return;
+  }
   const sent = new Set(digest.ids);
   const queue = await readQueue(dataDir);
   await writeQueue(dataDir, { lastDigest: digest.date, items: (queue.items || []).filter((entry) => !sent.has(entry.id)) });

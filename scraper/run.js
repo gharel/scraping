@@ -11,7 +11,7 @@
  */
 import { writeFile } from 'node:fs/promises';
 import path from 'node:path';
-import { buildDigest, enqueue, isDigestDue, localDay } from './alerts.js';
+import { buildDigest, buildTestDigest, enqueue, isDigestDue, localDay } from './alerts.js';
 import { runVeille } from './core.js';
 import { DEFAULT_CONFIG_FILE, ROOT_DIR, readConfig } from './lib/config-file.js';
 import { readQueue, writeQueue } from './lib/store.js';
@@ -56,8 +56,11 @@ async function main() {
     const appUrl = config.settings.appUrl || process.env.VIGIE_APP_URL || '';
     let queue = enqueue(await readQueue(args.data), result.added, config, now);
     if (queue.items.length) console.log(`Récapitulatif : ${queue.items.length} annonce(s) en attente.`);
-    if (isDigestDue(queue, now, config.settings, { force: process.env.VIGIE_FORCE_DIGEST === '1' })) {
-      const digest = buildDigest({ queue, items: result.items, config, appUrl, now });
+    const force = process.env.VIGIE_FORCE_DIGEST === '1';
+    if (isDigestDue(queue, now, config.settings, { force })) {
+      let digest = buildDigest({ queue, items: result.items, config, appUrl, now });
+      // Envoi forcé sans annonce en attente : e-mail de test, pour vérifier la réception.
+      if (!digest.subject && force) digest = buildTestDigest({ items: result.items, config, appUrl, now });
       if (digest.subject) {
         await writeFile(args.digest, JSON.stringify(digest, null, 2), 'utf8');
         console.log(`Récapitulatif prêt : ${digest.subject}`);

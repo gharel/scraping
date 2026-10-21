@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
     inputs:
       force_digest:
-        description: Envoyer tout de suite le récapitulatif par e-mail
+        description: Envoyer tout de suite le récapitulatif par e-mail (e-mail de test si rien n'est en attente)
         type: boolean
         default: false
   push:
