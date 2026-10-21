@@ -66,6 +66,25 @@
       "lastSeen": "2026-10-21T00:37:53.668Z"
     },
     {
+      "id": "marchespublics-nc:m8b-3503",
+      "sourceId": "marchespublics-nc",
+      "kind": "consultation",
+      "title": "FOURNITURE D’EQUIPEMENTS DE CONDITIONNEMENT ET DE PESAGE DE POMMES DE TERRE, OIGNONS ET PATATES DOUCES",
+      "summary": "FOURNITURE D’EQUIPEMENTS DE CONDITIONNEMENT ET DE PESAGE DE POMMES DE TERRE, OIGNONS ET PATATES DOUCES",
+      "reference": "OCEF-CP-2026-14",
+      "buyer": "Office de Commercialisation et dEntreposage Frigorifique",
+      "buyerLocation": "Nouméa",
+      "location": "Province Sud",
+      "nature": "Fournitures",
+      "procedure": "Procédure simplifiée",
+      "procedureCode": "SIMP",
+      "url": "https://portail.marchespublics.nc/entreprise/consultation/3503?orgAcronyme=m8b",
+      "publishedAt": "2026-10-21T00:00:00+11:00",
+      "deadline": "2026-11-12T16:00:00+11:00",
+      "firstSeen": "2026-10-21T10:12:45.145Z",
+      "lastSeen": "2026-10-21T10:12:45.145Z"
+    },
+    {
       "id": "lnc-legales:27ae65936489e024",
       "sourceId": "lnc-legales",
       "kind": "consultation",
