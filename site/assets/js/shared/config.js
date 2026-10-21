@@ -70,6 +70,7 @@ export const DEFAULT_SETTINGS = {
   localIntervalMinutes: 60,
   githubAlerts: true,
   alertOnlyMatching: true,
+  digestHour: 17,
   appUrl: '',
   excludeKeywords: [],
 };
@@ -197,6 +198,7 @@ export function normalizeConfig(raw) {
   settings.localIntervalMinutes = clampNumber(settings.localIntervalMinutes, 5, 1440, DEFAULT_SETTINGS.localIntervalMinutes);
   settings.githubAlerts = settings.githubAlerts !== false;
   settings.alertOnlyMatching = settings.alertOnlyMatching !== false;
+  settings.digestHour = clampNumber(settings.digestHour, 0, 23, DEFAULT_SETTINGS.digestHour);
   settings.excludeKeywords = parseKeywords(settings.excludeKeywords || []);
   return {
     settings,

@@ -7,7 +7,7 @@ import { icon } from '../icons.js';
 import { plural, relativeTime } from '../format.js';
 import * as prefs from '../prefs.js';
 import { THEME_ICONS } from '../theme.js';
-import { button, callout, field, input, pageHead, segmented, setBusy, toast, toggle } from '../ui.js';
+import { button, callout, field, input, pageHead, segmented, select, selectControl, setBusy, toast, toggle } from '../ui.js';
 
 function section(title, description, ...content) {
   return h('section', { class: 'settings-card' }, h('header', { class: 'settings-head' }, h('h2', null, title), description ? h('p', null, description) : null), h('div', { class: 'settings-body' }, content));
@@ -171,6 +171,25 @@ function githubSection(ctx) {
   );
 }
 
+/** Heures de passage de la veille en ligne (heures impaires à Nouméa). */
+const DIGEST_HOURS = [7, 9, 11, 13, 15, 17, 19, 21];
+
+function digestHourRow(config, disabled, onChange) {
+  const id = 'digest-hour';
+  const hours = DIGEST_HOURS.includes(config.settings.digestHour) ? DIGEST_HOURS : [...DIGEST_HOURS, config.settings.digestHour].sort((a, b) => a - b);
+  const wrap = select(
+    hours.map((hour) => ({ value: String(hour), label: `${hour} h` })),
+    { value: String(config.settings.digestHour), id, disabled },
+  );
+  selectControl(wrap).addEventListener('change', (event) => onChange(Number(event.target.value)));
+  return h(
+    'div',
+    { class: 'switch-row' },
+    h('div', { class: 'switch-text' }, h('label', { class: 'switch-label', for: id }, 'Heure d’envoi'), h('p', { class: 'switch-description' }, 'Heure de Nouméa, au passage de la veille en ligne.')),
+    h('div', { class: 'switch-select' }, wrap),
+  );
+}
+
 function alertsSection(ctx) {
   const { config, backend } = ctx.state;
   const canEdit = backend.canEdit;
@@ -187,12 +206,13 @@ function alertsSection(ctx) {
     'Alertes',
     null,
     toggle({
-      label: 'Alertes par e-mail',
-      description: 'À chaque nouveauté, Vigie ouvre un ticket sur le dépôt GitHub : GitHub vous l’envoie par e-mail si vous suivez le dépôt.',
+      label: 'Récapitulatif quotidien par e-mail',
+      description: `Chaque jour à ${config.settings.digestHour} h, un seul e-mail regroupe les nouvelles annonces repérées depuis le précédent. Rien de nouveau : pas d’e-mail.`,
       checked: config.settings.githubAlerts,
       disabled: !canEdit,
       onChange: (value) => updateSetting('githubAlerts', value),
     }),
+    digestHourRow(config, !canEdit || !config.settings.githubAlerts, (value) => updateSetting('digestHour', value)),
     toggle({
       label: 'Seulement les annonces de vos catégories',
       description: 'Les annonces non classées n’envoient pas d’alerte.',
@@ -220,7 +240,7 @@ function alertsSection(ctx) {
         toast('Notifications activées sur cet appareil.', 'success');
       },
     }),
-    canEdit ? null : h('p', { class: 'field-hint' }, 'Connectez GitHub pour modifier les alertes par e-mail.'),
+    canEdit ? null : h('p', { class: 'field-hint' }, 'Connectez GitHub pour modifier le récapitulatif par e-mail.'),
   );
 }
 

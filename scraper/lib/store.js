@@ -4,6 +4,7 @@
  *   status.json     état de chaque source et historique des passages
  *   snapshots/      dernier état des pages surveillées
  *   relais/         annonces relayées par Vigie sur le PC (sites que GitHub n'atteint pas)
+ *   alert-queue.json annonces en attente du récapitulatif quotidien par e-mail
  */
 import { mkdir, readFile, readdir, rename, rm, writeFile } from 'node:fs/promises';
 import path from 'node:path';
@@ -23,6 +24,16 @@ async function writeJson(file, data) {
   const temp = `${file}.${process.pid}.tmp`;
   await writeFile(temp, `${JSON.stringify(data, null, 2)}\n`, 'utf8');
   await rename(temp, file);
+}
+
+const queueFile = (dataDir) => path.join(dataDir, 'alert-queue.json');
+
+export async function readQueue(dataDir) {
+  return readJson(queueFile(dataDir), { lastDigest: null, items: [] });
+}
+
+export async function writeQueue(dataDir, queue) {
+  await writeJson(queueFile(dataDir), queue);
 }
 
 const safeName = (id) => String(id).replace(/[^a-z0-9-]/gi, '_');

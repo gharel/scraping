@@ -1,9 +1,7 @@
 node_modules/
 _site/
 local-data/
-alerte.json
-alerte-titre.txt
-alerte-corps.md
+recap.json
 *.log
 *.tmp
 .DS_Store

@@ -4,24 +4,28 @@
  *   npm run scrape                      toutes les sources actives, données dans data/
  *   npm run scrape -- --only id1,id2    seulement certaines sources
  *   npm run scrape -- --data dossier    autre dossier de données
- *   npm run scrape -- --alert alerte    écrit alerte.json si des nouveautés méritent un e-mail
+ *   npm run scrape -- --digest recap.json
+ *       met en file les nouveautés de vos catégories et, à l'heure du récapitulatif quotidien,
+ *       écrit recap.json (envoyé ensuite par scripts/send-digest.js).
+ *       VIGIE_NOW=2026-10-21T17:05:00+11:00 simule l'heure, VIGIE_FORCE_DIGEST=1 force le récapitulatif.
  */
 import { writeFile } from 'node:fs/promises';
 import path from 'node:path';
-import { buildAlert } from './alerts.js';
+import { buildDigest, enqueue, isDigestDue, localDay } from './alerts.js';
 import { runVeille } from './core.js';
 import { DEFAULT_CONFIG_FILE, ROOT_DIR, readConfig } from './lib/config-file.js';
+import { readQueue, writeQueue } from './lib/store.js';
 import { sourceProblems } from '../site/assets/js/shared/config.js';
 
 function parseArgs(argv) {
-  const args = { data: path.join(ROOT_DIR, 'data'), config: DEFAULT_CONFIG_FILE, only: null, alert: null };
+  const args = { data: path.join(ROOT_DIR, 'data'), config: DEFAULT_CONFIG_FILE, only: null, digest: null };
   for (let i = 0; i < argv.length; i += 1) {
     const arg = argv[i];
     const next = () => argv[++i];
     if (arg === '--data') args.data = path.resolve(next());
     else if (arg === '--config') args.config = path.resolve(next());
     else if (arg === '--only') args.only = next().split(',').map((id) => id.trim()).filter(Boolean);
-    else if (arg === '--alert') args.alert = path.resolve(next());
+    else if (arg === '--digest') args.digest = path.resolve(next());
   }
   return args;
 }
@@ -47,13 +51,24 @@ async function main() {
     `Terminé en ${(summary.durationMs / 1000).toFixed(1)} s : ${summary.checked} source(s), ${summary.added} nouveauté(s), ${summary.errors} erreur(s).`,
   );
 
-  if (args.alert) {
+  if (args.digest) {
+    const now = process.env.VIGIE_NOW ? new Date(process.env.VIGIE_NOW) : new Date();
     const appUrl = config.settings.appUrl || process.env.VIGIE_APP_URL || '';
-    const alert = buildAlert({ added: result.added, config, appUrl });
-    if (alert) {
-      await writeFile(args.alert, JSON.stringify(alert, null, 2), 'utf8');
-      console.log(`Alerte préparée : ${alert.title}`);
+    let queue = enqueue(await readQueue(args.data), result.added, config, now);
+    if (queue.items.length) console.log(`Récapitulatif : ${queue.items.length} annonce(s) en attente.`);
+    if (isDigestDue(queue, now, config.settings, { force: process.env.VIGIE_FORCE_DIGEST === '1' })) {
+      const digest = buildDigest({ queue, items: result.items, config, appUrl, now });
+      if (digest.subject) {
+        await writeFile(args.digest, JSON.stringify(digest, null, 2), 'utf8');
+        console.log(`Récapitulatif prêt : ${digest.subject}`);
+      } else {
+        // Rien à signaler aujourd'hui : pas d'e-mail, la journée est close.
+        const done = new Set(digest.ids);
+        queue = { lastDigest: localDay(now, config.settings.timezone), items: queue.items.filter((entry) => !done.has(entry.id)) };
+        console.log('Récapitulatif : aucune annonce à signaler aujourd’hui.');
+      }
     }
+    await writeQueue(args.data, queue);
   }
 }
 

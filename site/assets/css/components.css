@@ -396,6 +396,11 @@
   min-width: 0;
 }
 
+.switch-select {
+  flex-shrink: 0;
+  width: 112px;
+}
+
 .switch-label {
   font-weight: var(--weight-semibold);
   color: var(--text-strong);

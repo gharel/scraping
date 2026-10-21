@@ -29,7 +29,7 @@ L’écran de mot de passe reprend cette signature (pastille, Vigie, filet, logo
 - **Range** chaque annonce par territoire (Nouvelle-Calédonie, Polynésie française, Wallis-et-Futuna, Vanuatu, Pacifique), avec un filtre dédié.
 - **Classe** chaque annonce dans vos domaines (formation, IA, communication, développement, web, bureautique, audiovisuel, data, gestion de projet) et **écarte** le BTP grâce à des mots-clés exclus. Par défaut, seules les annonces de vos catégories sont affichées.
 - **Signale** les nouveautés (elles le restent jusqu’à ce que vous les marquiez comme lues), les clôtures proches (compte à rebours J-n) et les reports de date limite.
-- **Alerte par e-mail** via un ticket GitHub quand une nouvelle annonce entre dans vos catégories.
+- **Récapitulatif quotidien par e-mail** à 17 h (heure de Nouméa) : un seul e-mail HTML regroupe les nouvelles annonces de vos catégories.
 - **Exporte** les annonces affichées en CSV (Excel).
 
 ## Sources surveillées par défaut
@@ -94,9 +94,18 @@ Chaque modification crée un commit sur `config/veille.json` ; la veille relance
 
 Sans jeton, vous pouvez aussi modifier [config/veille.json](config/veille.json) directement sur GitHub.
 
-### Recevoir les alertes par e-mail
+### Recevoir le récapitulatif par e-mail
 
-À chaque passage, s’il y a de nouvelles annonces dans vos catégories, Vigie ouvre un ticket (issue) étiqueté `veille` sur le dépôt. GitHub vous l’envoie par e-mail si vous suivez le dépôt (bouton **Watch** > *All Activity*, ou *Custom* > *Issues*). Les alertes se désactivent dans **Réglages**.
+Chaque passage met de côté les nouvelles annonces de vos catégories (`data/alert-queue.json`). Le premier passage à partir de 17 h, heure de Nouméa, les envoie dans **un seul e-mail HTML**, regroupées par catégorie, avec la date limite de chaque annonce. Les annonces repérées après l’envoi partent le lendemain. Un jour sans nouveauté, aucun e-mail n’est envoyé. Si le passage de 17 h est retardé ou échoue, le suivant prend le relais : il y a au plus un e-mail par jour. L’heure d’envoi et l’interrupteur se règlent dans **Réglages** > Alertes.
+
+L’envoi passe par [Resend](https://resend.com) (gratuit jusqu’à 3 000 e-mails par mois). À configurer une fois :
+
+1. Créez un compte Resend **avec l’adresse qui doit recevoir le récapitulatif**. Sans domaine vérifié, l’expéditeur `onboarding@resend.dev` ne peut écrire qu’à cette adresse.
+2. Dans Resend > *API Keys*, créez une clé avec l’autorisation *Sending access*.
+3. Dans le dépôt GitHub > *Settings* > *Secrets and variables* > *Actions*, ajoutez deux secrets : `RESEND_API_KEY` (la clé) et `VIGIE_EMAIL_TO` (l’adresse de réception).
+4. Pour tester : *Actions* > *Veille* > *Run workflow*, cochez « Envoyer tout de suite le récapitulatif par e-mail ».
+
+Si un secret manque ou si Resend refuse l’envoi, le passage affiche un avertissement dans GitHub Actions et garde les annonces en attente pour le passage suivant.
 
 ## Lancer Vigie sur votre PC
 
@@ -131,7 +140,7 @@ Ensuite, après chaque vérification faite sur le PC :
 - il publie leurs annonces dans `data/relais/<source>.json` (annonces actuelles, date du relevé), **en un seul commit** « Relais : annonces lues depuis le PC (…) » ;
 - un relevé inchangé n’est republié qu’au bout de 3 heures, pour rester récent sans créer un commit à chaque passage. « Publier maintenant » force la publication.
 
-À son passage suivant (toutes les 2 heures), la veille en ligne essaie toujours de lire le site directement. Si GitHub reste bloqué et que le relevé du PC a moins de 6 heures, elle fusionne ses annonces comme si elle les avait lues : mêmes clés, donc pas de doublon ni de fausse nouveauté, et les vraies nouveautés déclenchent l’alerte par e-mail. Un relevé plus ancien, ou fait sur une autre adresse que celle de la source, est ignoré.
+À son passage suivant (toutes les 2 heures, à l’heure pile), la veille en ligne essaie toujours de lire le site directement. Si GitHub reste bloqué et que le relevé du PC a moins de 6 heures, elle fusionne ses annonces comme si elle les avait lues : mêmes clés, donc pas de doublon ni de fausse nouveauté, et les vraies nouveautés rejoignent le récapitulatif par e-mail. Un relevé plus ancien, ou fait sur une autre adresse que celle de la source, est ignoré.
 
 Le jeton est enregistré sur le PC dans `local-data/relais.json` (dossier ignoré par git). Il n’est jamais affiché, ni écrit dans le journal, ni servi par l’interface locale. « Désactiver le relais » le supprime.
 
@@ -199,7 +208,7 @@ Règles :
 - Seul l’objet de l’annonce compte (titre, résumé, nature), pas le nom de l’acheteur.
 - Une source peut imposer des catégories à toutes ses annonces.
 
-**Mots-clés exclus** (`settings.excludeKeywords`) : une annonce qui contient « travaux », « BTP », « génie civil », « voirie »… n’entre dans aucune catégorie, n’apparaît pas dans « Mes catégories » et ne déclenche pas d’alerte. La liste se modifie en bas de l’onglet Catégories.
+**Mots-clés exclus** (`settings.excludeKeywords`) : une annonce qui contient « travaux », « BTP », « génie civil », « voirie »… n’entre dans aucune catégorie, n’apparaît pas dans « Mes catégories » et ne figure pas dans le récapitulatif par e-mail. La liste se modifie en bas de l’onglet Catégories.
 
 ## Fonctionnement
 
@@ -207,11 +216,12 @@ Règles :
 Vigie sur votre PC (toutes les heures, relais activé)
   └─ commit             data/relais/<source>.json pour les sites que GitHub n'atteint pas
 
-GitHub Actions (toutes les 2 h)
+GitHub Actions (toutes les 2 h, à l'heure pile : 11 h, 13 h, 15 h, 17 h… à Nouméa)
   └─ npm run scrape     lit les sources, met à jour data/items.json et data/status.json
                         (site injoignable : relevé du PC repris s'il a moins de 6 h)
-  └─ commit             seulement si les annonces ont changé
-  └─ alerte             ticket GitHub si nouveautés dans vos catégories
+                        met en file les nouveautés de vos catégories (data/alert-queue.json)
+  └─ récapitulatif      à partir de 17 h, une fois par jour : e-mail HTML via Resend
+  └─ commit             seulement si les annonces ou la file ont changé
   └─ npm run build      assemble _site/ (interface + données + configuration)
   └─ GitHub Pages       publie https://gharel.github.io/scraping/
 ```
@@ -219,7 +229,7 @@ GitHub Actions (toutes les 2 h)
 | Dossier | Contenu |
 | --- | --- |
 | `config/veille.json` | Sources, catégories et réglages |
-| `data/` | Annonces connues, état des sources, état des pages surveillées, relevés relayés par le PC (`data/relais/`) |
+| `data/` | Annonces connues, état des sources, état des pages surveillées, relevés relayés par le PC (`data/relais/`), file du récapitulatif par e-mail (`alert-queue.json`) |
 | `scraper/` | Moteur de veille (Node.js) : lecteurs Atexo, RSS, liste CSS, page web |
 | `server/` | Serveur local (`npm start`) : interface, API, vérifications planifiées et relais |
 | `site/` | Interface web (HTML, CSS, JavaScript sans compilation) |
