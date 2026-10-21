@@ -2,9 +2,15 @@ name: Veille
 
 on:
   schedule:
-    # Toutes les 2 heures (à hh:17 UTC, soit hh:17 + 11 h à Nouméa).
-    - cron: '17 */2 * * *'
+    # Toutes les 2 heures, à l'heure pile (heures paires UTC, soit 11 h, 13 h, 15 h, 17 h… à Nouméa).
+    # Le passage de 17 h (06:00 UTC) prépare le récapitulatif quotidien par e-mail.
+    - cron: '0 */2 * * *'
   workflow_dispatch:
+    inputs:
+      force_digest:
+        description: Envoyer tout de suite le récapitulatif par e-mail
+        type: boolean
+        default: false
   push:
     branches: [main]
     paths-ignore:
@@ -13,7 +19,6 @@ on:
 
 permissions:
   contents: write
-  issues: write
   pages: write
   id-token: write
 
@@ -48,13 +53,21 @@ jobs:
       - name: Vérifier les sources
         env:
           VIGIE_APP_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
-        run: npm run scrape -- --alert alerte.json
+          VIGIE_FORCE_DIGEST: ${{ inputs.force_digest && '1' || '' }}
+        run: npm run scrape -- --digest recap.json
+
+      - name: Envoyer le récapitulatif par e-mail
+        if: hashFiles('recap.json') != ''
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          VIGIE_EMAIL_TO: ${{ secrets.VIGIE_EMAIL_TO }}
+        run: node scripts/send-digest.js recap.json
 
       - name: Enregistrer les nouvelles annonces
         run: |
           git config user.name "vigie[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/items.json data/snapshots
+          git add data/items.json data/snapshots data/alert-queue.json
           if git diff --cached --quiet; then
             echo "Aucune nouvelle donnée à enregistrer."
           else
@@ -65,15 +78,6 @@ jobs:
               sleep 5
             done
           fi
-
-      - name: Envoyer l'alerte par e-mail (ticket GitHub)
-        if: hashFiles('alerte.json') != ''
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          gh label create veille --color 50967c --description "Alertes de Vigie" 2>/dev/null || true
-          node -e "const a=require('./alerte.json');const fs=require('fs');fs.writeFileSync('alerte-titre.txt',a.title);fs.writeFileSync('alerte-corps.md',a.body)"
-          gh issue create --title "$(cat alerte-titre.txt)" --body-file alerte-corps.md --label veille
 
       - name: Préparer le site
         run: npm run build
