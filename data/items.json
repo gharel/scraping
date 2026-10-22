@@ -36,6 +36,26 @@
   },
   "items": [
     {
+      "id": "marchespublics-nc:f4g-3504",
+      "sourceId": "marchespublics-nc",
+      "kind": "consultation",
+      "title": "RÉNOVATION DE LA VILLA DITE « LE CHÂTEAU », SITUÉE À PORT-LAGUERRE – COMMUNE DE PAÏTA",
+      "summary": "La province Sud lance une consultation pour la rénovation de la villa dite « Le Château » située à Port-Laguerre – commune de Païta.",
+      "reference": "DAEM-APC-19-26",
+      "buyer": "Province Sud",
+      "buyerLocation": "Nouméa",
+      "location": "Province Sud",
+      "nature": "Travaux",
+      "procedure": "Procédure Autre (Subvention, Appel à projets, Délégation de service public)",
+      "procedureCode": "AUT",
+      "url": "https://portail.marchespublics.nc/entreprise/consultation/3504?orgAcronyme=f4g",
+      "publishedAt": "2026-10-23T00:00:00+11:00",
+      "deadline": "2026-11-10T15:30:00+11:00",
+      "lots": 6,
+      "firstSeen": "2026-10-22T22:54:33.135Z",
+      "lastSeen": "2026-10-22T22:54:33.135Z"
+    },
+    {
       "id": "province-nord:517b4cad256c9bc0",
       "sourceId": "province-nord",
       "kind": "consultation",
@@ -49,6 +69,59 @@
       "deadline": "2026-11-20T14:29:00+11:00",
       "firstSeen": "2026-10-22T00:22:22.912Z",
       "lastSeen": "2026-10-22T00:22:22.912Z"
+    },
+    {
+      "id": "marches-publics-etat:g7h-3091857",
+      "sourceId": "marches-publics-etat",
+      "kind": "consultation",
+      "title": "FOURNITURE D’EFFETS DE COUCHAGE AU PROFIT DES FORCES ARMEES DE LA NOUVELLE CALEDONIE (FANC), DU COMMANDEMENT DE LA GENDARMERIE",
+      "summary": "FOURNITURE D’EFFETS DE COUCHAGE AU PROFIT DES FORCES ARMEES DE LA NOUVELLE CALEDONIE (FANC), DU COMMANDEMENT DE LA GENDARMERIE (COMGEND-NC) ET DU REGIMENT DU SERVICE MILITAIRE ADAPTE (RSMA-NC)",
+      "reference": "2026-027",
+      "buyer": "Ministère des armées",
+      "location": "(988) Nouvelle-Calédonie, Nouvelle Calédonie",
+      "nature": "Fournitures",
+      "procedure": "Appel d'offres ouvert",
+      "procedureCode": "AOO",
+      "url": "https://www.marches-publics.gouv.fr/app.php/entreprise/consultation/3091857?orgAcronyme=g7h",
+      "publishedAt": "2026-10-22T00:00:00+11:00",
+      "deadline": "2026-11-26T01:30:00+11:00",
+      "firstSeen": "2026-10-22T22:58:23.797Z",
+      "lastSeen": "2026-10-22T22:58:23.797Z"
+    },
+    {
+      "id": "lnc-legales:f13e57aa642744b3",
+      "sourceId": "lnc-legales",
+      "kind": "consultation",
+      "title": "COMMUNE DE POUEMBOUT",
+      "url": "https://legales.lnc.nc/annonce/commune-de-pouembout-22-10-2026-31030",
+      "publishedAt": "2026-10-22T00:00:00+11:00",
+      "firstSeen": "2026-10-22T22:54:57.552Z",
+      "lastSeen": "2026-10-22T22:54:57.552Z"
+    },
+    {
+      "id": "lnc-legales:09ddf4f763578c86",
+      "sourceId": "lnc-legales",
+      "kind": "consultation",
+      "title": "Consultation pour des travaux de point à temps aux abords de la RT3section Col des roussettes PR15 au...",
+      "summary": "N° de Consultation : 2026/S3139 Consultation pour des travaux de point à temps aux abords de la RT3section Col des roussettes PR15 au...",
+      "reference": "2026/S3139",
+      "buyer": "PROVINCE NORD DAF",
+      "url": "https://legales.lnc.nc/annonce/province-nord-daf-direction-de-lamenagement-et-du-foncier-22-10-2026-31029",
+      "publishedAt": "2026-10-22T00:00:00+11:00",
+      "firstSeen": "2026-10-22T22:54:57.552Z",
+      "lastSeen": "2026-10-22T22:54:57.552Z"
+    },
+    {
+      "id": "lnc-legales:5a76776887a1600c",
+      "sourceId": "lnc-legales",
+      "kind": "consultation",
+      "title": "Fourniture et pose d’installations d’éclairage public Filaire et Solaire sur les communes d...",
+      "summary": "Appels d’offres , publié dans Marchés publics Province Nord le 22/10/2026 SIVM COTE EST SIVM COTE EST&nbsp;AVIS D’APPEL PUBLIC À LA CONCURRENCE - AVIS MODIFICATIF N° 1 SIVM/2026/TRVX/0001 Fourniture et pose d’installations d’éclairage public Filaire et Solaire sur les communes ... Lire la suite",
+      "buyer": "SIVM COTE EST",
+      "url": "https://legales.lnc.nc/annonce/sivm-cote-est-22-10-2026-31028",
+      "publishedAt": "2026-10-22T00:00:00+11:00",
+      "firstSeen": "2026-10-22T22:54:57.552Z",
+      "lastSeen": "2026-10-22T22:54:57.552Z"
     },
     {
       "id": "marchespublics-nc:h7u-3506",
@@ -474,7 +547,7 @@
       "url": "https://legales.lnc.nc/annonce/gouvernement-de-la-nouvelle-caledonie-vice-rectorat-de-la-nouvelle-caledonie-20-10-2026-30947",
       "publishedAt": "2026-10-20T00:00:00+11:00",
       "firstSeen": "2026-10-21T07:37:46.879Z",
-      "lastSeen": "2026-10-21T07:37:46.879Z"
+      "lastSeen": "2026-10-22T22:54:57.552Z"
     },
     {
       "id": "lnc-legales:f6f4c24ef3eea61b",
@@ -4267,10 +4340,19 @@
       "procedureCode": "AOO",
       "url": "https://portail.marchespublics.nc/entreprise/consultation/3444?orgAcronyme=h5j",
       "publishedAt": "2026-10-05T00:00:00+11:00",
-      "deadline": "2026-10-27T15:00:00+11:00",
+      "deadline": "2026-11-10T15:00:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
       "lastSeen": "2026-10-22T00:21:05.752Z",
-      "seed": true
+      "seed": true,
+      "updatedAt": "2026-10-22T22:54:33.135Z",
+      "history": [
+        {
+          "at": "2026-10-22T22:54:33.135Z",
+          "field": "deadline",
+          "from": "2026-10-27T15:00:00+11:00",
+          "to": "2026-11-10T15:00:00+11:00"
+        }
+      ]
     },
     {
       "id": "marches-publics-etat:s2d-3078814",
