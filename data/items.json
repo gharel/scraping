@@ -36,6 +36,21 @@
   },
   "items": [
     {
+      "id": "cps-appels-offres:9e02019d7414c877",
+      "sourceId": "cps-appels-offres",
+      "kind": "consultation",
+      "title": "Specialist hydrogeological advice and technical support for the aquifer conceptualisation of priority aquifers and preparation for the Aquifer Conceptualisation and Management Planning Workshop",
+      "reference": "RFQ26-10873",
+      "location": "Home-based",
+      "nature": "Services",
+      "status": "Advertised",
+      "url": "https://www.spc.int/procurement/tenders/specialist-hydrogeological-advice-and-technical-support-for-the-aquifer",
+      "publishedAt": "2026-10-23T02:52:00.000Z",
+      "deadline": "2026-10-30T12:00:00.000Z",
+      "firstSeen": "2026-10-23T09:05:19.939Z",
+      "lastSeen": "2026-10-23T09:05:19.939Z"
+    },
+    {
       "id": "cps-appels-offres:7564d09f54274b10",
       "sourceId": "cps-appels-offres",
       "kind": "consultation",
@@ -49,6 +64,63 @@
       "deadline": "2026-12-06T12:00:00.000Z",
       "firstSeen": "2026-10-23T02:53:59.311Z",
       "lastSeen": "2026-10-23T02:53:59.311Z"
+    },
+    {
+      "id": "marches-publics-etat:g6l-3091877",
+      "sourceId": "marches-publics-etat",
+      "kind": "consultation",
+      "title": "Rénovation du bâtiment A du collège de Lano Alofivai - île de Wallis",
+      "summary": "Rénovation du bâtiment A du collège de Lano Alofivai - île de Wallis",
+      "reference": "2026-E-PA-83-VR",
+      "buyer": "Ministère de l'Intérieur",
+      "location": "(986) Wallis-et-Futuna, Wallis et Futuna",
+      "nature": "Travaux",
+      "procedure": "Procédure adaptée",
+      "procedureCode": "MAPA",
+      "url": "https://www.marches-publics.gouv.fr/app.php/entreprise/consultation/3091877?orgAcronyme=g6l",
+      "publishedAt": "2026-10-23T00:00:00+11:00",
+      "deadline": "2026-11-23T00:30:00+11:00",
+      "firstSeen": "2026-10-23T09:05:09.882Z",
+      "lastSeen": "2026-10-23T09:05:09.882Z"
+    },
+    {
+      "id": "marchespublics-nc:v5b-3511",
+      "sourceId": "marchespublics-nc",
+      "kind": "consultation",
+      "title": "CONSTRUCTION DE LA CUISINE CENTRALE THUMA DE TUO MARE",
+      "summary": "CONSTRUCTION DE LA CUISINE CENTRALE THUMA DE TUO MARE. La Commune de MARE informe Mesdames, Messieurs les entrepreneurs du lancement de l'appel d'offres pour la Construction de la cuisine centrale Thuma de Tuo MARE. Les travaux de construction comprennent QUINZE (15) lots séparés. Le dossier peut-être téléchargé sur la plate-forme des marchés publics ou être retiré à Tirage de Plans, 8 rue Valbonne Nouméa.",
+      "reference": "AOO-983152026T03",
+      "buyer": "Commune de Maré",
+      "buyerLocation": "Tadine - Maré",
+      "location": "Province des Îles Loyauté",
+      "nature": "Travaux",
+      "procedure": "Appel d'offres ouvert",
+      "procedureCode": "AOO",
+      "url": "https://portail.marchespublics.nc/entreprise/consultation/3511?orgAcronyme=v5b",
+      "publishedAt": "2026-10-23T00:00:00+11:00",
+      "deadline": "2026-11-17T11:00:00+11:00",
+      "lots": 14,
+      "firstSeen": "2026-10-23T08:59:07.530Z",
+      "lastSeen": "2026-10-23T08:59:07.530Z"
+    },
+    {
+      "id": "marchespublics-nc:c5d-3510",
+      "sourceId": "marchespublics-nc",
+      "kind": "consultation",
+      "title": "Fourniture et installation de faisceaux hertziens pour sites mobile",
+      "summary": "Fourniture et installation de faisceaux hertziens pour sites mobile",
+      "reference": "D0167",
+      "buyer": "Office des Postes et Télécommunications de Nouvelle-Calédonie",
+      "buyerLocation": "Nouméa",
+      "location": "Province Sud, Province Nord, Province des Îles Loyauté",
+      "nature": "Fournitures",
+      "procedure": "Appel d'offres ouvert",
+      "procedureCode": "AOO",
+      "url": "https://portail.marchespublics.nc/entreprise/consultation/3510?orgAcronyme=c5d",
+      "publishedAt": "2026-10-23T00:00:00+11:00",
+      "deadline": "2026-11-16T15:00:00+11:00",
+      "firstSeen": "2026-10-23T08:59:07.530Z",
+      "lastSeen": "2026-10-23T08:59:07.530Z"
     },
     {
       "id": "lnc-legales:d01dd97a6f66fcd2",
@@ -2901,10 +2973,19 @@
       "procedureCode": "AOO",
       "url": "https://portail.marchespublics.nc/entreprise/consultation/3465?orgAcronyme=y6u",
       "publishedAt": "2026-10-09T00:00:00+11:00",
-      "deadline": "2026-11-02T11:00:00+11:00",
+      "deadline": "2026-11-09T11:00:00+11:00",
       "lots": 3,
       "firstSeen": "2026-10-09T16:59:26.304Z",
-      "lastSeen": "2026-10-23T02:49:55.705Z"
+      "lastSeen": "2026-10-23T02:49:55.705Z",
+      "updatedAt": "2026-10-23T08:59:07.530Z",
+      "history": [
+        {
+          "at": "2026-10-23T08:59:07.530Z",
+          "field": "deadline",
+          "from": "2026-11-02T11:00:00+11:00",
+          "to": "2026-11-09T11:00:00+11:00"
+        }
+      ]
     },
     {
       "id": "marches-publics-etat:g6l-3082894",
