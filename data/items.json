@@ -36,6 +36,45 @@
   },
   "items": [
     {
+      "id": "marchespublics-nc:s3d-3485",
+      "sourceId": "marchespublics-nc",
+      "kind": "consultation",
+      "title": "ANIMATION CENTRE VILLE – PROGRAMMATION ET ORGANISATION D’ÉVÈNEMENTS TYPE « JEUDIS DU CENTRE-VILLE »",
+      "summary": "La prestation consistera en la gestion de la programmation, la logistique et la mise en place des évènements type « Jeudis du centre-ville » avec ses aspects techniques, fonctionnels et sécuritaires ainsi que la régie déléguée comprenant principalement:\nMission de conseil auprès du maître d’ouvrage ; Conception et mise en œuvre des animations des « Jeudis du centre-ville »; Définition des besoins logistiques nécessaires à la mise en œuvre des animations auprès du maître d’ouvrage; Mission de régie déléguée.",
+      "reference": "26C040",
+      "buyer": "Ville de Nouméa",
+      "buyerLocation": "Nouméa",
+      "location": "Province Sud",
+      "nature": "Services",
+      "procedure": "Procédure Autre (Subvention, Appel à projets, Délégation de service public)",
+      "procedureCode": "AUT",
+      "url": "https://portail.marchespublics.nc/entreprise/consultation/3485?orgAcronyme=s3d",
+      "publishedAt": "2026-10-26T00:00:00+11:00",
+      "deadline": "2026-11-26T15:30:00+11:00",
+      "firstSeen": "2026-10-25T22:13:02.868Z",
+      "lastSeen": "2026-10-25T22:13:02.868Z"
+    },
+    {
+      "id": "marchespublics-nc:f4g-3505",
+      "sourceId": "marchespublics-nc",
+      "kind": "consultation",
+      "title": "REMPLACEMENT DES OUVRAGES DE CLIMATISATION DE VENTILATION SUR LE BÂTIMENT DE LA DEL DOUMER",
+      "summary": "La province Sud lance un appel public à concurrence pour le REMPLACEMENT DES OUVRAGES DE CLIMATISATION DE VENTILATION SUR LE BÂTIMENT DE LA DEL DOUMER.",
+      "reference": "DAEM-APC-23-26",
+      "buyer": "Province Sud",
+      "buyerLocation": "Nouméa",
+      "location": "Province Sud",
+      "nature": "Travaux",
+      "procedure": "Procédure Autre (Subvention, Appel à projets, Délégation de service public)",
+      "procedureCode": "AUT",
+      "url": "https://portail.marchespublics.nc/entreprise/consultation/3505?orgAcronyme=f4g",
+      "publishedAt": "2026-10-26T00:00:00+11:00",
+      "deadline": "2026-11-20T15:30:00+11:00",
+      "lots": 3,
+      "firstSeen": "2026-10-25T22:13:02.868Z",
+      "lastSeen": "2026-10-25T22:13:02.868Z"
+    },
+    {
       "id": "cps-appels-offres:9e02019d7414c877",
       "sourceId": "cps-appels-offres",
       "kind": "consultation",
@@ -173,6 +212,21 @@
       "lots": 6,
       "firstSeen": "2026-10-22T22:54:33.135Z",
       "lastSeen": "2026-10-25T02:37:49.427Z"
+    },
+    {
+      "id": "fsh:4ba49968f730f235",
+      "sourceId": "fsh",
+      "kind": "consultation",
+      "title": "Avis d’Appel d’offres – Remplacement des contrôles d’accès sur le Parc de logement du Fonds Calédonien de l’Habitat",
+      "summary": "#top .av-post-metadata-container.av-kfpd1q0k-c94a9810fc170c8b122cb8bef027931a{\ncolor:#bfbfbf;\n}\n\n22/10/2026\n\n.flex_column.av-keinxhp5-aec6709f9b1ca71e98bc61da82ce6be0{\nborder-radius:0px 0px 0px 0px;\npadding:20px 0px 0px 0px;\nbackground:url(https://www.fsh.nc/wp-content/uploads/2019/11/bk_chevron_bleu-1.png) 100% 50% no-repeat scroll ;\n}\n\nAvis d’Appel d’offres – Remplacement des contrôles d’accès sur le Parc de logement du Fonds Calédonien de l’Habitat\n\nLe Fonds Calédonien de l’Habitat, informe les entrepreneurs qu’il lance un appel d’offres ouvert pour le « Remplacement des contrôles d’accès sur le Parc de logement du Fonds Calédonien de l’Habitat »\n\nIl est demandé aux prestataires qui retirent les fichiers numériques sur le site www.fsh.nc d’envoyer un courriel à l’attention de nlevy@fsh.nc et flapetite@fsh.nc, avec comme objet « Contrôle accès portail FCH », sans autre formalité.\n\nCet envoi aura pour seul but d’établir la liste des courriels des prestataires qui ont retiré ces dossiers pour pouvoir les contacter en cas de modification avant la fin de l’appel d’offres.\n\nLes offres devront parvenir au FSH au plus tard le vendredi 13 novembre 2026 à 11h00.\n\nDossier téléchargeable ci-dessous :\n\nAvis Appel d’offres Travaux-Contrôle d’accès\n\nPièce 00 – RPAO PPI 2026- Contrôle d’accès\n\nDCE – Contrôle d’accès -FCH\n\nPartager cet articlePartager sur Facebook\nPartager par Mail",
+      "url": "https://www.fsh.nc/appels-offres/avis-dappel-doffres-remplacement-des-controles-dacces-sur-le-parc-de-logement-du-fonds-caledonien-de-lhabitat/?utm_source=rss&utm_medium=rss&utm_campaign=avis-dappel-doffres-remplacement-des-controles-dacces-sur-le-parc-de-logement-du-fonds-caledonien-de-lhabitat",
+      "publishedAt": "2026-10-22T03:29:11.000Z",
+      "deadline": "2026-11-13T11:00:00+11:00",
+      "tags": [
+        "appels offres"
+      ],
+      "firstSeen": "2026-10-25T22:13:16.232Z",
+      "lastSeen": "2026-10-25T22:13:16.232Z"
     },
     {
       "id": "province-nord:517b4cad256c9bc0",
@@ -5113,10 +5167,19 @@
       "procedureCode": "MAPA",
       "url": "https://www.marches-publics.gouv.fr/app.php/entreprise/consultation/3075834?orgAcronyme=g6l",
       "publishedAt": "2026-09-29T00:00:00+11:00",
-      "deadline": "2026-10-30T00:30:00+11:00",
+      "deadline": "2026-11-13T11:30:00+11:00",
       "firstSeen": "2026-10-08T09:13:16.353Z",
       "lastSeen": "2026-10-25T02:41:54.176Z",
-      "seed": true
+      "seed": true,
+      "updatedAt": "2026-10-25T22:17:03.724Z",
+      "history": [
+        {
+          "at": "2026-10-25T22:17:03.724Z",
+          "field": "deadline",
+          "from": "2026-10-30T00:30:00+11:00",
+          "to": "2026-11-13T11:30:00+11:00"
+        }
+      ]
     },
     {
       "id": "marches-publics-etat:g6l-3075829",
