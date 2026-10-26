@@ -36,6 +36,21 @@
   },
   "items": [
     {
+      "id": "cps-appels-offres:8c98e3e812f885db",
+      "sourceId": "cps-appels-offres",
+      "kind": "consultation",
+      "title": "RE-ADVERTISED - Procurement of Value Adding Equipment for Ovava Organic Learning Farm (OLF)",
+      "reference": "RFQ26-10721",
+      "location": "Vava’u, Tonga",
+      "nature": "Goods",
+      "status": "Advertised",
+      "url": "https://www.spc.int/procurement/tenders/re-advertised-procurement-of-value-adding-equipment-for-ovava-organic-learning",
+      "publishedAt": "2026-10-26T03:20:32.000Z",
+      "deadline": "2026-11-08T12:00:00.000Z",
+      "firstSeen": "2026-10-26T09:37:23.392Z",
+      "lastSeen": "2026-10-26T09:37:23.392Z"
+    },
+    {
       "id": "cps-appels-offres:3074a0b2ce5ad09c",
       "sourceId": "cps-appels-offres",
       "kind": "consultation",
@@ -49,6 +64,51 @@
       "deadline": "2026-11-08T12:00:00.000Z",
       "firstSeen": "2026-10-26T02:40:27.644Z",
       "lastSeen": "2026-10-26T02:40:27.644Z"
+    },
+    {
+      "id": "wallis-futuna:f1ebec1fcb0094cb",
+      "sourceId": "wallis-futuna",
+      "kind": "consultation",
+      "title": "Travaux de finition du bâtiment du marché couvert de Fiua au royaume de SIGAVE",
+      "summary": "Avis de marché : Travaux de finition du bâtiment du marché couvert de Fiua au royaume de SIGAVE La CCIMA Wallis et Futuna lance le marché public suivant : Travaux de finition du bâtiment du marché couvert de Fiua au royaume de SIGAVE Référence : 2026-001 Date limite de réception des offres : Vendredi 27 novembre 2026 à 12h00 (heure de Wallis). https://ccima.wf/appels-doffres/avis-de-march%C3%A9-public-travaux-de-finition-du-b%C3%A2timent-du-march%C3%A9-couvert-de-fiua/ Télécharger Avis_de_marché_-_Travaux_finition_bâtiment_Fiua PDF - 0,33 Mb - 26/10/2026",
+      "reference": "2026-001",
+      "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15393/126379/file/Avis_de_march%C3%A9_-_Travaux_finition_b%C3%A2timent_Fiua.pdf",
+      "publishedAt": "2026-10-26T00:00:00+11:00",
+      "deadline": "2026-11-27T12:00:00+11:00",
+      "firstSeen": "2026-10-26T09:36:24.941Z",
+      "lastSeen": "2026-10-26T09:36:24.941Z"
+    },
+    {
+      "id": "wallis-futuna:3028726b618f9e5e",
+      "sourceId": "wallis-futuna",
+      "kind": "consultation",
+      "title": "Travaux de fourniture et pose de panneaux photovoltaïques sur les bâtiments à charge de la Circonscription d'Uvea - PROLONGATION",
+      "summary": "Avis de marché : travaux de fourniture et pose de panneaux photovoltaïques sur les bâtiments à charge de la Circonscription d'Uvea - PROLONGATION La Circonscription d'Uvea lance le marché public suivant : accord-cadre à bons de commande relatif aux travaux de fourniture et pose de panneaux photovoltaïques sur les bâtiments à charge de la Circonscription d'Uvea Référence : 2026-E-PA-55-CIRCO Date limite de réception des offres : vendredi 13 novembre 2026 à 11h30 (heure de Wallis). - Dépôt de l'offre : La transmission électronique des plis se fera uniquement sur le profil acheteur de…",
+      "reference": "2026-E-PA-55-CIRCO",
+      "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15394/126384/file/Avis%20march%C3%A9%20-%20PROLONGATION%201.pdf",
+      "publishedAt": "2026-10-26T00:00:00+11:00",
+      "deadline": "2026-11-13T11:30:00+11:00",
+      "firstSeen": "2026-10-26T09:36:24.941Z",
+      "lastSeen": "2026-10-26T09:36:24.941Z"
+    },
+    {
+      "id": "marchespublics-nc:b8r-3512",
+      "sourceId": "marchespublics-nc",
+      "kind": "consultation",
+      "title": "Consultation relative au lot N°02 - RENOVATION ET EXTENSION DU CENTRE D’INCENDIE ET DE SECOURS DE LIFOU - CISL",
+      "summary": "Appel d’Offres Ouvert pour le lot nᵒ 02 (Fondations – Gros OEuvre – Maçonnerie) relatif à la Rénovation et Extension du Centre d’Incendie et de Secours de Lifou – CISL.\nLe marché sera conclu avec un groupement d'entreprises agissant conjointement avec pour mandataire le titulaire du lot 02 : Fondations – Gros OEuvre – Maçonnerie.",
+      "reference": "3emeRENOV-CIS-LIF",
+      "buyer": "Commune de Lifou",
+      "buyerLocation": "Lifou",
+      "location": "Province des Îles Loyauté",
+      "nature": "Travaux",
+      "procedure": "Appel d'offres ouvert",
+      "procedureCode": "AOO",
+      "url": "https://portail.marchespublics.nc/entreprise/consultation/3512?orgAcronyme=b8r",
+      "publishedAt": "2026-10-26T00:00:00+11:00",
+      "deadline": "2026-11-16T15:00:00+11:00",
+      "firstSeen": "2026-10-26T09:33:14.569Z",
+      "lastSeen": "2026-10-26T09:33:14.569Z"
     },
     {
       "id": "wallis-futuna:a156c84142cbce8a",
@@ -4463,6 +4523,18 @@
       "goneAt": "2026-10-26T02:40:27.644Z"
     },
     {
+      "id": "ifap:784ad6dbde1cbd1f",
+      "sourceId": "ifap",
+      "kind": "consultation",
+      "title": "Repères socioculturels en contexte calédonien",
+      "status": "20/11/2026",
+      "url": "https://www.ifap.nc/sites/default/files/2026-10/26_SAS14_CONS_0.pdf",
+      "publishedAt": "2026-10-06T00:00:00+11:00",
+      "deadline": "2026-11-20T00:00:00+11:00",
+      "firstSeen": "2026-10-26T09:33:39.860Z",
+      "lastSeen": "2026-10-26T09:33:39.860Z"
+    },
+    {
       "id": "marches-publics-etat:g6l-3058249",
       "sourceId": "marches-publics-etat",
       "kind": "consultation",
@@ -4647,7 +4719,9 @@
           "from": "26 SAS14 CONS Repères socioculturels en contexte calédonien",
           "to": "Repères socioculturels en contexte calédonien"
         }
-      ]
+      ],
+      "gone": true,
+      "goneAt": "2026-10-26T09:33:39.860Z"
     },
     {
       "id": "province-nord:1ed30beb7405d268",
@@ -4919,7 +4993,9 @@
       "deadline": "2026-10-26T14:00:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
       "lastSeen": "2026-10-26T02:36:09.163Z",
-      "seed": true
+      "seed": true,
+      "gone": true,
+      "goneAt": "2026-10-26T09:33:14.569Z"
     },
     {
       "id": "cps-appels-offres:0d5b9a8b6f7e7f71",
@@ -5147,7 +5223,9 @@
       "deadline": "2026-10-26T15:30:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
       "lastSeen": "2026-10-26T02:36:09.163Z",
-      "seed": true
+      "seed": true,
+      "gone": true,
+      "goneAt": "2026-10-26T09:33:14.569Z"
     },
     {
       "id": "marchespublics-nc:f4g-3439",
@@ -5344,7 +5422,9 @@
           "from": "CIRCO0.Avis marché",
           "to": "Travaux de fourniture et pose de panneaux photovoltaïques sur les bâtiments à charge de la Circonscription d'Uvea"
         }
-      ]
+      ],
+      "gone": true,
+      "goneAt": "2026-10-26T09:36:24.941Z"
     },
     {
       "id": "province-sud-avis:98d168b0d5702fc1",
@@ -6190,7 +6270,9 @@
       "deadline": "2026-10-26T15:00:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
       "lastSeen": "2026-10-26T02:36:09.163Z",
-      "seed": true
+      "seed": true,
+      "gone": true,
+      "goneAt": "2026-10-26T09:33:14.569Z"
     },
     {
       "id": "marchespublics-nc:s9s-3426",
@@ -6350,7 +6432,9 @@
       "deadline": "2026-10-26T16:00:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
       "lastSeen": "2026-10-26T02:36:09.163Z",
-      "seed": true
+      "seed": true,
+      "gone": true,
+      "goneAt": "2026-10-26T09:33:14.569Z"
     },
     {
       "id": "marchespublics-nc:f4g-3408",
@@ -6371,7 +6455,9 @@
       "lots": 2,
       "firstSeen": "2026-10-08T07:01:04.349Z",
       "lastSeen": "2026-10-26T02:36:09.163Z",
-      "seed": true
+      "seed": true,
+      "gone": true,
+      "goneAt": "2026-10-26T09:33:14.569Z"
     },
     {
       "id": "marchespublics-nc:s9s-3419",
