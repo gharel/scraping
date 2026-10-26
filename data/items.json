@@ -6911,10 +6911,19 @@
       "procedureCode": "AOO",
       "url": "https://www.marches-publics.gouv.fr/app.php/entreprise/consultation/3062494?orgAcronyme=g6l",
       "publishedAt": "2026-09-14T00:00:00+11:00",
-      "deadline": "2026-11-03T12:00:00+11:00",
+      "deadline": "2026-11-18T12:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:16.353Z",
       "lastSeen": "2026-10-26T02:40:20.224Z",
-      "seed": true
+      "seed": true,
+      "updatedAt": "2026-10-26T16:28:00.162Z",
+      "history": [
+        {
+          "at": "2026-10-26T16:28:00.162Z",
+          "field": "deadline",
+          "from": "2026-11-03T12:00:00+11:00",
+          "to": "2026-11-18T12:00:00+11:00"
+        }
+      ]
     },
     {
       "id": "marches-publics-etat:f2h-3062309",
