@@ -64,6 +64,24 @@
       "lastSeen": "2026-10-28T00:52:49.470Z"
     },
     {
+      "id": "marches-publics-etat:f2h-3087414",
+      "sourceId": "marches-publics-etat",
+      "kind": "consultation",
+      "title": "Marché public portant sur le déploiement d’une flottille de cinq planeurs équipés de capteurs dans le cadre d’une expédition",
+      "summary": "La présente consultation a pour objet la réalisation de prestations de services portant sur l’intégration d’un nouveau capteur sur des planeurs sous-marins ainsi que sur le déploiement d’une flottille de cinq planeurs équipés de ces capteurs et d’autres capteurs, destinés à l’acquisition et au traitement de données dans le cadre d’une expédition océanographique pour le compte du Laboratoire d'Océanographie de Villefranche (LOV).",
+      "reference": "2026-09",
+      "buyer": "Etablissements et organismes de l'enseignement supérieur, de la recherche et de l'innovation",
+      "location": "(988) Nouvelle-Calédonie, Nouvelle Calédonie, (06) Alpes-Maritimes",
+      "nature": "Services",
+      "procedure": "Appel d'offres ouvert",
+      "procedureCode": "AOO",
+      "url": "https://www.marches-publics.gouv.fr/app.php/entreprise/consultation/3087414?orgAcronyme=f2h",
+      "publishedAt": "2026-10-28T00:00:00+11:00",
+      "deadline": "2026-11-25T19:00:00+11:00",
+      "firstSeen": "2026-10-28T14:48:49.245Z",
+      "lastSeen": "2026-10-28T14:48:49.245Z"
+    },
+    {
       "id": "lnc-legales:c0dfa5dd0ac02a9d",
       "sourceId": "lnc-legales",
       "kind": "consultation",
