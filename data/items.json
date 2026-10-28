@@ -36,6 +36,19 @@
   },
   "items": [
     {
+      "id": "wallis-futuna:df5465ecd32dbbe0",
+      "sourceId": "wallis-futuna",
+      "kind": "consultation",
+      "title": "Accord-cadre à bons de commande en vue de la fourniture de matériaux pour la réhabilitation d’habitations insalubres sur l’île de Futuna",
+      "summary": "Avis de marché : Accord-cadre à bons de commande en vue de la fourniture de matériaux pour la réhabilitation d’habitations insalubres sur l’île de Futuna L'Administration supérieure des îles Wallis et Futuna lance le marché public suivant : Accord-cadre à bons de commande en vue de la fourniture de matériaux pour la réhabilitation d’habitations insalubres sur l’île de Futuna Référence : 2026-T-AO-74-TP Date limite de réception des offres : Lundi 30 novembre 2026 à 11h30 (heure de Wallis). - Dépôt de l'offre : La transmission électronique des plis se fera uniquement sur le profil acheteur de…",
+      "reference": "2026-T-AO-74-TP",
+      "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15397/126399/file/Avis%20de%20march%C3%A9%20-%20RHI%20Futuna.pdf",
+      "publishedAt": "2026-10-29T00:00:00+11:00",
+      "deadline": "2026-11-30T11:30:00+11:00",
+      "firstSeen": "2026-10-28T20:45:59.607Z",
+      "lastSeen": "2026-10-28T20:45:59.607Z"
+    },
+    {
       "id": "cps-appels-offres:5d422038263b1bbb",
       "sourceId": "cps-appels-offres",
       "kind": "consultation",
@@ -62,6 +75,24 @@
       ],
       "firstSeen": "2026-10-28T00:52:49.470Z",
       "lastSeen": "2026-10-28T00:52:49.470Z"
+    },
+    {
+      "id": "marches-publics-etat:d4t-3032744",
+      "sourceId": "marches-publics-etat",
+      "kind": "consultation",
+      "title": "Prestations de formations spécifiques ATSEP dédié aux outils de radiocommunication aéronautique de marque TELERAD.",
+      "summary": "Le contrat porte sur les prestations suivantes : Programme de formations spécifiques ATSEP dédié aux outils de radiocommunication aéronautique de marque TELERAD.\n\nLe présent marché définit les prestations de formations spécifiques destinées aux ATSEP dédiés aux outils de radiocommunication aéronautique de marque TELERAD.\n\nObjectifs :\n• Garantir les compétences nécessaires au MCO (Maintien en Conditions Opérationnelles) des systèmes radio ;\n• Former 20 à 60 agents par an ;\n• Commander des sessions de formation dédiées à la DGAC, selon les besoins opérationnels dans les locaux du titulaire et dans les locaux de la DGAC ;\n• Commander des places dans les sessions planifiées et organisées par le titulaire.",
+      "reference": "2026-05-SDRH",
+      "buyer": "Ministère de la Transition Écologique, Ministère de la Cohésion des Territoires, Ministère de la Mer",
+      "location": "(988) Nouvelle-Calédonie, Nouvelle Calédonie, (971) Guadeloupe +4",
+      "nature": "Services",
+      "procedure": "Procédure avec négociations",
+      "procedureCode": "PAN",
+      "url": "https://www.marches-publics.gouv.fr/app.php/entreprise/consultation/3032744?orgAcronyme=d4t",
+      "publishedAt": "2026-10-28T00:00:00+11:00",
+      "deadline": "2026-11-12T12:00:00+11:00",
+      "firstSeen": "2026-10-28T20:46:47.143Z",
+      "lastSeen": "2026-10-28T20:46:47.143Z"
     },
     {
       "id": "marches-publics-etat:f2h-3087414",
