@@ -1,21 +1,4 @@
 {
-  "lastDigest": "2026-10-27",
-  "items": [
-    {
-      "id": "wallis-futuna:810632d0d59f5ca5",
-      "queuedAt": "2026-10-27T20:24:29.156Z"
-    },
-    {
-      "id": "wallis-futuna:9e30494ef256dde1",
-      "queuedAt": "2026-10-27T20:24:29.156Z"
-    },
-    {
-      "id": "wallis-futuna:08e746ba9221947f",
-      "queuedAt": "2026-10-27T20:24:29.156Z"
-    },
-    {
-      "id": "lnc-legales:86fa7cf544b7eb71",
-      "queuedAt": "2026-10-28T00:54:38.037Z"
-    }
-  ]
+  "lastDigest": "2026-10-28",
+  "items": []
 }

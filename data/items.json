@@ -36,6 +36,21 @@
   },
   "items": [
     {
+      "id": "cps-appels-offres:5d422038263b1bbb",
+      "sourceId": "cps-appels-offres",
+      "kind": "consultation",
+      "title": "Pacific Community Strategic Plan 2022–2031 Five-Year Milestone Review",
+      "reference": "RFQ26-10783",
+      "location": "Pacific region",
+      "nature": "Services",
+      "status": "Advertised",
+      "url": "https://www.spc.int/procurement/tenders/pacific-community-strategic-plan-2022-2031-five-year-milestone-review",
+      "publishedAt": "2026-10-28T03:38:58.000Z",
+      "deadline": "2026-11-11T12:00:00.000Z",
+      "firstSeen": "2026-10-28T07:51:57.728Z",
+      "lastSeen": "2026-10-28T07:51:57.728Z"
+    },
+    {
       "id": "province-sud-appels-a-projets:e95a7eda298e24fa",
       "sourceId": "province-sud-appels-a-projets",
       "kind": "appel-a-projets",
@@ -47,6 +62,57 @@
       ],
       "firstSeen": "2026-10-28T00:52:49.470Z",
       "lastSeen": "2026-10-28T00:52:49.470Z"
+    },
+    {
+      "id": "lnc-legales:c0dfa5dd0ac02a9d",
+      "sourceId": "lnc-legales",
+      "kind": "consultation",
+      "title": "I DMAX 458 293 NC REVISION 95 000 KM H",
+      "summary": "N° de Consultation : 2026/S3219 I DMAX 458 293 NC REVISION 95 000 KM H MOTEUR + F HUILE + F AIR + VIDANGE PONTS AV/AR + LAVE GLACE + ...",
+      "reference": "2026/S3219",
+      "buyer": "PROVINCE NORD DAJAP",
+      "url": "https://legales.lnc.nc/annonce/province-nord-dajap-direction-des-affaires-administratives-28-10-2026-31280",
+      "publishedAt": "2026-10-28T00:00:00+11:00",
+      "firstSeen": "2026-10-28T07:48:23.132Z",
+      "lastSeen": "2026-10-28T07:48:23.132Z"
+    },
+    {
+      "id": "lnc-legales:65a1f89e5c2dec76",
+      "sourceId": "lnc-legales",
+      "kind": "consultation",
+      "title": "Fourniture d'équipements d'arrimage (sangles, chaines et tendeurs) pour remorque porte-engins",
+      "summary": "N° de Consultation : 2026/S3218 Fourniture d'équipements d'arrimage (sangles, chaines et tendeurs) pour remorque porte-engins La DA...",
+      "reference": "2026/S3218",
+      "buyer": "PROVINCE NORD DAF",
+      "url": "https://legales.lnc.nc/annonce/province-nord-daf-direction-de-lamenagement-et-du-foncier-28-10-2026-31279",
+      "publishedAt": "2026-10-28T00:00:00+11:00",
+      "firstSeen": "2026-10-28T07:48:23.132Z",
+      "lastSeen": "2026-10-28T07:48:23.132Z"
+    },
+    {
+      "id": "lnc-legales:3076d95d78e4ee5a",
+      "sourceId": "lnc-legales",
+      "kind": "consultation",
+      "title": "Fourniture d'une durite de direction - Volvo FMX 385 306 NC",
+      "summary": "N° de Consultation : 2026/S3217 Fourniture d'une durite de direction - Volvo FMX 385 306 NC La DAF, subdivision de Koné, secteur To...",
+      "reference": "2026/S3217",
+      "buyer": "PROVINCE NORD DAF",
+      "url": "https://legales.lnc.nc/annonce/province-nord-daf-direction-de-lamenagement-et-du-foncier-28-10-2026-31278",
+      "publishedAt": "2026-10-28T00:00:00+11:00",
+      "firstSeen": "2026-10-28T07:48:23.132Z",
+      "lastSeen": "2026-10-28T07:48:23.132Z"
+    },
+    {
+      "id": "ifap:29bcadb8f783f0c1",
+      "sourceId": "ifap",
+      "kind": "consultation",
+      "title": "Droit de la famille",
+      "status": "30/11/2026",
+      "url": "https://www.ifap.nc/sites/default/files/2026-10/26_SAS17_CONS_0.pdf",
+      "publishedAt": "2026-10-28T00:00:00+11:00",
+      "deadline": "2026-11-30T00:00:00+11:00",
+      "firstSeen": "2026-10-28T07:48:17.516Z",
+      "lastSeen": "2026-10-28T07:48:17.516Z"
     },
     {
       "id": "marches-publics-etat:g6l-3094937",
@@ -203,6 +269,120 @@
       "lastSeen": "2026-10-28T00:51:59.023Z"
     },
     {
+      "id": "lnc-legales:60ad60d74794d8c5",
+      "sourceId": "lnc-legales",
+      "kind": "consultation",
+      "title": "F + P DE",
+      "summary": "N° de Consultation : 2026/S3162 F + P DE CLOTURE La Direction des Affaires Juridiques, Administratives et du Patrimoine lance, pour le...",
+      "reference": "2026/S3162",
+      "buyer": "PROVINCE NORD DAJAP",
+      "url": "https://legales.lnc.nc/annonce/province-nord-dajap-direction-des-affaires-administratives-27-10-2026-31277",
+      "publishedAt": "2026-10-27T00:00:00+11:00",
+      "firstSeen": "2026-10-28T07:48:23.132Z",
+      "lastSeen": "2026-10-28T07:48:23.132Z"
+    },
+    {
+      "id": "lnc-legales:819c6d129e167827",
+      "sourceId": "lnc-legales",
+      "kind": "consultation",
+      "title": "SECHE LINGE AVEC CONDENSATION - CMS VOH",
+      "summary": "N° de Consultation : 2026/S3214 SECHE LINGE AVEC CONDENSATION - CMS VOH Un devis pour le CMS...",
+      "reference": "2026/S3214",
+      "buyer": "PROVINCE NORD DASSPS",
+      "url": "https://legales.lnc.nc/annonce/province-nord-dassps-direction-des-affaires-sanitaires-et-sociales-et-des-problemes-de-societe-27-10-2026-31276",
+      "publishedAt": "2026-10-27T00:00:00+11:00",
+      "firstSeen": "2026-10-28T07:48:23.132Z",
+      "lastSeen": "2026-10-28T07:48:23.132Z"
+    },
+    {
+      "id": "lnc-legales:efdca50591fb5ebf",
+      "sourceId": "lnc-legales",
+      "kind": "consultation",
+      "title": "Fourniture de fruits et légumes pour livraison le vendredi 30 ...",
+      "summary": "N° de Consultation : 2026/S3212 Fourniture de fruits et légumes pour livraison le vendredi 30 ...",
+      "reference": "2026/S3212",
+      "buyer": "PROVINCE NORD DEFIJ",
+      "url": "https://legales.lnc.nc/annonce/province-nord-defij-direction-de-lenseignement-de-la-formation-de-linsertion-et-de-la-jeunesse-27-10-2026-31275",
+      "publishedAt": "2026-10-27T00:00:00+11:00",
+      "firstSeen": "2026-10-28T07:48:23.132Z",
+      "lastSeen": "2026-10-28T07:48:23.132Z"
+    },
+    {
+      "id": "lnc-legales:00d6aa70682444d9",
+      "sourceId": "lnc-legales",
+      "kind": "consultation",
+      "title": "FOURNITURE ET LIVRAISON DE FRUITS ET LEGUMES A INTERNAT DE KOUM...",
+      "summary": "N° de Consultation : 2026/S3209 FOURNITURE ET LIVRAISON DE FRUITS ET LEGUMES A INTERNAT DE KOUM...",
+      "reference": "2026/S3209",
+      "buyer": "PROVINCE NORD DEFIJ",
+      "url": "https://legales.lnc.nc/annonce/province-nord-defij-direction-de-lenseignement-de-la-formation-de-linsertion-et-de-la-jeunesse-27-10-2026-31274",
+      "publishedAt": "2026-10-27T00:00:00+11:00",
+      "firstSeen": "2026-10-28T07:48:23.132Z",
+      "lastSeen": "2026-10-28T07:48:23.132Z"
+    },
+    {
+      "id": "lnc-legales:28d69f55d05427d2",
+      "sourceId": "lnc-legales",
+      "kind": "consultation",
+      "title": "Débroussailleuse agent SAF/BGPA",
+      "summary": "N° de Consultation : 2026/S3205 Débroussailleuse agent SAF/BGPA Pour les besoins de la direct...",
+      "reference": "2026/S3205",
+      "buyer": "PROVINCE NORD DASSPS",
+      "url": "https://legales.lnc.nc/annonce/province-nord-dassps-direction-des-affaires-sanitaires-et-sociales-et-des-problemes-de-societe-27-10-2026-31273",
+      "publishedAt": "2026-10-27T00:00:00+11:00",
+      "firstSeen": "2026-10-28T07:48:23.132Z",
+      "lastSeen": "2026-10-28T07:48:23.132Z"
+    },
+    {
+      "id": "lnc-legales:7c86c21a55db8289",
+      "sourceId": "lnc-legales",
+      "kind": "consultation",
+      "title": "Fourniture d'une batterie marine 100 Ah",
+      "summary": "N° de Consultation : 2026/S3203 Fourniture d'une batterie marine 100 Ah Objet : Fourniture d'une batterie marine...",
+      "reference": "2026/S3203",
+      "buyer": "PROVINCE NORD DDEE",
+      "url": "https://legales.lnc.nc/annonce/province-nord-ddee-direction-du-developpement-economique-et-de-lenvironnement-27-10-2026-31272",
+      "publishedAt": "2026-10-27T00:00:00+11:00",
+      "firstSeen": "2026-10-28T07:48:23.132Z",
+      "lastSeen": "2026-10-28T07:48:23.132Z"
+    },
+    {
+      "id": "lnc-legales:adeb5970f4d31038",
+      "sourceId": "lnc-legales",
+      "kind": "consultation",
+      "title": "Sécurisation de la traversée des tribus sur la RPN10 - Tribu de Tchambouene - Commune de Pouebo ...",
+      "summary": "PROVINCE NORD DAF - Direction de l'Aménagement et du Foncier",
+      "buyer": "PROVINCE NORD DAF",
+      "url": "https://legales.lnc.nc/annonce/province-nord-daf-direction-de-lamenagement-et-du-foncier-27-10-2026-31271",
+      "publishedAt": "2026-10-27T00:00:00+11:00",
+      "firstSeen": "2026-10-28T07:48:23.132Z",
+      "lastSeen": "2026-10-28T07:48:23.132Z"
+    },
+    {
+      "id": "lnc-legales:14165293bc00316c",
+      "sourceId": "lnc-legales",
+      "kind": "consultation",
+      "title": "Sécurisation de la traversée des tribus sur la RPN10 - École de la tribu de Panié - Commune de...",
+      "summary": "PROVINCE NORD DAF - Direction de l'Aménagement et du Foncier",
+      "buyer": "PROVINCE NORD DAF",
+      "url": "https://legales.lnc.nc/annonce/province-nord-daf-direction-de-lamenagement-et-du-foncier-27-10-2026-31270",
+      "publishedAt": "2026-10-27T00:00:00+11:00",
+      "firstSeen": "2026-10-28T07:48:23.132Z",
+      "lastSeen": "2026-10-28T07:48:23.132Z"
+    },
+    {
+      "id": "lnc-legales:3d225edae929b95f",
+      "sourceId": "lnc-legales",
+      "kind": "consultation",
+      "title": "Remise en conformité des emprises routière et sécurisation du gabarit de circulation sur la RPN7...",
+      "summary": "PROVINCE NORD DAF - Direction de l'Aménagement et du Foncier",
+      "buyer": "PROVINCE NORD DAF",
+      "url": "https://legales.lnc.nc/annonce/province-nord-daf-direction-de-lamenagement-et-du-foncier-27-10-2026-31269",
+      "publishedAt": "2026-10-27T00:00:00+11:00",
+      "firstSeen": "2026-10-28T07:48:23.132Z",
+      "lastSeen": "2026-10-28T07:48:23.132Z"
+    },
+    {
       "id": "lnc-legales:528607bb6df556d6",
       "sourceId": "lnc-legales",
       "kind": "consultation",
@@ -239,7 +419,9 @@
       "publishedAt": "2026-10-27T00:00:00+11:00",
       "deadline": "2026-11-23T11:30:00+11:00",
       "firstSeen": "2026-10-27T20:23:35.561Z",
-      "lastSeen": "2026-10-27T20:23:35.561Z"
+      "lastSeen": "2026-10-27T20:23:35.561Z",
+      "gone": true,
+      "goneAt": "2026-10-28T07:51:01.039Z"
     },
     {
       "id": "wallis-futuna:87f83a0fe3f28539",
@@ -252,7 +434,9 @@
       "publishedAt": "2026-10-27T00:00:00+11:00",
       "deadline": "2026-11-13T11:30:00+11:00",
       "firstSeen": "2026-10-27T20:23:35.561Z",
-      "lastSeen": "2026-10-27T20:23:35.561Z"
+      "lastSeen": "2026-10-27T20:23:35.561Z",
+      "gone": true,
+      "goneAt": "2026-10-28T07:51:01.039Z"
     },
     {
       "id": "wallis-futuna:547d967ccbc3eb7c",
@@ -265,9 +449,7 @@
       "publishedAt": "2026-10-27T00:00:00+11:00",
       "deadline": "2026-11-23T11:30:00+11:00",
       "firstSeen": "2026-10-27T09:31:40.127Z",
-      "lastSeen": "2026-10-27T09:31:40.127Z",
-      "gone": true,
-      "goneAt": "2026-10-27T20:23:35.561Z"
+      "lastSeen": "2026-10-28T07:51:01.039Z"
     },
     {
       "id": "wallis-futuna:111cc8e858631369",
@@ -280,9 +462,7 @@
       "publishedAt": "2026-10-27T00:00:00+11:00",
       "deadline": "2026-11-13T11:30:00+11:00",
       "firstSeen": "2026-10-27T09:31:40.127Z",
-      "lastSeen": "2026-10-27T09:31:40.127Z",
-      "gone": true,
-      "goneAt": "2026-10-27T20:23:35.561Z"
+      "lastSeen": "2026-10-28T07:51:01.039Z"
     },
     {
       "id": "marchespublics-nc:f4g-3513",
@@ -417,7 +597,9 @@
       "publishedAt": "2026-10-26T00:00:00+11:00",
       "deadline": "2026-11-27T12:00:00+11:00",
       "firstSeen": "2026-10-27T20:23:35.561Z",
-      "lastSeen": "2026-10-27T20:23:35.561Z"
+      "lastSeen": "2026-10-27T20:23:35.561Z",
+      "gone": true,
+      "goneAt": "2026-10-28T07:51:01.039Z"
     },
     {
       "id": "wallis-futuna:5345a1321bb8bb94",
@@ -430,7 +612,9 @@
       "publishedAt": "2026-10-26T00:00:00+11:00",
       "deadline": "2026-11-23T11:30:00+11:00",
       "firstSeen": "2026-10-27T20:23:35.561Z",
-      "lastSeen": "2026-10-27T20:23:35.561Z"
+      "lastSeen": "2026-10-27T20:23:35.561Z",
+      "gone": true,
+      "goneAt": "2026-10-28T07:51:01.039Z"
     },
     {
       "id": "lnc-legales:0f9fc4c7ce1aa249",
@@ -738,9 +922,7 @@
       "publishedAt": "2026-10-26T00:00:00+11:00",
       "deadline": "2026-11-27T12:00:00+11:00",
       "firstSeen": "2026-10-26T09:36:24.941Z",
-      "lastSeen": "2026-10-27T09:31:40.127Z",
-      "gone": true,
-      "goneAt": "2026-10-27T20:23:35.561Z"
+      "lastSeen": "2026-10-28T07:51:01.039Z"
     },
     {
       "id": "wallis-futuna:3028726b618f9e5e",
@@ -787,9 +969,7 @@
       "publishedAt": "2026-10-26T00:00:00+11:00",
       "deadline": "2026-11-23T11:30:00+11:00",
       "firstSeen": "2026-10-26T02:39:26.392Z",
-      "lastSeen": "2026-10-27T09:31:40.127Z",
-      "gone": true,
-      "goneAt": "2026-10-27T20:23:35.561Z"
+      "lastSeen": "2026-10-28T07:51:01.039Z"
     },
     {
       "id": "lnc-legales:63612b1680fc23b7",
@@ -2066,9 +2246,18 @@
       "procedureCode": "SIMP",
       "url": "https://portail.marchespublics.nc/entreprise/consultation/3499?orgAcronyme=p2q",
       "publishedAt": "2026-10-20T00:00:00+11:00",
-      "deadline": "2026-10-30T12:00:00+11:00",
+      "deadline": "2026-11-06T12:00:00+11:00",
       "firstSeen": "2026-10-20T04:47:52.422Z",
-      "lastSeen": "2026-10-28T00:51:45.364Z"
+      "lastSeen": "2026-10-28T00:51:45.364Z",
+      "updatedAt": "2026-10-28T07:47:51.503Z",
+      "history": [
+        {
+          "at": "2026-10-28T07:47:51.503Z",
+          "field": "deadline",
+          "from": "2026-10-30T12:00:00+11:00",
+          "to": "2026-11-06T12:00:00+11:00"
+        }
+      ]
     },
     {
       "id": "marchespublics-nc:h5j-3487",
@@ -2114,7 +2303,9 @@
       "publishedAt": "2026-10-19T00:00:00+11:00",
       "deadline": "2026-11-19T11:30:00+11:00",
       "firstSeen": "2026-10-27T20:23:35.561Z",
-      "lastSeen": "2026-10-27T20:23:35.561Z"
+      "lastSeen": "2026-10-27T20:23:35.561Z",
+      "gone": true,
+      "goneAt": "2026-10-28T07:51:01.039Z"
     },
     {
       "id": "wallis-futuna:b9e9b4bcacf76660",
@@ -2127,7 +2318,9 @@
       "publishedAt": "2026-10-19T00:00:00+11:00",
       "deadline": "2026-11-19T11:30:00+11:00",
       "firstSeen": "2026-10-27T20:23:35.561Z",
-      "lastSeen": "2026-10-27T20:23:35.561Z"
+      "lastSeen": "2026-10-27T20:23:35.561Z",
+      "gone": true,
+      "goneAt": "2026-10-28T07:51:01.039Z"
     },
     {
       "id": "wallis-futuna:6ff8943a7497b0f4",
@@ -2140,9 +2333,7 @@
       "publishedAt": "2026-10-19T00:00:00+11:00",
       "deadline": "2026-11-19T11:30:00+11:00",
       "firstSeen": "2026-10-20T11:36:09.310Z",
-      "lastSeen": "2026-10-27T09:31:40.127Z",
-      "gone": true,
-      "goneAt": "2026-10-27T20:23:35.561Z"
+      "lastSeen": "2026-10-28T07:51:01.039Z"
     },
     {
       "id": "wallis-futuna:96ccc65e283785b7",
@@ -2155,9 +2346,7 @@
       "publishedAt": "2026-10-19T00:00:00+11:00",
       "deadline": "2026-11-19T11:30:00+11:00",
       "firstSeen": "2026-10-20T11:36:09.310Z",
-      "lastSeen": "2026-10-27T09:31:40.127Z",
-      "gone": true,
-      "goneAt": "2026-10-27T20:23:35.561Z"
+      "lastSeen": "2026-10-28T07:51:01.039Z"
     },
     {
       "id": "lnc-legales:e31e4dbb116c9c4f",
@@ -3824,7 +4013,9 @@
       "publishedAt": "2026-10-09T00:00:00+11:00",
       "deadline": "2026-11-09T11:30:00+11:00",
       "firstSeen": "2026-10-27T20:23:35.561Z",
-      "lastSeen": "2026-10-27T20:23:35.561Z"
+      "lastSeen": "2026-10-27T20:23:35.561Z",
+      "gone": true,
+      "goneAt": "2026-10-28T07:51:01.039Z"
     },
     {
       "id": "wallis-futuna:9065ee55ae4e5aa7",
@@ -3837,9 +4028,7 @@
       "publishedAt": "2026-10-09T00:00:00+11:00",
       "deadline": "2026-11-09T11:30:00+11:00",
       "firstSeen": "2026-10-15T11:28:39.532Z",
-      "lastSeen": "2026-10-27T09:31:40.127Z",
-      "gone": true,
-      "goneAt": "2026-10-27T20:23:35.561Z"
+      "lastSeen": "2026-10-28T07:51:01.039Z"
     },
     {
       "id": "lnc-legales:6d576d8732dcbd30",
@@ -4181,7 +4370,7 @@
       "summary": "BTA WARU Pierre Doui à NETCHAOT et BTA GOROMOEDO et MAHOSSEM à TIAKANA La mairie de Koné informe les entrepreneurs du lancement de deux appels d’offres pour la réalisation des travaux d’électrification filaire : Électrification BTA WARU Pierre Doui à NETCHAOT (FER- 2023) sur la commune de Koné Électrification BTA GOROMOEDO et MAHOSSEM à TIAKANA (FER – 2023)... 03/05/2025",
       "url": "https://www.koohne.nc/bta-waru-pierre-doui-a-netchaot-et-bta-goromoedo-et-mahossem-a-tiakana/",
       "firstSeen": "2026-10-08T09:13:00.240Z",
-      "lastSeen": "2026-10-27T03:12:32.274Z",
+      "lastSeen": "2026-10-28T07:50:18.394Z",
       "seed": true,
       "updatedAt": "2026-10-08T23:48:14.104Z",
       "history": [
@@ -4201,7 +4390,7 @@
       "summary": "Réalisation des repas dans les écoles maternelles et primaires publiques Le Maire de la Commune de KONE informe les entreprises qu’il lance un appel d’offres ouvert concernant : Le transport des repas dans les écoles maternelles et primaires publiques de Koné pour les années 2024, 2025 et 2026. 06/10/2023",
       "url": "https://www.koohne.nc/realisation-des-repas-dans-les-ecoles-maternelles-et-primaires-publiques/",
       "firstSeen": "2026-10-08T09:13:00.240Z",
-      "lastSeen": "2026-10-27T03:12:32.274Z",
+      "lastSeen": "2026-10-28T07:50:18.394Z",
       "seed": true,
       "updatedAt": "2026-10-08T23:48:14.104Z",
       "history": [
@@ -4221,7 +4410,7 @@
       "summary": "Le transport des repas dans les écoles maternelles et primaires publiques Le Maire de la Commune de KONE informe les entreprises qu’il lance un appel d’offres ouvert concernant : le transport des repas dans les écoles maternelles et primaires publiques de Koné pour les années 2024, 2025 et 2026. L’appel d’offres est constitué de six (6) lots : ... 06/10/2023",
       "url": "https://www.koohne.nc/le-transport-des-repas-dans-les-ecoles-maternelles-et-primaires-publiques/",
       "firstSeen": "2026-10-08T09:13:00.240Z",
-      "lastSeen": "2026-10-27T03:12:32.274Z",
+      "lastSeen": "2026-10-28T07:50:18.394Z",
       "seed": true,
       "updatedAt": "2026-10-08T23:48:14.104Z",
       "history": [
@@ -5268,7 +5457,9 @@
       "publishedAt": "2026-10-06T00:00:00+11:00",
       "deadline": "2026-10-19T17:00:00+11:00",
       "firstSeen": "2026-10-27T20:23:35.561Z",
-      "lastSeen": "2026-10-27T20:23:35.561Z"
+      "lastSeen": "2026-10-27T20:23:35.561Z",
+      "gone": true,
+      "goneAt": "2026-10-28T07:51:01.039Z"
     },
     {
       "id": "ifap:784ad6dbde1cbd1f",
@@ -5319,7 +5510,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15364/126184/file/Cahier%20des%20charges%20Goodies%20WF%20Tourisme%20valid%C3%A9.pdf",
       "publishedAt": "2026-10-06T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-10-27T09:31:40.127Z",
+      "lastSeen": "2026-10-28T07:51:01.039Z",
       "seed": true,
       "deadline": "2026-10-19T17:00:00+11:00",
       "updatedAt": "2026-10-08T09:32:04.922Z",
@@ -5330,9 +5521,7 @@
           "from": "Cahier des charges Goodies WF Tourisme validé",
           "to": "Renouvellement des goodies - Wallis et Futuna Tourisme"
         }
-      ],
-      "gone": true,
-      "goneAt": "2026-10-27T20:23:35.561Z"
+      ]
     },
     {
       "id": "lnc-legales:daca1fa2e614d919",
@@ -5849,7 +6038,9 @@
       "publishedAt": "2026-10-01T00:00:00+11:00",
       "deadline": "2026-10-28T11:30:00+11:00",
       "firstSeen": "2026-10-27T20:23:35.561Z",
-      "lastSeen": "2026-10-27T20:23:35.561Z"
+      "lastSeen": "2026-10-27T20:23:35.561Z",
+      "gone": true,
+      "goneAt": "2026-10-28T07:51:01.039Z"
     },
     {
       "id": "wallis-futuna:ec7a2150beba5107",
@@ -5860,7 +6051,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15353/126085/file/Avis%20de%20march%C3%A9.pdf",
       "publishedAt": "2026-10-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-10-27T09:31:40.127Z",
+      "lastSeen": "2026-10-28T07:51:01.039Z",
       "seed": true,
       "reference": "2026-E-PA-57-SBL",
       "deadline": "2026-10-28T11:30:00+11:00",
@@ -5872,9 +6063,7 @@
           "from": "Avis de marché",
           "to": "Entretien des espaces verts de l''Administration supérieure à Mata-Utu, du Vatarium et de 2 logements administratifs"
         }
-      ],
-      "gone": true,
-      "goneAt": "2026-10-27T20:23:35.561Z"
+      ]
     },
     {
       "id": "mont-dore:40cd6918cd72c655",
@@ -6917,7 +7106,9 @@
       "publishedAt": "2026-09-21T00:00:00+11:00",
       "deadline": "2026-10-27T11:30:00+11:00",
       "firstSeen": "2026-10-27T20:23:35.561Z",
-      "lastSeen": "2026-10-27T20:23:35.561Z"
+      "lastSeen": "2026-10-27T20:23:35.561Z",
+      "gone": true,
+      "goneAt": "2026-10-28T07:51:01.039Z"
     },
     {
       "id": "marches-publics-etat:g6l-3070779",
@@ -6992,7 +7183,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15340/125943/file/avis%20de%20march%C3%A9%20-%20enrochements%20Wallis.pdf",
       "publishedAt": "2026-09-21T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-10-27T09:31:40.127Z",
+      "lastSeen": "2026-10-28T07:51:01.039Z",
       "seed": true,
       "reference": "2026-T-AO-56-ENV",
       "deadline": "2026-10-27T11:30:00+11:00",
@@ -7004,9 +7195,7 @@
           "from": "avis de marché - enrochements Wallis",
           "to": "Réalisation de protections littorales par enrochements sur l'île de Wallis"
         }
-      ],
-      "gone": true,
-      "goneAt": "2026-10-27T20:23:35.561Z"
+      ]
     },
     {
       "id": "province-sud-avis:e46b9baadc7764c3",
@@ -7059,7 +7248,9 @@
       "deadline": "2026-10-28T15:00:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
       "lastSeen": "2026-10-28T00:51:45.364Z",
-      "seed": true
+      "seed": true,
+      "gone": true,
+      "goneAt": "2026-10-28T07:47:51.503Z"
     },
     {
       "id": "marchespublics-nc:c5d-3401",
@@ -7863,7 +8054,9 @@
       "publishedAt": "2026-09-10T00:00:00+11:00",
       "deadline": "2026-10-06T11:30:00+11:00",
       "firstSeen": "2026-10-27T20:23:35.561Z",
-      "lastSeen": "2026-10-27T20:23:35.561Z"
+      "lastSeen": "2026-10-27T20:23:35.561Z",
+      "gone": true,
+      "goneAt": "2026-10-28T07:51:01.039Z"
     },
     {
       "id": "wallis-futuna:f9c06028212b7b27",
@@ -7874,7 +8067,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15323/125775/file/Avis%20de%20march%C3%A9%20-%20MOE%20Vailepo.pdf",
       "publishedAt": "2026-09-10T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-10-27T09:31:40.127Z",
+      "lastSeen": "2026-10-28T07:51:01.039Z",
       "seed": true,
       "reference": "2026-T-PA-54-ENV",
       "deadline": "2026-10-06T11:30:00+11:00",
@@ -7886,9 +8079,7 @@
           "from": "Avis de marché - MOE Vailepo",
           "to": "MOE - CET Vailepo"
         }
-      ],
-      "gone": true,
-      "goneAt": "2026-10-27T20:23:35.561Z"
+      ]
     },
     {
       "id": "marchespublics-nc:h5j-3386",
@@ -8155,7 +8346,9 @@
       "publishedAt": "2026-09-02T00:00:00+11:00",
       "deadline": "2026-09-22T11:30:00+11:00",
       "firstSeen": "2026-10-27T20:23:35.561Z",
-      "lastSeen": "2026-10-27T20:23:35.561Z"
+      "lastSeen": "2026-10-27T20:23:35.561Z",
+      "gone": true,
+      "goneAt": "2026-10-28T07:51:01.039Z"
     },
     {
       "id": "wallis-futuna:119c65c4c19769dc",
@@ -8166,7 +8359,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15303/125615/file/Avis%20de%20march%C3%A9.pdf",
       "publishedAt": "2026-09-02T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-10-27T09:31:40.127Z",
+      "lastSeen": "2026-10-28T07:51:01.039Z",
       "seed": true,
       "reference": "2026-E-PA-53-SEAC",
       "deadline": "2026-09-22T11:30:00+11:00",
@@ -8178,9 +8371,7 @@
           "from": "Avis de marché",
           "to": "Réaménagement du parking visiteur de l'aéroport de Hihifo - Wallis"
         }
-      ],
-      "gone": true,
-      "goneAt": "2026-10-27T20:23:35.561Z"
+      ]
     },
     {
       "id": "province-sud-avis:491d745db49a4da2",
@@ -8203,7 +8394,9 @@
       "publishedAt": "2026-09-01T00:00:00+11:00",
       "deadline": "2026-08-27T11:30:00+11:00",
       "firstSeen": "2026-10-27T20:23:35.561Z",
-      "lastSeen": "2026-10-27T20:23:35.561Z"
+      "lastSeen": "2026-10-27T20:23:35.561Z",
+      "gone": true,
+      "goneAt": "2026-10-28T07:51:01.039Z"
     },
     {
       "id": "wallis-futuna:13768110ed993587",
@@ -8214,7 +8407,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15296/125581/file/Note%20sign%C3%A9e.pdf",
       "publishedAt": "2026-09-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-10-27T09:31:40.127Z",
+      "lastSeen": "2026-10-28T07:51:01.039Z",
       "seed": true,
       "deadline": "2026-08-27T11:30:00+11:00",
       "updatedAt": "2026-10-08T09:32:04.922Z",
@@ -8225,9 +8418,7 @@
           "from": "Note signée",
           "to": "Déploiement de bornes digitales de comptage et d'information touristique - PROLONGATION"
         }
-      ],
-      "gone": true,
-      "goneAt": "2026-10-27T20:23:35.561Z"
+      ]
     },
     {
       "id": "ville-dumbea:afcfde8f80e5f90a",
@@ -8301,7 +8492,9 @@
       "deadline": "2026-10-28T14:00:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
       "lastSeen": "2026-10-28T00:51:45.364Z",
-      "seed": true
+      "seed": true,
+      "gone": true,
+      "goneAt": "2026-10-28T07:47:51.503Z"
     },
     {
       "id": "ifap:a60816e93ea85348",
@@ -8552,7 +8745,9 @@
       "publishedAt": "2026-08-06T00:00:00+11:00",
       "deadline": "2026-08-19T11:30:00+11:00",
       "firstSeen": "2026-10-27T20:23:35.561Z",
-      "lastSeen": "2026-10-27T20:23:35.561Z"
+      "lastSeen": "2026-10-27T20:23:35.561Z",
+      "gone": true,
+      "goneAt": "2026-10-28T07:51:01.039Z"
     },
     {
       "id": "wallis-futuna:dd4bf29fa4a3301c",
@@ -8563,7 +8758,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15261/125313/file/SEAC-Avis%20rectificatif%20march%C3%A9%20-%20prolongation.pdf",
       "publishedAt": "2026-08-06T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-10-27T09:31:40.127Z",
+      "lastSeen": "2026-10-28T07:51:01.039Z",
       "seed": true,
       "reference": "2026-E-PA-24-SEAC",
       "deadline": "2026-08-19T11:30:00+11:00",
@@ -8575,9 +8770,7 @@
           "from": "SEAC-Avis rectificatif marché - prolongation",
           "to": "Accord-cadre à bons de commandes pour l'entretien et le nettoyage des bureaux du service d’État de l'Aviation civile des îles Wallis et Futuna-prolongation"
         }
-      ],
-      "gone": true,
-      "goneAt": "2026-10-27T20:23:35.561Z"
+      ]
     },
     {
       "id": "province-sud-avis:793b0d088cbf2307",
@@ -8662,7 +8855,9 @@
       "publishedAt": "2026-08-03T00:00:00+11:00",
       "deadline": "2026-08-28T11:30:00+11:00",
       "firstSeen": "2026-10-27T20:23:35.561Z",
-      "lastSeen": "2026-10-27T20:23:35.561Z"
+      "lastSeen": "2026-10-27T20:23:35.561Z",
+      "gone": true,
+      "goneAt": "2026-10-28T07:51:01.039Z"
     },
     {
       "id": "wallis-futuna:dd365a2c50a707c3",
@@ -8675,7 +8870,9 @@
       "publishedAt": "2026-08-03T00:00:00+11:00",
       "deadline": "2026-08-28T11:30:00+11:00",
       "firstSeen": "2026-10-27T20:23:35.561Z",
-      "lastSeen": "2026-10-27T20:23:35.561Z"
+      "lastSeen": "2026-10-27T20:23:35.561Z",
+      "gone": true,
+      "goneAt": "2026-10-28T07:51:01.039Z"
     },
     {
       "id": "haut-commissariat-pf:a205d4770a030d58",
@@ -8698,7 +8895,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15250/125219/file/Avis%20de%20march%C3%A9.pdf",
       "publishedAt": "2026-08-03T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-10-27T09:31:40.127Z",
+      "lastSeen": "2026-10-28T07:51:01.039Z",
       "seed": true,
       "reference": "2026-T-AO-29-TP",
       "deadline": "2026-08-28T11:30:00+11:00",
@@ -8710,9 +8907,7 @@
           "from": "Avis de marché",
           "to": "Réalisation de 6 extensions du réseau d'adduction d'eau potable sur l'île de Wallis"
         }
-      ],
-      "gone": true,
-      "goneAt": "2026-10-27T20:23:35.561Z"
+      ]
     },
     {
       "id": "wallis-futuna:e1f562aab4de21e9",
@@ -8723,7 +8918,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15251/125224/file/avis%20de%20march%C3%A9.pdf",
       "publishedAt": "2026-08-03T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-10-27T09:31:40.127Z",
+      "lastSeen": "2026-10-28T07:51:01.039Z",
       "seed": true,
       "reference": "2026-T-AO-25-TP",
       "deadline": "2026-08-28T11:30:00+11:00",
@@ -8735,9 +8930,7 @@
           "from": "avis de marché",
           "to": "Réalisation de peintures d'étanchéité sur les couvertures des locaux techniques et de peintures de ravalement sur tous les voiles extérieurs des réservoirs en béton armé de Wallis"
         }
-      ],
-      "gone": true,
-      "goneAt": "2026-10-27T20:23:35.561Z"
+      ]
     },
     {
       "id": "port-papeete:7b935ec8a6e4cf06",
@@ -8965,7 +9158,9 @@
       "publishedAt": "2026-07-21T00:00:00+11:00",
       "deadline": "2026-08-17T11:30:00+11:00",
       "firstSeen": "2026-10-27T20:23:35.561Z",
-      "lastSeen": "2026-10-27T20:23:35.561Z"
+      "lastSeen": "2026-10-27T20:23:35.561Z",
+      "gone": true,
+      "goneAt": "2026-10-28T07:51:01.039Z"
     },
     {
       "id": "wallis-futuna:552162112953ae3e",
@@ -8976,7 +9171,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15235/125068/file/Avis%20de%20march%C3%A9.pdf",
       "publishedAt": "2026-07-21T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-10-27T09:31:40.127Z",
+      "lastSeen": "2026-10-28T07:51:01.039Z",
       "seed": true,
       "reference": "2026-T-PA-51-ENV",
       "deadline": "2026-08-17T11:30:00+11:00",
@@ -8988,9 +9183,7 @@
           "from": "Avis de marché",
           "to": "Fourniture et installation d'un stockage d'énergie photovoltaïque au service territorial de l'environnement de Wallis"
         }
-      ],
-      "gone": true,
-      "goneAt": "2026-10-27T20:23:35.561Z"
+      ]
     },
     {
       "id": "wallis-futuna:606959d89a0c942d",
@@ -9003,7 +9196,9 @@
       "publishedAt": "2026-07-17T00:00:00+11:00",
       "deadline": "2026-08-10T11:30:00+11:00",
       "firstSeen": "2026-10-27T20:23:35.561Z",
-      "lastSeen": "2026-10-27T20:23:35.561Z"
+      "lastSeen": "2026-10-27T20:23:35.561Z",
+      "gone": true,
+      "goneAt": "2026-10-28T07:51:01.039Z"
     },
     {
       "id": "wallis-futuna:bf17db6e703abcc5",
@@ -9014,7 +9209,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15224/124991/file/avis%20de%20march%C3%A9.pdf",
       "publishedAt": "2026-07-17T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-10-27T09:31:40.127Z",
+      "lastSeen": "2026-10-28T07:51:01.039Z",
       "seed": true,
       "reference": "2026-T-PA-35-ENV",
       "deadline": "2026-08-10T11:30:00+11:00",
@@ -9026,9 +9221,7 @@
           "from": "avis de marché",
           "to": "Mission d'assistance à maîtrise d'ouvrage (AMO) pour la réalisation d'une alvéole de stockage des déchets ménagers au Centre d'Enfouissement Technique de Moasa sur l'île de Futuna"
         }
-      ],
-      "gone": true,
-      "goneAt": "2026-10-27T20:23:35.561Z"
+      ]
     },
     {
       "id": "wallis-futuna:08e746ba9221947f",
@@ -9040,7 +9233,9 @@
       "publishedAt": "2026-07-10T00:00:00+11:00",
       "deadline": "2026-07-27T00:00:00+11:00",
       "firstSeen": "2026-10-27T20:23:35.561Z",
-      "lastSeen": "2026-10-27T20:23:35.561Z"
+      "lastSeen": "2026-10-27T20:23:35.561Z",
+      "gone": true,
+      "goneAt": "2026-10-28T07:51:01.039Z"
     },
     {
       "id": "wallis-futuna:bddfa0c710e8c7bc",
@@ -9052,7 +9247,9 @@
       "publishedAt": "2026-07-10T00:00:00+11:00",
       "deadline": "2026-07-27T00:00:00+11:00",
       "firstSeen": "2026-10-27T20:23:35.561Z",
-      "lastSeen": "2026-10-27T20:23:35.561Z"
+      "lastSeen": "2026-10-27T20:23:35.561Z",
+      "gone": true,
+      "goneAt": "2026-10-28T07:51:01.039Z"
     },
     {
       "id": "wallis-futuna:79b53f6661b565f4",
@@ -9063,7 +9260,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15218/124961/file/Avis%20de%20consultation%202026%20-%20website%20WF%20Tourisme.pdf",
       "publishedAt": "2026-07-10T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-10-27T09:31:40.127Z",
+      "lastSeen": "2026-10-28T07:51:01.039Z",
       "seed": true,
       "deadline": "2026-07-27T00:00:00+11:00",
       "updatedAt": "2026-10-08T09:32:04.922Z",
@@ -9074,9 +9271,7 @@
           "from": "Avis de consultation 2026 - website WF Tourisme",
           "to": "Refonte technique et fonctionnelle du site internet touristique de Wallis et Futuna"
         }
-      ],
-      "gone": true,
-      "goneAt": "2026-10-27T20:23:35.561Z"
+      ]
     },
     {
       "id": "wallis-futuna:6e032abb8a60e064",
@@ -9101,7 +9296,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15220/124971/file/Avis%20de%20consultation%202026%20-%20cartes%20touristiques%20WF.pdf",
       "publishedAt": "2026-07-10T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-10-27T09:31:40.127Z",
+      "lastSeen": "2026-10-28T07:51:01.039Z",
       "seed": true,
       "deadline": "2026-07-27T00:00:00+11:00",
       "updatedAt": "2026-10-08T09:32:04.922Z",
@@ -9112,9 +9307,7 @@
           "from": "Avis de consultation 2026 - cartes touristiques WF",
           "to": "Refonte et mise à jour des cartes touristiques de Wallis et Futuna"
         }
-      ],
-      "gone": true,
-      "goneAt": "2026-10-27T20:23:35.561Z"
+      ]
     },
     {
       "id": "wallis-futuna:a3405ff34d1709bd",
@@ -9167,7 +9360,9 @@
       "publishedAt": "2026-07-07T00:00:00+11:00",
       "deadline": "2026-08-07T11:30:00+11:00",
       "firstSeen": "2026-10-27T20:23:35.561Z",
-      "lastSeen": "2026-10-27T20:23:35.561Z"
+      "lastSeen": "2026-10-27T20:23:35.561Z",
+      "gone": true,
+      "goneAt": "2026-10-28T07:51:01.039Z"
     },
     {
       "id": "haut-commissariat-pf:b51936fe7c049407",
@@ -9190,7 +9385,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15205/124854/file/Avis%20de%20march%C3%A9.pdf",
       "publishedAt": "2026-07-07T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-10-27T09:31:40.127Z",
+      "lastSeen": "2026-10-28T07:51:01.039Z",
       "seed": true,
       "reference": "2026-E-PA-23-SEAC",
       "deadline": "2026-08-07T11:30:00+11:00",
@@ -9202,9 +9397,7 @@
           "from": "Avis de marché",
           "to": "Réaménagement du parking visiteur de l’aéroport de Hihifo - Wallis"
         }
-      ],
-      "gone": true,
-      "goneAt": "2026-10-27T20:23:35.561Z"
+      ]
     },
     {
       "id": "ifap:62ddb93f12cae8ad",
@@ -9508,7 +9701,9 @@
           "from": "2026 SAS09 CONS Interculturalité",
           "to": "26_SAS09_CONS Interculturalité"
         }
-      ]
+      ],
+      "gone": true,
+      "goneAt": "2026-10-28T07:48:17.516Z"
     },
     {
       "id": "province-sud-avis:bf2e6b07f61dec2b",
@@ -9744,7 +9939,9 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/index.php/contenu/telechargement/15133/124353/file/20260520-tx%20renov%20LPA.pdf",
       "publishedAt": "2026-05-20T00:00:00+11:00",
       "firstSeen": "2026-10-27T20:23:35.561Z",
-      "lastSeen": "2026-10-27T20:23:35.561Z"
+      "lastSeen": "2026-10-27T20:23:35.561Z",
+      "gone": true,
+      "goneAt": "2026-10-28T07:51:01.039Z"
     },
     {
       "id": "wallis-futuna:205ce8807dc8b54a",
@@ -9755,10 +9952,8 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15133/124353/file/20260520-tx%20renov%20LPA.pdf",
       "publishedAt": "2026-05-20T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-10-27T09:31:40.127Z",
-      "seed": true,
-      "gone": true,
-      "goneAt": "2026-10-27T20:23:35.561Z"
+      "lastSeen": "2026-10-28T07:51:01.039Z",
+      "seed": true
     },
     {
       "id": "province-sud-appels-a-projets:91f69c3fab953631",
@@ -12422,7 +12617,7 @@
       "url": "https://www.koohne.nc/nouveaux-marches-fer-2022-et-2023/",
       "publishedAt": "2023-01-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:00.240Z",
-      "lastSeen": "2026-10-27T03:12:32.274Z",
+      "lastSeen": "2026-10-28T07:50:18.394Z",
       "seed": true,
       "updatedAt": "2026-10-08T23:48:14.104Z",
       "history": [
@@ -13295,7 +13490,7 @@
       "url": "https://www.koohne.nc/hta-bta-habitations-a-la-tribu-de-neami-fer-2022/",
       "publishedAt": "2022-01-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:00.240Z",
-      "lastSeen": "2026-10-27T03:12:32.274Z",
+      "lastSeen": "2026-10-28T07:50:18.394Z",
       "seed": true,
       "updatedAt": "2026-10-08T23:48:14.104Z",
       "history": [
