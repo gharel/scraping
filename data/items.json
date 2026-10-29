@@ -36,6 +36,24 @@
   },
   "items": [
     {
+      "id": "marches-publics-etat:g7h-3095702",
+      "sourceId": "marches-publics-etat",
+      "kind": "consultation",
+      "title": "FAPF - Base navale de Papeete - carénage - construction - déconstruction de ras débordoirs",
+      "summary": "FAPF - Base navale de Papeete - carénage - construction - déconstruction de ras débordoirs",
+      "reference": "DIDPPT26009",
+      "buyer": "Ministère des armées",
+      "location": "(987) Polynésie Française, POLYNÉSIE FRANÇAISE",
+      "nature": "Travaux",
+      "procedure": "Procédure adaptée",
+      "procedureCode": "MAPA",
+      "url": "https://www.marches-publics.gouv.fr/app.php/entreprise/consultation/3095702?orgAcronyme=g7h",
+      "publishedAt": "2026-10-29T00:00:00+11:00",
+      "deadline": "2026-11-30T22:30:00+11:00",
+      "firstSeen": "2026-10-29T20:49:09.557Z",
+      "lastSeen": "2026-10-29T20:49:09.557Z"
+    },
+    {
       "id": "marchespublics-nc:t5y-3519",
       "sourceId": "marchespublics-nc",
       "kind": "consultation",
