@@ -36,6 +36,25 @@
   },
   "items": [
     {
+      "id": "marchespublics-nc:t5y-3519",
+      "sourceId": "marchespublics-nc",
+      "kind": "consultation",
+      "title": "Marché de gestion de l'accueil des usagers, de l'entretien et de la surveillance des déchetteries.",
+      "summary": "Le SIVM SUD informe les entreprises qu’il lance un appel d’offres ouvert pour l’accueil des usagers, l’entretien et la surveillance des déchetteries de Boulouparis, Bourail, La Foa et Thio.",
+      "reference": "AAO-SIVM2026-GESTIONCTT",
+      "buyer": "Syndicat Intercommunal à Vocation Multiple Sud",
+      "buyerLocation": "LA FOA",
+      "location": "Province Sud",
+      "nature": "Services",
+      "procedure": "Appel d'offres ouvert",
+      "procedureCode": "AOO",
+      "url": "https://portail.marchespublics.nc/entreprise/consultation/3519?orgAcronyme=t5y",
+      "publishedAt": "2026-10-29T00:00:00+11:00",
+      "deadline": "2026-11-27T13:00:00+11:00",
+      "firstSeen": "2026-10-29T07:54:04.745Z",
+      "lastSeen": "2026-10-29T07:54:04.745Z"
+    },
+    {
       "id": "marches-publics-etat:g7h-3095712",
       "sourceId": "marches-publics-etat",
       "kind": "consultation",
@@ -4597,7 +4616,7 @@
       "summary": "BTA WARU Pierre Doui à NETCHAOT et BTA GOROMOEDO et MAHOSSEM à TIAKANA La mairie de Koné informe les entrepreneurs du lancement de deux appels d’offres pour la réalisation des travaux d’électrification filaire : Électrification BTA WARU Pierre Doui à NETCHAOT (FER- 2023) sur la commune de Koné Électrification BTA GOROMOEDO et MAHOSSEM à TIAKANA (FER – 2023)... 03/05/2025",
       "url": "https://www.koohne.nc/bta-waru-pierre-doui-a-netchaot-et-bta-goromoedo-et-mahossem-a-tiakana/",
       "firstSeen": "2026-10-08T09:13:00.240Z",
-      "lastSeen": "2026-10-28T07:50:18.394Z",
+      "lastSeen": "2026-10-29T07:57:15.382Z",
       "seed": true,
       "updatedAt": "2026-10-08T23:48:14.104Z",
       "history": [
@@ -4617,7 +4636,7 @@
       "summary": "Réalisation des repas dans les écoles maternelles et primaires publiques Le Maire de la Commune de KONE informe les entreprises qu’il lance un appel d’offres ouvert concernant : Le transport des repas dans les écoles maternelles et primaires publiques de Koné pour les années 2024, 2025 et 2026. 06/10/2023",
       "url": "https://www.koohne.nc/realisation-des-repas-dans-les-ecoles-maternelles-et-primaires-publiques/",
       "firstSeen": "2026-10-08T09:13:00.240Z",
-      "lastSeen": "2026-10-28T07:50:18.394Z",
+      "lastSeen": "2026-10-29T07:57:15.382Z",
       "seed": true,
       "updatedAt": "2026-10-08T23:48:14.104Z",
       "history": [
@@ -4637,7 +4656,7 @@
       "summary": "Le transport des repas dans les écoles maternelles et primaires publiques Le Maire de la Commune de KONE informe les entreprises qu’il lance un appel d’offres ouvert concernant : le transport des repas dans les écoles maternelles et primaires publiques de Koné pour les années 2024, 2025 et 2026. L’appel d’offres est constitué de six (6) lots : ... 06/10/2023",
       "url": "https://www.koohne.nc/le-transport-des-repas-dans-les-ecoles-maternelles-et-primaires-publiques/",
       "firstSeen": "2026-10-08T09:13:00.240Z",
-      "lastSeen": "2026-10-28T07:50:18.394Z",
+      "lastSeen": "2026-10-29T07:57:15.382Z",
       "seed": true,
       "updatedAt": "2026-10-08T23:48:14.104Z",
       "history": [
@@ -4966,7 +4985,9 @@
       "lots": 3,
       "firstSeen": "2026-10-08T09:13:16.353Z",
       "lastSeen": "2026-10-29T01:31:34.631Z",
-      "seed": true
+      "seed": true,
+      "gone": true,
+      "goneAt": "2026-10-29T07:59:14.715Z"
     },
     {
       "id": "lnc-legales:db21065c9a13df4d",
@@ -12846,7 +12867,7 @@
       "url": "https://www.koohne.nc/nouveaux-marches-fer-2022-et-2023/",
       "publishedAt": "2023-01-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:00.240Z",
-      "lastSeen": "2026-10-28T07:50:18.394Z",
+      "lastSeen": "2026-10-29T07:57:15.382Z",
       "seed": true,
       "updatedAt": "2026-10-08T23:48:14.104Z",
       "history": [
@@ -13719,7 +13740,7 @@
       "url": "https://www.koohne.nc/hta-bta-habitations-a-la-tribu-de-neami-fer-2022/",
       "publishedAt": "2022-01-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:00.240Z",
-      "lastSeen": "2026-10-28T07:50:18.394Z",
+      "lastSeen": "2026-10-29T07:57:15.382Z",
       "seed": true,
       "updatedAt": "2026-10-08T23:48:14.104Z",
       "history": [
