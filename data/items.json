@@ -36,6 +36,21 @@
   },
   "items": [
     {
+      "id": "cps-appels-offres:aa9835cb889b2301",
+      "sourceId": "cps-appels-offres",
+      "kind": "consultation",
+      "title": "Review of national legislation and policies on anchored fish aggregating devices in Pacific Island countries",
+      "reference": "RFP26-10198",
+      "location": "Contractor's Home based",
+      "nature": "Services",
+      "status": "Advertised",
+      "url": "https://www.spc.int/procurement/tenders/review-of-national-legislation-and-policies-on-anchored-fish-aggregating",
+      "publishedAt": "2026-10-30T03:23:39.000Z",
+      "deadline": "2026-12-13T12:00:00.000Z",
+      "firstSeen": "2026-10-30T08:00:24.640Z",
+      "lastSeen": "2026-10-30T08:00:24.640Z"
+    },
+    {
       "id": "cps-appels-offres:a48c1c53bc3c429c",
       "sourceId": "cps-appels-offres",
       "kind": "consultation",
@@ -49,6 +64,44 @@
       "deadline": "2026-11-29T12:00:00.000Z",
       "firstSeen": "2026-10-30T01:32:14.026Z",
       "lastSeen": "2026-10-30T01:32:14.026Z"
+    },
+    {
+      "id": "marchespublics-nc:y6u-3523",
+      "sourceId": "marchespublics-nc",
+      "kind": "consultation",
+      "title": "Travaux d’optimisation et de mise en accessibilité de la ligne Université Aménagement de l’arrêt « Bousquet » Commune de Nouméa",
+      "summary": "Travaux d’optimisation et de mise en accessibilité de la ligne Université Aménagement de l’arrêt « Bousquet » Commune de Nouméa",
+      "reference": "26M19",
+      "buyer": "Syndicat Mixte des Transports Urbains du Grand Nouméa",
+      "buyerLocation": "Nouméa",
+      "location": "Province Sud",
+      "nature": "Travaux",
+      "procedure": "Appel d'offres ouvert",
+      "procedureCode": "AOO",
+      "url": "https://portail.marchespublics.nc/entreprise/consultation/3523?orgAcronyme=y6u",
+      "publishedAt": "2026-10-30T00:00:00+11:00",
+      "deadline": "2026-11-23T11:00:00+11:00",
+      "firstSeen": "2026-10-30T07:56:26.427Z",
+      "lastSeen": "2026-10-30T07:56:26.427Z"
+    },
+    {
+      "id": "marchespublics-nc:y6u-3524",
+      "sourceId": "marchespublics-nc",
+      "kind": "consultation",
+      "title": "Travaux d’optimisation et de mise en accessibilité de la ligne Université Aménagement du point d'arrêt « Jules GARNIER 03 » Commune",
+      "summary": "Travaux d’optimisation et de mise en accessibilité de la ligne Université Aménagement du point d'arrêt « Jules GARNIER 03 » Commune de Nouméa",
+      "reference": "26M20",
+      "buyer": "Syndicat Mixte des Transports Urbains du Grand Nouméa",
+      "buyerLocation": "Nouméa",
+      "location": "Province Sud",
+      "nature": "Travaux",
+      "procedure": "Appel d'offres ouvert",
+      "procedureCode": "AOO",
+      "url": "https://portail.marchespublics.nc/entreprise/consultation/3524?orgAcronyme=y6u",
+      "publishedAt": "2026-10-30T00:00:00+11:00",
+      "deadline": "2026-11-23T11:00:00+11:00",
+      "firstSeen": "2026-10-30T07:56:26.427Z",
+      "lastSeen": "2026-10-30T07:56:26.427Z"
     },
     {
       "id": "lnc-legales:162428f8d509391f",
@@ -79,7 +132,9 @@
       "publishedAt": "2026-10-30T00:00:00+11:00",
       "deadline": "2026-10-30T15:30:00+11:00",
       "firstSeen": "2026-10-30T01:29:16.074Z",
-      "lastSeen": "2026-10-30T01:29:16.074Z"
+      "lastSeen": "2026-10-30T01:29:16.074Z",
+      "gone": true,
+      "goneAt": "2026-10-30T07:56:26.427Z"
     },
     {
       "id": "lnc-legales:a4658fca5a77e806",
@@ -4300,7 +4355,9 @@
       "publishedAt": "2026-10-12T00:00:00+11:00",
       "deadline": "2026-10-30T16:00:00+11:00",
       "firstSeen": "2026-10-11T23:38:50.589Z",
-      "lastSeen": "2026-10-30T01:29:16.074Z"
+      "lastSeen": "2026-10-30T01:29:16.074Z",
+      "gone": true,
+      "goneAt": "2026-10-30T07:56:26.427Z"
     },
     {
       "id": "lnc-legales:a7f6c30f6912445e",
@@ -6792,7 +6849,9 @@
       "deadline": "2026-10-30T15:30:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
       "lastSeen": "2026-10-30T01:29:16.074Z",
-      "seed": true
+      "seed": true,
+      "gone": true,
+      "goneAt": "2026-10-30T07:56:26.427Z"
     },
     {
       "id": "marchespublics-nc:f4g-3438",
@@ -7949,7 +8008,9 @@
       "deadline": "2026-10-30T04:30:00+11:00",
       "firstSeen": "2026-10-08T09:13:16.353Z",
       "lastSeen": "2026-10-30T01:32:07.027Z",
-      "seed": true
+      "seed": true,
+      "gone": true,
+      "goneAt": "2026-10-30T08:00:16.503Z"
     },
     {
       "id": "marches-publics-etat:g6l-3068484",
@@ -8093,7 +8154,9 @@
       "deadline": "2026-10-30T16:00:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
       "lastSeen": "2026-10-30T01:29:16.074Z",
-      "seed": true
+      "seed": true,
+      "gone": true,
+      "goneAt": "2026-10-30T07:56:26.427Z"
     },
     {
       "id": "marchespublics-nc:m5w-3405",
@@ -8324,7 +8387,7 @@
       "reference": "2026-DTPN988",
       "url": "https://www.nouvelle-caledonie.gouv.fr/Publications/Marches-publics/Avis-d-appel-a-la-concurrnce-n-2026-DTPN988-Automobiles",
       "firstSeen": "2026-10-08T09:12:50.881Z",
-      "lastSeen": "2026-10-29T01:28:02.351Z",
+      "lastSeen": "2026-10-30T07:56:44.328Z",
       "seed": true,
       "summary": "Avis d'appel à la concurrnce n°2026-DTPN988 - Automobiles Mis à jour le 14/09/2026 AVIS D’APPEL À LA CONCURRENCE N°2026-DTPN988-AUTOMOBILES 1 – Identification de l’acheteur public : HAUT-COMMISSARIAT de la République en Nouvelle-Calédonie 9 bis rue de la République BP C5 - 98844 NOUMEA CEDEX 2 – Mode de passation : Marché de fournitures passé sous la forme d’un marché à procédure adaptée 3 – Objet de la consultation : Fourniture et livraison de véhicules neufs pour la direction territoriale de la police nationale 4 – Modalités d’obtention du dossier : Les candidats doivent retirer les dossiers par voie électronique, sur la plateforme des achats de l’État (PLACE) : https://www.marches-publics.gouv.fr/ 5 – Présentation des offres : Les entreprises devront présenter un dossier complet tel que décrit dans le RC. 6 – Réception des offres : Les offres doivent être transmises par voie électronique sur la plateforme des achats de l’État (PLACE) : selon les conditions fixées dans le RC. 7 – Date et heure limites de réception des plis : Le mardi 28 septembre 2026 à 16 heures (heure locale) selon les conditions fixées dans le règlement de la consultation. 8 – Délai d’engagement des candidats",
       "publishedAt": "2026-09-14T00:00:00+11:00"
@@ -9230,7 +9293,7 @@
       "url": "https://www.polynesie-francaise.gouv.fr/contenu/telechargement/54781/350422/file/Avis%20de%20publicit%C3%A9_2026_SOLIMPRESS.pdf",
       "publishedAt": "2026-08-03T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:03.204Z",
-      "lastSeen": "2026-10-29T01:30:50.861Z",
+      "lastSeen": "2026-10-30T07:59:31.163Z",
       "seed": true
     },
     {
@@ -9720,7 +9783,7 @@
       "url": "https://www.polynesie-francaise.gouv.fr/contenu/telechargement/54738/350109/file/Avis%20de%20publicit%C3%A9_2026_Securisation_hall_accueil_HCRPF.pdf",
       "publishedAt": "2026-07-07T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:03.204Z",
-      "lastSeen": "2026-10-29T01:30:50.861Z",
+      "lastSeen": "2026-10-30T07:59:31.163Z",
       "seed": true
     },
     {
@@ -9958,7 +10021,7 @@
       "reference": "2026-HC988",
       "url": "https://www.nouvelle-caledonie.gouv.fr/Publications/Marches-publics/Avis-d-appel-a-la-concurrence-n-2026-HC988-Vehicules",
       "firstSeen": "2026-10-08T09:12:50.881Z",
-      "lastSeen": "2026-10-29T01:28:02.351Z",
+      "lastSeen": "2026-10-30T07:56:44.328Z",
       "seed": true,
       "summary": "Avis d'appel à la concurrence n°2026-HC988- Véhicules Mis à jour le 23/06/2026 1 – Identification de l’acheteur public : HAUT-COMMISSARIAT de la République en Nouvelle-Calédonie 9 bis rue de la République BP C5 98844 NOUMEA CEDEX 2 – Mode de passation : Marché de fournitures et de services passé sous la forme d’un appel d’offres ouvert. 3 – Objet de la consultation: Accord-cadre multi-attributaire à marchés subséquents relatif à la fourniture et la livraison de véhicules neufs et d'occasion pour les besoins des services de l'Etat en Nouvelle-Calédonie n°2026_HC988_VEHICULES 4 – Modalités d’obtention du dossier : Les candidats doivent retirer les dossiers par voie électronique, sur la plateforme des achats de l’État (PLACE) : https://www.marches-publics.gouv.fr/ 5 – Présentation des offres : Les entreprises devront présenter un dossier complet tel que décrit au règlement de consultation. 6 – Réception des offres : Les offres doivent être transmises par voie électronique sur la plateforme des achats de l’État (PLACE) : https://www.marches-publics.gouv.fr/ selon les conditions fixées dans le règlement de la consultation. 7 – Date et heure limites de réception des plis : Le mercredi 22",
       "publishedAt": "2026-06-23T00:00:00+11:00"
@@ -10395,7 +10458,7 @@
       "reference": "2026-HC988",
       "url": "https://www.nouvelle-caledonie.gouv.fr/Publications/Marches-publics/Avis-d-appel-a-la-concurrence-n-2026-HC988-consommables-informatiques",
       "firstSeen": "2026-10-08T09:12:50.881Z",
-      "lastSeen": "2026-10-29T01:28:02.351Z",
+      "lastSeen": "2026-10-30T07:56:44.328Z",
       "seed": true,
       "summary": "Avis d'appel à la concurrence n°2026-HC988 consommables informatiques Mis à jour le 27/04/2026 1 – Identification de l’acheteur public : HAUT-COMMISSARIAT de la République en Nouvelle-Calédonie 9 bis rue de la République BP C5 98844 NOUMEA CEDEX 2 – Mode de passation : Marché de fournitures et de services passé sous la forme d’un appel d’offres ouvert. 3 – Objet de la consultation: Fourniture de consommables pour impression et petits matériels informatiques pour le Haut-Commissariat de la République en Nouvelle-Calédonie et la Direction territoriale de la police Nationale de Nouvelle-Calédonie 4 – Modalités d’obtention du dossier : Les candidats doivent retirer les dossiers par voie électronique, sur la plateforme des achats de l’État (PLACE) : https://www.marches-publics.gouv.fr/ 5 – Présentation des offres : Les entreprises devront présenter un dossier complet tel que décrit au règlement de consultation. 6 – Réception des offres : Les offres doivent être transmises par voie électronique sur la plateforme des achats de l’État (PLACE) : https://www.marches-publics.gouv.fr/ selon les conditions fixées dans le règlement de la consultation. 7 – Date et heure limites de réception des p",
       "publishedAt": "2026-04-27T00:00:00+11:00"
@@ -10650,7 +10713,7 @@
       "title": "Avis d'appel à la concurrence MAPA 2026/HC988 - Entretien des espaces verts",
       "url": "https://www.nouvelle-caledonie.gouv.fr/Publications/Marches-publics/Avis-d-appel-a-la-concurrence-MAPA-2026-HC988-Entretien-des-espaces-verts",
       "firstSeen": "2026-10-08T09:12:50.881Z",
-      "lastSeen": "2026-10-29T01:28:02.351Z",
+      "lastSeen": "2026-10-30T07:56:44.328Z",
       "seed": true,
       "summary": "Avis d'appel à la concurrence MAPA 2026/HC988 - Entretien des espaces verts Mis à jour le 25/02/2026 AVIS D’APPEL A LA CONCURRENCE MAPA 2026/HC988_ENTRETIEN DES ESPACES VERTS DE LA SUBDIVISION ADMINISTRATIVE NORD DE KONE ET DE L’ANTENNE DE POINDIMIE 1 – Identification de l’organisme qui passe le marché : HAUT-COMMISSARIAT de la République en Nouvelle-Calédonie 1, avenue du Maréchal Foch BP C5 98844 NOUMEA CEDEX 2 – Mode de passation : Marché à procédure adaptée de services et fournitures. 3 – Objet du marché : Prestations d’entretien des espaces verts de la Subdivision Administrative Nord de Koné et de l’antenne de Poindimié. 4 – Modalités d’obtention du dossier : Dès parution du présent avis, le dossier de consultation des entreprises (DCE) peut être retiré, par voie électronique sur la PLACE à l’adresse : https://www.marches-publics.gouv.fr 5 – Présentation des offres : Les entreprises devront présenter un dossier complet tel que décrit au règlement de la consultation. 6 – Réception des offres : Les offres doivent être transmises par voie électronique sur la plateforme des achats de l’Etat (PLACE) à l’adresse suivante : https://www.marches-publics.gouv.fr selon les conditions fix",
       "publishedAt": "2026-02-25T00:00:00+11:00"
@@ -10663,7 +10726,7 @@
       "reference": "2026/HC988",
       "url": "https://www.nouvelle-caledonie.gouv.fr/Publications/Marches-publics/Avis-d-appel-a-la-concurrence-n-2026-HC988-Bulletins-de-vote",
       "firstSeen": "2026-10-08T09:12:50.881Z",
-      "lastSeen": "2026-10-29T01:28:02.351Z",
+      "lastSeen": "2026-10-30T07:56:44.328Z",
       "seed": true,
       "summary": "Avis d'appel à la concurrence n°2026/HC988 Bulletins de vote Mis à jour le 13/02/2026 AVIS D’APPEL A LA CONCURRENCE N°2026_HC988_BULLETINS_DE_VOTE 1 – Identification de l’organisme qui passe le marché : HAUT-COMMISSARIAT de la République en Nouvelle-Calédonie 9 bis rue de la République BP C5 98844 NOUMEA CEDEX 2 – Mode de passation : Marché de prestation à procédure formalisée. Appel d’offres ouvert. 3 – Objet du marché : Accord cadre relatif à l’impression et la livraison de bulletins de vote à l’occasion de toute élection présidentielle ou référendum national pour le haut-commissariat de la République en Nouvelle-Calédonie et l’administration supérieure des îles de Wallis et Futuna 4 – Modalités d’obtention du dossier : Les candidats doivent retirer les dossiers par voie électronique, sur la plateforme des achats de l’État (PLACE) : https://www.marches-publics.gouv.fr/ 5 – Présentation des offres : Les entreprises devront présenter un dossier complet tel que décrit au règlement de consultation. 6 – Réception des offres : Les offres doivent être transmises par voie électronique sur la plateforme des achats de l’État (PLACE) : https://www.marches-publics.gouv.fr/ selon les conditio",
       "publishedAt": "2026-02-13T00:00:00+11:00"
@@ -11055,7 +11118,7 @@
       "title": "AVIS RECTIFICATIF - Modification de la durée pour les marchés d’hygiène de nettoyage,",
       "url": "https://www.nouvelle-caledonie.gouv.fr/Publications/Marches-publics/AVIS-RECTIFICATIF-Modification-de-la-duree-pour-les-marches-d-hygiene-de-nettoyage",
       "firstSeen": "2026-10-08T09:12:50.881Z",
-      "lastSeen": "2026-10-29T01:28:02.351Z",
+      "lastSeen": "2026-10-30T07:56:44.328Z",
       "seed": true,
       "summary": "AVIS RECTIFICATIF - Modification de la durée pour les marchés d’hygiène de nettoyage, Mis à jour le 21/11/2025 AVIS RECTIFICATIF Modification de la durée Pour les marchés d’hygiène de nettoyage, de produits d’entretien et emballages alimentaire pour la cuisine du Centre Pénitentiaire de Nouméa et du Centre de Détention de Koné (2026 -2030) Identification de l’organisme qui passe les marchés : Ministère de la Justice Mission des services pénitentiaires de l'Outre-Mer Unité opérationnelle de Nouvelle-Calédonie B.P. 491 2 rue du capitaine bois 98845 NOUMEA Cedex Objet de la modification : Durée du Marché q M.A.P.A. 2025 N°0012 Lot n°1 : articles d’hygiène, de nettoyage, de produits d’entretien et emballage alimentaires pour la cuisine Lot n°2 : barquettes jetables en aluminium à usage alimentaire Lot N°3 : articles d’hygiène, de nettoyage, de vaisselle, de consommable jetables et de produits spécifiques pour l’administration Lot N°4 : articles d’hygiène, de nettoyage, de vaisselle, de consommable jetables et de produits spécifiques pour la population pénale Marché fractionné à bons de commande, conclus pour une période allant du 1er janvier 2026 au 31 décembre 2030. La durée du marché",
       "reference": "0012",
@@ -11068,7 +11131,7 @@
       "title": "Appel public à concurrence pour les marchés d'alimentation et d'hygiène du centre pénitentiaire",
       "url": "https://www.nouvelle-caledonie.gouv.fr/Publications/Marches-publics/Appel-public-a-concurrence-pour-les-marches-d-alimentation-et-d-hygiene-du-centre-penitentiaire",
       "firstSeen": "2026-10-08T09:12:50.881Z",
-      "lastSeen": "2026-10-29T01:28:02.351Z",
+      "lastSeen": "2026-10-30T07:56:44.328Z",
       "seed": true,
       "summary": "Appel public à concurrence pour les marchés d'alimentation et d'hygiène du centre pénitentiaire Mis à jour le 17/11/2025 AVIS D'APPEL PUBLIC A CONCURRENCE Pour les marchés d’alimentation et d’hygiène du Centre Pénitentiaire de Nouméa et du Centre de Détention de Koné (2026 -2027) Identification de l’organisme qui passe les marchés : Ministère de la Justice Mission des services pénitentiaires de l'Outre-Mer Unité opérationnelle de Nouvelle-Calédonie B.P. 491 2 rue du capitaine bois 98845 NOUMEA Cedex Objet, numéros des marchés et décomposition en lots : Les marchés d’alimentation et d’hygiène se composent des lots suivants : - M.A.P.A. 2025 N°0003 : Fourniture de produits boulangerie pour l’administration - M.A.P.A. 2025 N°0004 Lot n°1 : fruits et légumes frais pour l’administration Lot n°2 : produits frais de 4éme gamme pour l’administration Lot n°3 : produits frais 5 ème gamme pour l’administration - M.A.P.A. 2025 N°0008 Lot n°1 : produits d’épicerie pour l’administration Lot n°2 : produits de petit déjeuner pour l’administration - M.A.P.A. 2025 N°0001 Lot n°1 : desserts lactés, fromages beurre et crème fraîche réfrigérés pour l’administration - M.A.P.A. 2025 N°0010 Lot n°1 : prod",
       "reference": "0003",
@@ -11352,7 +11415,7 @@
       "reference": "2025/HC988",
       "url": "https://www.nouvelle-caledonie.gouv.fr/Publications/Marches-publics/Avis-d-appel-a-la-concurrence-n-2025-HC988-entretien-des-espaces-verts",
       "firstSeen": "2026-10-08T09:12:50.881Z",
-      "lastSeen": "2026-10-29T01:28:02.351Z",
+      "lastSeen": "2026-10-30T07:56:44.328Z",
       "seed": true,
       "summary": "Avis d'appel à la concurrence n°2025/HC988 entretien des espaces verts Mis à jour le 10/10/2025 1 – Identification de l’organisme qui passe le marché : HAUT-COMMISSARIAT de la République en Nouvelle-Calédonie 1, avenue du Maréchal Foch BP C5 98844 NOUMEA CEDEX 2 – Mode de passation : Marché de fournitures et de services passé sous la forme d’un appel d’offres ouvert 3 – Objet du marché : Prestations d’entretien des espaces verts du Haut-commissariat de la République en Nouvelle-Calédonie et de la Direction territoriale de la Police Nationale de Nouvelle-Calédonie. 4 – Modalités d’obtention du dossier : Les candidats doivent retirer le dossier de consultation des opérateurs économiques (DCOE) dès parution de cet avis, par voie électronique sur PLACE à l’adresse : https://www.marches-publics.gouv.fr 5 – Présentation des offres : Les entreprises devront présenter un dossier complet tel que décrit au règlement de la consultation. 6 – Réception des offres : Les offres doivent être transmises par voie électronique sur la plateforme des achats de l’Etat (PLACE) à l’adresse suivante : https://www.marches-publics.gouv.fr selon les conditions fixées au règlement de la consultation. 7 – Date",
       "publishedAt": "2025-10-10T00:00:00+11:00"
@@ -11540,7 +11603,7 @@
       "title": "Fourniture et livraison de deux véhicules thermiques, banalisés, au profit de la Police Nationale",
       "url": "https://www.nouvelle-caledonie.gouv.fr/Publications/Marches-publics/Fourniture-et-livraison-de-deux-vehicules-thermiques-banalises-au-profit-de-la-Police-Nationale",
       "firstSeen": "2026-10-08T09:12:50.881Z",
-      "lastSeen": "2026-10-29T01:28:02.351Z",
+      "lastSeen": "2026-10-30T07:56:44.328Z",
       "seed": true,
       "summary": "Fourniture et livraison de deux véhicules thermiques, banalisés, au profit de la Police Nationale Mis à jour le 18/07/2025 - Règlement de consultation (RC) - Cahier des clauses administratives particulières (CCAP) - Cahier des clauses techniques particulières (CCTP) - Décomposition du prix global et forfaitaire - Acte d'engagement (ATTRI 1) - Lettre de candidature -Désignation du mandataire par ses co-traitants (DC1) - Déclaration du candidat individuel ou du membre du groupement (DC2) - Déclaration de sous-traitance (DC4)",
       "publishedAt": "2025-07-18T00:00:00+11:00"
@@ -11552,7 +11615,7 @@
       "title": "Centre Pénitentiaire de Nouméa - Maintenance personalisée des systèmes d'électricité",
       "url": "https://www.nouvelle-caledonie.gouv.fr/Publications/Marches-publics/Centre-Penitentiaire-de-Noumea-Maintenance-personalisee-des-systemes-d-electricite",
       "firstSeen": "2026-10-08T09:12:50.881Z",
-      "lastSeen": "2026-10-29T01:28:02.351Z",
+      "lastSeen": "2026-10-30T07:56:44.328Z",
       "seed": true,
       "summary": "Centre Pénitentiaire de Nouméa - Maintenance personalisée des systèmes d'électricité Mis à jour le 16/07/2025 AVIS D'APPEL PUBLIC A CONCURRENCE : MAINTENANCE PERSONALISEE DES SYSTEMES D’ELECTRICITE Du Centre Pénitentiaire de Nouméa 1 - IDENTIFICATION DE L’ACHETEUR PUBLIC Ministère de la Justice Mission des services pénitentiaires de l'Outre-Mer Centre Pénitentiaire de Nouméa 2, rue du Capitaine Bois - BP 491 98845 Nouméa cedex 2 - OBJET DE LA CONSULTATION La consultation concerne la passation du marché, pour deux ans, pour la MAINTENANCE PERSONALISEE DES SYSTEMES D’ELECTRICITE du Centre Pénitentiaire de Nouméa. 3 - MODE DE PASSATION Marché selon la procédure d’appel d’offres ouvert. 4 - MODALITES DE RETRAIT DU DOSSIER DE CONSULTATION Dossier De Consultation des Entreprises sont à demander à : Madame Marie-Lydie MACKAM Tel. : 27.89.75 Marie-lydie.mackam@justice.fr ou Madame Myriam Castillon Tél. : 27.89.76 / 75 05 56 myriam.castillon@justice.fr Renseignements d’ordre technique auprès de : Monsieur DUROST Steve steve.durost@justice.fr ou Monsieur BENOIST Jacques Jacques.Benoist@justice.fr Une visite obligatoire du site est prévue le Vendredi 25 Juillet à 09h. Prendre contact avec les",
       "publishedAt": "2025-07-16T00:00:00+11:00"
