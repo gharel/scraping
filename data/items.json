@@ -6567,7 +6567,9 @@
       "deadline": "2026-11-01T13:59:00+11:00",
       "firstSeen": "2026-10-08T09:13:16.353Z",
       "lastSeen": "2026-11-01T03:42:49.911Z",
-      "seed": true
+      "seed": true,
+      "gone": true,
+      "goneAt": "2026-11-01T17:31:09.364Z"
     },
     {
       "id": "secal:8bfe8fcf47943d54",
