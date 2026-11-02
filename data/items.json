@@ -36,6 +36,45 @@
   },
   "items": [
     {
+      "id": "marchespublics-nc:s3d-3526",
+      "sourceId": "marchespublics-nc",
+      "kind": "consultation",
+      "title": "TRAVAUX D’ENTRETIEN D'ÉLECTRICITÉ DU PATRIMOINE SCOLAIRE ET DES ÉDIFICES COMMUNAUX",
+      "summary": "Travaux d’entretien, de dépannage, de réparation et de mise en conformité des installations électriques du patrimoine scolaire et des édifices communaux de la Ville de Nouméa.",
+      "reference": "2026-77",
+      "buyer": "Ville de Nouméa",
+      "buyerLocation": "Nouméa",
+      "location": "Province Sud",
+      "nature": "Travaux",
+      "procedure": "Appel d'offres ouvert",
+      "procedureCode": "AOO",
+      "url": "https://portail.marchespublics.nc/entreprise/consultation/3526?orgAcronyme=s3d",
+      "publishedAt": "2026-11-02T00:00:00+11:00",
+      "deadline": "2026-12-03T15:30:00+11:00",
+      "firstSeen": "2026-11-02T08:42:04.727Z",
+      "lastSeen": "2026-11-02T08:42:04.727Z"
+    },
+    {
+      "id": "marchespublics-nc:s3d-3530",
+      "sourceId": "marchespublics-nc",
+      "kind": "consultation",
+      "title": "NETTOIEMENT DES ESPACES PUBLICS DE LA COMMUNE DE NOUMÉA",
+      "summary": "Le marché porte sur les prestations de propreté urbaine de la Ville de Nouméa, il comprend le balayage mécanisé, le nettoiement manuel, la collecte des bornes de propreté et l’enlèvement des dépôts sauvages.\nIl couvre également l’effacement des graffitis ainsi que le nettoyage et l’entretien des sanitaires publics.\nIl vise à garantir la propreté des espaces publics, avec des exigences de qualité, de réactivité et de traçabilité des interventions.",
+      "reference": "2026-78",
+      "buyer": "Ville de Nouméa",
+      "buyerLocation": "Nouméa",
+      "location": "Province Sud",
+      "nature": "Services",
+      "procedure": "Appel d'offres ouvert",
+      "procedureCode": "AOO",
+      "url": "https://portail.marchespublics.nc/entreprise/consultation/3530?orgAcronyme=s3d",
+      "publishedAt": "2026-11-02T00:00:00+11:00",
+      "deadline": "2026-12-03T15:30:00+11:00",
+      "lots": 7,
+      "firstSeen": "2026-11-02T08:42:04.727Z",
+      "lastSeen": "2026-11-02T08:42:04.727Z"
+    },
+    {
       "id": "marches-publics-etat:g6l-3097232",
       "sourceId": "marches-publics-etat",
       "kind": "consultation",
@@ -98,7 +137,7 @@
       "publishedAt": "2026-10-30T03:23:39.000Z",
       "deadline": "2026-12-13T12:00:00.000Z",
       "firstSeen": "2026-10-30T08:00:24.640Z",
-      "lastSeen": "2026-11-01T03:42:55.204Z"
+      "lastSeen": "2026-11-02T08:46:15.193Z"
     },
     {
       "id": "cps-appels-offres:a48c1c53bc3c429c",
@@ -113,7 +152,7 @@
       "publishedAt": "2026-10-29T22:16:18.000Z",
       "deadline": "2026-11-29T12:00:00.000Z",
       "firstSeen": "2026-10-30T01:32:14.026Z",
-      "lastSeen": "2026-11-01T03:42:55.204Z"
+      "lastSeen": "2026-11-02T08:46:15.193Z"
     },
     {
       "id": "marchespublics-nc:y6u-3523",
@@ -362,7 +401,7 @@
       "publishedAt": "2026-10-28T03:38:58.000Z",
       "deadline": "2026-11-11T12:00:00.000Z",
       "firstSeen": "2026-10-28T07:51:57.728Z",
-      "lastSeen": "2026-11-01T03:42:55.204Z"
+      "lastSeen": "2026-11-02T08:46:15.193Z"
     },
     {
       "id": "province-sud-appels-a-projets:e95a7eda298e24fa",
@@ -693,7 +732,7 @@
       "publishedAt": "2026-10-26T21:59:02.000Z",
       "deadline": "2026-11-10T12:00:00.000Z",
       "firstSeen": "2026-10-26T22:12:50.172Z",
-      "lastSeen": "2026-11-01T03:42:55.204Z"
+      "lastSeen": "2026-11-02T08:46:15.193Z"
     },
     {
       "id": "fiaf:f0ba9bc42bbc6023",
@@ -1010,7 +1049,7 @@
       "publishedAt": "2026-10-26T03:20:32.000Z",
       "deadline": "2026-11-08T12:00:00.000Z",
       "firstSeen": "2026-10-26T09:37:23.392Z",
-      "lastSeen": "2026-11-01T03:42:55.204Z"
+      "lastSeen": "2026-11-02T08:46:15.193Z"
     },
     {
       "id": "cps-appels-offres:3074a0b2ce5ad09c",
@@ -1025,7 +1064,7 @@
       "publishedAt": "2026-10-25T22:10:16.000Z",
       "deadline": "2026-11-08T12:00:00.000Z",
       "firstSeen": "2026-10-26T02:40:27.644Z",
-      "lastSeen": "2026-11-01T03:42:55.204Z"
+      "lastSeen": "2026-11-02T08:46:15.193Z"
     },
     {
       "id": "lnc-legales:86fa7cf544b7eb71",
@@ -1501,7 +1540,7 @@
       "publishedAt": "2026-10-23T02:52:00.000Z",
       "deadline": "2026-10-30T12:00:00.000Z",
       "firstSeen": "2026-10-23T09:05:19.939Z",
-      "lastSeen": "2026-11-01T03:42:55.204Z"
+      "lastSeen": "2026-11-02T08:46:15.193Z"
     },
     {
       "id": "cps-appels-offres:7564d09f54274b10",
@@ -1516,7 +1555,7 @@
       "publishedAt": "2026-10-23T02:34:17.000Z",
       "deadline": "2026-12-06T12:00:00.000Z",
       "firstSeen": "2026-10-23T02:53:59.311Z",
-      "lastSeen": "2026-11-01T03:42:55.204Z"
+      "lastSeen": "2026-11-02T08:46:15.193Z"
     },
     {
       "id": "province-sud-avis:ec3662e365a02135",
@@ -1892,7 +1931,7 @@
       "publishedAt": "2026-10-21T02:51:24.000Z",
       "deadline": "2026-11-04T12:00:00.000Z",
       "firstSeen": "2026-10-21T07:40:53.728Z",
-      "lastSeen": "2026-11-01T03:42:55.204Z"
+      "lastSeen": "2026-11-02T08:46:15.193Z"
     },
     {
       "id": "province-nord:2418e3b80d285cc3",
@@ -2744,7 +2783,7 @@
       "publishedAt": "2026-10-19T02:52:13.000Z",
       "deadline": "2026-11-02T12:00:00.000Z",
       "firstSeen": "2026-10-19T04:41:27.061Z",
-      "lastSeen": "2026-11-01T03:42:55.204Z"
+      "lastSeen": "2026-11-02T08:46:15.193Z"
     },
     {
       "id": "wallis-futuna:f0d8e4c1d9498a37",
@@ -3437,7 +3476,7 @@
       "publishedAt": "2026-10-15T03:07:57.000Z",
       "deadline": "2026-11-01T12:00:00.000Z",
       "firstSeen": "2026-10-15T04:42:28.450Z",
-      "lastSeen": "2026-11-01T03:42:55.204Z"
+      "lastSeen": "2026-11-02T08:46:15.193Z"
     },
     {
       "id": "cps-appels-offres:f57de3010107e6ff",
@@ -3617,7 +3656,7 @@
       "publishedAt": "2026-10-14T02:37:06.000Z",
       "deadline": "2026-11-08T12:00:00.000Z",
       "firstSeen": "2026-10-14T07:40:50.052Z",
-      "lastSeen": "2026-11-01T03:42:55.204Z",
+      "lastSeen": "2026-11-02T08:46:15.193Z",
       "updatedAt": "2026-10-27T09:32:33.759Z",
       "history": [
         {
@@ -3641,7 +3680,7 @@
       "publishedAt": "2026-10-13T21:50:15.000Z",
       "deadline": "2026-11-10T12:00:00.000Z",
       "firstSeen": "2026-10-14T01:16:25.753Z",
-      "lastSeen": "2026-11-01T03:42:55.204Z"
+      "lastSeen": "2026-11-02T08:46:15.193Z"
     },
     {
       "id": "province-nord:84ce25d442b36954",
@@ -4268,7 +4307,9 @@
       "publishedAt": "2026-10-12T00:00:00+11:00",
       "deadline": "2026-11-02T15:30:00+11:00",
       "firstSeen": "2026-10-12T15:20:38.765Z",
-      "lastSeen": "2026-11-02T01:10:06.459Z"
+      "lastSeen": "2026-11-02T01:10:06.459Z",
+      "gone": true,
+      "goneAt": "2026-11-02T08:42:04.727Z"
     },
     {
       "id": "marches-publics-etat:g7h-3083754",
@@ -4324,7 +4365,9 @@
       "publishedAt": "2026-10-12T00:00:00+11:00",
       "deadline": "2026-11-02T15:00:00+11:00",
       "firstSeen": "2026-10-12T05:54:47.601Z",
-      "lastSeen": "2026-11-02T01:10:06.459Z"
+      "lastSeen": "2026-11-02T01:10:06.459Z",
+      "gone": true,
+      "goneAt": "2026-11-02T08:42:04.727Z"
     },
     {
       "id": "lnc-legales:650ed148e7a8eef0",
@@ -5367,7 +5410,9 @@
       "lots": 2,
       "firstSeen": "2026-10-08T07:01:04.349Z",
       "lastSeen": "2026-11-02T01:10:06.459Z",
-      "seed": true
+      "seed": true,
+      "gone": true,
+      "goneAt": "2026-11-02T08:42:04.727Z"
     },
     {
       "id": "marchespublics-nc:p2q-3463",
@@ -5430,7 +5475,7 @@
       "publishedAt": "2026-10-07T03:47:54.000Z",
       "deadline": "2026-11-04T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
-      "lastSeen": "2026-11-01T03:42:55.204Z",
+      "lastSeen": "2026-11-02T08:46:15.193Z",
       "seed": true,
       "status": "Advertised"
     },
@@ -5813,7 +5858,9 @@
       "deadline": "2026-11-02T15:00:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
       "lastSeen": "2026-11-02T01:10:06.459Z",
-      "seed": true
+      "seed": true,
+      "gone": true,
+      "goneAt": "2026-11-02T08:42:04.727Z"
     },
     {
       "id": "marchespublics-nc:t5y-3455",
@@ -5834,7 +5881,9 @@
       "lots": 3,
       "firstSeen": "2026-10-08T07:01:04.349Z",
       "lastSeen": "2026-11-02T01:10:06.459Z",
-      "seed": true
+      "seed": true,
+      "gone": true,
+      "goneAt": "2026-11-02T08:42:04.727Z"
     },
     {
       "id": "pwd-vanuatu:438d3790a0245175",
@@ -6258,7 +6307,7 @@
       "publishedAt": "2026-10-02T03:19:34.000Z",
       "deadline": "2026-11-08T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
-      "lastSeen": "2026-11-01T03:42:55.204Z",
+      "lastSeen": "2026-11-02T08:46:15.193Z",
       "seed": true,
       "status": "Advertised",
       "updatedAt": "2026-10-27T09:32:33.759Z",
@@ -6392,7 +6441,9 @@
       "deadline": "2026-11-02T16:00:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
       "lastSeen": "2026-11-02T01:10:06.459Z",
-      "seed": true
+      "seed": true,
+      "gone": true,
+      "goneAt": "2026-11-02T08:42:04.727Z"
     },
     {
       "id": "marchespublics-nc:b7k-3442",
@@ -6743,7 +6794,7 @@
       "publishedAt": "2026-09-28T22:42:58.000Z",
       "deadline": "2026-11-01T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
-      "lastSeen": "2026-11-01T03:42:55.204Z",
+      "lastSeen": "2026-11-02T08:46:15.193Z",
       "seed": true,
       "status": "Advertised",
       "updatedAt": "2026-10-22T00:25:51.600Z",
@@ -6768,7 +6819,7 @@
       "publishedAt": "2026-09-28T22:27:56.000Z",
       "deadline": "2026-11-01T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
-      "lastSeen": "2026-11-01T03:42:55.204Z",
+      "lastSeen": "2026-11-02T08:46:15.193Z",
       "seed": true,
       "status": "Advertised",
       "updatedAt": "2026-10-22T00:25:51.600Z",
@@ -7300,7 +7351,7 @@
       "publishedAt": "2026-09-23T04:14:37.000Z",
       "deadline": "2026-11-04T12:00:00.000Z",
       "firstSeen": "2026-10-08T07:01:12.138Z",
-      "lastSeen": "2026-11-01T03:42:55.204Z",
+      "lastSeen": "2026-11-02T08:46:15.193Z",
       "seed": true,
       "status": "Advertised"
     },
@@ -9366,7 +9417,7 @@
       "url": "https://www.polynesie-francaise.gouv.fr/contenu/telechargement/54781/350422/file/Avis%20de%20publicit%C3%A9_2026_SOLIMPRESS.pdf",
       "publishedAt": "2026-08-03T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:03.204Z",
-      "lastSeen": "2026-11-01T03:42:05.309Z",
+      "lastSeen": "2026-11-02T08:45:18.751Z",
       "seed": true
     },
     {
@@ -9856,7 +9907,7 @@
       "url": "https://www.polynesie-francaise.gouv.fr/contenu/telechargement/54738/350109/file/Avis%20de%20publicit%C3%A9_2026_Securisation_hall_accueil_HCRPF.pdf",
       "publishedAt": "2026-07-07T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:03.204Z",
-      "lastSeen": "2026-11-01T03:42:05.309Z",
+      "lastSeen": "2026-11-02T08:45:18.751Z",
       "seed": true
     },
     {
