@@ -36,6 +36,25 @@
   },
   "items": [
     {
+      "id": "marches-publics-etat:g6l-3098057",
+      "sourceId": "marches-publics-etat",
+      "kind": "consultation",
+      "title": "Construction du bâtiment",
+      "summary": "Construction du bâtiment",
+      "reference": "2026-T-AO-85-STAR",
+      "buyer": "Ministère de l'Intérieur",
+      "location": "(986) Wallis-et-Futuna, Wallis et Futuna",
+      "nature": "Travaux",
+      "procedure": "Appel d'offres ouvert",
+      "procedureCode": "AOO",
+      "url": "https://www.marches-publics.gouv.fr/app.php/entreprise/consultation/3098057?orgAcronyme=g6l",
+      "publishedAt": "2026-11-03T00:00:00+11:00",
+      "deadline": "2026-12-16T00:30:00+11:00",
+      "lots": 13,
+      "firstSeen": "2026-11-03T17:30:42.697Z",
+      "lastSeen": "2026-11-03T17:30:42.697Z"
+    },
+    {
       "id": "wallis-futuna:bbd8052440430087",
       "sourceId": "wallis-futuna",
       "kind": "consultation",
