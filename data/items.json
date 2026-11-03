@@ -36,6 +36,55 @@
   },
   "items": [
     {
+      "id": "wallis-futuna:bbd8052440430087",
+      "sourceId": "wallis-futuna",
+      "kind": "consultation",
+      "title": "Accord-cadre à bons de commande relatif au traitement et à l’exportation des déchets dangereux du Territoire de Wallis et Futuna.",
+      "summary": "Avis de marché : Accord-cadre à bons de commande relatif au traitement et à l’exportation des déchets dangereux du Territoire de Wallis et Futuna. L'Administration supérieure des îles Wallis et Futuna lance le marché public suivant : Accord-cadre à bons de commande relatif au traitement et à l’exportation des déchets dangereux du Territoire de Wallis et Futuna. Référence : 2026-T-AO-84-ENV Date limite de réception des offres : Vendredi 4 décembre 2026 à 11h30 (heure de Wallis). - Dépôt de l'offre : La transmission électronique des plis se fera uniquement sur le profil acheteur de…",
+      "reference": "2026-T-AO-84-ENV",
+      "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15400/126425/file/avis%20de%20march%C3%A9%20-%20exports%20d%C3%A9chets.pdf",
+      "publishedAt": "2026-11-03T00:00:00+11:00",
+      "deadline": "2026-12-04T11:30:00+11:00",
+      "firstSeen": "2026-11-03T09:01:58.780Z",
+      "lastSeen": "2026-11-03T09:01:58.780Z"
+    },
+    {
+      "id": "lnc-legales:9f81abd8d57f2664",
+      "sourceId": "lnc-legales",
+      "kind": "consultation",
+      "title": "TRAVAUX D’ENTRETIEN D’ÉLECTRICITÉ DU PATRIMOINE SCOLAIRE ET DES ÉDIFICES COMMUNAUX",
+      "summary": "TRAVAUX D’ENTRETIEN D’ÉLECTRICITÉ DU PATRIMOINE SCOLAIRE ET DES ÉDIFICES COMMUNAUX Le maire de la ville de Nouméa informe les personnes intéressées du lancement de...",
+      "buyer": "ville de Nouméa",
+      "url": "https://legales.lnc.nc/annonce/ville-de-noumea-03-11-2026-31440",
+      "publishedAt": "2026-11-03T00:00:00+11:00",
+      "firstSeen": "2026-11-03T08:59:16.622Z",
+      "lastSeen": "2026-11-03T08:59:16.622Z"
+    },
+    {
+      "id": "lnc-legales:7f35721fbc35db5c",
+      "sourceId": "lnc-legales",
+      "kind": "consultation",
+      "title": "COLLECTE DES DÉCHETS MÉNAGERS VOLUMINEUX",
+      "summary": "COLLECTE DES DÉCHETS MÉNAGERS VOLUMINEUX Le maire de la ville de Nouméa informe les personnes intéressées du lancement de l’appel d’offres concernant la collecte de...",
+      "buyer": "ville de Nouméa",
+      "url": "https://legales.lnc.nc/annonce/ville-de-noumea-03-11-2026-31439",
+      "publishedAt": "2026-11-03T00:00:00+11:00",
+      "firstSeen": "2026-11-03T08:59:16.622Z",
+      "lastSeen": "2026-11-03T08:59:16.622Z"
+    },
+    {
+      "id": "lnc-legales:965d426f5f59322a",
+      "sourceId": "lnc-legales",
+      "kind": "consultation",
+      "title": "Le maire de la ville de Nouméa informe les personnes intéressées du lancement de l’appel d’offres concernant le nettoiement des esp...",
+      "summary": "Appels d’offres , publié dans rrb.nc le 03/11/2026 ville de Nouméa NETTOIEMENT DES ESPACES PUBLICS DE LA COMMUNE DE NOUMÉA&nbsp; Le maire de la ville de Nouméa informe les personnes intéressées du lancement de l’appel d’offres concernant le nettoiement des e ... Lire la suite",
+      "buyer": "ville de Nouméa",
+      "url": "https://legales.lnc.nc/annonce/ville-de-noumea-03-11-2026-31438",
+      "publishedAt": "2026-11-03T00:00:00+11:00",
+      "firstSeen": "2026-11-03T08:59:16.622Z",
+      "lastSeen": "2026-11-03T08:59:16.622Z"
+    },
+    {
       "id": "lnc-legales:c0f231cbf937a000",
       "sourceId": "lnc-legales",
       "kind": "consultation",
@@ -7152,7 +7201,9 @@
           "from": "2026-10-20T15:30:00+11:00",
           "to": "2026-11-03T15:30:00+11:00"
         }
-      ]
+      ],
+      "gone": true,
+      "goneAt": "2026-11-03T08:58:59.303Z"
     },
     {
       "id": "marchespublics-nc:q1s-3437",
