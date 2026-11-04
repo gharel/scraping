@@ -36,6 +36,21 @@
   },
   "items": [
     {
+      "id": "cps-appels-offres:a1f8851f8658e68a",
+      "sourceId": "cps-appels-offres",
+      "kind": "consultation",
+      "title": "Web Based Multimedia Storytelling Platform",
+      "reference": "RFQ26-10883",
+      "location": "Fiji & New Caledonia",
+      "nature": "Services",
+      "status": "Advertised",
+      "url": "https://www.spc.int/procurement/tenders/web-based-multimedia-storytelling-platform",
+      "publishedAt": "2026-11-04T08:52:53.000Z",
+      "deadline": "2026-11-18T12:00:00.000Z",
+      "firstSeen": "2026-11-04T13:38:03.874Z",
+      "lastSeen": "2026-11-04T13:38:03.874Z"
+    },
+    {
       "id": "lexpol-marches:ec1fa71d8077de1c",
       "sourceId": "lexpol-marches",
       "kind": "consultation",
@@ -4558,7 +4573,9 @@
       "deadline": "2026-11-04T15:30:00+11:00",
       "lots": 4,
       "firstSeen": "2026-10-13T15:56:51.573Z",
-      "lastSeen": "2026-11-04T04:16:49.650Z"
+      "lastSeen": "2026-11-04T04:16:49.650Z",
+      "gone": true,
+      "goneAt": "2026-11-04T13:35:40.498Z"
     },
     {
       "id": "lnc-legales:b8a5fbff05070d29",
@@ -9924,7 +9941,7 @@
       "url": "https://www.polynesie-francaise.gouv.fr/contenu/telechargement/54781/350422/file/Avis%20de%20publicit%C3%A9_2026_SOLIMPRESS.pdf",
       "publishedAt": "2026-08-03T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:03.204Z",
-      "lastSeen": "2026-11-03T01:58:47.453Z",
+      "lastSeen": "2026-11-04T13:37:38.936Z",
       "seed": true
     },
     {
@@ -10414,7 +10431,7 @@
       "url": "https://www.polynesie-francaise.gouv.fr/contenu/telechargement/54738/350109/file/Avis%20de%20publicit%C3%A9_2026_Securisation_hall_accueil_HCRPF.pdf",
       "publishedAt": "2026-07-07T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:03.204Z",
-      "lastSeen": "2026-11-03T01:58:47.453Z",
+      "lastSeen": "2026-11-04T13:37:38.936Z",
       "seed": true
     },
     {
