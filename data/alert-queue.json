@@ -1,29 +1,4 @@
 {
-  "lastDigest": "2026-11-03",
-  "items": [
-    {
-      "id": "lnc-legales:b00b9bcd8a6f6ae9",
-      "queuedAt": "2026-11-03T22:49:20.125Z"
-    },
-    {
-      "id": "marchespublics-nc:b7k-3529",
-      "queuedAt": "2026-11-04T04:19:09.217Z"
-    },
-    {
-      "id": "lexpol-marches:8e57e8d393b1ad85",
-      "queuedAt": "2026-11-04T04:19:09.217Z"
-    },
-    {
-      "id": "cps-appels-offres:a1f8851f8658e68a",
-      "queuedAt": "2026-11-04T13:38:05.515Z"
-    },
-    {
-      "id": "lnc-legales:ed577efd9dd14792",
-      "queuedAt": "2026-11-05T01:58:43.760Z"
-    },
-    {
-      "id": "cps-appels-offres:b1d56e0d2cd29317",
-      "queuedAt": "2026-11-05T04:42:08.083Z"
-    }
-  ]
+  "lastDigest": "2026-11-05",
+  "items": []
 }
