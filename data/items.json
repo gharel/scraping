@@ -36,6 +36,64 @@
   },
   "items": [
     {
+      "id": "lexpol-marches:db8e37d87a153b7a",
+      "sourceId": "lexpol-marches",
+      "kind": "consultation",
+      "title": "Marché de fourniture relatif à l’acquisition de deux camions frigorifiques pour l’abattoir public de Papeiti sis à Papara île de Tahiti",
+      "summary": "DIRECTION DE L’AGRICULTURE - Marché de fourniture relatif à l’acquisition de deux camions frigorifiques pour l’abattoir public de Papeiti sis à Papara île de Tahiti - Date de remise de l'offre 04/12/2026 04/11/2026 Voir l'annonce >",
+      "buyer": "DIRECTION DE L’AGRICULTURE",
+      "url": "https://lexpol.cloud.pf/LexpolAfficheAnnonceMP.php?t=317093&rech=0&page=1",
+      "deadline": "2026-12-04T00:00:00+11:00",
+      "firstSeen": "2026-11-05T04:41:50.438Z",
+      "lastSeen": "2026-11-05T04:41:50.438Z"
+    },
+    {
+      "id": "lexpol-marches:9295addf5202a1c7",
+      "sourceId": "lexpol-marches",
+      "kind": "consultation",
+      "title": "Commune de Papeete - Avis d'attribution - ENTRETIEN DU RÉSEAU D’ÉVACUATION DES EAUX PLUVIALES DE LA COMMUNE DE PAPEETE 04/11/2026",
+      "summary": "Commune de Papeete - Avis d'attribution - ENTRETIEN DU RÉSEAU D’ÉVACUATION DES EAUX PLUVIALES DE LA COMMUNE DE PAPEETE 04/11/2026 Voir l'annonce >",
+      "url": "https://lexpol.cloud.pf/LexpolAfficheAnnonceMP.php?t=315857&rech=0&page=1",
+      "firstSeen": "2026-11-05T04:41:50.438Z",
+      "lastSeen": "2026-11-05T04:41:50.438Z"
+    },
+    {
+      "id": "lexpol-marches:2598d91aceb060a4",
+      "sourceId": "lexpol-marches",
+      "kind": "consultation",
+      "title": "Direction générale de l'éducation et des enseignements (DGEE) - Avis d'attribution - Mise en conformité CFO et SSI des collèges et lycées – JP.2027 04/11/2026",
+      "summary": "Direction générale de l'éducation et des enseignements (DGEE) - Avis d'attribution - Mise en conformité CFO et SSI des collèges et lycées – JP.2027 04/11/2026 Voir l'annonce >",
+      "url": "https://lexpol.cloud.pf/LexpolAfficheAnnonceMP.php?t=316625&rech=0&page=1",
+      "firstSeen": "2026-11-05T04:41:50.438Z",
+      "lastSeen": "2026-11-05T04:41:50.438Z"
+    },
+    {
+      "id": "lexpol-marches:68b182a735eb2295",
+      "sourceId": "lexpol-marches",
+      "kind": "consultation",
+      "title": "Commune de Papeete - Avis d'attribution - TRAVAUX DE DESAMIANTAGE ET DE RENOVATION DE L'ECOLE UI TAMA- LOT 2 : MACONNERIE /",
+      "summary": "Commune de Papeete - Avis d'attribution - TRAVAUX DE DESAMIANTAGE ET DE RENOVATION DE L'ECOLE UI TAMA- LOT 2 : MACONNERIE / CLOTURE / CHENEAUX - PLANCHES DE RIVE - DESCENTES D'EAUX PLUVIALES / PEINTURE 04/11/2026 Voir l'annonce >",
+      "url": "https://lexpol.cloud.pf/LexpolAfficheAnnonceMP.php?t=317235&rech=0&page=1",
+      "deadline": "2026-11-04T00:00:00+11:00",
+      "firstSeen": "2026-11-05T04:41:50.438Z",
+      "lastSeen": "2026-11-05T04:41:50.438Z"
+    },
+    {
+      "id": "cps-appels-offres:b1d56e0d2cd29317",
+      "sourceId": "cps-appels-offres",
+      "kind": "consultation",
+      "title": "Consultancy to create visually appealing and engaging infographics using scientific information for the \"Vulnerability of Pacific Islands Agriculture and Forestry to Climate Change\" book",
+      "reference": "RFQ26-10955",
+      "location": "Regional",
+      "nature": "Services",
+      "status": "Advertised",
+      "url": "https://www.spc.int/procurement/tenders/consultancy-to-create-visually-appealing-and-engaging-infographics-using",
+      "publishedAt": "2026-11-05T02:21:05.000Z",
+      "deadline": "2026-11-19T12:00:00.000Z",
+      "firstSeen": "2026-11-05T04:42:07.165Z",
+      "lastSeen": "2026-11-05T04:42:07.165Z"
+    },
+    {
       "id": "province-nord:4cea6594a9068913",
       "sourceId": "province-nord",
       "kind": "consultation",
@@ -100,7 +158,7 @@
       "url": "https://lexpol.cloud.pf/LexpolAfficheAnnonceMP.php?t=317106&rech=0&page=1",
       "deadline": "2026-12-02T00:00:00+11:00",
       "firstSeen": "2026-11-04T04:18:52.125Z",
-      "lastSeen": "2026-11-04T04:18:52.125Z"
+      "lastSeen": "2026-11-05T04:41:50.438Z"
     },
     {
       "id": "lexpol-marches:cee38406462d3db8",
@@ -112,7 +170,7 @@
       "url": "https://lexpol.cloud.pf/LexpolAfficheAnnonceMP.php?t=317138&rech=0&page=1",
       "deadline": "2026-12-07T00:00:00+11:00",
       "firstSeen": "2026-11-04T04:18:52.125Z",
-      "lastSeen": "2026-11-04T04:18:52.125Z"
+      "lastSeen": "2026-11-05T04:41:50.438Z"
     },
     {
       "id": "lexpol-marches:f89be31d7e8a8457",
@@ -124,7 +182,7 @@
       "url": "https://lexpol.cloud.pf/LexpolAfficheAnnonceMP.php?t=317097&rech=0&page=1",
       "deadline": "2026-11-23T00:00:00+11:00",
       "firstSeen": "2026-11-04T04:18:52.125Z",
-      "lastSeen": "2026-11-04T04:18:52.125Z"
+      "lastSeen": "2026-11-05T04:41:50.438Z"
     },
     {
       "id": "lexpol-marches:8e57e8d393b1ad85",
@@ -327,7 +385,7 @@
       "publishedAt": "2026-11-04T00:00:00+11:00",
       "deadline": "2026-12-16T11:30:00+11:00",
       "firstSeen": "2026-11-04T04:18:43.302Z",
-      "lastSeen": "2026-11-04T04:18:43.302Z"
+      "lastSeen": "2026-11-05T04:41:47.787Z"
     },
     {
       "id": "marchespublics-nc:b7k-3529",
@@ -534,7 +592,7 @@
       "publishedAt": "2026-11-03T00:00:00+11:00",
       "deadline": "2026-12-04T11:30:00+11:00",
       "firstSeen": "2026-11-03T09:01:58.780Z",
-      "lastSeen": "2026-11-04T04:18:43.302Z"
+      "lastSeen": "2026-11-05T04:41:47.787Z"
     },
     {
       "id": "lnc-legales:9f81abd8d57f2664",
@@ -1067,7 +1125,7 @@
       "publishedAt": "2026-10-29T00:00:00+11:00",
       "deadline": "2026-11-30T11:30:00+11:00",
       "firstSeen": "2026-10-28T20:45:59.607Z",
-      "lastSeen": "2026-11-04T04:18:43.302Z"
+      "lastSeen": "2026-11-05T04:41:47.787Z"
     },
     {
       "id": "cps-appels-offres:5d422038263b1bbb",
@@ -1623,7 +1681,7 @@
       "publishedAt": "2026-10-27T00:00:00+11:00",
       "deadline": "2026-11-23T11:30:00+11:00",
       "firstSeen": "2026-10-27T09:31:40.127Z",
-      "lastSeen": "2026-11-04T04:18:43.302Z"
+      "lastSeen": "2026-11-05T04:41:47.787Z"
     },
     {
       "id": "wallis-futuna:111cc8e858631369",
@@ -1636,7 +1694,7 @@
       "publishedAt": "2026-10-27T00:00:00+11:00",
       "deadline": "2026-11-13T11:30:00+11:00",
       "firstSeen": "2026-10-27T09:31:40.127Z",
-      "lastSeen": "2026-11-04T04:18:43.302Z"
+      "lastSeen": "2026-11-05T04:41:47.787Z"
     },
     {
       "id": "marchespublics-nc:f4g-3513",
@@ -2096,7 +2154,7 @@
       "publishedAt": "2026-10-26T00:00:00+11:00",
       "deadline": "2026-11-27T12:00:00+11:00",
       "firstSeen": "2026-10-26T09:36:24.941Z",
-      "lastSeen": "2026-11-04T04:18:43.302Z"
+      "lastSeen": "2026-11-05T04:41:47.787Z"
     },
     {
       "id": "wallis-futuna:3028726b618f9e5e",
@@ -2143,7 +2201,7 @@
       "publishedAt": "2026-10-26T00:00:00+11:00",
       "deadline": "2026-11-23T11:30:00+11:00",
       "firstSeen": "2026-10-26T02:39:26.392Z",
-      "lastSeen": "2026-11-04T04:18:43.302Z"
+      "lastSeen": "2026-11-05T04:41:47.787Z"
     },
     {
       "id": "lnc-legales:63612b1680fc23b7",
@@ -3534,7 +3592,7 @@
       "publishedAt": "2026-10-19T00:00:00+11:00",
       "deadline": "2026-11-19T11:30:00+11:00",
       "firstSeen": "2026-10-20T11:36:09.310Z",
-      "lastSeen": "2026-11-04T04:18:43.302Z"
+      "lastSeen": "2026-11-05T04:41:47.787Z"
     },
     {
       "id": "wallis-futuna:96ccc65e283785b7",
@@ -3547,7 +3605,7 @@
       "publishedAt": "2026-10-19T00:00:00+11:00",
       "deadline": "2026-11-19T11:30:00+11:00",
       "firstSeen": "2026-10-20T11:36:09.310Z",
-      "lastSeen": "2026-11-04T04:18:43.302Z"
+      "lastSeen": "2026-11-05T04:41:47.787Z"
     },
     {
       "id": "lnc-legales:e31e4dbb116c9c4f",
@@ -5258,7 +5316,7 @@
       "publishedAt": "2026-10-09T00:00:00+11:00",
       "deadline": "2026-11-09T11:30:00+11:00",
       "firstSeen": "2026-10-15T11:28:39.532Z",
-      "lastSeen": "2026-11-04T04:18:43.302Z"
+      "lastSeen": "2026-11-05T04:41:47.787Z"
     },
     {
       "id": "lnc-legales:6d576d8732dcbd30",
@@ -6752,7 +6810,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15364/126184/file/Cahier%20des%20charges%20Goodies%20WF%20Tourisme%20valid%C3%A9.pdf",
       "publishedAt": "2026-10-06T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-11-04T04:18:43.302Z",
+      "lastSeen": "2026-11-05T04:41:47.787Z",
       "seed": true,
       "deadline": "2026-10-19T17:00:00+11:00",
       "updatedAt": "2026-10-08T09:32:04.922Z",
@@ -7297,7 +7355,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15353/126085/file/Avis%20de%20march%C3%A9.pdf",
       "publishedAt": "2026-10-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-11-04T04:18:43.302Z",
+      "lastSeen": "2026-11-05T04:41:47.787Z",
       "seed": true,
       "reference": "2026-E-PA-57-SBL",
       "deadline": "2026-10-28T11:30:00+11:00",
@@ -8439,7 +8497,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15340/125943/file/avis%20de%20march%C3%A9%20-%20enrochements%20Wallis.pdf",
       "publishedAt": "2026-09-21T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-11-04T04:18:43.302Z",
+      "lastSeen": "2026-11-05T04:41:47.787Z",
       "seed": true,
       "reference": "2026-T-AO-56-ENV",
       "deadline": "2026-10-27T11:30:00+11:00",
@@ -9327,7 +9385,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15323/125775/file/Avis%20de%20march%C3%A9%20-%20MOE%20Vailepo.pdf",
       "publishedAt": "2026-09-10T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-11-04T04:18:43.302Z",
+      "lastSeen": "2026-11-05T04:41:47.787Z",
       "seed": true,
       "reference": "2026-T-PA-54-ENV",
       "deadline": "2026-10-06T11:30:00+11:00",
@@ -9619,7 +9677,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15303/125615/file/Avis%20de%20march%C3%A9.pdf",
       "publishedAt": "2026-09-02T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-11-04T04:18:43.302Z",
+      "lastSeen": "2026-11-05T04:41:47.787Z",
       "seed": true,
       "reference": "2026-E-PA-53-SEAC",
       "deadline": "2026-09-22T11:30:00+11:00",
@@ -9667,7 +9725,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15296/125581/file/Note%20sign%C3%A9e.pdf",
       "publishedAt": "2026-09-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-11-04T04:18:43.302Z",
+      "lastSeen": "2026-11-05T04:41:47.787Z",
       "seed": true,
       "deadline": "2026-08-27T11:30:00+11:00",
       "updatedAt": "2026-10-08T09:32:04.922Z",
@@ -10018,7 +10076,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15261/125313/file/SEAC-Avis%20rectificatif%20march%C3%A9%20-%20prolongation.pdf",
       "publishedAt": "2026-08-06T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-11-04T04:18:43.302Z",
+      "lastSeen": "2026-11-05T04:41:47.787Z",
       "seed": true,
       "reference": "2026-E-PA-24-SEAC",
       "deadline": "2026-08-19T11:30:00+11:00",
@@ -10143,7 +10201,7 @@
       "url": "https://www.polynesie-francaise.gouv.fr/contenu/telechargement/54781/350422/file/Avis%20de%20publicit%C3%A9_2026_SOLIMPRESS.pdf",
       "publishedAt": "2026-08-03T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:03.204Z",
-      "lastSeen": "2026-11-04T13:37:38.936Z",
+      "lastSeen": "2026-11-05T04:41:48.896Z",
       "seed": true
     },
     {
@@ -10155,7 +10213,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15250/125219/file/Avis%20de%20march%C3%A9.pdf",
       "publishedAt": "2026-08-03T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-11-04T04:18:43.302Z",
+      "lastSeen": "2026-11-05T04:41:47.787Z",
       "seed": true,
       "reference": "2026-T-AO-29-TP",
       "deadline": "2026-08-28T11:30:00+11:00",
@@ -10178,7 +10236,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15251/125224/file/avis%20de%20march%C3%A9.pdf",
       "publishedAt": "2026-08-03T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-11-04T04:18:43.302Z",
+      "lastSeen": "2026-11-05T04:41:47.787Z",
       "seed": true,
       "reference": "2026-T-AO-25-TP",
       "deadline": "2026-08-28T11:30:00+11:00",
@@ -10431,7 +10489,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15235/125068/file/Avis%20de%20march%C3%A9.pdf",
       "publishedAt": "2026-07-21T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-11-04T04:18:43.302Z",
+      "lastSeen": "2026-11-05T04:41:47.787Z",
       "seed": true,
       "reference": "2026-T-PA-51-ENV",
       "deadline": "2026-08-17T11:30:00+11:00",
@@ -10469,7 +10527,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15224/124991/file/avis%20de%20march%C3%A9.pdf",
       "publishedAt": "2026-07-17T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-11-04T04:18:43.302Z",
+      "lastSeen": "2026-11-05T04:41:47.787Z",
       "seed": true,
       "reference": "2026-T-PA-35-ENV",
       "deadline": "2026-08-10T11:30:00+11:00",
@@ -10520,7 +10578,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15218/124961/file/Avis%20de%20consultation%202026%20-%20website%20WF%20Tourisme.pdf",
       "publishedAt": "2026-07-10T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-11-04T04:18:43.302Z",
+      "lastSeen": "2026-11-05T04:41:47.787Z",
       "seed": true,
       "deadline": "2026-07-27T00:00:00+11:00",
       "updatedAt": "2026-10-08T09:32:04.922Z",
@@ -10556,7 +10614,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15220/124971/file/Avis%20de%20consultation%202026%20-%20cartes%20touristiques%20WF.pdf",
       "publishedAt": "2026-07-10T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-11-04T04:18:43.302Z",
+      "lastSeen": "2026-11-05T04:41:47.787Z",
       "seed": true,
       "deadline": "2026-07-27T00:00:00+11:00",
       "updatedAt": "2026-10-08T09:32:04.922Z",
@@ -10633,7 +10691,7 @@
       "url": "https://www.polynesie-francaise.gouv.fr/contenu/telechargement/54738/350109/file/Avis%20de%20publicit%C3%A9_2026_Securisation_hall_accueil_HCRPF.pdf",
       "publishedAt": "2026-07-07T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:03.204Z",
-      "lastSeen": "2026-11-04T13:37:38.936Z",
+      "lastSeen": "2026-11-05T04:41:48.896Z",
       "seed": true
     },
     {
@@ -10645,7 +10703,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15205/124854/file/Avis%20de%20march%C3%A9.pdf",
       "publishedAt": "2026-07-07T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-11-04T04:18:43.302Z",
+      "lastSeen": "2026-11-05T04:41:47.787Z",
       "seed": true,
       "reference": "2026-E-PA-23-SEAC",
       "deadline": "2026-08-07T11:30:00+11:00",
@@ -11212,7 +11270,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15133/124353/file/20260520-tx%20renov%20LPA.pdf",
       "publishedAt": "2026-05-20T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-11-04T04:18:43.302Z",
+      "lastSeen": "2026-11-05T04:41:47.787Z",
       "seed": true
     },
     {
