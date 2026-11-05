@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <!-- La roue des outils Skazy Formation sur fond blanc : un arc par outil, dans le dégradé de
-       son favicon, en partant du haut dans le sens des aiguilles d'une montre (Quiz, Mini-jeux,
-       Vigie, Atelier d’exercices IA, Permis IA, Captif, Prompthèque). -->
+       son favicon, en partant du haut dans le sens des aiguilles d'une montre (Vigie, Quiz,
+       Mini-jeux, Atelier d’exercices IA, L’IA en schémas, Permis IA, Prompthèque, Captif). -->
   <defs>
     <linearGradient id="rouge" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#ff6557"/>
@@ -19,6 +19,10 @@
       <stop offset="0" stop-color="#7ce963"/>
       <stop offset="1" stop-color="#02934a"/>
     </linearGradient>
+    <linearGradient id="turquoise" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2ee6c8"/>
+      <stop offset="1" stop-color="#0a9396"/>
+    </linearGradient>
     <linearGradient id="bleu" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#29c9fa"/>
       <stop offset="1" stop-color="#135ae4"/>
@@ -34,12 +38,13 @@
   </defs>
   <rect x="0.75" y="0.75" width="62.5" height="62.5" rx="13.25" fill="#ffffff" stroke="#dee2e6" stroke-width="1.5"/>
   <g fill="none" stroke-width="10">
-    <path stroke="url(#rouge)" d="M33.13 13.53A18.5 18.5 0 0 1 45.73 19.6"/>
-    <path stroke="url(#orange)" d="M47.14 21.37A18.5 18.5 0 0 1 50.25 35.01"/>
-    <path stroke="url(#jaune)" d="M49.75 37.21A18.5 18.5 0 0 1 41.03 48.15"/>
-    <path stroke="url(#vert)" d="M38.99 49.13A18.5 18.5 0 0 1 25.01 49.13"/>
-    <path stroke="url(#bleu)" d="M22.97 48.15A18.5 18.5 0 0 1 14.25 37.21"/>
-    <path stroke="url(#indigo)" d="M13.75 35.01A18.5 18.5 0 0 1 16.86 21.37"/>
-    <path stroke="url(#violet)" d="M18.27 19.6A18.5 18.5 0 0 1 30.87 13.53"/>
+    <path stroke="url(#rouge)" d="M33.13 13.53A18.5 18.5 0 0 1 44.26 18.14"/>
+    <path stroke="url(#orange)" d="M45.86 19.74A18.5 18.5 0 0 1 50.47 30.87"/>
+    <path stroke="url(#jaune)" d="M50.47 33.13A18.5 18.5 0 0 1 45.86 44.26"/>
+    <path stroke="url(#vert)" d="M44.26 45.86A18.5 18.5 0 0 1 33.13 50.47"/>
+    <path stroke="url(#turquoise)" d="M30.87 50.47A18.5 18.5 0 0 1 19.74 45.86"/>
+    <path stroke="url(#bleu)" d="M18.14 44.26A18.5 18.5 0 0 1 13.53 33.13"/>
+    <path stroke="url(#indigo)" d="M13.53 30.87A18.5 18.5 0 0 1 18.14 19.74"/>
+    <path stroke="url(#violet)" d="M19.74 18.14A18.5 18.5 0 0 1 30.87 13.53"/>
   </g>
 </svg>
