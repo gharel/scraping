@@ -36,6 +36,81 @@
   },
   "items": [
     {
+      "id": "province-nord:517b4cad256c9bc0",
+      "sourceId": "province-nord",
+      "kind": "consultation",
+      "title": "BTA Anne-Marie BOKOE-GOWE à MONTFAOUE (FER-2021) - Commune de Poya",
+      "reference": "04/2026",
+      "buyer": "Commune de Nèkö (Poya)",
+      "nature": "Travaux",
+      "status": "Ouvert",
+      "url": "https://marchespublics.province-nord.nc/sallemarche.aspx",
+      "publishedAt": "2026-11-07T00:00:00+11:00",
+      "deadline": "2026-12-01T15:00:00+11:00",
+      "firstSeen": "2026-10-22T00:22:22.912Z",
+      "lastSeen": "2026-11-06T00:04:58.266Z",
+      "updatedAt": "2026-11-06T13:34:11.520Z",
+      "history": [
+        {
+          "at": "2026-11-06T13:34:11.520Z",
+          "field": "deadline",
+          "from": "2026-11-20T14:29:00+11:00",
+          "to": "2026-12-01T15:00:00+11:00"
+        },
+        {
+          "at": "2026-11-06T13:34:11.520Z",
+          "field": "title",
+          "from": "Fourniture et pose de kits photovoltaïques autonomes (FER 2023 - FER 2025)",
+          "to": "BTA Anne-Marie BOKOE-GOWE à MONTFAOUE (FER-2021) - Commune de Poya"
+        }
+      ]
+    },
+    {
+      "id": "cps-appels-offres:9a1017d777c6b986",
+      "sourceId": "cps-appels-offres",
+      "kind": "consultation",
+      "title": "Qualitative and quantitative survey on local crops consumption in the Marshall Islands, Samoa, Tuvalu and Vanuatu.",
+      "reference": "RFQ26-10970",
+      "location": "Regional",
+      "nature": "Services",
+      "status": "Advertised",
+      "url": "https://www.spc.int/procurement/tenders/qualitative-and-quantitative-survey-on-local-crops-consumption-in-the-marshall",
+      "publishedAt": "2026-11-06T05:06:20.000Z",
+      "deadline": "2026-11-22T12:00:00.000Z",
+      "firstSeen": "2026-11-06T13:36:05.237Z",
+      "lastSeen": "2026-11-06T13:36:05.237Z"
+    },
+    {
+      "id": "cps-appels-offres:9bb1e87e917661dd",
+      "sourceId": "cps-appels-offres",
+      "kind": "consultation",
+      "title": "Artificial Turf for the Netball/Volleyball/Soccer Court at SPC Narere Campus",
+      "reference": "RFQ26-10978",
+      "location": "Fiji",
+      "nature": "Goods",
+      "status": "Advertised",
+      "url": "https://www.spc.int/procurement/tenders/artificial-turf-for-the-netballvolleyballsoccer-court-at-spc-narere-campus",
+      "publishedAt": "2026-11-06T04:49:42.000Z",
+      "deadline": "2026-11-16T12:00:00.000Z",
+      "firstSeen": "2026-11-06T13:36:05.237Z",
+      "lastSeen": "2026-11-06T13:36:05.237Z"
+    },
+    {
+      "id": "cps-appels-offres:81d02b78faf1cd01",
+      "sourceId": "cps-appels-offres",
+      "kind": "consultation",
+      "title": "Consultancy to support deliver human rights technical support",
+      "reference": "RFQ26-10977",
+      "location": "Consultant’s home base",
+      "nature": "Services",
+      "status": "Advertised",
+      "url": "https://www.spc.int/procurement/tenders/consultancy-to-support-deliver-human-rights-technical-support",
+      "publishedAt": "2026-11-06T04:38:12.000Z",
+      "deadline": "2026-11-25T12:00:00.000Z",
+      "firstSeen": "2026-11-06T13:36:05.237Z",
+      "lastSeen": "2026-11-06T13:36:05.237Z"
+    },
+    {
       "id": "lexpol-marches:a81f8d8b09f5d85e",
       "sourceId": "lexpol-marches",
       "kind": "consultation",
@@ -70,6 +145,44 @@
       "deadline": "2026-12-07T00:00:00+11:00",
       "firstSeen": "2026-11-06T00:06:01.565Z",
       "lastSeen": "2026-11-06T00:06:01.565Z"
+    },
+    {
+      "id": "marches-publics-etat:a4n-2909212",
+      "sourceId": "marches-publics-etat",
+      "kind": "consultation",
+      "title": "L’accord-cadre a pour objet l’émission de cartes de paiement professionnelles et de services associés à la gestion des cartes.",
+      "summary": "L’accord-cadre a pour objet l’émission de cartes de paiement professionnelles et de services associés à la gestion des cartes.",
+      "reference": "DAECarteAchatAffaires2026",
+      "buyer": "Ministère de l’Économie, des Finances et de la Souveraineté Industrielle et Numérique",
+      "location": "(988) Nouvelle-Calédonie, (987) Polynésie Française, (986) Wallis-et-Futuna +12",
+      "nature": "Services",
+      "procedure": "Procédure avec négociations",
+      "procedureCode": "PAN",
+      "url": "https://www.marches-publics.gouv.fr/app.php/entreprise/consultation/2909212?orgAcronyme=a4n",
+      "publishedAt": "2026-11-06T00:00:00+11:00",
+      "deadline": "2026-12-07T12:00:00+11:00",
+      "lots": 2,
+      "firstSeen": "2026-11-06T13:35:57.394Z",
+      "lastSeen": "2026-11-06T13:35:57.394Z"
+    },
+    {
+      "id": "marchespublics-nc:m8b-3539",
+      "sourceId": "marchespublics-nc",
+      "kind": "consultation",
+      "title": "Fourniture d'une remorque plateau",
+      "summary": "Fourniture d'une remorque plateau",
+      "reference": "OCEF-CP-2026-13",
+      "buyer": "Office de Commercialisation et dEntreposage Frigorifique",
+      "buyerLocation": "Nouméa",
+      "location": "Province Sud",
+      "nature": "Fournitures",
+      "procedure": "Procédure simplifiée",
+      "procedureCode": "SIMP",
+      "url": "https://portail.marchespublics.nc/entreprise/consultation/3539?orgAcronyme=m8b",
+      "publishedAt": "2026-11-06T00:00:00+11:00",
+      "deadline": "2026-12-10T16:00:00+11:00",
+      "firstSeen": "2026-11-06T13:33:10.137Z",
+      "lastSeen": "2026-11-06T13:33:10.137Z"
     },
     {
       "id": "marches-publics-etat:g6l-3098982",
@@ -2670,10 +2783,19 @@
       "procedureCode": "AUT",
       "url": "https://portail.marchespublics.nc/entreprise/consultation/3504?orgAcronyme=f4g",
       "publishedAt": "2026-10-23T00:00:00+11:00",
-      "deadline": "2026-11-10T15:30:00+11:00",
+      "deadline": "2026-11-17T15:30:00+11:00",
       "lots": 6,
       "firstSeen": "2026-10-22T22:54:33.135Z",
-      "lastSeen": "2026-11-06T00:03:53.655Z"
+      "lastSeen": "2026-11-06T00:03:53.655Z",
+      "updatedAt": "2026-11-06T13:33:10.137Z",
+      "history": [
+        {
+          "at": "2026-11-06T13:33:10.137Z",
+          "field": "deadline",
+          "from": "2026-11-10T15:30:00+11:00",
+          "to": "2026-11-17T15:30:00+11:00"
+        }
+      ]
     },
     {
       "id": "fsh:4ba49968f730f235",
@@ -2689,21 +2811,6 @@
       ],
       "firstSeen": "2026-10-25T22:13:16.232Z",
       "lastSeen": "2026-11-06T00:04:07.996Z"
-    },
-    {
-      "id": "province-nord:517b4cad256c9bc0",
-      "sourceId": "province-nord",
-      "kind": "consultation",
-      "title": "Fourniture et pose de kits photovoltaïques autonomes (FER 2023 - FER 2025)",
-      "reference": "04/2026",
-      "buyer": "Commune de Pwëbuu (Pouembout)",
-      "nature": "Travaux",
-      "status": "Ouvert",
-      "url": "https://marchespublics.province-nord.nc/sallemarche.aspx",
-      "publishedAt": "2026-10-22T11:00:00+11:00",
-      "deadline": "2026-11-20T14:29:00+11:00",
-      "firstSeen": "2026-10-22T00:22:22.912Z",
-      "lastSeen": "2026-11-06T00:04:58.266Z"
     },
     {
       "id": "lnc-legales:2de6a2ec79fe97bd",
