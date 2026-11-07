@@ -36,6 +36,26 @@
   },
   "items": [
     {
+      "id": "lexpol-marches:a48047696308a944",
+      "sourceId": "lexpol-marches",
+      "kind": "consultation",
+      "title": "DIRECTION DE l’ENVIRONNEMENT (DIREN) - Avis d'attribution - Location, installation et exploitation d'un réseau de mesure et de télésurveillance des eaux souterraines de la vallée de la Punaru'u 06/11/2026",
+      "summary": "DIRECTION DE l’ENVIRONNEMENT (DIREN) - Avis d'attribution - Location, installation et exploitation d'un réseau de mesure et de télésurveillance des eaux souterraines de la vallée de la Punaru'u 06/11/2026 Voir l'annonce >",
+      "url": "https://lexpol.cloud.pf/LexpolAfficheAnnonceMP.php?t=316979&rech=0&page=1",
+      "firstSeen": "2026-11-07T08:07:52.999Z",
+      "lastSeen": "2026-11-07T08:07:52.999Z"
+    },
+    {
+      "id": "lexpol-marches:62e783be3cbf3aa0",
+      "sourceId": "lexpol-marches",
+      "kind": "consultation",
+      "title": "Commune de Teva I Uta - Avis d'attribution - Marché public de « maîtrise d’œuvre » de type appel d’offres ouvert dans le cadre des travaux de rénovation de l’adduction principale de Vaite et du quartier Vaite – Phase 1,",
+      "summary": "Commune de Teva I Uta - Avis d'attribution - Marché public de « maîtrise d’œuvre » de type appel d’offres ouvert dans le cadre des travaux de rénovation de l’adduction principale de Vaite et du quartier Vaite – Phase 1, à Papeari, liés à l’alimentation en eau potable de la commune de Teva I Uta. Les missions attendues sont PRO, ACT, VISA, DET et AOR 06/11/2026 Voir l'annonce >",
+      "url": "https://lexpol.cloud.pf/LexpolAfficheAnnonceMP.php?t=317216&rech=0&page=1",
+      "firstSeen": "2026-11-07T08:07:52.999Z",
+      "lastSeen": "2026-11-07T08:07:52.999Z"
+    },
+    {
       "id": "province-nord:517b4cad256c9bc0",
       "sourceId": "province-nord",
       "kind": "consultation",
@@ -3132,9 +3152,18 @@
       "procedureCode": "SIMP",
       "url": "https://portail.marchespublics.nc/entreprise/consultation/3503?orgAcronyme=m8b",
       "publishedAt": "2026-10-21T00:00:00+11:00",
-      "deadline": "2026-11-12T16:00:00+11:00",
+      "deadline": "2026-11-16T16:00:00+11:00",
       "firstSeen": "2026-10-21T10:12:45.145Z",
-      "lastSeen": "2026-11-07T01:29:27.324Z"
+      "lastSeen": "2026-11-07T01:29:27.324Z",
+      "updatedAt": "2026-11-07T08:05:55.670Z",
+      "history": [
+        {
+          "at": "2026-11-07T08:05:55.670Z",
+          "field": "deadline",
+          "from": "2026-11-12T16:00:00+11:00",
+          "to": "2026-11-16T16:00:00+11:00"
+        }
+      ]
     },
     {
       "id": "lnc-legales:27ae65936489e024",
