@@ -36,6 +36,36 @@
   },
   "items": [
     {
+      "id": "province-nord:2418e3b80d285cc3",
+      "sourceId": "province-nord",
+      "kind": "consultation",
+      "title": "TRAVAUX DE RECONSTRUCTION DE L'OUVRAGE DE KARAGREU",
+      "reference": "04-2026",
+      "buyer": "Commune de Waa Wi Luu (Houaïlou)",
+      "nature": "Travaux",
+      "status": "Ouvert",
+      "url": "https://marchespublics.province-nord.nc/sallemarche.aspx",
+      "publishedAt": "2026-11-10T00:00:00+11:00",
+      "deadline": "2026-12-01T11:00:00+11:00",
+      "firstSeen": "2026-10-20T21:37:01.801Z",
+      "lastSeen": "2026-11-09T01:21:55.934Z",
+      "updatedAt": "2026-11-09T20:21:07.180Z",
+      "history": [
+        {
+          "at": "2026-11-09T20:21:07.180Z",
+          "field": "deadline",
+          "from": "2026-11-23T15:00:00+11:00",
+          "to": "2026-12-01T11:00:00+11:00"
+        },
+        {
+          "at": "2026-11-09T20:21:07.180Z",
+          "field": "title",
+          "from": "Nettoyage et de l'entretien des bâtiments municipaux",
+          "to": "TRAVAUX DE RECONSTRUCTION DE L'OUVRAGE DE KARAGREU"
+        }
+      ]
+    },
+    {
       "id": "marchespublics-nc:p2q-3542",
       "sourceId": "marchespublics-nc",
       "kind": "consultation",
@@ -3259,21 +3289,6 @@
       "deadline": "2026-11-04T12:00:00.000Z",
       "firstSeen": "2026-10-21T07:40:53.728Z",
       "lastSeen": "2026-11-09T01:23:04.198Z"
-    },
-    {
-      "id": "province-nord:2418e3b80d285cc3",
-      "sourceId": "province-nord",
-      "kind": "consultation",
-      "title": "Nettoyage et de l'entretien des bâtiments municipaux",
-      "reference": "04-2026",
-      "buyer": "Commune de Koumac",
-      "nature": "Service",
-      "status": "Ouvert",
-      "url": "https://marchespublics.province-nord.nc/sallemarche.aspx",
-      "publishedAt": "2026-10-21T06:00:00+11:00",
-      "deadline": "2026-11-23T15:00:00+11:00",
-      "firstSeen": "2026-10-20T21:37:01.801Z",
-      "lastSeen": "2026-11-09T01:21:55.934Z"
     },
     {
       "id": "lnc-legales:b1bed38f3a4767aa",
