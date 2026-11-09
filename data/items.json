@@ -36,6 +36,45 @@
   },
   "items": [
     {
+      "id": "marchespublics-nc:p2q-3542",
+      "sourceId": "marchespublics-nc",
+      "kind": "consultation",
+      "title": "Gardiennage et surveillance de l'aéroport de Nouméa-Magenta",
+      "summary": "Prestations de gardiennage et de surveillance à mettre en œuvre sur l’aéroport de Nouméa - Magenta pour le compte de la CCI-NC.\n\nCes prestations ont pour objet de contribuer à la protection des biens et des personnes présents sur l’ensemble de la plateforme aéroportuaire, classée Établissement Recevant du Public (ERP) et de faciliter la circulation des usagers, accompagnateurs et passagers.",
+      "reference": "CCIGEA2731GAR",
+      "buyer": "Chambre de commerce et d'industrie de Nouvelle-Calédonie",
+      "buyerLocation": "Nouméa",
+      "location": "Province Sud",
+      "nature": "Services",
+      "procedure": "Procédure simplifiée",
+      "procedureCode": "SIMP",
+      "url": "https://portail.marchespublics.nc/entreprise/consultation/3542?orgAcronyme=p2q",
+      "publishedAt": "2026-11-09T00:00:00+11:00",
+      "deadline": "2026-12-01T12:00:00+11:00",
+      "firstSeen": "2026-11-09T08:55:25.431Z",
+      "lastSeen": "2026-11-09T08:55:25.431Z"
+    },
+    {
+      "id": "marchespublics-nc:c5d-3541",
+      "sourceId": "marchespublics-nc",
+      "kind": "consultation",
+      "title": "2026-DMI-SEI-Travaux_renovation_agence_Hienghene_OPTNC_en_13_lots",
+      "summary": "2026-DMI-SEI-Travaux_renovation_agence_Hienghene_OPTNC_en_13_lots",
+      "reference": "26-DMI-Travaux_Hienghene_OPTNC",
+      "buyer": "Office des Postes et Télécommunications de Nouvelle-Calédonie",
+      "buyerLocation": "Nouméa",
+      "location": "Province Nord",
+      "nature": "Travaux",
+      "procedure": "Appel d'offres ouvert",
+      "procedureCode": "AOO",
+      "url": "https://portail.marchespublics.nc/entreprise/consultation/3541?orgAcronyme=c5d",
+      "publishedAt": "2026-11-09T00:00:00+11:00",
+      "deadline": "2026-11-30T15:00:00+11:00",
+      "lots": 13,
+      "firstSeen": "2026-11-09T08:55:25.431Z",
+      "lastSeen": "2026-11-09T08:55:25.431Z"
+    },
+    {
       "id": "lnc-legales:2fdbc06cab1007a9",
       "sourceId": "lnc-legales",
       "kind": "consultation",
@@ -3848,7 +3887,9 @@
       "publishedAt": "2026-10-20T00:00:00+11:00",
       "deadline": "2026-11-09T15:30:00+11:00",
       "firstSeen": "2026-10-20T04:47:52.422Z",
-      "lastSeen": "2026-11-09T01:20:51.499Z"
+      "lastSeen": "2026-11-09T01:20:51.499Z",
+      "gone": true,
+      "goneAt": "2026-11-09T08:55:25.431Z"
     },
     {
       "id": "marchespublics-nc:f4g-3493",
@@ -3867,7 +3908,9 @@
       "publishedAt": "2026-10-20T00:00:00+11:00",
       "deadline": "2026-11-09T15:30:00+11:00",
       "firstSeen": "2026-10-20T04:47:52.422Z",
-      "lastSeen": "2026-11-09T01:20:51.499Z"
+      "lastSeen": "2026-11-09T01:20:51.499Z",
+      "gone": true,
+      "goneAt": "2026-11-09T08:55:25.431Z"
     },
     {
       "id": "marchespublics-nc:h5j-3488",
@@ -4631,7 +4674,9 @@
       "publishedAt": "2026-10-16T00:00:00+11:00",
       "deadline": "2026-11-09T16:00:00+11:00",
       "firstSeen": "2026-10-16T07:08:01.188Z",
-      "lastSeen": "2026-11-09T01:20:51.499Z"
+      "lastSeen": "2026-11-09T01:20:51.499Z",
+      "gone": true,
+      "goneAt": "2026-11-09T08:55:25.431Z"
     },
     {
       "id": "marchespublics-nc:p2q-3482",
@@ -4650,7 +4695,9 @@
       "publishedAt": "2026-10-16T00:00:00+11:00",
       "deadline": "2026-11-09T16:00:00+11:00",
       "firstSeen": "2026-10-16T07:08:01.188Z",
-      "lastSeen": "2026-11-09T01:20:51.499Z"
+      "lastSeen": "2026-11-09T01:20:51.499Z",
+      "gone": true,
+      "goneAt": "2026-11-09T08:55:25.431Z"
     },
     {
       "id": "marches-publics-etat:g7h-3082899",
@@ -5997,7 +6044,9 @@
       "deadline": "2026-11-09T00:30:00+11:00",
       "lots": 5,
       "firstSeen": "2026-10-09T02:11:49.072Z",
-      "lastSeen": "2026-11-09T01:22:59.003Z"
+      "lastSeen": "2026-11-09T01:22:59.003Z",
+      "gone": true,
+      "goneAt": "2026-11-09T08:59:24.301Z"
     },
     {
       "id": "province-sud-avis:b3c361350c9a8880",
@@ -8927,10 +8976,19 @@
       "procedureCode": "AOO",
       "url": "https://portail.marchespublics.nc/entreprise/consultation/3428?orgAcronyme=h5j",
       "publishedAt": "2026-09-22T00:00:00+11:00",
-      "deadline": "2026-11-18T15:00:00+11:00",
+      "deadline": "2026-12-03T15:00:00+11:00",
       "firstSeen": "2026-10-08T07:01:04.349Z",
       "lastSeen": "2026-11-09T01:20:51.499Z",
-      "seed": true
+      "seed": true,
+      "updatedAt": "2026-11-09T08:55:25.431Z",
+      "history": [
+        {
+          "at": "2026-11-09T08:55:25.431Z",
+          "field": "deadline",
+          "from": "2026-11-18T15:00:00+11:00",
+          "to": "2026-12-03T15:00:00+11:00"
+        }
+      ]
     },
     {
       "id": "marchespublics-nc:m8b-3427",
