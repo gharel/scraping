@@ -7858,11 +7858,20 @@
       "procedureCode": "AOO",
       "url": "https://www.marches-publics.gouv.fr/app.php/entreprise/consultation/3056294?orgAcronyme=d2v",
       "publishedAt": "2026-10-05T00:00:00+11:00",
-      "deadline": "2026-12-04T12:00:00+11:00",
+      "deadline": "2027-01-04T12:00:00+11:00",
       "lots": 7,
       "firstSeen": "2026-10-08T09:13:16.353Z",
       "lastSeen": "2026-11-10T03:57:36.744Z",
-      "seed": true
+      "seed": true,
+      "updatedAt": "2026-11-10T19:34:22.719Z",
+      "history": [
+        {
+          "at": "2026-11-10T19:34:22.719Z",
+          "field": "deadline",
+          "from": "2026-12-04T12:00:00+11:00",
+          "to": "2027-01-04T12:00:00+11:00"
+        }
+      ]
     },
     {
       "id": "marchespublics-nc:i9o-3445",
