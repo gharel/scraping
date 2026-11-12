@@ -36,6 +36,25 @@
   },
   "items": [
     {
+      "id": "marchespublics-nc:f4g-3548",
+      "sourceId": "marchespublics-nc",
+      "kind": "consultation",
+      "title": "PRESTATIONS DE DERATISATION, DESINSECTISATION ET DETERMITAGE SUR PLUSIEURS SITES DE LA PROVINCE SUD",
+      "summary": "La présente consultation porte sur",
+      "reference": "DAEM-APC-11-26",
+      "buyer": "Province Sud",
+      "buyerLocation": "Nouméa",
+      "location": "Province Sud",
+      "nature": "Services",
+      "procedure": "Procédure Autre (Subvention, Appel à projets, Délégation de service public)",
+      "procedureCode": "AUT",
+      "url": "https://portail.marchespublics.nc/entreprise/consultation/3548?orgAcronyme=f4g",
+      "publishedAt": "2026-11-13T00:00:00+11:00",
+      "deadline": "2026-11-30T15:30:00+11:00",
+      "firstSeen": "2026-11-12T21:59:25.892Z",
+      "lastSeen": "2026-11-12T21:59:25.892Z"
+    },
+    {
       "id": "lexpol-marches:4d0bbe8f99512668",
       "sourceId": "lexpol-marches",
       "kind": "consultation",
@@ -127,9 +146,7 @@
       "publishedAt": "2026-11-12T00:00:00+11:00",
       "deadline": "2026-12-07T00:00:00+11:00",
       "firstSeen": "2026-11-11T23:56:24.092Z",
-      "lastSeen": "2026-11-11T23:56:24.092Z",
-      "gone": true,
-      "goneAt": "2026-11-12T05:15:27.680Z"
+      "lastSeen": "2026-11-12T22:00:39.964Z"
     },
     {
       "id": "marchespublics-nc:n2a-3550",
