@@ -48,6 +48,44 @@
       "lastSeen": "2026-11-13T02:33:18.771Z"
     },
     {
+      "id": "marchespublics-nc:c5d-3553",
+      "sourceId": "marchespublics-nc",
+      "kind": "consultation",
+      "title": "2026-DMI-SEI-Travaux_refection_etancheite_zones_ABCD_site_KLING_OPTNC_2_lots",
+      "summary": "2026-DMI-SEI-Travaux_refection_etancheite_zones_ABCD_site_KLING_OPTNC_2_lots",
+      "reference": "26-DMI-Travaux_etancheite_OPT-NC",
+      "buyer": "Office des Postes et Télécommunications de Nouvelle-Calédonie",
+      "buyerLocation": "Nouméa",
+      "location": "Province Sud",
+      "nature": "Travaux",
+      "procedure": "Procédure simplifiée",
+      "procedureCode": "SIMP",
+      "url": "https://portail.marchespublics.nc/entreprise/consultation/3553?orgAcronyme=c5d",
+      "publishedAt": "2026-11-13T00:00:00+11:00",
+      "deadline": "2026-12-07T15:00:00+11:00",
+      "firstSeen": "2026-11-13T11:46:20.594Z",
+      "lastSeen": "2026-11-13T11:46:20.594Z"
+    },
+    {
+      "id": "marchespublics-nc:f4g-3552",
+      "sourceId": "marchespublics-nc",
+      "kind": "consultation",
+      "title": "Avis de sourcing - Mise en place d’une application mobile iOS/Android",
+      "summary": "Identification de sociétés pouvant proposer une solution d’application mobile de défis, avec classements et back-office d’administration, pour la découverte de la province Sud.",
+      "reference": "DSIN-AS-04-26",
+      "buyer": "Province Sud",
+      "buyerLocation": "Nouméa",
+      "location": "Province Sud",
+      "nature": "Services",
+      "procedure": "Procédure simplifiée",
+      "procedureCode": "SIMP",
+      "url": "https://portail.marchespublics.nc/entreprise/consultation/3552?orgAcronyme=f4g",
+      "publishedAt": "2026-11-13T00:00:00+11:00",
+      "deadline": "2026-11-23T16:00:00+11:00",
+      "firstSeen": "2026-11-13T11:46:20.594Z",
+      "lastSeen": "2026-11-13T11:46:20.594Z"
+    },
+    {
       "id": "marchespublics-nc:s9s-3535",
       "sourceId": "marchespublics-nc",
       "kind": "consultation",
@@ -2508,7 +2546,7 @@
       "publishedAt": "2026-10-28T00:00:00+11:00",
       "deadline": "2026-11-30T00:00:00+11:00",
       "firstSeen": "2026-10-28T07:48:17.516Z",
-      "lastSeen": "2026-11-12T05:14:36.395Z"
+      "lastSeen": "2026-11-13T11:46:42.984Z"
     },
     {
       "id": "marches-publics-etat:g6l-3094937",
@@ -4078,7 +4116,7 @@
       "publishedAt": "2026-10-21T00:00:00+11:00",
       "deadline": "2026-11-11T00:00:00+11:00",
       "firstSeen": "2026-10-20T21:36:20.245Z",
-      "lastSeen": "2026-11-12T05:14:36.395Z"
+      "lastSeen": "2026-11-13T11:46:42.984Z"
     },
     {
       "id": "province-sud-avis:024439864dc26bca",
@@ -6081,6 +6119,30 @@
       "lastSeen": "2026-10-15T04:38:46.072Z"
     },
     {
+      "id": "ifap:fc68cf132b5d83d9",
+      "sourceId": "ifap",
+      "kind": "consultation",
+      "title": "Parcours socle pour les managers intermédiaires",
+      "status": "16/11/2026",
+      "url": "https://www.ifap.nc/sites/default/files/2026-11/26_RHM07_CONS.pdf",
+      "publishedAt": "2026-10-12T00:00:00+11:00",
+      "deadline": "2026-11-16T00:00:00+11:00",
+      "firstSeen": "2026-11-13T11:46:42.984Z",
+      "lastSeen": "2026-11-13T11:46:42.984Z"
+    },
+    {
+      "id": "ifap:ed0402879a841b6d",
+      "sourceId": "ifap",
+      "kind": "consultation",
+      "title": "Parcours socle pour les managers de proximité",
+      "status": "16/11/2026",
+      "url": "https://www.ifap.nc/sites/default/files/2026-11/26_RHM06_CONS.pdf",
+      "publishedAt": "2026-10-12T00:00:00+11:00",
+      "deadline": "2026-11-16T00:00:00+11:00",
+      "firstSeen": "2026-11-13T11:46:42.984Z",
+      "lastSeen": "2026-11-13T11:46:42.984Z"
+    },
+    {
       "id": "lnc-legales:f09a89f60c1423dd",
       "sourceId": "lnc-legales",
       "kind": "consultation",
@@ -6333,7 +6395,9 @@
       "publishedAt": "2026-10-12T00:00:00+11:00",
       "deadline": "2026-11-13T15:00:00+11:00",
       "firstSeen": "2026-10-12T05:54:47.601Z",
-      "lastSeen": "2026-11-13T02:28:55.319Z"
+      "lastSeen": "2026-11-13T02:28:55.319Z",
+      "gone": true,
+      "goneAt": "2026-11-13T11:46:20.594Z"
     },
     {
       "id": "marchespublics-nc:c5d-3467",
@@ -6379,7 +6443,9 @@
       "publishedAt": "2026-10-12T00:00:00+11:00",
       "deadline": "2026-11-13T00:00:00+11:00",
       "firstSeen": "2026-10-11T23:39:12.024Z",
-      "lastSeen": "2026-11-12T05:14:36.395Z"
+      "lastSeen": "2026-11-12T05:14:36.395Z",
+      "gone": true,
+      "goneAt": "2026-11-13T11:46:42.984Z"
     },
     {
       "id": "ifap:29ce5468c618333f",
@@ -6391,7 +6457,9 @@
       "publishedAt": "2026-10-12T00:00:00+11:00",
       "deadline": "2026-11-13T00:00:00+11:00",
       "firstSeen": "2026-10-11T23:39:12.024Z",
-      "lastSeen": "2026-11-12T05:14:36.395Z"
+      "lastSeen": "2026-11-12T05:14:36.395Z",
+      "gone": true,
+      "goneAt": "2026-11-13T11:46:42.984Z"
     },
     {
       "id": "marchespublics-nc:g1s-3464",
@@ -6936,7 +7004,7 @@
       "title": "2025.01.13 Maîtrise d'oeuvre pour le renouvellement des conduites d'eau potable - plan pluriannuel 2024-2028",
       "url": "https://www.ville-dumbea.nc/sites/default/files/datocms/1736891526-285-ddp-sdd_communique-attrib_m-24e15_signe.pdf",
       "firstSeen": "2026-10-08T09:12:59.579Z",
-      "lastSeen": "2026-11-12T05:15:34.358Z",
+      "lastSeen": "2026-11-13T11:48:08.635Z",
       "seed": true
     },
     {
@@ -6946,7 +7014,7 @@
       "title": "2025.01.08 Entretien courant des réseaux d’eaux pluviales du domaine public et entretien des réseaux et ouvrages d’assainissement des équipements publics de la Ville de Dumbéa - Années 2025 et 2026",
       "url": "https://www.ville-dumbea.nc/sites/default/files/datocms/1736379868-2728-ddp-scv_communique-attrib_m-24s17_btp-boufeneche_signe.pdf",
       "firstSeen": "2026-10-08T09:12:59.579Z",
-      "lastSeen": "2026-11-12T05:15:34.358Z",
+      "lastSeen": "2026-11-13T11:48:08.635Z",
       "seed": true
     },
     {
@@ -6956,7 +7024,7 @@
       "title": "2024.12.31 Propreté urbaine de la Ville de Dumbéa - Années 2025 et 2026",
       "url": "https://www.ville-dumbea.nc/sites/default/files/datocms/1736379961-3007-ddp-scv_communique-attrib_m-24s18_signe.pdf",
       "firstSeen": "2026-10-08T09:12:59.579Z",
-      "lastSeen": "2026-11-12T05:15:34.358Z",
+      "lastSeen": "2026-11-13T11:48:08.635Z",
       "seed": true
     },
     {
@@ -6966,7 +7034,7 @@
       "title": "2024.07.16 Marché pluriannuel de travaux relatifs à la réfection et l’entretien de voiries communales 2024-2026",
       "url": "https://www.ville-dumbea.nc/sites/default/files/datocms/1721344038-1149-ddp-scv_com-attribution_m-24t04-24t05-24t06_ppi-refect-entretien24-26-ok-rr.pdf",
       "firstSeen": "2026-10-08T09:12:59.579Z",
-      "lastSeen": "2026-11-12T05:15:34.358Z",
+      "lastSeen": "2026-11-13T11:48:08.635Z",
       "seed": true
     },
     {
@@ -7990,7 +8058,7 @@
       "publishedAt": "2026-10-06T00:00:00+11:00",
       "deadline": "2026-11-20T00:00:00+11:00",
       "firstSeen": "2026-10-26T09:33:39.860Z",
-      "lastSeen": "2026-11-12T05:14:36.395Z"
+      "lastSeen": "2026-11-13T11:46:42.984Z"
     },
     {
       "id": "marches-publics-etat:g6l-3058249",
@@ -8413,7 +8481,7 @@
       "publishedAt": "2026-10-02T08:00:00+11:00",
       "deadline": "2026-11-30T15:30:00+11:00",
       "firstSeen": "2026-10-08T09:12:55.574Z",
-      "lastSeen": "2026-11-11T00:22:50.197Z",
+      "lastSeen": "2026-11-13T11:47:24.605Z",
       "seed": true
     },
     {
@@ -8563,7 +8631,7 @@
       "url": "https://www.ville-dumbea.nc/sites/default/files/2026-10/11488_Com-AT-AO-Carburants-2027-2028_signe.pdf",
       "publishedAt": "2026-10-01T00:00:00+11:00",
       "firstSeen": "2026-10-28T00:53:00.229Z",
-      "lastSeen": "2026-11-12T05:15:34.358Z"
+      "lastSeen": "2026-11-13T11:48:08.635Z"
     },
     {
       "id": "wallis-futuna:9812e6ab7e05d191",
@@ -8623,7 +8691,7 @@
       "url": "https://www.ville-dumbea.nc/sites/default/files/2026-10/13835_Communique-AO-signalisation-SH-SV-2027-28_signe.pdf",
       "publishedAt": "2026-10-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:59.579Z",
-      "lastSeen": "2026-11-12T05:15:34.358Z",
+      "lastSeen": "2026-11-13T11:48:08.635Z",
       "seed": true
     },
     {
@@ -8634,7 +8702,7 @@
       "url": "https://www.ville-dumbea.nc/sites/default/files/2026-10/13836_Communique-AO-FOSSES-2027-28_signe.pdf",
       "publishedAt": "2026-10-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:59.579Z",
-      "lastSeen": "2026-11-12T05:15:34.358Z",
+      "lastSeen": "2026-11-13T11:48:08.635Z",
       "seed": true
     },
     {
@@ -10275,7 +10343,7 @@
       "url": "https://www.ifap.nc/sites/default/files/2026-09/26_EFO03_CONS.pdf",
       "publishedAt": "2026-09-16T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:52.604Z",
-      "lastSeen": "2026-11-12T05:14:36.395Z",
+      "lastSeen": "2026-11-13T11:46:42.984Z",
       "seed": true,
       "status": "Expirée",
       "deadline": "2026-10-30T00:00:00+11:00",
@@ -10991,7 +11059,7 @@
       "url": "https://www.ville-dumbea.nc/sites/default/files/2026-09/11025_Com-AT-AO-Collecte-OM-2027_signe.pdf",
       "publishedAt": "2026-09-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:59.579Z",
-      "lastSeen": "2026-11-12T05:15:34.358Z",
+      "lastSeen": "2026-11-13T11:48:08.635Z",
       "seed": true
     },
     {
@@ -11067,7 +11135,7 @@
       "url": "https://www.ifap.nc/sites/default/files/2026-08/26_STS20_CONS.pdf",
       "publishedAt": "2026-08-26T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:52.604Z",
-      "lastSeen": "2026-11-12T05:14:36.395Z",
+      "lastSeen": "2026-11-13T11:46:42.984Z",
       "seed": true,
       "status": "Expirée",
       "updatedAt": "2026-10-08T09:43:08.594Z",
@@ -11088,7 +11156,7 @@
       "url": "https://www.ifap.nc/sites/default/files/2026-08/26_STS19_CONS.pdf",
       "publishedAt": "2026-08-26T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:52.604Z",
-      "lastSeen": "2026-11-12T05:14:36.395Z",
+      "lastSeen": "2026-11-13T11:46:42.984Z",
       "seed": true,
       "updatedAt": "2026-10-08T09:43:08.594Z",
       "history": [
@@ -11115,7 +11183,7 @@
       "url": "https://www.ifap.nc/sites/default/files/2026-08/26_STS21_CONS.pdf",
       "publishedAt": "2026-08-25T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:52.604Z",
-      "lastSeen": "2026-11-12T05:14:36.395Z",
+      "lastSeen": "2026-11-13T11:46:42.984Z",
       "seed": true,
       "status": "Expirée",
       "updatedAt": "2026-10-08T09:43:08.594Z",
@@ -11136,7 +11204,7 @@
       "url": "https://www.ifap.nc/sites/default/files/2026-08/26_RHM05_CONS.pdf",
       "publishedAt": "2026-08-25T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:52.604Z",
-      "lastSeen": "2026-11-12T05:14:36.395Z",
+      "lastSeen": "2026-11-13T11:46:42.984Z",
       "seed": true,
       "status": "Expirée",
       "updatedAt": "2026-10-08T09:43:08.594Z",
@@ -11284,7 +11352,7 @@
       "url": "https://www.ifap.nc/sites/default/files/2026-08/26_SIMEF_0.pdf",
       "publishedAt": "2026-08-10T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:52.604Z",
-      "lastSeen": "2026-11-12T05:14:36.395Z",
+      "lastSeen": "2026-11-13T11:46:42.984Z",
       "seed": true,
       "status": "Expirée",
       "updatedAt": "2026-10-08T09:43:08.594Z",
@@ -11616,7 +11684,7 @@
       "url": "https://www.ifap.nc/sites/default/files/2026-09/26_SAS11_CONS_PROLONGATION.pdf",
       "publishedAt": "2026-07-30T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:52.604Z",
-      "lastSeen": "2026-11-12T05:14:36.395Z",
+      "lastSeen": "2026-11-13T11:46:42.984Z",
       "seed": true,
       "status": "Expirée",
       "updatedAt": "2026-10-08T09:43:08.594Z",
@@ -11637,7 +11705,7 @@
       "url": "https://www.ifap.nc/sites/default/files/2026-07/2026_SAS12_CONS%20%281%29.pdf",
       "publishedAt": "2026-07-30T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:52.604Z",
-      "lastSeen": "2026-11-12T05:14:36.395Z",
+      "lastSeen": "2026-11-13T11:46:42.984Z",
       "seed": true,
       "updatedAt": "2026-10-08T09:43:08.594Z",
       "history": [
@@ -11664,7 +11732,7 @@
       "url": "https://www.ifap.nc/sites/default/files/2026-07/26_SAS15_CONS.pdf",
       "publishedAt": "2026-07-30T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:52.604Z",
-      "lastSeen": "2026-11-12T05:14:36.395Z",
+      "lastSeen": "2026-11-13T11:46:42.984Z",
       "seed": true,
       "updatedAt": "2026-10-08T09:43:08.594Z",
       "history": [
@@ -11691,7 +11759,7 @@
       "url": "https://www.ifap.nc/sites/default/files/2026-07/26_SAS13_CONS.pdf",
       "publishedAt": "2026-07-30T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:52.604Z",
-      "lastSeen": "2026-11-12T05:14:36.395Z",
+      "lastSeen": "2026-11-13T11:46:42.984Z",
       "seed": true,
       "updatedAt": "2026-10-08T09:43:08.594Z",
       "history": [
@@ -11970,7 +12038,7 @@
       "url": "https://www.ifap.nc/sites/default/files/2026-07/26_IDF04_CONS.pdf",
       "publishedAt": "2026-07-03T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:52.604Z",
-      "lastSeen": "2026-11-12T05:14:36.395Z",
+      "lastSeen": "2026-11-13T11:46:42.984Z",
       "seed": true,
       "status": "Expirée",
       "updatedAt": "2026-10-08T09:43:08.594Z",
@@ -12027,7 +12095,7 @@
       "url": "https://www.ifap.nc/sites/default/files/2026-07/26_IDF05_CONS.pdf",
       "publishedAt": "2026-07-02T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:52.604Z",
-      "lastSeen": "2026-11-12T05:14:36.395Z",
+      "lastSeen": "2026-11-13T11:46:42.984Z",
       "seed": true,
       "status": "Expirée",
       "updatedAt": "2026-10-08T09:43:08.594Z",
@@ -12141,7 +12209,7 @@
       "url": "https://www.ifap.nc/sites/default/files/2026-06/26_RHM04_CONS%20%281%29.pdf",
       "publishedAt": "2026-06-30T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:52.604Z",
-      "lastSeen": "2026-11-12T05:14:36.395Z",
+      "lastSeen": "2026-11-13T11:46:42.984Z",
       "seed": true,
       "status": "Expirée",
       "updatedAt": "2026-10-08T09:43:08.594Z",
@@ -12187,7 +12255,7 @@
       "url": "https://www.ifap.nc/sites/default/files/2026-06/26_SAS10_CONS.pdf",
       "publishedAt": "2026-06-18T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:52.604Z",
-      "lastSeen": "2026-11-12T05:14:36.395Z",
+      "lastSeen": "2026-11-13T11:46:42.984Z",
       "seed": true,
       "status": "Expirée",
       "updatedAt": "2026-10-08T09:43:08.594Z",
@@ -12232,7 +12300,7 @@
       "url": "https://www.ifap.nc/sites/default/files/2026-06/26_INF05_CONS.pdf",
       "publishedAt": "2026-06-10T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:52.604Z",
-      "lastSeen": "2026-11-12T05:14:36.395Z",
+      "lastSeen": "2026-11-13T11:46:42.984Z",
       "seed": true,
       "status": "Expirée",
       "updatedAt": "2026-10-08T09:43:08.594Z",
@@ -12702,7 +12770,7 @@
       "url": "https://www.ville-dumbea.nc/sites/default/files/2026-04/4256%20SDD_Communique_attribution_CT%20SCIAGE%20BETON.pdf",
       "publishedAt": "2026-04-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:59.579Z",
-      "lastSeen": "2026-11-12T05:15:34.358Z",
+      "lastSeen": "2026-11-13T11:48:08.635Z",
       "seed": true
     },
     {
@@ -12830,7 +12898,7 @@
       "url": "https://www.ville-dumbea.nc/sites/default/files/2026-03/3701%20SDD_Communique_attribution_CT%20ASSYSTEM%20NC.pdf",
       "publishedAt": "2026-03-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:59.579Z",
-      "lastSeen": "2026-11-12T05:15:34.358Z",
+      "lastSeen": "2026-11-13T11:48:08.635Z",
       "seed": true
     },
     {
@@ -13209,7 +13277,7 @@
       "url": "https://www.ville-dumbea.nc/sites/default/files/2025-12/16825%20DDP-SCV_Communiqu%C3%A9%20attribution_AO%20EV%202026-27.pdf",
       "publishedAt": "2025-12-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:59.579Z",
-      "lastSeen": "2026-11-12T05:15:34.358Z",
+      "lastSeen": "2026-11-13T11:48:08.635Z",
       "seed": true
     },
     {
@@ -13428,7 +13496,7 @@
       "url": "https://www.ville-dumbea.nc/sites/default/files/2025-11/15289%20DDP-SDD_Communiqu%C3%A9%20attribution_DSP%20ELECT_Z1.pdf",
       "publishedAt": "2025-11-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:59.579Z",
-      "lastSeen": "2026-11-12T05:15:34.358Z",
+      "lastSeen": "2026-11-13T11:48:08.635Z",
       "seed": true
     },
     {
@@ -13439,7 +13507,7 @@
       "url": "https://www.ville-dumbea.nc/sites/default/files/2025-11/15290%20DDP-SDD_Communiqu%C3%A9%20%20attribution_DSP%20ELECT%20Z2.pdf",
       "publishedAt": "2025-11-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:59.579Z",
-      "lastSeen": "2026-11-12T05:15:34.358Z",
+      "lastSeen": "2026-11-13T11:48:08.635Z",
       "seed": true
     },
     {
@@ -13645,7 +13713,7 @@
       "url": "https://www.ville-dumbea.nc/sites/default/files/2025-09/10918%20DDP-SDD_Communiqu%C3%A9_attribution_M.25T12.pdf",
       "publishedAt": "2025-09-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:59.579Z",
-      "lastSeen": "2026-11-12T05:15:34.358Z",
+      "lastSeen": "2026-11-13T11:48:08.635Z",
       "seed": true
     },
     {
@@ -13656,7 +13724,7 @@
       "url": "https://www.ville-dumbea.nc/sites/default/files/2025-09/10919%20DDP-SDD_Communique_attribution_M.25T34.pdf",
       "publishedAt": "2025-09-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:59.579Z",
-      "lastSeen": "2026-11-12T05:15:34.358Z",
+      "lastSeen": "2026-11-13T11:48:08.635Z",
       "seed": true
     },
     {
@@ -13680,7 +13748,7 @@
       "url": "https://www.ville-dumbea.nc/sites/default/files/2025-08/DVEA-SRE_Com%20attribution_Fournitures%20scolaires.docx.pdf",
       "publishedAt": "2025-08-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:59.579Z",
-      "lastSeen": "2026-11-12T05:15:34.358Z",
+      "lastSeen": "2026-11-13T11:48:08.635Z",
       "seed": true
     },
     {
@@ -13835,7 +13903,7 @@
       "url": "https://www.ville-dumbea.nc/sites/default/files/2025-07/7959%20DDP-SDD_Communiqu%C3%A9%20attribution_M.25T12_sign%C3%A9_0.pdf",
       "publishedAt": "2025-07-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:59.579Z",
-      "lastSeen": "2026-11-12T05:15:34.358Z",
+      "lastSeen": "2026-11-13T11:48:08.635Z",
       "seed": true
     },
     {
@@ -14537,7 +14605,7 @@
       "url": "https://www.ville-dumbea.nc/sites/default/files/datocms/1730844345-1685-ddp-sdd_communique-attribution_m-23t42_batitech.pdf",
       "publishedAt": "2024-01-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:59.579Z",
-      "lastSeen": "2026-11-12T05:15:34.358Z",
+      "lastSeen": "2026-11-13T11:48:08.635Z",
       "seed": true
     },
     {
@@ -14561,7 +14629,7 @@
       "url": "https://www.ville-dumbea.nc/sites/default/files/datocms/1730847090-1658-ddp-cmgt_communique-attribution_m-23e50_pru-do.pdf",
       "publishedAt": "2024-01-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:59.579Z",
-      "lastSeen": "2026-11-12T05:15:34.358Z",
+      "lastSeen": "2026-11-13T11:48:08.635Z",
       "seed": true
     },
     {
@@ -14572,7 +14640,7 @@
       "url": "https://www.ville-dumbea.nc/sites/default/files/datocms/1720654225-1114-ddp-scv_communique-attrib_m-24t03_gag-refect-pjr-bbsg-24-ok-rr.pdf",
       "publishedAt": "2024-01-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:59.579Z",
-      "lastSeen": "2026-11-12T05:15:34.358Z",
+      "lastSeen": "2026-11-13T11:48:08.635Z",
       "seed": true
     },
     {
@@ -14583,7 +14651,7 @@
       "url": "https://www.ville-dumbea.nc/sites/default/files/datocms/1712802389-623-ddp-sep_com-attribution_m-23t52_mtt_okbt.pdf",
       "publishedAt": "2024-01-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:59.579Z",
-      "lastSeen": "2026-11-12T05:15:34.358Z",
+      "lastSeen": "2026-11-13T11:48:08.635Z",
       "seed": true
     },
     {
@@ -14607,7 +14675,7 @@
       "url": "https://www.ville-dumbea.nc/sites/default/files/datocms/1708296502-246-ddp-sep-attribution-mmt-ecole-et-bat_m-23s46_23s47_23s48_23s53.pdf",
       "publishedAt": "2024-01-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:12:59.579Z",
-      "lastSeen": "2026-11-12T05:15:34.358Z",
+      "lastSeen": "2026-11-13T11:48:08.635Z",
       "seed": true
     },
     {
