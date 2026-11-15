@@ -36,6 +36,21 @@
   },
   "items": [
     {
+      "id": "province-nord:31ae7112e91d43f8",
+      "sourceId": "province-nord",
+      "kind": "consultation",
+      "title": "PRESTATIONS DE LOCATION, D'INSTALLATION ET DE MAINTENANCE DE MATERIELS D'IMPRESSION",
+      "reference": "2026/057",
+      "buyer": "Province Nord",
+      "nature": "Fourniture",
+      "status": "Ouvert",
+      "url": "https://marchespublics.province-nord.nc/sallemarche.aspx",
+      "publishedAt": "2026-11-16T08:00:00+11:00",
+      "deadline": "2026-12-10T10:30:00+11:00",
+      "firstSeen": "2026-11-15T22:22:25.706Z",
+      "lastSeen": "2026-11-15T22:22:25.706Z"
+    },
+    {
       "id": "lexpol-marches:ea68a6b6626abf33",
       "sourceId": "lexpol-marches",
       "kind": "consultation",
