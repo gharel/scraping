@@ -1143,7 +1143,7 @@
       "publishedAt": "2026-11-09T00:00:00+11:00",
       "deadline": "2026-12-16T11:30:00+11:00",
       "firstSeen": "2026-11-08T21:34:29.358Z",
-      "lastSeen": "2026-11-15T08:43:52.533Z"
+      "lastSeen": "2026-11-16T14:30:33.016Z"
     },
     {
       "id": "marchespublics-nc:s3d-3534",
@@ -2028,7 +2028,7 @@
       "publishedAt": "2026-11-04T00:00:00+11:00",
       "deadline": "2026-12-16T11:30:00+11:00",
       "firstSeen": "2026-11-04T04:18:43.302Z",
-      "lastSeen": "2026-11-15T08:43:52.533Z"
+      "lastSeen": "2026-11-16T14:30:33.016Z"
     },
     {
       "id": "marchespublics-nc:b7k-3529",
@@ -2235,7 +2235,7 @@
       "publishedAt": "2026-11-03T00:00:00+11:00",
       "deadline": "2026-12-04T11:30:00+11:00",
       "firstSeen": "2026-11-03T09:01:58.780Z",
-      "lastSeen": "2026-11-15T08:43:52.533Z"
+      "lastSeen": "2026-11-16T14:30:33.016Z"
     },
     {
       "id": "lnc-legales:9f81abd8d57f2664",
@@ -2768,7 +2768,7 @@
       "publishedAt": "2026-10-29T00:00:00+11:00",
       "deadline": "2026-11-30T11:30:00+11:00",
       "firstSeen": "2026-10-28T20:45:59.607Z",
-      "lastSeen": "2026-11-15T08:43:52.533Z"
+      "lastSeen": "2026-11-16T14:30:33.016Z"
     },
     {
       "id": "cps-appels-offres:5d422038263b1bbb",
@@ -3326,7 +3326,7 @@
       "publishedAt": "2026-10-27T00:00:00+11:00",
       "deadline": "2026-11-23T11:30:00+11:00",
       "firstSeen": "2026-10-27T09:31:40.127Z",
-      "lastSeen": "2026-11-15T08:43:52.533Z"
+      "lastSeen": "2026-11-16T14:30:33.016Z"
     },
     {
       "id": "wallis-futuna:111cc8e858631369",
@@ -3339,7 +3339,7 @@
       "publishedAt": "2026-10-27T00:00:00+11:00",
       "deadline": "2026-11-13T11:30:00+11:00",
       "firstSeen": "2026-10-27T09:31:40.127Z",
-      "lastSeen": "2026-11-15T08:43:52.533Z"
+      "lastSeen": "2026-11-16T14:30:33.016Z"
     },
     {
       "id": "marchespublics-nc:f4g-3513",
@@ -3799,7 +3799,7 @@
       "publishedAt": "2026-10-26T00:00:00+11:00",
       "deadline": "2026-11-27T12:00:00+11:00",
       "firstSeen": "2026-10-26T09:36:24.941Z",
-      "lastSeen": "2026-11-15T08:43:52.533Z"
+      "lastSeen": "2026-11-16T14:30:33.016Z"
     },
     {
       "id": "wallis-futuna:3028726b618f9e5e",
@@ -3848,7 +3848,7 @@
       "publishedAt": "2026-10-26T00:00:00+11:00",
       "deadline": "2026-11-23T11:30:00+11:00",
       "firstSeen": "2026-10-26T02:39:26.392Z",
-      "lastSeen": "2026-11-15T08:43:52.533Z"
+      "lastSeen": "2026-11-16T14:30:33.016Z"
     },
     {
       "id": "lnc-legales:63612b1680fc23b7",
@@ -5270,7 +5270,7 @@
       "publishedAt": "2026-10-19T00:00:00+11:00",
       "deadline": "2026-11-19T11:30:00+11:00",
       "firstSeen": "2026-10-20T11:36:09.310Z",
-      "lastSeen": "2026-11-15T08:43:52.533Z"
+      "lastSeen": "2026-11-16T14:30:33.016Z"
     },
     {
       "id": "wallis-futuna:96ccc65e283785b7",
@@ -5283,7 +5283,7 @@
       "publishedAt": "2026-10-19T00:00:00+11:00",
       "deadline": "2026-11-19T11:30:00+11:00",
       "firstSeen": "2026-10-20T11:36:09.310Z",
-      "lastSeen": "2026-11-15T08:43:52.533Z"
+      "lastSeen": "2026-11-16T14:30:33.016Z"
     },
     {
       "id": "lnc-legales:e31e4dbb116c9c4f",
@@ -6360,7 +6360,9 @@
       "deadline": "2026-11-16T15:30:00+11:00",
       "lots": 2,
       "firstSeen": "2026-10-14T07:36:41.258Z",
-      "lastSeen": "2026-11-16T04:09:21.843Z"
+      "lastSeen": "2026-11-16T04:09:21.843Z",
+      "gone": true,
+      "goneAt": "2026-11-16T14:27:30.907Z"
     },
     {
       "id": "marchespublics-nc:h5j-3473",
@@ -6570,7 +6572,7 @@
       "sourceId": "ifap",
       "kind": "consultation",
       "title": "Parcours socle pour les managers intermédiaires",
-      "status": "16/11/2026",
+      "status": "Expirée",
       "url": "https://www.ifap.nc/sites/default/files/2026-11/26_RHM07_CONS.pdf",
       "publishedAt": "2026-10-12T00:00:00+11:00",
       "deadline": "2026-11-16T00:00:00+11:00",
@@ -6582,7 +6584,7 @@
       "sourceId": "ifap",
       "kind": "consultation",
       "title": "Parcours socle pour les managers de proximité",
-      "status": "16/11/2026",
+      "status": "Expirée",
       "url": "https://www.ifap.nc/sites/default/files/2026-11/26_RHM06_CONS.pdf",
       "publishedAt": "2026-10-12T00:00:00+11:00",
       "deadline": "2026-11-16T00:00:00+11:00",
@@ -7042,7 +7044,7 @@
       "publishedAt": "2026-10-09T00:00:00+11:00",
       "deadline": "2026-11-09T11:30:00+11:00",
       "firstSeen": "2026-10-15T11:28:39.532Z",
-      "lastSeen": "2026-11-15T08:43:52.533Z"
+      "lastSeen": "2026-11-16T14:30:33.016Z"
     },
     {
       "id": "lnc-legales:6d576d8732dcbd30",
@@ -8548,7 +8550,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15364/126184/file/Cahier%20des%20charges%20Goodies%20WF%20Tourisme%20valid%C3%A9.pdf",
       "publishedAt": "2026-10-06T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-11-15T08:43:52.533Z",
+      "lastSeen": "2026-11-16T14:30:33.016Z",
       "seed": true,
       "deadline": "2026-10-19T17:00:00+11:00",
       "updatedAt": "2026-10-08T09:32:04.922Z",
@@ -9108,7 +9110,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15353/126085/file/Avis%20de%20march%C3%A9.pdf",
       "publishedAt": "2026-10-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-11-15T08:43:52.533Z",
+      "lastSeen": "2026-11-16T14:30:33.016Z",
       "seed": true,
       "reference": "2026-E-PA-57-SBL",
       "deadline": "2026-10-28T11:30:00+11:00",
@@ -10261,7 +10263,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15340/125943/file/avis%20de%20march%C3%A9%20-%20enrochements%20Wallis.pdf",
       "publishedAt": "2026-09-21T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-11-15T08:43:52.533Z",
+      "lastSeen": "2026-11-16T14:30:33.016Z",
       "seed": true,
       "reference": "2026-T-AO-56-ENV",
       "deadline": "2026-10-27T11:30:00+11:00",
@@ -11151,7 +11153,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15323/125775/file/Avis%20de%20march%C3%A9%20-%20MOE%20Vailepo.pdf",
       "publishedAt": "2026-09-10T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-11-15T08:43:52.533Z",
+      "lastSeen": "2026-11-16T14:30:33.016Z",
       "seed": true,
       "reference": "2026-T-PA-54-ENV",
       "deadline": "2026-10-06T11:30:00+11:00",
@@ -11443,7 +11445,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15303/125615/file/Avis%20de%20march%C3%A9.pdf",
       "publishedAt": "2026-09-02T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-11-15T08:43:52.533Z",
+      "lastSeen": "2026-11-16T14:30:33.016Z",
       "seed": true,
       "reference": "2026-E-PA-53-SEAC",
       "deadline": "2026-09-22T11:30:00+11:00",
@@ -11491,7 +11493,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15296/125581/file/Note%20sign%C3%A9e.pdf",
       "publishedAt": "2026-09-01T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-11-15T08:43:52.533Z",
+      "lastSeen": "2026-11-16T14:30:33.016Z",
       "seed": true,
       "deadline": "2026-08-27T11:30:00+11:00",
       "updatedAt": "2026-10-08T09:32:04.922Z",
@@ -11842,7 +11844,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15261/125313/file/SEAC-Avis%20rectificatif%20march%C3%A9%20-%20prolongation.pdf",
       "publishedAt": "2026-08-06T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-11-15T08:43:52.533Z",
+      "lastSeen": "2026-11-16T14:30:33.016Z",
       "seed": true,
       "reference": "2026-E-PA-24-SEAC",
       "deadline": "2026-08-19T11:30:00+11:00",
@@ -11967,7 +11969,7 @@
       "url": "https://www.polynesie-francaise.gouv.fr/contenu/telechargement/54781/350422/file/Avis%20de%20publicit%C3%A9_2026_SOLIMPRESS.pdf",
       "publishedAt": "2026-08-03T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:03.204Z",
-      "lastSeen": "2026-11-15T08:43:53.724Z",
+      "lastSeen": "2026-11-16T14:30:37.258Z",
       "seed": true
     },
     {
@@ -11979,7 +11981,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15250/125219/file/Avis%20de%20march%C3%A9.pdf",
       "publishedAt": "2026-08-03T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-11-15T08:43:52.533Z",
+      "lastSeen": "2026-11-16T14:30:33.016Z",
       "seed": true,
       "reference": "2026-T-AO-29-TP",
       "deadline": "2026-08-28T11:30:00+11:00",
@@ -12002,7 +12004,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15251/125224/file/avis%20de%20march%C3%A9.pdf",
       "publishedAt": "2026-08-03T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-11-15T08:43:52.533Z",
+      "lastSeen": "2026-11-16T14:30:33.016Z",
       "seed": true,
       "reference": "2026-T-AO-25-TP",
       "deadline": "2026-08-28T11:30:00+11:00",
@@ -12255,7 +12257,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15235/125068/file/Avis%20de%20march%C3%A9.pdf",
       "publishedAt": "2026-07-21T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-11-15T08:43:52.533Z",
+      "lastSeen": "2026-11-16T14:30:33.016Z",
       "seed": true,
       "reference": "2026-T-PA-51-ENV",
       "deadline": "2026-08-17T11:30:00+11:00",
@@ -12293,7 +12295,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15224/124991/file/avis%20de%20march%C3%A9.pdf",
       "publishedAt": "2026-07-17T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-11-15T08:43:52.533Z",
+      "lastSeen": "2026-11-16T14:30:33.016Z",
       "seed": true,
       "reference": "2026-T-PA-35-ENV",
       "deadline": "2026-08-10T11:30:00+11:00",
@@ -12344,7 +12346,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15218/124961/file/Avis%20de%20consultation%202026%20-%20website%20WF%20Tourisme.pdf",
       "publishedAt": "2026-07-10T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-11-15T08:43:52.533Z",
+      "lastSeen": "2026-11-16T14:30:33.016Z",
       "seed": true,
       "deadline": "2026-07-27T00:00:00+11:00",
       "updatedAt": "2026-10-08T09:32:04.922Z",
@@ -12380,7 +12382,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15220/124971/file/Avis%20de%20consultation%202026%20-%20cartes%20touristiques%20WF.pdf",
       "publishedAt": "2026-07-10T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-11-15T08:43:52.533Z",
+      "lastSeen": "2026-11-16T14:30:33.016Z",
       "seed": true,
       "deadline": "2026-07-27T00:00:00+11:00",
       "updatedAt": "2026-10-08T09:32:04.922Z",
@@ -12457,7 +12459,7 @@
       "url": "https://www.polynesie-francaise.gouv.fr/contenu/telechargement/54738/350109/file/Avis%20de%20publicit%C3%A9_2026_Securisation_hall_accueil_HCRPF.pdf",
       "publishedAt": "2026-07-07T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:03.204Z",
-      "lastSeen": "2026-11-15T08:43:53.724Z",
+      "lastSeen": "2026-11-16T14:30:37.258Z",
       "seed": true
     },
     {
@@ -12469,7 +12471,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15205/124854/file/Avis%20de%20march%C3%A9.pdf",
       "publishedAt": "2026-07-07T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-11-15T08:43:52.533Z",
+      "lastSeen": "2026-11-16T14:30:33.016Z",
       "seed": true,
       "reference": "2026-E-PA-23-SEAC",
       "deadline": "2026-08-07T11:30:00+11:00",
@@ -13036,7 +13038,7 @@
       "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15133/124353/file/20260520-tx%20renov%20LPA.pdf",
       "publishedAt": "2026-05-20T00:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:01.667Z",
-      "lastSeen": "2026-11-15T08:43:52.533Z",
+      "lastSeen": "2026-11-16T14:30:33.016Z",
       "seed": true
     },
     {
