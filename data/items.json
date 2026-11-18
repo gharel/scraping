@@ -36,6 +36,30 @@
   },
   "items": [
     {
+      "id": "lnc-legales:f9397a0f9a7b097d",
+      "sourceId": "lnc-legales",
+      "kind": "consultation",
+      "title": "MISSION DE MAITRISE D’ŒUVRE POUR LA RÉFECTION DES FAÇADES DOUBLE-PEAU DE LA RÉSIDENCE UNIVERSITAIRE DE NOUVILLE (UNC 500)",
+      "summary": "MISSION DE MAITRISE D’ŒUVRE POUR LA RÉFECTION DES FAÇADES DOUBLE-PEAU DE LA RÉSIDENCE UNIVERSITAIRE DE NOUVILLE (UNC 500) La ...",
+      "buyer": "SOCIETE IMMOBILIERE DE NOUVELLE-CALEDONIE",
+      "url": "https://legales.lnc.nc/annonce/societe-immobiliere-de-nouvelle-caledonie-19-11-2026-31921",
+      "publishedAt": "2026-11-19T00:00:00+11:00",
+      "firstSeen": "2026-11-18T23:27:01.619Z",
+      "lastSeen": "2026-11-18T23:27:01.619Z"
+    },
+    {
+      "id": "lnc-legales:578accb14ad55a77",
+      "sourceId": "lnc-legales",
+      "kind": "consultation",
+      "title": "Travaux d’aménagement en vue de la rétrocession à la collectivité des espaces publics du lotissement les Palmiers III – dans le quartier de Koutio, sur la Commune de Dumbé...",
+      "summary": "Fonds Social de l'Habitat",
+      "buyer": "Fonds Social de l'Habitat",
+      "url": "https://legales.lnc.nc/annonce/fonds-social-de-lhabitat-19-11-2026-31920",
+      "publishedAt": "2026-11-19T00:00:00+11:00",
+      "firstSeen": "2026-11-18T23:27:01.619Z",
+      "lastSeen": "2026-11-18T23:27:01.619Z"
+    },
+    {
       "id": "lexpol-marches:79ee0f20454976b6",
       "sourceId": "lexpol-marches",
       "kind": "consultation",
