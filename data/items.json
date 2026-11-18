@@ -120,6 +120,25 @@
       "lastSeen": "2026-11-18T00:21:58.637Z"
     },
     {
+      "id": "marchespublics-nc:y6u-3556",
+      "sourceId": "marchespublics-nc",
+      "kind": "consultation",
+      "title": "TRAVAUX DE REPARATION ET DE PROTECTION DU PONTON DU VALLON-DORE",
+      "summary": "TRAVAUX DE REPARATION ET DE PROTECTION DU PONTON DU VALLON-DORE -Lot 1",
+      "reference": "26-M-16",
+      "buyer": "Syndicat Mixte des Transports Urbains du Grand Nouméa",
+      "buyerLocation": "Nouméa",
+      "location": "Province Sud",
+      "nature": "Travaux",
+      "procedure": "Marché de gré à gré",
+      "procedureCode": "MGG",
+      "url": "https://portail.marchespublics.nc/entreprise/consultation/3556?orgAcronyme=y6u",
+      "publishedAt": "2026-11-18T00:00:00+11:00",
+      "deadline": "2026-11-23T08:00:00+11:00",
+      "firstSeen": "2026-11-18T16:36:15.061Z",
+      "lastSeen": "2026-11-18T16:36:15.061Z"
+    },
+    {
       "id": "lexpol-marches:74c00277f8985001",
       "sourceId": "lexpol-marches",
       "kind": "consultation",
@@ -11394,7 +11413,9 @@
           "from": "2026-11-03T12:00:00+11:00",
           "to": "2026-11-18T12:00:00+11:00"
         }
-      ]
+      ],
+      "gone": true,
+      "goneAt": "2026-11-18T16:38:49.356Z"
     },
     {
       "id": "marches-publics-etat:f2h-3062309",
