@@ -88,7 +88,9 @@ La version en ligne est en consultation seule tant que vous n’avez pas connect
 
 1. Dans **Réglages**, cliquez sur « Créer le jeton sur GitHub ».
 2. Choisissez le dépôt `gharel/scraping` uniquement, avec les autorisations **Contents** et **Actions** en lecture et écriture.
-3. Collez le jeton dans Vigie. Il reste stocké dans ce navigateur uniquement.
+3. Collez le jeton dans Vigie. Il reste dans l’onglet seulement (sessionStorage) et s’efface à sa fermeture : gardez-le dans votre gestionnaire de mots de passe. Il expire au bout de 30 jours.
+
+Le jeton n’est pas gardé dans le localStorage, que tous les sites `gharel.github.io` partagent : une faille sur l’un d’eux suffirait à le lire.
 
 Chaque modification crée un commit sur `config/veille.json` ; la veille relance alors une vérification et republie le site en 1 à 2 minutes. Le bouton « Vérifier maintenant » déclenche une vérification immédiate.
 

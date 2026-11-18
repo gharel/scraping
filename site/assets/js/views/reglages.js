@@ -37,7 +37,8 @@ function tokenUrl(repository, { relay = false } = {}) {
     name: relay ? `Vigie relais (${repo || 'veille'})` : `Vigie (${repo || 'veille'})`,
     description: relay ? 'Publier depuis le PC les annonces des sites que GitHub ne peut pas lire' : 'Modifier la veille Vigie depuis la version en ligne',
     target_name: owner || '',
-    expires_in: '366',
+    // Jeton de la version en ligne : courte durée, il n'est gardé que le temps de l'onglet.
+    expires_in: relay ? '366' : '30',
     contents: 'write',
     ...(relay ? {} : { actions: 'write' }),
   });
@@ -156,7 +157,7 @@ function githubSection(ctx) {
   };
   return section(
     'Modifier la veille en ligne',
-    'Sans connexion, la version en ligne est en consultation seule. Connectez GitHub une fois sur chaque appareil pour gérer les sources et les catégories.',
+    'Sans connexion, la version en ligne est en consultation seule. Connectez GitHub pour gérer les sources et les catégories : la connexion dure le temps de cet onglet.',
     h(
       'ol',
       { class: 'steps' },
@@ -164,7 +165,7 @@ function githubSection(ctx) {
       h(
         'li',
         null,
-        h('p', null, h('strong', null, 'Collez le jeton ici.'), ' Il reste uniquement dans ce navigateur.'),
+        h('p', null, h('strong', null, 'Collez le jeton ici.'), ' Il reste dans cet onglet seulement et s’efface à sa fermeture ; gardez-le dans votre gestionnaire de mots de passe.'),
         h('form', { class: 'inline-form', onSubmit: connect }, field({ label: 'Jeton GitHub', control: token }), button('Connecter', { type: 'submit', iconName: 'github' })),
       ),
     ),

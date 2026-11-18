@@ -1,5 +1,5 @@
 /**
- * Préférences propres à cet appareil (filtres, annonces suivies et lues, jeton GitHub), sous le
+ * Préférences propres à cet appareil (filtres, annonces suivies et lues), sous le
  * préfixe « vigie. ». Le thème, commun à tous les outils Skazy Formation, a sa propre clé (theme.js).
  * Tout est protégé : en navigation privée, le stockage peut être indisponible.
  */
@@ -28,6 +28,36 @@ export function writeShared(key, value) {
 export const read = (key, fallback = null) => readShared(PREFIX + key, fallback);
 
 export const write = (key, value) => writeShared(PREFIX + key, value);
+
+/**
+ * Secret (jeton GitHub) gardé dans le sessionStorage de cet onglet seulement, effacé à sa fermeture.
+ * Le localStorage de gharel.github.io est partagé par tous les sites Pages du compte : une faille
+ * sur l'un d'eux suffirait à y lire un jeton. Une ancienne copie en localStorage est déplacée ici.
+ */
+export function readSecret(key) {
+  const legacy = read(key);
+  if (legacy != null) {
+    write(key, null);
+    writeSecret(key, legacy);
+  }
+  try {
+    const raw = window.sessionStorage.getItem(PREFIX + key);
+    return raw == null ? null : JSON.parse(raw);
+  } catch {
+    return null;
+  }
+}
+
+/** Enregistre un secret pour cet onglet ; `null` le retire (et toute ancienne copie en localStorage). */
+export function writeSecret(key, value) {
+  write(key, null);
+  try {
+    if (value == null) window.sessionStorage.removeItem(PREFIX + key);
+    else window.sessionStorage.setItem(PREFIX + key, JSON.stringify(value));
+  } catch {
+    /* stockage indisponible : le secret ne sera pas conservé */
+  }
+}
 
 function readSession(key) {
   try {

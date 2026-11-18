@@ -154,7 +154,7 @@ function readonlyBackend(deploy) {
 
 export function createBackend({ local, deploy }) {
   if (local) return localBackend();
-  const token = prefs.read('githubToken');
+  const token = prefs.readSecret('githubToken');
   if (token && deploy?.repository) return githubBackend(deploy, token);
   return readonlyBackend(deploy);
 }
@@ -162,9 +162,9 @@ export function createBackend({ local, deploy }) {
 export async function connectGitHub(deploy, token) {
   const client = createGitHubClient({ token, repository: deploy.repository, branch: deploy.branch || 'main' });
   await client.check();
-  prefs.write('githubToken', token);
+  prefs.writeSecret('githubToken', token);
 }
 
 export function disconnectGitHub() {
-  prefs.write('githubToken', null);
+  prefs.writeSecret('githubToken', null);
 }
