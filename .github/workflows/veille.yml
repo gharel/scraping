@@ -2,9 +2,11 @@ name: Veille
 
 on:
   schedule:
-    # Toutes les 2 heures, à l'heure pile (heures paires UTC, soit 11 h, 13 h, 15 h, 17 h… à Nouméa).
-    # Le passage de 17 h (06:00 UTC) prépare le récapitulatif quotidien par e-mail.
-    - cron: '0 */2 * * *'
+    # Toutes les heures, à la 23e minute (… 16 h 23, 17 h 23… à Nouméa).
+    # GitHub retarde ou saute les passages planifiés à l'heure pile, les plus chargés :
+    # avec « 0 */2 », à peine 3 ou 4 passages sur 12 avaient lieu chaque jour.
+    # Le premier passage à partir de 17 h à Nouméa (06:23 UTC) envoie le récapitulatif par e-mail.
+    - cron: '23 * * * *'
   workflow_dispatch:
     inputs:
       force_digest:

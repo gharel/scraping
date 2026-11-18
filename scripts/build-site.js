@@ -37,7 +37,7 @@ const deploy = {
   repository: repository(),
   branch: process.env.GITHUB_REF_NAME || 'main',
   workflow: 'veille.yml',
-  schedule: 'toutes les 2 heures à l’heure pile, via GitHub Actions.',
+  schedule: 'toutes les heures (vers 16 h 23, 17 h 23…), via GitHub Actions.',
   builtAt: new Date().toISOString(),
 };
 await writeFile(path.join(OUT, 'data', 'deploy.json'), `${JSON.stringify(deploy, null, 2)}\n`);

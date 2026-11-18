@@ -95,7 +95,7 @@ function relaySection(ctx) {
   return section(
     'Relais vers la version en ligne',
     RELAY_INTRO,
-    callout('success', 'cloud', `Relais actif vers ${relay.repository}`, h('p', null, 'La veille en ligne reprend ces annonces à son passage suivant (toutes les 2 heures), tant que le relevé a moins de 6 heures.')),
+    callout('success', 'cloud', `Relais actif vers ${relay.repository}`, h('p', null, 'La veille en ligne reprend ces annonces à son passage suivant (toutes les heures), tant que le relevé a moins de 6 heures.')),
     last && !last.ok ? callout('warning', 'warning', 'La dernière publication a échoué', h('p', null, last.error)) : null,
     h(
       'ul',
@@ -172,8 +172,8 @@ function githubSection(ctx) {
   );
 }
 
-/** Heures de passage de la veille en ligne (heures impaires à Nouméa). */
-const DIGEST_HOURS = [7, 9, 11, 13, 15, 17, 19, 21];
+/** Heures d'envoi proposées : la veille en ligne passe toutes les heures (vers 16 h 23, 17 h 23…). */
+const DIGEST_HOURS = Array.from({ length: 16 }, (_, index) => index + 6);
 
 function digestHourRow(config, disabled, onChange) {
   const id = 'digest-hour';
@@ -208,7 +208,7 @@ function alertsSection(ctx) {
     null,
     toggle({
       label: 'Récapitulatif quotidien par e-mail',
-      description: `Chaque jour à ${config.settings.digestHour} h, un seul e-mail regroupe les nouvelles annonces repérées depuis le précédent. Rien de nouveau : pas d’e-mail.`,
+      description: `Chaque jour à partir de ${config.settings.digestHour} h, un seul e-mail regroupe les nouvelles annonces repérées depuis le précédent. Rien de nouveau : pas d’e-mail.`,
       checked: config.settings.githubAlerts,
       disabled: !canEdit,
       onChange: (value) => updateSetting('githubAlerts', value),
@@ -269,7 +269,7 @@ function scheduleSection(ctx) {
     h(
       'ul',
       { class: 'facts' },
-      h('li', null, icon('cloud', { size: 18 }), h('span', null, h('strong', null, 'En ligne : '), deploy?.schedule || 'toutes les 2 heures, via GitHub Actions.')),
+      h('li', null, icon('cloud', { size: 18 }), h('span', null, h('strong', null, 'En ligne : '), deploy?.schedule || 'toutes les heures, via GitHub Actions.')),
       h('li', null, icon('laptop', { size: 18 }), h('span', null, h('strong', null, 'Sur votre PC : '), `toutes les ${config.settings.localIntervalMinutes} minutes tant que Vigie est lancé.`)),
     ),
     backend.canEdit

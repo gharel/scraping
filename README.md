@@ -24,12 +24,12 @@ L’écran de mot de passe reprend cette signature (pastille, Vigie, filet, logo
 
 ## Ce que fait Vigie
 
-- **Surveille** 32 sources (portails de marchés publics, provinces, communes, établissements publics, journaux d’annonces légales) toutes les 2 heures (en ligne) ou toutes les heures (sur votre PC).
+- **Surveille** 32 sources (portails de marchés publics, provinces, communes, établissements publics, journaux d’annonces légales) toutes les heures, en ligne comme sur votre PC.
 - **Lit les consultations en détail** : acheteur, référence, procédure, nature, nombre de lots, date de publication, date limite. Quand la liste ne donne que l’acheteur, Vigie lit la fiche de l’annonce pour en connaître l’objet.
 - **Range** chaque annonce par territoire (Nouvelle-Calédonie, Polynésie française, Wallis-et-Futuna, Vanuatu, Pacifique), avec un filtre dédié.
 - **Classe** chaque annonce dans vos domaines (formation, IA, communication, développement, web, bureautique, audiovisuel, data, gestion de projet) et **écarte** le BTP grâce à des mots-clés exclus. Par défaut, seules les annonces de vos catégories sont affichées.
 - **Signale** les nouveautés (elles le restent jusqu’à ce que vous les marquiez comme lues), les clôtures proches (compte à rebours J-n) et les reports de date limite.
-- **Récapitulatif quotidien par e-mail** à 17 h (heure de Nouméa) : un seul e-mail HTML regroupe les nouvelles annonces de vos catégories.
+- **Récapitulatif quotidien par e-mail** vers 17 h (heure de Nouméa) : un seul e-mail HTML regroupe les nouvelles annonces de vos catégories.
 - **Exporte** les annonces affichées en CSV (Excel).
 
 ## Sources surveillées par défaut
@@ -142,7 +142,7 @@ Ensuite, après chaque vérification faite sur le PC :
 - il publie leurs annonces dans `data/relais/<source>.json` (annonces actuelles, date du relevé), **en un seul commit** « Relais : annonces lues depuis le PC (…) » ;
 - un relevé inchangé n’est republié qu’au bout de 3 heures, pour rester récent sans créer un commit à chaque passage. « Publier maintenant » force la publication.
 
-À son passage suivant (toutes les 2 heures, à l’heure pile), la veille en ligne essaie toujours de lire le site directement. Si GitHub reste bloqué et que le relevé du PC a moins de 6 heures, elle fusionne ses annonces comme si elle les avait lues : mêmes clés, donc pas de doublon ni de fausse nouveauté, et les vraies nouveautés rejoignent le récapitulatif par e-mail. Un relevé plus ancien, ou fait sur une autre adresse que celle de la source, est ignoré.
+À son passage suivant (toutes les heures), la veille en ligne essaie toujours de lire le site directement. Si GitHub reste bloqué et que le relevé du PC a moins de 6 heures, elle fusionne ses annonces comme si elle les avait lues : mêmes clés, donc pas de doublon ni de fausse nouveauté, et les vraies nouveautés rejoignent le récapitulatif par e-mail. Un relevé plus ancien, ou fait sur une autre adresse que celle de la source, est ignoré.
 
 Le jeton est enregistré sur le PC dans `local-data/relais.json` (dossier ignoré par git). Il n’est jamais affiché, ni écrit dans le journal, ni servi par l’interface locale. « Désactiver le relais » le supprime.
 
@@ -218,7 +218,7 @@ Règles :
 Vigie sur votre PC (toutes les heures, relais activé)
   └─ commit             data/relais/<source>.json pour les sites que GitHub n'atteint pas
 
-GitHub Actions (toutes les 2 h, à l'heure pile : 11 h, 13 h, 15 h, 17 h… à Nouméa)
+GitHub Actions (toutes les heures : 16 h 23, 17 h 23… à Nouméa)
   └─ npm run scrape     lit les sources, met à jour data/items.json et data/status.json
                         (site injoignable : relevé du PC repris s'il a moins de 6 h)
                         met en file les nouveautés de vos catégories (data/alert-queue.json)
