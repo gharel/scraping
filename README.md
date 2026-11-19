@@ -2,7 +2,7 @@
 
 Vigie surveille automatiquement les appels d’offres publiés en Nouvelle-Calédonie, à Wallis-et-Futuna, en Polynésie française et au Vanuatu, ainsi que toutes les pages web que vous lui confiez. Les nouveautés sont classées par catégories, signalées dans l’interface et, si vous le souhaitez, envoyées par e-mail.
 
-**Version en ligne : <https://gharel.github.io/scraping/>**
+**Version en ligne : <https://gharel.github.io/vigie/>**
 
 | Bureau | Mobile (thème sombre) |
 | --- | --- |
@@ -87,7 +87,7 @@ Seule une empreinte PBKDF2 (SHA-256, 600 000 itérations) est publiée, dans `si
 La version en ligne est en consultation seule tant que vous n’avez pas connecté GitHub sur l’appareil :
 
 1. Dans **Réglages**, cliquez sur « Créer le jeton sur GitHub ».
-2. Choisissez le dépôt `gharel/scraping` uniquement, avec les autorisations **Contents** et **Actions** en lecture et écriture.
+2. Choisissez le dépôt `gharel/vigie` uniquement, avec les autorisations **Contents** et **Actions** en lecture et écriture.
 3. Collez le jeton dans Vigie. Il reste dans l’onglet seulement (sessionStorage) et s’efface à sa fermeture : gardez-le dans votre gestionnaire de mots de passe. Il expire au bout de 30 jours.
 
 Le jeton n’est pas gardé dans le localStorage, que tous les sites `gharel.github.io` partagent : une faille sur l’un d’eux suffirait à le lire.
@@ -114,7 +114,7 @@ Si un secret manque ou si Resend refuse l’envoi, le passage affiche un avertis
 Prérequis : [Node.js](https://nodejs.org) 20 ou plus récent.
 
 ```bash
-git clone https://github.com/gharel/scraping.git vigie
+git clone https://github.com/gharel/vigie.git
 cd vigie
 npm install
 npm start
@@ -133,7 +133,7 @@ Sous Windows :
 Les sites qui filtrent les serveurs de GitHub restent lisibles depuis votre PC. Le relais publie leurs annonces sur la version en ligne :
 
 1. Lancez Vigie sur votre PC (`npm start`), onglet **Réglages**, carte « Relais vers la version en ligne ».
-2. Cliquez sur « Créer le jeton sur GitHub » : dépôt `gharel/scraping` uniquement, autorisation **Contents** en lecture et écriture. Le jeton créé pour la version en ligne convient aussi.
+2. Cliquez sur « Créer le jeton sur GitHub » : dépôt `gharel/vigie` uniquement, autorisation **Contents** en lecture et écriture. Le jeton créé pour la version en ligne convient aussi.
 3. Collez le jeton et cliquez sur « Activer le relais ». Vigie vérifie le jeton (sans rien modifier dans le dépôt) puis publie aussitôt.
 
 Ensuite, après chaque vérification faite sur le PC :
@@ -225,7 +225,7 @@ GitHub Actions (toutes les heures : 16 h 23, 17 h 23… à Nouméa)
   └─ récapitulatif      à partir de 17 h, une fois par jour : e-mail HTML via Resend
   └─ commit             seulement si les annonces ou la file ont changé
   └─ npm run build      assemble _site/ (interface + données + configuration)
-  └─ GitHub Pages       publie https://gharel.github.io/scraping/
+  └─ GitHub Pages       publie https://gharel.github.io/vigie/
 ```
 
 | Dossier | Contenu |

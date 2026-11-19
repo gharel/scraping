@@ -51,7 +51,7 @@ const RELAY_INTRO = 'Quelques sites refusent les serveurs de GitHub qui assurent
 function relaySection(ctx) {
   const relay = ctx.state.local?.relay;
   if (!relay) return null;
-  const repository = relay.repository || 'gharel/scraping';
+  const repository = relay.repository || 'gharel/vigie';
   if (!relay.configured) {
     const token = input({ type: 'password', placeholder: 'github_pat_…', autocomplete: 'off' });
     const repoInput = relay.repository ? null : input({ placeholder: 'propriétaire/dépôt' });
@@ -319,7 +319,7 @@ function deviceSection(ctx) {
 }
 
 function installSection(ctx) {
-  const repository = ctx.state.deploy?.repository || 'gharel/scraping';
+  const repository = ctx.state.deploy?.repository || 'gharel/vigie';
   return section(
     'Lancer Vigie sur votre PC',
     'Le mode local vérifie les sources depuis votre ordinateur et permet de tester une source avant de l’ajouter. Il faut Node.js 20 ou plus récent.',

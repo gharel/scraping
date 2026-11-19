@@ -5,7 +5,7 @@
     "localIntervalMinutes": 60,
     "githubAlerts": true,
     "alertOnlyMatching": true,
-    "appUrl": "https://gharel.github.io/scraping/",
+    "appUrl": "https://gharel.github.io/vigie/",
     "excludeKeywords": [
       "travaux",
       "BTP",

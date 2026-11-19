@@ -199,14 +199,14 @@ test('relais : publication depuis le PC, puis désactivation pendant une publica
   t.after(() => rm(dir, { recursive: true, force: true }));
   const file = path.join(dir, 'relais.json');
   const token = `github_pat_${'Z9'.repeat(40)}`;
-  await writeFile(file, JSON.stringify({ token, repository: 'gharel/scraping', branch: 'main', published: {} }));
+  await writeFile(file, JSON.stringify({ token, repository: 'gharel/vigie', branch: 'main', published: {} }));
 
   const commits = [];
   let onPatch = async () => {};
   const fetchImpl = async (url, options = {}) => {
     const json = (body, status = 200) => new Response(JSON.stringify(body), { status });
-    if (url.startsWith('https://gharel.github.io/scraping/data/status.json')) return json({ sources: { [SOURCE.id]: { ok: false, network: true, where: 'github' } } });
-    const route = url.replace('https://api.github.com/repos/gharel/scraping', '');
+    if (url.startsWith('https://gharel.github.io/vigie/data/status.json')) return json({ sources: { [SOURCE.id]: { ok: false, network: true, where: 'github' } } });
+    const route = url.replace('https://api.github.com/repos/gharel/vigie', '');
     const body = options.body ? JSON.parse(options.body) : null;
     if (route === '/git/refs/heads/main' && options.method === 'GET') return json({ object: { sha: 'head' } });
     if (route === '/git/commits/head') return json({ tree: { sha: 'base-tree' } });
@@ -254,17 +254,17 @@ test('relais : le jeton est vérifié, gardé sur le PC et jamais renvoyé à l�
   t.after(() => rm(dir, { recursive: true, force: true }));
   const file = path.join(dir, 'relais.json');
   const token = `github_pat_${'A1b2'.repeat(20)}`;
-  await assert.rejects(connect({ token: 'pas-un-jeton', repository: 'gharel/scraping', file }), /ne ressemble pas/);
+  await assert.rejects(connect({ token: 'pas-un-jeton', repository: 'gharel/vigie', file }), /ne ressemble pas/);
 
   const requests = [];
   const fetchImpl = async (url, options) => {
     requests.push({ url, method: options.method, auth: options.headers.Authorization });
-    const body = url.endsWith('/git/blobs') ? { sha: 'blob' } : { full_name: 'gharel/scraping', default_branch: 'main' };
+    const body = url.endsWith('/git/blobs') ? { sha: 'blob' } : { full_name: 'gharel/vigie', default_branch: 'main' };
     return new Response(JSON.stringify(body), { status: url.endsWith('/git/blobs') ? 201 : 200 });
   };
-  const settings = await connect({ token, repository: 'gharel/scraping', fetchImpl, file });
+  const settings = await connect({ token, repository: 'gharel/vigie', fetchImpl, file });
   assert.equal(settings.branch, 'main');
-  assert.deepEqual(requests.map((entry) => `${entry.method} ${entry.url}`), ['GET https://api.github.com/repos/gharel/scraping', 'POST https://api.github.com/repos/gharel/scraping/git/blobs']);
+  assert.deepEqual(requests.map((entry) => `${entry.method} ${entry.url}`), ['GET https://api.github.com/repos/gharel/vigie', 'POST https://api.github.com/repos/gharel/vigie/git/blobs']);
   assert.ok(requests.every((entry) => entry.auth === `Bearer ${token}`));
   assert.equal((await readSettings(file)).token, token);
   const state = publicState(await readSettings(file));
@@ -272,5 +272,5 @@ test('relais : le jeton est vérifié, gardé sur le PC et jamais renvoyé à l�
   assert.ok(!JSON.stringify(state).includes(token), 'le jeton ne sort pas du PC');
 
   const refused = async () => new Response(JSON.stringify({ message: 'Resource not accessible by personal access token' }), { status: 403 });
-  await assert.rejects(connect({ token, repository: 'gharel/scraping', fetchImpl: refused, file }), /Contents/);
+  await assert.rejects(connect({ token, repository: 'gharel/vigie', fetchImpl: refused, file }), /Contents/);
 });
