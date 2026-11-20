@@ -147,6 +147,32 @@
       "lastSeen": "2026-11-20T00:45:02.117Z"
     },
     {
+      "id": "wallis-futuna:9f53983372dc213d",
+      "sourceId": "wallis-futuna",
+      "kind": "consultation",
+      "title": "Travaux de réalisation d’une chaussée béton sur 500ml à ASOA sur la RT1 de Futuna- PROLONGATION",
+      "summary": "Avis de marché : Travaux de réalisation d’une chaussée béton sur 500ml à ASOA sur la RT1 de Futuna- PROLONGATION L'Administration supérieure des îles Wallis et Futuna lance le marché public suivant : Travaux de réalisation d’une chaussée béton sur 500ml à ASOA sur la RT1 de Futuna Référence : 2026-T-PA-82-TP Date limite de réception des offres : jeudi 26 novembre 2026 à 11h30 (heure de Wallis). - Dépôt de l'offre : La transmission électronique des plis se fera uniquement sur le profil acheteur de l’Administration Supérieure sur la plateforme (PLACE) à l’adresse suivante…",
+      "reference": "2026-T-PA-82-TP",
+      "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15453/126758/file/Avis%20de%20march%C3%A9%20-%20Asoa.pdf",
+      "publishedAt": "2026-11-20T00:00:00+11:00",
+      "deadline": "2026-11-26T11:30:00+11:00",
+      "firstSeen": "2026-11-20T17:57:19.100Z",
+      "lastSeen": "2026-11-20T17:57:19.100Z"
+    },
+    {
+      "id": "wallis-futuna:324544a3f03736b2",
+      "sourceId": "wallis-futuna",
+      "kind": "consultation",
+      "title": "Rénovation du bâtiment A du collège de Lano Alofivai – île de Wallis - PROLONGATION",
+      "summary": "Avis de marché : Rénovation du bâtiment A du collège de Lano Alofivai – île de Wallis - PROLONGATION L'Administration supérieure des îles Wallis et Futuna lance le marché public suivant : Rénovation du bâtiment A du collège de Lano Alofivai – île de Wallis Référence : 2026-E-PA-83-VR Date limite de réception des offres : jeudi 26 novembre 2026 à 11h30 (heure de Wallis). - Dépôt de l'offre : La transmission électronique des plis se fera uniquement sur le profil acheteur de l’Administration Supérieure sur la plateforme (PLACE) à l’adresse suivante : https://www.marches-publics.gouv.fr/…",
+      "reference": "2026-E-PA-83-VR",
+      "url": "https://www.wallis-et-futuna.gouv.fr/contenu/telechargement/15452/126753/file/Avis%20de%20march%C3%A9%20rectificatif%20-%20Lano.pdf",
+      "publishedAt": "2026-11-20T00:00:00+11:00",
+      "deadline": "2026-11-26T11:30:00+11:00",
+      "firstSeen": "2026-11-20T17:57:19.100Z",
+      "lastSeen": "2026-11-20T17:57:19.100Z"
+    },
+    {
       "id": "lnc-legales:7d09acf47bb0cebd",
       "sourceId": "lnc-legales",
       "kind": "consultation",
@@ -275,7 +301,7 @@
       "deadline": "2026-12-22T01:30:00+11:00",
       "lots": 7,
       "firstSeen": "2026-11-19T07:42:32.320Z",
-      "lastSeen": "2026-11-19T07:42:32.320Z"
+      "lastSeen": "2026-11-20T17:57:33.376Z"
     },
     {
       "id": "marches-publics-etat:g7h-3107212",
@@ -293,7 +319,7 @@
       "publishedAt": "2026-11-19T00:00:00+11:00",
       "deadline": "2026-12-03T02:00:00+11:00",
       "firstSeen": "2026-11-19T07:42:32.320Z",
-      "lastSeen": "2026-11-19T07:42:32.320Z"
+      "lastSeen": "2026-11-20T17:57:33.376Z"
     },
     {
       "id": "marchespublics-nc:u9p-3557",
@@ -627,7 +653,7 @@
       "publishedAt": "2026-11-17T00:00:00+11:00",
       "deadline": "2026-12-03T01:00:00+11:00",
       "firstSeen": "2026-11-18T00:21:52.708Z",
-      "lastSeen": "2026-11-19T07:42:32.320Z"
+      "lastSeen": "2026-11-20T17:57:33.376Z"
     },
     {
       "id": "lnc-legales:6b52ef32ae9f589a",
@@ -680,7 +706,7 @@
       "publishedAt": "2026-11-17T00:00:00+11:00",
       "deadline": "2026-11-30T01:00:00+11:00",
       "firstSeen": "2026-11-16T23:59:29.993Z",
-      "lastSeen": "2026-11-19T07:42:32.320Z"
+      "lastSeen": "2026-11-20T17:57:33.376Z"
     },
     {
       "id": "lnc-legales:326edfcb956ebe43",
@@ -2274,7 +2300,7 @@
       "deadline": "2026-12-07T12:00:00+11:00",
       "lots": 2,
       "firstSeen": "2026-11-06T13:35:57.394Z",
-      "lastSeen": "2026-11-19T07:42:32.320Z"
+      "lastSeen": "2026-11-20T17:57:33.376Z"
     },
     {
       "id": "marchespublics-nc:m8b-3539",
@@ -2311,7 +2337,7 @@
       "publishedAt": "2026-11-06T00:00:00+11:00",
       "deadline": "2026-12-16T00:30:00+11:00",
       "firstSeen": "2026-11-06T04:35:27.878Z",
-      "lastSeen": "2026-11-19T07:42:32.320Z"
+      "lastSeen": "2026-11-20T17:57:33.376Z"
     },
     {
       "id": "marchespublics-nc:h5j-3532",
@@ -2331,7 +2357,9 @@
       "deadline": "2026-11-20T15:00:00+11:00",
       "lots": 3,
       "firstSeen": "2026-11-06T04:33:22.420Z",
-      "lastSeen": "2026-11-20T00:43:55.132Z"
+      "lastSeen": "2026-11-20T00:43:55.132Z",
+      "gone": true,
+      "goneAt": "2026-11-20T17:55:23.663Z"
     },
     {
       "id": "marchespublics-nc:f4g-3537",
@@ -3003,7 +3031,7 @@
       "deadline": "2026-12-16T00:30:00+11:00",
       "lots": 13,
       "firstSeen": "2026-11-03T17:30:42.697Z",
-      "lastSeen": "2026-11-19T07:42:32.320Z"
+      "lastSeen": "2026-11-20T17:57:33.376Z"
     },
     {
       "id": "wallis-futuna:bbd8052440430087",
@@ -3253,7 +3281,7 @@
       "publishedAt": "2026-11-02T00:00:00+11:00",
       "deadline": "2026-12-04T00:30:00+11:00",
       "firstSeen": "2026-11-02T01:13:36.742Z",
-      "lastSeen": "2026-11-19T07:42:32.320Z"
+      "lastSeen": "2026-11-20T17:57:33.376Z"
     },
     {
       "id": "lnc-legales:71025ed9898350bd",
@@ -3443,7 +3471,7 @@
       "publishedAt": "2026-10-29T00:00:00+11:00",
       "deadline": "2026-11-30T22:30:00+11:00",
       "firstSeen": "2026-10-29T20:49:09.557Z",
-      "lastSeen": "2026-11-19T07:42:32.320Z"
+      "lastSeen": "2026-11-20T17:57:33.376Z"
     },
     {
       "id": "marchespublics-nc:t5y-3519",
@@ -3480,7 +3508,7 @@
       "publishedAt": "2026-10-29T00:00:00+11:00",
       "deadline": "2026-11-27T01:00:00+11:00",
       "firstSeen": "2026-10-29T01:31:34.631Z",
-      "lastSeen": "2026-11-19T07:42:32.320Z"
+      "lastSeen": "2026-11-20T17:57:33.376Z"
     },
     {
       "id": "lnc-legales:b6baeaf7bb7c2a87",
@@ -3706,7 +3734,7 @@
       "publishedAt": "2026-10-28T00:00:00+11:00",
       "deadline": "2026-11-25T19:00:00+11:00",
       "firstSeen": "2026-10-28T14:48:49.245Z",
-      "lastSeen": "2026-11-19T07:42:32.320Z"
+      "lastSeen": "2026-11-20T17:57:33.376Z"
     },
     {
       "id": "lnc-legales:c0dfa5dd0ac02a9d",
@@ -3776,7 +3804,7 @@
       "deadline": "2026-11-30T00:30:00+11:00",
       "lots": 7,
       "firstSeen": "2026-10-28T00:54:29.774Z",
-      "lastSeen": "2026-11-19T07:42:32.320Z"
+      "lastSeen": "2026-11-20T17:57:33.376Z"
     },
     {
       "id": "marchespublics-nc:f4g-3515",
@@ -4109,7 +4137,9 @@
       "publishedAt": "2026-10-27T00:00:00+11:00",
       "deadline": "2026-11-23T11:30:00+11:00",
       "firstSeen": "2026-10-27T09:31:40.127Z",
-      "lastSeen": "2026-11-20T00:46:58.079Z"
+      "lastSeen": "2026-11-20T00:46:58.079Z",
+      "gone": true,
+      "goneAt": "2026-11-20T17:57:19.100Z"
     },
     {
       "id": "wallis-futuna:111cc8e858631369",
@@ -4178,7 +4208,7 @@
       "publishedAt": "2026-10-27T00:00:00+11:00",
       "deadline": "2026-11-23T00:30:00+11:00",
       "firstSeen": "2026-10-27T03:14:03.804Z",
-      "lastSeen": "2026-11-19T07:42:32.320Z"
+      "lastSeen": "2026-11-20T17:57:33.376Z"
     },
     {
       "id": "lnc-legales:e3253d1af82998c8",
@@ -4631,7 +4661,9 @@
       "publishedAt": "2026-10-26T00:00:00+11:00",
       "deadline": "2026-11-23T11:30:00+11:00",
       "firstSeen": "2026-10-26T02:39:26.392Z",
-      "lastSeen": "2026-11-20T00:46:58.079Z"
+      "lastSeen": "2026-11-20T00:46:58.079Z",
+      "gone": true,
+      "goneAt": "2026-11-20T17:57:19.100Z"
     },
     {
       "id": "lnc-legales:63612b1680fc23b7",
@@ -4694,7 +4726,9 @@
       "deadline": "2026-11-20T15:30:00+11:00",
       "lots": 3,
       "firstSeen": "2026-10-25T22:13:02.868Z",
-      "lastSeen": "2026-11-20T00:43:55.132Z"
+      "lastSeen": "2026-11-20T00:43:55.132Z",
+      "gone": true,
+      "goneAt": "2026-11-20T17:55:23.663Z"
     },
     {
       "id": "cps-appels-offres:9e02019d7414c877",
@@ -4817,7 +4851,7 @@
       "publishedAt": "2026-10-23T00:00:00+11:00",
       "deadline": "2026-11-23T00:30:00+11:00",
       "firstSeen": "2026-10-23T09:05:09.882Z",
-      "lastSeen": "2026-11-19T07:42:32.320Z"
+      "lastSeen": "2026-11-20T17:57:33.376Z"
     },
     {
       "id": "marchespublics-nc:v5b-3511",
@@ -5053,7 +5087,7 @@
       "publishedAt": "2026-10-22T00:00:00+11:00",
       "deadline": "2026-11-26T01:30:00+11:00",
       "firstSeen": "2026-10-22T22:58:23.797Z",
-      "lastSeen": "2026-11-19T07:42:32.320Z"
+      "lastSeen": "2026-11-20T17:57:33.376Z"
     },
     {
       "id": "lnc-legales:f13e57aa642744b3",
@@ -5673,7 +5707,9 @@
       "deadline": "2026-11-19T22:00:00+11:00",
       "lots": 5,
       "firstSeen": "2026-10-20T21:39:56.181Z",
-      "lastSeen": "2026-11-19T07:42:32.320Z"
+      "lastSeen": "2026-11-19T07:42:32.320Z",
+      "gone": true,
+      "goneAt": "2026-11-20T17:57:33.376Z"
     },
     {
       "id": "province-sud-avis:a0f6246dc85e0174",
@@ -6193,7 +6229,9 @@
       "publishedAt": "2026-10-19T00:00:00+11:00",
       "deadline": "2026-11-19T22:30:00+11:00",
       "firstSeen": "2026-10-19T19:57:44.386Z",
-      "lastSeen": "2026-11-19T07:42:32.320Z"
+      "lastSeen": "2026-11-19T07:42:32.320Z",
+      "gone": true,
+      "goneAt": "2026-11-20T17:57:33.376Z"
     },
     {
       "id": "province-sud-avis:1f57ec02d89ae761",
@@ -6222,7 +6260,9 @@
       "publishedAt": "2026-10-19T00:00:00+11:00",
       "deadline": "2026-11-20T15:30:00+11:00",
       "firstSeen": "2026-10-19T13:10:24.582Z",
-      "lastSeen": "2026-11-20T00:43:55.132Z"
+      "lastSeen": "2026-11-20T00:43:55.132Z",
+      "gone": true,
+      "goneAt": "2026-11-20T17:55:23.663Z"
     },
     {
       "id": "marches-publics-etat:g6l-3088866",
@@ -6536,7 +6576,9 @@
           "from": "2026-11-13T12:00:00+11:00",
           "to": "2026-11-20T12:00:00+11:00"
         }
-      ]
+      ],
+      "gone": true,
+      "goneAt": "2026-11-20T17:55:23.663Z"
     },
     {
       "id": "marchespublics-nc:p2q-3481",
@@ -9303,7 +9345,7 @@
       "sourceId": "ifap",
       "kind": "consultation",
       "title": "Repères socioculturels en contexte calédonien",
-      "status": "20/11/2026",
+      "status": "Expirée",
       "url": "https://www.ifap.nc/sites/default/files/2026-10/26_SAS14_CONS_0.pdf",
       "publishedAt": "2026-10-06T00:00:00+11:00",
       "deadline": "2026-11-20T00:00:00+11:00",
@@ -9534,7 +9576,7 @@
       "deadline": "2027-01-04T12:00:00+11:00",
       "lots": 7,
       "firstSeen": "2026-10-08T09:13:16.353Z",
-      "lastSeen": "2026-11-19T07:42:32.320Z",
+      "lastSeen": "2026-11-20T17:57:33.376Z",
       "seed": true,
       "updatedAt": "2026-11-10T19:34:22.719Z",
       "history": [
@@ -10184,7 +10226,7 @@
       "publishedAt": "2026-09-29T00:00:00+11:00",
       "deadline": "2026-12-02T16:00:00+11:00",
       "firstSeen": "2026-10-08T09:13:16.353Z",
-      "lastSeen": "2026-11-19T07:42:32.320Z",
+      "lastSeen": "2026-11-20T17:57:33.376Z",
       "seed": true
     },
     {
